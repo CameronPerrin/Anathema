@@ -13,9 +13,9 @@ GameObject:
   - component: {fileID: 6599254282807249055}
   - component: {fileID: 1362725172635438697}
   - component: {fileID: 2720997935150891657}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Capsule
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -111,7 +111,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 80
   m_CollisionDetection: 0
 --- !u!1 &5913627536402293255
 GameObject:
@@ -125,9 +125,9 @@ GameObject:
   - component: {fileID: 1586890228308391731}
   - component: {fileID: 1226989755781005930}
   - component: {fileID: 2623674306348549703}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: PhotonPlayer
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
