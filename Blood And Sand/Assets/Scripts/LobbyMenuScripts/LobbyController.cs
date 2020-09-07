@@ -106,7 +106,7 @@ public class LobbyController : MonoBehaviourPunCallbacks
 		{
 			GameObject tempListing = Instantiate(roomListingPrefab, roomsContainter);
 			RoomButton tempButton = tempListing.GetComponent<RoomButton>();
-			tempButton.SetRoom(room.Name, room.MaxPlayers, room.PlayerCount);
+			tempButton.SetRoom(room.Name, 4, room.PlayerCount);
 		}
 	}
 
@@ -114,10 +114,10 @@ public class LobbyController : MonoBehaviourPunCallbacks
 	{
 		roomName = nameIn;
 	}
-	public void OnRoomSizeChanged(string sizeIn)
-	{
-		roomSize = int.Parse(sizeIn);
-	}
+	//public void OnRoomSizeChanged(string sizeIn)
+	//{
+	//	roomSize = int.Parse(sizeIn);
+	//}
 
 	public void CreateRoom()
 	{

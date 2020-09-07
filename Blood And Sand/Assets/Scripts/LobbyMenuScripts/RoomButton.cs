@@ -25,6 +25,6 @@ public class RoomButton : MonoBehaviour
 		roomSize = sizeInput;
 		playerCount = countInput;
 		nameText.text = nameInput;
-		sizeText.text = countInput + "/" + sizeInput;
+		sizeText.text = countInput + "/4";
 	}
 }
