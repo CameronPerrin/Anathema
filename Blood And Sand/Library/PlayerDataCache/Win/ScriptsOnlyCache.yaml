@@ -4,6 +4,8 @@ ScriptsOnlyBuild:
     - GameSetupController
     - LobbyController
     - NetworkController
+    - PlayerController
+    - PlayerLoadoutController
     - PlayerMovementController
     - RoomButton
     - RoomController
@@ -253,6 +255,10 @@ ScriptsOnlyBuild:
       Script: {instanceID: 17888}
     - Class: 114
       Script: {instanceID: 17896}
+    - Class: 114
+      Script: {instanceID: 20846}
+    - Class: 114
+      Script: {instanceID: 33272}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -2105,6 +2111,18 @@ ScriptsOnlyBuild:
     assemblyName: Unity.VisualEffectGraph.Runtime.dll
     namespaceName: UnityEngine.VFX.Utility
     className: VFXUISliderBinder
+  - hash:
+      serializedVersion: 2
+      Hash: 31f3206bae16996fee0672f4bf957dab
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: PlayerLoadoutController
+  - hash:
+      serializedVersion: 2
+      Hash: 223e74bf3e1e898d00b4017913da6a5c
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: PlayerController
   platform: 5
   scenePathNames:
   - Assets/Scenes/LobbyMenu.unity

@@ -13,6 +13,8 @@ GameObject:
   - component: {fileID: 8943961251076596433}
   - component: {fileID: 2172955140548748907}
   - component: {fileID: 574058013841345917}
+  - component: {fileID: 902926016281700560}
+  - component: {fileID: 7727050765829538694}
   m_Layer: 9
   m_Name: Capsule
   m_TagString: Player
@@ -114,6 +116,38 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 80
   m_CollisionDetection: 0
+--- !u!114 &902926016281700560
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1404866618595192266}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7b2ac029f25c9514182ad022e936e1b0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 0}
+  melee: {fileID: 1088286949887834589, guid: a9ae1fdfcc2547c41a9502bdf6e4e295, type: 3}
+  ranged: {fileID: 8686200462685646754, guid: 9539e6f518ba7014ea91dc4220c457b6, type: 3}
+  magic: {fileID: 5758610013345411240, guid: d84fc733bdc076242bf882dbf8d419bc, type: 3}
+  equipped: {fileID: 1088286949887834589, guid: a9ae1fdfcc2547c41a9502bdf6e4e295,
+    type: 3}
+  choice: 0
+--- !u!114 &7727050765829538694
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1404866618595192266}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d126aa3dc97254847bbd1fdc4d936da1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawned: {fileID: 0}
 --- !u!1 &1428299595166449183
 GameObject:
   m_ObjectHideFlags: 0
@@ -269,6 +303,7 @@ GameObject:
   - component: {fileID: 2690347591216138540}
   - component: {fileID: 2188337182655465566}
   - component: {fileID: 3536456245099357506}
+  - component: {fileID: 6805519542810895283}
   m_Layer: 9
   m_Name: PhotonPlayer
   m_TagString: Player
@@ -363,6 +398,19 @@ CharacterController:
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &6805519542810895283
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3536456245099357511}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d126aa3dc97254847bbd1fdc4d936da1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawned: {fileID: 0}
 --- !u!1 &3747429205975524519
 GameObject:
   m_ObjectHideFlags: 0
@@ -387,7 +435,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3747429205975524519}
-  m_LocalRotation: {x: -0.0000000013716176, y: 0.9935772, z: -0.113156535, w: -0.000000012043565}
+  m_LocalRotation: {x: 0.0000000013716176, y: 0.9935772, z: -0.113156535, w: 0.000000012043565}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
