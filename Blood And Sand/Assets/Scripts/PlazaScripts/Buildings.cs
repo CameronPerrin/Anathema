@@ -5,11 +5,11 @@ using UnityEngine;
 public class Buildings : MonoBehaviour
 {
 
-	private String buildingTag;
+	//private String buildingTag;
     // Start is called before the first frame update
     void Start()
     {
-        buildingTag = gameObject.tag;
+        //buildingTag = gameObject.tag;
     }
 
     // Update is called once per frame
@@ -20,7 +20,7 @@ public class Buildings : MonoBehaviour
 
     void mageTower()
 	{
-		debug.log("You have entered the Mage Tower");
+		//debug.log("You have entered the Mage Tower");
     }
-}
+
 }
