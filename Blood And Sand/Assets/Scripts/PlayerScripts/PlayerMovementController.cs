@@ -6,9 +6,12 @@ using UnityEngine;
 
 public class PlayerMovementController : MonoBehaviour
 {
+    public GameObject rayOrigin;
+
     private PhotonView PV;
     private CinemachineFreeLook CFL;
     public CharacterController controller;
+    public Camera ray_camera;
     public GameObject p_camera;
     //public Transform cam;
 	public float moveSpeed = 6f;
@@ -20,6 +23,7 @@ public class PlayerMovementController : MonoBehaviour
         PV = GetComponent<PhotonView>();
         if (PV.IsMine)
         {
+            ray_camera = Camera.main;
             p_camera = Camera.main.gameObject;
             CFL = transform.GetChild(0).GetComponent<CinemachineFreeLook>();
             //CFL.Follow = transform.GetChild(1);
@@ -33,6 +37,19 @@ public class PlayerMovementController : MonoBehaviour
     {
         if (PV.IsMine)
         {
+
+            // RAYTRACING
+            RaycastHit hit;
+            Ray pointing = ray_camera.ScreenPointToRay(Input.mousePosition); //GetComponent<Camera>()
+
+            if(Physics.Raycast(pointing, out hit, 20)){
+                    Debug.DrawRay(pointing.origin, pointing.direction * 20);
+                    if(hit.collider.tag == "Interact"){
+                        if(Input.GetKeyDown("e")){
+                        Debug.Log("INTERACTING...");
+                        }
+                    }
+            }
 
             float horizontal = Input.GetAxisRaw("Horizontal");
             float vertical = Input.GetAxisRaw("Vertical");

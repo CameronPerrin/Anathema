@@ -392,7 +392,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c279ce23d6b83c46acae9758bc1d4c1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rayOrigin: {fileID: 0}
   controller: {fileID: 3536456245099357506}
+  ray_camera: {fileID: 0}
   p_camera: {fileID: 0}
   moveSpeed: 5
   turnSmoothTime: 0.1
