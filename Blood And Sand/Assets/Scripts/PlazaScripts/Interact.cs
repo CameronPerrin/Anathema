@@ -5,20 +5,23 @@ using UnityEngine;
 public class Interact : MonoBehaviour
 {
     public int interactItem;
+    public GameObject spawnLocation;
 
     public void interactFunction(GameObject player){
         switch (interactItem){
-                case 1: 
+                case 1: // Mage tower
                     Debug.Log("Mage Tower");
+                    player.transform.position = spawnLocation.transform.position;
                     break;
-                case 2:
+                case 2: // Blacksmith
                     Debug.Log("Blacksmith");
-                    player.transform.position = new Vector3(0, -85, 0);
+                    player.transform.position = spawnLocation.transform.position;
                     break;
-                case 3:
+                case 3: // Armorsmith
                     Debug.Log("Armorsmith");
+                    player.transform.position = spawnLocation.transform.position;
                     break;
-                default:
+                default: //default
                     Debug.Log("Default interact msg");
                     break;
             }
