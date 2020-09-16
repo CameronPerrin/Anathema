@@ -38,15 +38,15 @@ public class PlayerMovementController : MonoBehaviour
         if (PV.IsMine)
         {
 
-            // RAYTRACING
+            // RAYTRACING for Player to interact with things.
             RaycastHit hit;
-            Ray pointing = ray_camera.ScreenPointToRay(Input.mousePosition); //GetComponent<Camera>()
+            Ray pointing = ray_camera.ScreenPointToRay(Input.mousePosition);
 
             if(Physics.Raycast(pointing, out hit, 20)){
                     Debug.DrawRay(pointing.origin, pointing.direction * 20);
                     if(hit.collider.tag == "Interact"){
                         if(Input.GetKeyDown("e")){
-                            hit.collider.gameObject.GetComponent<Interact>().interactFunction();
+                            hit.collider.gameObject.GetComponent<Interact>().interactFunction(this.gameObject);
                         }
                     }
             }
