@@ -4,12 +4,16 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using System.IO;
 
 public class RoomController : MonoBehaviourPunCallbacks
 {
 
 	[SerializeField]
 	private int multiPlayerSceneIndex;
+
+	[SerializeField]
+	private int townSceneIndex;
 
 	[SerializeField]
 	private GameObject lobbyPanel;
@@ -26,6 +30,8 @@ public class RoomController : MonoBehaviourPunCallbacks
 
 	[SerializeField]
 	private Text roomNameDisplay;
+	[SerializeField]
+	private GameObject lobbyObject;
 
 	void ClearPlayerListings()
 	{
@@ -45,21 +51,35 @@ public class RoomController : MonoBehaviourPunCallbacks
 		}
 	}
 
+	public void CreatePlayer()
+	{
+		Debug.Log("Creating Player");
+		PhotonNetwork.Instantiate(Path.Combine("PhotonPrefabs", "PhotonPlayer"), Vector3.zero, Quaternion.identity);
+	}
+
 	public override void OnJoinedRoom()
 	{
-		roomPanel.SetActive(true);
-		lobbyPanel.SetActive(false);
-		roomNameDisplay.text = PhotonNetwork.CurrentRoom.Name;
-		if(PhotonNetwork.IsMasterClient)
-		{
-			startButton.SetActive(true);
+        if (!lobbyObject.GetComponent<LobbyController>().inAnathema)
+        {
+			roomPanel.SetActive(true);
+			lobbyPanel.SetActive(false);
+			roomNameDisplay.text = PhotonNetwork.CurrentRoom.Name;
+			if (PhotonNetwork.IsMasterClient)
+			{
+				startButton.SetActive(true);
+			}
+			else
+			{
+				startButton.SetActive(false);
+			}
+			ClearPlayerListings();
+			ListPlayers();
 		}
-		else
-		{
-			startButton.SetActive(false);
+		else if (lobbyObject.GetComponent<LobbyController>().inAnathema)
+        {
+			StartGame();
 		}
-		ClearPlayerListings();
-		ListPlayers();
+
 	}
 
 	public override void OnPlayerEnteredRoom(Player newPlayer)
@@ -82,8 +102,20 @@ public class RoomController : MonoBehaviourPunCallbacks
 	{
 		if(PhotonNetwork.IsMasterClient)
 		{
-			PhotonNetwork.CurrentRoom.IsOpen = false;
-			PhotonNetwork.LoadLevel(multiPlayerSceneIndex);
+			if (!lobbyObject.GetComponent<LobbyController>().inAnathema)
+			{
+				
+				PhotonNetwork.CurrentRoom.IsOpen = false;
+				PhotonNetwork.LoadLevel(multiPlayerSceneIndex);
+			}
+			else if (lobbyObject.GetComponent<LobbyController>().inAnathema)
+			{
+				Debug.Log("starting GAme!!! lolzors");
+				PhotonNetwork.LoadLevel(townSceneIndex);
+				//run start button function then creat player
+				//CreatePlayer();
+			}
+
 		}
 	}
 

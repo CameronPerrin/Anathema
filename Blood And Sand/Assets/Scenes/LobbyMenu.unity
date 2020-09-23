@@ -666,7 +666,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &141893103
 GameObject:
@@ -1292,7 +1292,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 580815413}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: PlayerLoadoutController, Assembly-CSharp
         m_MethodName: RangedChosen
         m_Mode: 1
@@ -1733,7 +1733,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 580815413}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: PlayerLoadoutController, Assembly-CSharp
         m_MethodName: MagicChosen
         m_Mode: 1
@@ -1826,7 +1826,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 42a596cdc29937a4eaf108ae4926ad6d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  multiPlayerSceneIndex: 1
+  multiPlayerSceneIndex: 2
+  townSceneIndex: 1
   lobbyPanel: {fileID: 1885743541}
   roomPanel: {fileID: 436379369}
   startButton: {fileID: 1816090986}
@@ -1834,55 +1835,7 @@ MonoBehaviour:
   playerListingPrefab: {fileID: 629578269354616955, guid: cfc3764ca2533914eb701d0f08c6f117,
     type: 3}
   roomNameDisplay: {fileID: 1230755380}
---- !u!1 &580815412
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 580815414}
-  - component: {fileID: 580815413}
-  m_Layer: 0
-  m_Name: PlayerLoadoutPassthrough
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &580815413
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 580815412}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7b2ac029f25c9514182ad022e936e1b0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  player: {fileID: 3536456245099357511, guid: b663b7ce322b288458daa2a6708b4a3c, type: 3}
-  melee: {fileID: 1088286949887834589, guid: a9ae1fdfcc2547c41a9502bdf6e4e295, type: 3}
-  ranged: {fileID: 8686200462685646754, guid: 9539e6f518ba7014ea91dc4220c457b6, type: 3}
-  magic: {fileID: 5758610013345411240, guid: d84fc733bdc076242bf882dbf8d419bc, type: 3}
-  equipped: {fileID: 0}
-  choice: 0
---- !u!4 &580815414
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 580815412}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 600.8914, y: 175.54407, z: 1072.9302}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 5
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  lobbyObject: {fileID: 666291327}
 --- !u!1 &595212920
 GameObject:
   m_ObjectHideFlags: 0
@@ -1896,7 +1849,7 @@ GameObject:
   - component: {fileID: 595212922}
   - component: {fileID: 595212921}
   m_Layer: 5
-  m_Name: Canvas
+  m_Name: JoiningCanvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1977,7 +1930,7 @@ RectTransform:
   - {fileID: 1885743542}
   - {fileID: 436379370}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -2031,6 +1984,7 @@ MonoBehaviour:
   lobbyPanel: {fileID: 1885743541}
   mainPanel: {fileID: 60291431}
   playerNameInput: {fileID: 289081540}
+  inAnathema: 0
   roomsContainter: {fileID: 10758647}
   roomListingPrefab: {fileID: 6812253815123980753, guid: 733c4cd1d3144e5408d5b0b2a82fb2e2,
     type: 3}
@@ -3059,7 +3013,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 580815413}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: PlayerLoadoutController, Assembly-CSharp
         m_MethodName: MeleeChosen
         m_Mode: 1
@@ -5139,7 +5093,7 @@ GameObject:
   - component: {fileID: 1885743542}
   m_Layer: 5
   m_Name: Lobby
-  m_TagString: Untagged
+  m_TagString: Lobby
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

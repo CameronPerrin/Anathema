@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+
 public class LobbyController : MonoBehaviourPunCallbacks
 {
 
@@ -19,6 +20,7 @@ public class LobbyController : MonoBehaviourPunCallbacks
 
 	private string roomName;
 	private int roomSize;
+	public bool inAnathema = true;
 
 	private List<RoomInfo> roomListings;
 	[SerializeField]
@@ -58,11 +60,25 @@ public class LobbyController : MonoBehaviourPunCallbacks
 		//playerNameInput.text = nameInput; //REDUNTANT
 	}
 
+
+
 	public void JoinLobbyOnClick()
 	{
 		mainPanel.SetActive(false);
-		lobbyPanel.SetActive(true);
-		PhotonNetwork.JoinLobby();
+		inAnathema = true;
+		CreateRoom();
+		//PhotonNetwork.JoinRoom("AnathemaTown");
+		//roomPanel.SetActive(false);
+		
+		//lobbyPanel.SetActive(true);
+		//PhotonNetwork.JoinLobby();
+
+		//RoomOptions AnathemaOps = new RoomOptions() { IsVisible = false, IsOpen = true, MaxPlayers = 0 };
+		//PhotonNetwork.CreateRoom("AnathemaTown", AnathemaOps);
+		//PhotonNetwork.JoinRoom("AnathemaTown");
+		//CreatePlayer();
+
+
 	}
 
 	public override void OnRoomListUpdate(List<RoomInfo> roomList)
@@ -108,6 +124,7 @@ public class LobbyController : MonoBehaviourPunCallbacks
 			RoomButton tempButton = tempListing.GetComponent<RoomButton>();
 			tempButton.SetRoom(room.Name, 4, room.PlayerCount);
 		}
+
 	}
 
 	public void OnRoomNameChanged(string nameIn)
@@ -119,12 +136,28 @@ public class LobbyController : MonoBehaviourPunCallbacks
 	//	roomSize = int.Parse(sizeIn);
 	//}
 
+
 	public void CreateRoom()
 	{
 		Debug.Log("Creating room now");
-		RoomOptions roomOps = new RoomOptions() { IsVisible = true, IsOpen = true, MaxPlayers = (byte)roomSize };
-		PhotonNetwork.CreateRoom(roomName, roomOps);
+		if (!inAnathema)
+		{
+			Debug.Log("creating custom room");
+			//disconnect the player
+			PhotonNetwork.LeaveRoom();
+			//wait a few seconds
+			RoomOptions roomOps = new RoomOptions() { IsVisible = true, IsOpen = true, MaxPlayers = (byte)roomSize };
+			PhotonNetwork.CreateRoom(roomName, roomOps);
+		} 
+		else if(inAnathema)
+        {
+			Debug.Log("creating anathema");
+			RoomOptions roomOps2 = new RoomOptions() { IsVisible = false, IsOpen = true, MaxPlayers = 0 };
+			PhotonNetwork.CreateRoom("AnathemaTown", roomOps2, null);
+		}
 	}
+
+
 
 	public override void OnCreateRoomFailed(short returnCode, string message)
 	{

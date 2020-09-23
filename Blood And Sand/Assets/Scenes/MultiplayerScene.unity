@@ -863,6 +863,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   interactItem: 2
   spawnLocation: {fileID: 570681301}
+  LobbyPanel: {fileID: 0}
+  LobbyPanelController: {fileID: 0}
 --- !u!1 &843055950
 GameObject:
   m_ObjectHideFlags: 0
@@ -1461,7 +1463,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1545066487}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 79fbcb9b0b29cfb44be5fe026da86377, type: 3}
   m_Name: 
@@ -1576,6 +1578,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   interactItem: 1
   spawnLocation: {fileID: 843055950}
+  LobbyPanel: {fileID: 0}
+  LobbyPanelController: {fileID: 0}
 --- !u!1 &1750511282
 GameObject:
   m_ObjectHideFlags: 0
@@ -1783,6 +1787,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   interactItem: 3
   spawnLocation: {fileID: 105942248}
+  LobbyPanel: {fileID: 0}
+  LobbyPanelController: {fileID: 0}
 --- !u!1 &2043446238
 GameObject:
   m_ObjectHideFlags: 0
