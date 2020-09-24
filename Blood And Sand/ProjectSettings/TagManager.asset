@@ -5,8 +5,6 @@ TagManager:
   serializedVersion: 2
   tags:
   - Interact
-  - Lobby
-  - LobbyController
   layers:
   - Default
   - TransparentFX

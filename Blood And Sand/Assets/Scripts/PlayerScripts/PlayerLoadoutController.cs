@@ -32,7 +32,7 @@ public class PlayerLoadoutController : MonoBehaviour
     void Start()
     {
         DontDestroyOnLoad(this.gameObject);
-        equipped = melee;
+        //choice = 3;
 
 
         //instantiate chosen prefab structure
