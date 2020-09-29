@@ -2030,7 +2030,7 @@ MonoBehaviour:
   lobbyConnectButton: {fileID: 1268675021}
   lobbyPanel: {fileID: 1885743541}
   mainPanel: {fileID: 60291431}
-  playerNameInput: {fileID: 289081540}
+  playerNameInput: {fileID: 0}
   roomsContainter: {fileID: 10758647}
   roomListingPrefab: {fileID: 6812253815123980753, guid: 733c4cd1d3144e5408d5b0b2a82fb2e2,
     type: 3}
