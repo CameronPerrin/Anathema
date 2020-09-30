@@ -743,7 +743,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 525577251}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 612124603}
+        m_TargetAssemblyTypeName: GameFinder, Assembly-CSharp
+        m_MethodName: findGame
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &525577251
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -825,6 +837,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1f117e73c580ba74b83558a1771efdce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerListingPrefab: {fileID: 0}
+  playersContainer: {fileID: 0}
 --- !u!1 &645087707
 GameObject:
   m_ObjectHideFlags: 0
