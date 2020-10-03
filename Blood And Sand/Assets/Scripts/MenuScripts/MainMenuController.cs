@@ -6,6 +6,10 @@ using UnityEngine;
 
 public class MainMenuController : MonoBehaviourPunCallbacks
 {
+
+    [SerializeField]
+    private string sceneIndex;
+
     [SerializeField]
     private GameObject startButton;
 
