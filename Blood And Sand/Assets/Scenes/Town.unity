@@ -2359,6 +2359,7 @@ MonoBehaviour:
   spawnLocation: {fileID: 0}
   networkUI: {fileID: 968120469}
   playerCam: {fileID: 45262373}
+  weaponShowing: {fileID: 0}
 --- !u!65 &496951622
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8544,7 +8545,7 @@ PrefabInstance:
     - target: {fileID: 5819432040853163884, guid: 8bd3d207199e1854688f7565f211cd36,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 14.23
+      value: 13.512
       objectReference: {fileID: 0}
     - target: {fileID: 5819432040853163884, guid: 8bd3d207199e1854688f7565f211cd36,
         type: 3}
@@ -9282,7 +9283,7 @@ MonoBehaviour:
     foreground:
       apply: 1
       opacity: 0.2553879
-      num: 4
+      num: 2
     background:
       apply: 1
       opacity: 0.18
