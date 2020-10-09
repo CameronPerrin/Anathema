@@ -71,7 +71,7 @@ MeshRenderer:
   m_RendererPriority: 0
   m_Materials:
   - {fileID: 2131188}
-  - {fileID: 2147804}
+  - {fileID: 2100000, guid: 240da4819f975954da356d413067b757, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -115,36 +115,112 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Optimized Bark Material
-  m_Shader: {fileID: 10604, guid: 0000000000000000f000000000000000, type: 0}
-  m_ShaderKeywords: 
-  m_LightmapFlags: 5
+  m_Shader: {fileID: 4800000, guid: d7dd1c3f4cba1d441a7d295a168bac0d, type: 3}
+  m_ShaderKeywords: _ADVANCEDLIGHTING_ON
+  m_LightmapFlags: 6
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
-  m_CustomRenderQueue: 2000
+  m_CustomRenderQueue: -1
   stringTagMap: {}
   disabledShaderPasses: []
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
+    - _BaseMap:
+        m_Texture: {fileID: 2800000, guid: f82d7808d61c0fe40ac870b61d38c05f, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _BumpMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _BumpSpecMap:
         m_Texture: {fileID: 2800000, guid: 62a80745906a31e4e80055fd7ec2add8, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _EmissionMap:
+        m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
         m_Texture: {fileID: 2800000, guid: f82d7808d61c0fe40ac870b61d38c05f, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _MetallicGlossMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _OcclusionMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _SpecGlossMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _TranslucencyMap:
         m_Texture: {fileID: 2800000, guid: e08b6027d32f103499d413e4141bfcf3, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _WindMap:
+        m_Texture: {fileID: 2800000, guid: 58ee3d953f2ad1d4bb6dce9e0821b8c0, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     m_Floats:
+    - _AdvancedLighting: 1
+    - _AlphaClip: 0
+    - _AlphaToCoverage: 0
+    - _BendFlattenStrength: 1
+    - _BendMode: 0
+    - _BendPushStrength: 1
+    - _Blend: 0
+    - _BumpScale: 1
+    - _ColorMapHeight: 1
+    - _ColorMapStrength: 0
+    - _Cull: 2
+    - _Cutoff: 0.3
+    - _DstBlend: 0
+    - _EnvironmentReflections: 1
+    - _GlossMapScale: 0
+    - _Glossiness: 0
+    - _GlossyReflections: 0
+    - _Metallic: 0
+    - _OcclusionStrength: 1
+    - _PerspectiveCorrection: 0
+    - _QueueOffset: 0
+    - _ReceiveShadows: 1
+    - _Scalemap: 0
+    - _ShadowBiasCorrection: 0
+    - _Smoothness: 0
+    - _SmoothnessTextureChannel: 0
+    - _SpecularHighlights: 1
     - _SquashAmount: 1
+    - _SrcBlend: 1
+    - _Surface: 0
+    - _Translucency: 0.2
+    - _VertexDarkening: 0.1
+    - _WindAmbientStrength: 0.2
+    - _WindGustFreq: 4
+    - _WindGustStrength: 0.2
+    - _WindGustTint: 0.066
+    - _WindObjectRand: 0.5
+    - _WindRandStrength: 0.5
+    - _WindSpeed: 3
+    - _WindSwinging: 0.15
+    - _WindVertexRand: 0.6
+    - _WorkflowMode: 1
+    - _ZWrite: 1
     m_Colors:
+    - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
+    - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
+    - _FadeParams: {r: 50, g: 100, b: 0, a: 0}
+    - _HueVariation: {r: 1, g: 0.63, b: 0, a: 0.15}
+    - _ScalemapInfluence: {r: 0, g: 1, b: 0, a: 0}
     - _SpecColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
     - _TreeInstanceColor: {r: 1, g: 1, b: 1, a: 1}
     - _TreeInstanceScale: {r: 1, g: 1, b: 1, a: 1}
+    - _WindDirection: {r: 1, g: 0, b: 0, a: 0}
   m_BuildTextureStacks: []
 --- !u!21 &2147804
 Material:
@@ -154,44 +230,120 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Optimized Leaf Material
-  m_Shader: {fileID: 10605, guid: 0000000000000000f000000000000000, type: 0}
-  m_ShaderKeywords: 
-  m_LightmapFlags: 5
+  m_Shader: {fileID: 4800000, guid: d7dd1c3f4cba1d441a7d295a168bac0d, type: 3}
+  m_ShaderKeywords: _ADVANCEDLIGHTING_ON _ALPHATEST_ON _OCCLUSIONMAP
+  m_LightmapFlags: 6
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
-  m_CustomRenderQueue: 2000
+  m_CustomRenderQueue: -1
   stringTagMap: {}
   disabledShaderPasses: []
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
+    - _BaseMap:
+        m_Texture: {fileID: 2800000, guid: f82d7808d61c0fe40ac870b61d38c05f, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _BumpMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _BumpSpecMap:
         m_Texture: {fileID: 2800000, guid: 62a80745906a31e4e80055fd7ec2add8, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _EmissionMap:
+        m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
         m_Texture: {fileID: 2800000, guid: f82d7808d61c0fe40ac870b61d38c05f, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _MetallicGlossMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _OcclusionMap:
+        m_Texture: {fileID: 2800000, guid: fa29af801d4654e469207cffeea8e8cf, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _ShadowTex:
         m_Texture: {fileID: 2800000, guid: fa29af801d4654e469207cffeea8e8cf, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _SpecGlossMap:
+        m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _TranslucencyMap:
         m_Texture: {fileID: 2800000, guid: e08b6027d32f103499d413e4141bfcf3, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _WindMap:
+        m_Texture: {fileID: 2800000, guid: 58ee3d953f2ad1d4bb6dce9e0821b8c0, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     m_Floats:
+    - _AdvancedLighting: 1
+    - _AlphaClip: 1
+    - _AlphaToCoverage: 0
+    - _BendFlattenStrength: 1
+    - _BendMode: 0
+    - _BendPushStrength: 1
+    - _Blend: 0
+    - _BumpScale: 1
+    - _ColorMapHeight: 1
+    - _ColorMapStrength: 0
+    - _Cull: 2
     - _Cutoff: 0.3
+    - _DstBlend: 0
+    - _EnvironmentReflections: 1
+    - _GlossMapScale: 0
+    - _Glossiness: 0
+    - _GlossyReflections: 0
+    - _Metallic: 0
+    - _OcclusionStrength: 0.5
+    - _PerspectiveCorrection: 0
+    - _QueueOffset: 0
+    - _ReceiveShadows: 1
+    - _Scalemap: 0
+    - _ShadowBiasCorrection: 0
     - _ShadowOffsetScale: 1
     - _ShadowStrength: 0.8
+    - _Smoothness: 0
+    - _SmoothnessTextureChannel: 0
+    - _SpecularHighlights: 1
     - _SquashAmount: 1
+    - _SrcBlend: 1
+    - _Surface: 0
+    - _Translucency: 0.2
     - _TranslucencyViewDependency: 0.7
+    - _VertexDarkening: 0.1
+    - _WindAmbientStrength: 0.2
+    - _WindGustFreq: 4
+    - _WindGustStrength: 0.2
+    - _WindGustTint: 0.066
+    - _WindObjectRand: 0.5
+    - _WindRandStrength: 0.5
+    - _WindSpeed: 3
+    - _WindSwinging: 0.15
+    - _WindVertexRand: 0.6
+    - _WorkflowMode: 1
+    - _ZWrite: 1
     m_Colors:
+    - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
+    - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
+    - _FadeParams: {r: 50, g: 100, b: 0, a: 0}
+    - _HueVariation: {r: 1, g: 0.63, b: 0, a: 0.15}
+    - _ScalemapInfluence: {r: 0, g: 1, b: 0, a: 0}
+    - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
     - _TranslucencyColor: {r: 0.73, g: 0.85, b: 0.41, a: 1}
     - _TreeInstanceColor: {r: 1, g: 1, b: 1, a: 1}
     - _TreeInstanceScale: {r: 1, g: 1, b: 1, a: 1}
+    - _WindDirection: {r: 1, g: 0, b: 0, a: 0}
   m_BuildTextureStacks: []
 --- !u!43 &4368594
 Mesh:
