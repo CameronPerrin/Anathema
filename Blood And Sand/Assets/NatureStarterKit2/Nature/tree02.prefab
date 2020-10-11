@@ -71,7 +71,7 @@ MeshRenderer:
   m_RendererPriority: 0
   m_Materials:
   - {fileID: 2181332}
-  - {fileID: 2100000, guid: 240da4819f975954da356d413067b757, type: 2}
+  - {fileID: 2100000, guid: 3b33578a26911984fa9984a794c79f72, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -336,7 +336,7 @@ Material:
     - _BillboardShadowFade: 0.5
     - _Blend: 0
     - _BumpScale: 1
-    - _ColorMapHeight: 0
+    - _ColorMapHeight: 1
     - _ColorMapStrength: 0
     - _Cull: 2
     - _Cutoff: 0.3
@@ -382,7 +382,7 @@ Material:
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _FadeParams: {r: 50, g: 100, b: 0, a: 0}
-    - _HueVariation: {r: 0.9622641, g: 0.9622641, b: 0.9622641, a: 0.7294118}
+    - _HueVariation: {r: 0.9622642, g: 0.9622642, b: 0.9622642, a: 0.1}
     - _HueVariationColor: {r: 1, g: 0.5, b: 0, a: 0}
     - _ScalemapInfluence: {r: 0, g: 1, b: 0, a: 0}
     - _SpecColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
