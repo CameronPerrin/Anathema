@@ -13,6 +13,27 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cacheType: 7
+<<<<<<< Updated upstream
+  lastUpdatedAtString: 0001-01-01T00:00:00.000+00:00
+  initializedAtString: 0001-01-01T00:00:00.000+00:00
+  gitLocks: []
+--- !u!114 &2
+MonoBehaviour:
+  m_ObjectHideFlags: 61
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1265399648, guid: 68c7e4565cde54155bb78d8e935f1ddb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cacheType: 7
+  lastUpdatedAtString: 2020-10-11T15:37:24.049-04:00
+  initializedAtString: 2020-10-11T15:37:24.049-04:00
+=======
   lastUpdatedAtString: 2020-10-11T13:40:31.395-04:00
   initializedAtString: 2020-10-11T13:40:31.395-04:00
+>>>>>>> Stashed changes
   gitLocks: []

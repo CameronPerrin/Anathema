@@ -136,15 +136,15 @@ Material:
     - _Surface: 0
     - _Translucency: 1
     - _TwoSided: 2
-    - _VertexDarkening: 0.147
-    - _WindAmbientStrength: 0.053
-    - _WindGustFreq: 9.75
-    - _WindGustStrength: 0.3
+    - _VertexDarkening: 0.033
+    - _WindAmbientStrength: 0.332
+    - _WindGustFreq: 7.82
+    - _WindGustStrength: 1
     - _WindGustTint: 0
-    - _WindObjectRand: 0
+    - _WindObjectRand: 1
     - _WindQuality: 0
     - _WindRandStrength: 0
-    - _WindSpeed: 3
+    - _WindSpeed: 0.56
     - _WindSwinging: 1
     - _WindVertexRand: 1
     - _WorkflowMode: 1
