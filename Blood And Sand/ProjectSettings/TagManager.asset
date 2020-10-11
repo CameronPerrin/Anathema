@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
   - Interact
+  - Inventory_Item
   layers:
   - Default
   - TransparentFX

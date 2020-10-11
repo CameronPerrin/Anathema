@@ -8,7 +8,7 @@ public class MainMenuController : MonoBehaviourPunCallbacks
 {
 
     [SerializeField]
-    private string sceneIndex;
+    private int sceneIndex;
 
     [SerializeField]
     private GameObject startButton;
@@ -33,7 +33,7 @@ public class MainMenuController : MonoBehaviourPunCallbacks
     }
     public override void OnJoinedRoom()
     {
-        PhotonNetwork.LoadLevel(1);
+        PhotonNetwork.LoadLevel(sceneIndex);
     }
 
 }

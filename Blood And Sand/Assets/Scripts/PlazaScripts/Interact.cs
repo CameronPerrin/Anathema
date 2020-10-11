@@ -39,6 +39,7 @@ public class Interact : MonoBehaviour
                 Cursor.lockState = CursorLockMode.None;
                 break;
             case 5: //weapon grab
+                //make it so you can only use this once. rn you can spam this
                 Debug.Log("Weapon Grab");
                 playerBoi = GameObject.FindGameObjectWithTag("Player");
                 //give the weapon to the player
@@ -46,9 +47,11 @@ public class Interact : MonoBehaviour
                 //reposition it
                 weaponShowing.position = playerBoi.transform.GetChild(2).position;
                 weaponShowing.rotation = playerBoi.transform.GetChild(2).rotation;
+                //remove money from account
                 //put it in the save file
+                playerBoi.GetComponent<InventoryController>().MainHandWeapon = weaponShowing.gameObject;
+                playerBoi.GetComponent<InventoryController>().Save();
 
-                //remove money from account and save file based on the weaponshowing.value
                 break;
             default: //default
                 Debug.Log("Default interact msg");
