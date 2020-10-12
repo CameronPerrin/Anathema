@@ -943,10 +943,10 @@ MonoBehaviour:
       colorTag: 0
     - name: GrassSingle_demoMix
       settings:
-        brushRadius: 0.62
+        brushRadius: 0.26
         brushSpacing: 0.36
         brushOverlapCheckMode: 0
-        brushOverlapDistance: 0.5
+        brushOverlapDistance: 0.65
         brushOverlapCheckObjects: 1
         brushOverlapCheckLayers:
           serializedVersion: 2
@@ -961,10 +961,10 @@ MonoBehaviour:
         randomizeOrientationZ: 0
         scaleTransformMode: 0
         scaleMode: 0
-        scaleUniformMin: 1
-        scaleUniformMax: 1
-        scalePerAxisMin: {x: 1, y: 1, z: 1}
-        scalePerAxisMax: {x: 1, y: 1, z: 1}
+        scaleUniformMin: 1.25
+        scaleUniformMax: 1.5
+        scalePerAxisMin: {x: 1, y: 0.4, z: 1}
+        scalePerAxisMax: {x: 1, y: 0.6, z: 1}
         pinFixedRotation: 0
         pinFixedRotationValue: {x: 0, y: 0, z: 0}
         pinFixedScale: 0
