@@ -6,6 +6,8 @@ using UnityEngine;
 
 public class PlayerMovementController : MonoBehaviour
 {
+    public bool isPaused = false;
+
     public GameObject rayOrigin;
 
     private PhotonView PV;
@@ -35,7 +37,7 @@ public class PlayerMovementController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (PV.IsMine)
+        if (PV.IsMine && !isPaused)
         {
 
             // RAYTRACING for Player to interact with things.
