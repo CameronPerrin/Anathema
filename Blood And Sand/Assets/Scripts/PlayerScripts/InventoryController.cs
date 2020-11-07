@@ -11,8 +11,13 @@ using System.Text;
 public class InventoryController : MonoBehaviour
 {
 
+	private Vector3 moveBy;
+	private int itemCount = 0;
+	private int saveCount = 1;
     // The weapon the player has.
     public GameObject MainHandWeapon;
+
+    public List<GameObject> inventoryList;
 
 
 	private Player_Data CreateSaveGameObject()
@@ -30,6 +35,16 @@ public class InventoryController : MonoBehaviour
 	  return data;
 	}
 
+	private int GetInvNumber(){
+		var fileNames = Directory.GetFiles(Application.persistentDataPath, "*.dat");
+
+	    foreach(var fileName in fileNames)
+	    {
+	       saveCount++;
+	    }
+	    return saveCount;
+	}
+
     public void Save()
     {
         //float test = 50;
@@ -44,7 +59,7 @@ public class InventoryController : MonoBehaviour
 		BinaryFormatter bf = new BinaryFormatter();
 
         // Stream the file with a File Stream. (Note that File.Create() 'Creates' or 'Overwrites' a file.)
-        FileStream file = File.Create(Application.persistentDataPath + "/PlayerData.dat");
+        FileStream file = File.Create(Application.persistentDataPath + "/PlayerData"+GetInvNumber()+".dat");
         // Create a new Player_Data.
      
         //Save the data.
@@ -75,7 +90,7 @@ public class InventoryController : MonoBehaviour
 
 			Debug.Log(data.object_name);
 			//find the prfab and store it in a variable to move to the palyer
-			GameObject LoadedWeapon = Instantiate(Resources.Load("prefabs/"+data.object_name)) as GameObject;
+			GameObject LoadedWeapon = Instantiate(Resources.Load("prefabs/items/"+data.object_name)) as GameObject;
 
 			//give it to the player having issues with 
 				//Setting the parent of a transform which resides in a Prefab Asset is disabled to prevent data corruption
@@ -96,10 +111,44 @@ public class InventoryController : MonoBehaviour
 
     	}
 	}
+
+	public void LoadIntoInventory(){
+
+		var fileNames = Directory.GetFiles(Application.persistentDataPath, "*.dat");
+
+	    foreach(var fileName in fileNames)
+	    {
+	    	itemCount++;
+			GameObject invPanel = Instantiate(Resources.Load("prefabs/ItemHolder")) as GameObject;
+			invPanel.transform.SetParent(this.gameObject.transform.GetChild(3).GetChild(0));
+			moveBy = new Vector3 ((Screen.width * 0.5f)+(itemCount*110), Screen.height * 0.5f, 0);
+			invPanel.transform.position = moveBy;
+	    	//Debug.Log(fileName);
+	    	if(File.Exists(fileName)){
+	    		BinaryFormatter bf = new BinaryFormatter();
+				FileStream file = File.Open(fileName, FileMode.Open);
+				Player_Data data = (Player_Data)bf.Deserialize(file);
+				file.Close();
+				GameObject LoadedItem = Instantiate(Resources.Load("prefabs/items/"+data.object_name)) as GameObject;
+				LoadedItem.transform.SetParent(this.gameObject.transform.GetChild(3).GetChild(0));
+				moveBy = new Vector3 ((Screen.width * 0.5f)+(itemCount*110), Screen.height * 0.5f, 0);
+				LoadedItem.transform.position = moveBy;
+				Debug.Log(data.object_name);
+
+    		}
+
+
+	    }
+
+
+
+	}
 }
 [System.Serializable]
 class Player_Data
 {
+	public int inv_number;
+
     public string object_name;
 
 

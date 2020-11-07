@@ -22,21 +22,29 @@ public class MouseLock : MonoBehaviour
             if(paused)
             {
                 pauseScreen.SetActive(true);
+                this.GetComponent<PlayerMovementController>().isPaused = true;
+                this.gameObject.transform.GetChild(0).gameObject.SetActive(false);
 
             }
             else if(!paused)
             {
                 pauseScreen.SetActive(false);
+                this.GetComponent<PlayerMovementController>().isPaused = false;
+                this.gameObject.transform.GetChild(0).gameObject.SetActive(true);
             }
         }
 
         if(!paused)
         {
             Cursor.lockState = CursorLockMode.Locked;
+            this.GetComponent<PlayerMovementController>().isPaused = false;
+            this.gameObject.transform.GetChild(0).gameObject.SetActive(true);
         }
         else if(paused)
         {
             Cursor.lockState = CursorLockMode.None;
+            this.GetComponent<PlayerMovementController>().isPaused = true;
+            this.gameObject.transform.GetChild(0).gameObject.SetActive(false);
         }
 
     }
