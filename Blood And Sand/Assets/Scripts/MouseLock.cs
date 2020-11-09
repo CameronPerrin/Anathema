@@ -9,15 +9,18 @@ public class MouseLock : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        pauseScreen = GameObject.FindGameObjectWithTag("PauseMenu");
+        pauseScreen.SetActive(false);
     }
 
     // Update is called once per frame
     void Update()
     {
+        //pauseScreen = GameObject.FindGameObjectWithTag("PauseMenu");
         //SUPER rough pause menu so I can hit buttons in the test scene
-        if(Input.GetKeyDown(KeyCode.Escape))
-        {   
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            
             paused = !paused;
             if(paused)
             {

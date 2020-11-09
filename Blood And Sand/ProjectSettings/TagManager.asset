@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Interact
   - Inventory_Item
+  - PauseMenu
   layers:
   - Default
   - TransparentFX
