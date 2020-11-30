@@ -13,36 +13,42 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cacheType: 6
-  lastUpdatedAtString: 2020-11-29T19:08:53.043-05:00
-  initializedAtString: 2020-11-29T18:36:18.083-05:00
+  lastUpdatedAtString: 2020-11-29T20:17:26.422-05:00
+  initializedAtString: 2020-11-29T20:15:50.594-05:00
   entries:
-  - path: Blood And Sand\Assets\Scenes\Test Scenes\CombatTesting.unity
-    fullPath: F:\Anathema\Blood And Sand\Assets\Scenes\Test Scenes\CombatTesting.unity
-    projectPath: Assets\Scenes\Test Scenes\CombatTesting.unity
-    originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
-  - path: Blood And Sand\Assets\Scenes\Test Scenes\CombatTesting.unity.meta
-    fullPath: F:\Anathema\Blood And Sand\Assets\Scenes\Test Scenes\CombatTesting.unity.meta
-    projectPath: Assets\Scenes\Test Scenes\CombatTesting.unity.meta
-    originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
-  - path: Blood And Sand\Assets\Scenes\Test Scenes\WeaponTesting.unity
-    fullPath: F:\Anathema\Blood And Sand\Assets\Scenes\Test Scenes\WeaponTesting.unity
-    projectPath: Assets\Scenes\Test Scenes\WeaponTesting.unity
+  - path: Blood And Sand\Assets\Photon\Resources\PhotonPrefabs\PhotonPlayer.prefab
+    fullPath: F:\Anathema\Blood And Sand\Assets\Photon\Resources\PhotonPrefabs\PhotonPlayer.prefab
+    projectPath: Assets\Photon\Resources\PhotonPrefabs\PhotonPlayer.prefab
     originalPath: 
     indexStatus: 0
     workTreeStatus: 3
-  - path: Blood And Sand\Assets\Scenes\Town.unity
-    fullPath: F:\Anathema\Blood And Sand\Assets\Scenes\Town.unity
-    projectPath: Assets\Scenes\Town.unity
+  - path: Blood And Sand\Assets\Prefabs\PauseMenu.prefab
+    fullPath: F:\Anathema\Blood And Sand\Assets\Prefabs\PauseMenu.prefab
+    projectPath: Assets\Prefabs\PauseMenu.prefab
     originalPath: 
     indexStatus: 0
     workTreeStatus: 3
-  - path: Blood And Sand\Assets\Scripts\TownScripts\GameFinder.cs
-    fullPath: F:\Anathema\Blood And Sand\Assets\Scripts\TownScripts\GameFinder.cs
-    projectPath: Assets\Scripts\TownScripts\GameFinder.cs
+  - path: Blood And Sand\Assets\Resources\Prefabs\InvItem.prefab
+    fullPath: F:\Anathema\Blood And Sand\Assets\Resources\Prefabs\InvItem.prefab
+    projectPath: Assets\Resources\Prefabs\InvItem.prefab
+    originalPath: 
+    indexStatus: 1
+    workTreeStatus: 1
+  - path: Blood And Sand\Assets\Resources\Prefabs\InvItem.prefab.meta
+    fullPath: F:\Anathema\Blood And Sand\Assets\Resources\Prefabs\InvItem.prefab.meta
+    projectPath: Assets\Resources\Prefabs\InvItem.prefab.meta
+    originalPath: 
+    indexStatus: 1
+    workTreeStatus: 1
+  - path: Blood And Sand\Assets\Scripts\PauseMenuController.cs
+    fullPath: F:\Anathema\Blood And Sand\Assets\Scripts\PauseMenuController.cs
+    projectPath: Assets\Scripts\PauseMenuController.cs
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 3
+  - path: Blood And Sand\Assets\Scripts\PlayerScripts\InventoryController.cs
+    fullPath: F:\Anathema\Blood And Sand\Assets\Scripts\PlayerScripts\InventoryController.cs
+    projectPath: Assets\Scripts\PlayerScripts\InventoryController.cs
     originalPath: 
     indexStatus: 0
     workTreeStatus: 3
@@ -52,39 +58,111 @@ MonoBehaviour:
     originalPath: 
     indexStatus: 0
     workTreeStatus: 3
+  - path: Blood And Sand\Library\Artifacts\06\06e28b5ff728ab52780d4d9bf80bdff4
+    fullPath: F:\Anathema\Blood And Sand\Library\Artifacts\06\06e28b5ff728ab52780d4d9bf80bdff4
+    projectPath: Library\Artifacts\06\06e28b5ff728ab52780d4d9bf80bdff4
+    originalPath: 
+    indexStatus: 1
+    workTreeStatus: 1
+  - path: Blood And Sand\Library\Artifacts\44\4483496c65e07120f927f2a5204b7b7c
+    fullPath: F:\Anathema\Blood And Sand\Library\Artifacts\44\4483496c65e07120f927f2a5204b7b7c
+    projectPath: Library\Artifacts\44\4483496c65e07120f927f2a5204b7b7c
+    originalPath: 
+    indexStatus: 1
+    workTreeStatus: 1
+  - path: Blood And Sand\Library\Artifacts\48\48bcfb1fa7a635216ef39074e4d071ad
+    fullPath: F:\Anathema\Blood And Sand\Library\Artifacts\48\48bcfb1fa7a635216ef39074e4d071ad
+    projectPath: Library\Artifacts\48\48bcfb1fa7a635216ef39074e4d071ad
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 5
+  - path: Blood And Sand\Library\Artifacts\4b\4ba5e6ef69fa02cdf0cfba5fb7a9002e
+    fullPath: F:\Anathema\Blood And Sand\Library\Artifacts\4b\4ba5e6ef69fa02cdf0cfba5fb7a9002e
+    projectPath: Library\Artifacts\4b\4ba5e6ef69fa02cdf0cfba5fb7a9002e
+    originalPath: 
+    indexStatus: 1
+    workTreeStatus: 1
   - path: Blood And Sand\Library\Artifacts\55\552c64d5a60c11c0d3d00ca1fa96351a
     fullPath: F:\Anathema\Blood And Sand\Library\Artifacts\55\552c64d5a60c11c0d3d00ca1fa96351a
     projectPath: Library\Artifacts\55\552c64d5a60c11c0d3d00ca1fa96351a
     originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
-  - path: Blood And Sand\Library\Artifacts\a3\a3bca336e36562a9a86d7a52442417f2
-    fullPath: F:\Anathema\Blood And Sand\Library\Artifacts\a3\a3bca336e36562a9a86d7a52442417f2
-    projectPath: Library\Artifacts\a3\a3bca336e36562a9a86d7a52442417f2
+    indexStatus: 0
+    workTreeStatus: 5
+  - path: Blood And Sand\Library\Artifacts\5c\5c6d128edb4df23f26dd96a5a279300d
+    fullPath: F:\Anathema\Blood And Sand\Library\Artifacts\5c\5c6d128edb4df23f26dd96a5a279300d
+    projectPath: Library\Artifacts\5c\5c6d128edb4df23f26dd96a5a279300d
     originalPath: 
     indexStatus: 1
     workTreeStatus: 1
+  - path: Blood And Sand\Library\Artifacts\67\677d625d0ebf30cb397fe76afbc3d474
+    fullPath: F:\Anathema\Blood And Sand\Library\Artifacts\67\677d625d0ebf30cb397fe76afbc3d474
+    projectPath: Library\Artifacts\67\677d625d0ebf30cb397fe76afbc3d474
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 5
+  - path: Blood And Sand\Library\Artifacts\77\77f9aeef371d4c8960bad57083259a65
+    fullPath: F:\Anathema\Blood And Sand\Library\Artifacts\77\77f9aeef371d4c8960bad57083259a65
+    projectPath: Library\Artifacts\77\77f9aeef371d4c8960bad57083259a65
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 5
+  - path: Blood And Sand\Library\Artifacts\7f\7ff6e2331c5b26ab2be0aa809a6d7710
+    fullPath: F:\Anathema\Blood And Sand\Library\Artifacts\7f\7ff6e2331c5b26ab2be0aa809a6d7710
+    projectPath: Library\Artifacts\7f\7ff6e2331c5b26ab2be0aa809a6d7710
+    originalPath: 
+    indexStatus: 1
+    workTreeStatus: 1
+  - path: Blood And Sand\Library\Artifacts\85\8587df4930871cec62e4f9de725c25d8
+    fullPath: F:\Anathema\Blood And Sand\Library\Artifacts\85\8587df4930871cec62e4f9de725c25d8
+    projectPath: Library\Artifacts\85\8587df4930871cec62e4f9de725c25d8
+    originalPath: 
+    indexStatus: 1
+    workTreeStatus: 1
+  - path: Blood And Sand\Library\Artifacts\95\95376ee1f20fe758563a09e895066b36
+    fullPath: F:\Anathema\Blood And Sand\Library\Artifacts\95\95376ee1f20fe758563a09e895066b36
+    projectPath: Library\Artifacts\95\95376ee1f20fe758563a09e895066b36
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 5
   - path: Blood And Sand\Library\Artifacts\b0\b042fd8c25e8ccd81af6243973e5f8a8
     fullPath: F:\Anathema\Blood And Sand\Library\Artifacts\b0\b042fd8c25e8ccd81af6243973e5f8a8
     projectPath: Library\Artifacts\b0\b042fd8c25e8ccd81af6243973e5f8a8
     originalPath: 
+    indexStatus: 0
+    workTreeStatus: 5
+  - path: Blood And Sand\Library\Artifacts\c1\c18a04c7a341b31f73a533b3e667fa01
+    fullPath: F:\Anathema\Blood And Sand\Library\Artifacts\c1\c18a04c7a341b31f73a533b3e667fa01
+    projectPath: Library\Artifacts\c1\c18a04c7a341b31f73a533b3e667fa01
+    originalPath: 
     indexStatus: 1
     workTreeStatus: 1
+  - path: Blood And Sand\Library\Artifacts\c2\c217a38e289449be79c7a97758633f3a
+    fullPath: F:\Anathema\Blood And Sand\Library\Artifacts\c2\c217a38e289449be79c7a97758633f3a
+    projectPath: Library\Artifacts\c2\c217a38e289449be79c7a97758633f3a
+    originalPath: 
+    indexStatus: 1
+    workTreeStatus: 1
+  - path: Blood And Sand\Library\Artifacts\c7\c70b9ff71a3b17eeeaa7eea08981af79
+    fullPath: F:\Anathema\Blood And Sand\Library\Artifacts\c7\c70b9ff71a3b17eeeaa7eea08981af79
+    projectPath: Library\Artifacts\c7\c70b9ff71a3b17eeeaa7eea08981af79
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 5
+  - path: Blood And Sand\Library\Artifacts\cc\cc82ffb50876084c17f964ea2f7bffbb
+    fullPath: F:\Anathema\Blood And Sand\Library\Artifacts\cc\cc82ffb50876084c17f964ea2f7bffbb
+    projectPath: Library\Artifacts\cc\cc82ffb50876084c17f964ea2f7bffbb
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 5
   - path: Blood And Sand\Library\Artifacts\f1\f1101d72d71c28bdb4115043f8ae6809
     fullPath: F:\Anathema\Blood And Sand\Library\Artifacts\f1\f1101d72d71c28bdb4115043f8ae6809
     projectPath: Library\Artifacts\f1\f1101d72d71c28bdb4115043f8ae6809
     originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
+    indexStatus: 0
+    workTreeStatus: 5
   - path: Blood And Sand\Library\EditorInstance.json
     fullPath: F:\Anathema\Blood And Sand\Library\EditorInstance.json
     projectPath: Library\EditorInstance.json
-    originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
-  - path: Blood And Sand\Library\EditorUserBuildSettings.asset
-    fullPath: F:\Anathema\Blood And Sand\Library\EditorUserBuildSettings.asset
-    projectPath: Library\EditorUserBuildSettings.asset
     originalPath: 
     indexStatus: 0
     workTreeStatus: 3
@@ -112,183 +190,9 @@ MonoBehaviour:
     originalPath: 
     indexStatus: 0
     workTreeStatus: 3
-  - path: Blood And Sand\Library\LastBuild.buildreport
-    fullPath: F:\Anathema\Blood And Sand\Library\LastBuild.buildreport
-    projectPath: Library\LastBuild.buildreport
-    originalPath: 
-    indexStatus: 0
-    workTreeStatus: 3
-  - path: Blood And Sand\Library\PackageManager\ProjectCache.bin
-    fullPath: F:\Anathema\Blood And Sand\Library\PackageManager\ProjectCache.bin
-    projectPath: Library\PackageManager\ProjectCache.bin
-    originalPath: 
-    indexStatus: 0
-    workTreeStatus: 3
-  - path: Blood And Sand\Library\PlayerDataCache\Win\Data\boot.config
-    fullPath: F:\Anathema\Blood And Sand\Library\PlayerDataCache\Win\Data\boot.config
-    projectPath: Library\PlayerDataCache\Win\Data\boot.config
-    originalPath: 
-    indexStatus: 0
-    workTreeStatus: 3
-  - path: Blood And Sand\Library\PlayerDataCache\Win\Data\globalgamemanagers
-    fullPath: F:\Anathema\Blood And Sand\Library\PlayerDataCache\Win\Data\globalgamemanagers
-    projectPath: Library\PlayerDataCache\Win\Data\globalgamemanagers
-    originalPath: 
-    indexStatus: 0
-    workTreeStatus: 3
-  - path: Blood And Sand\Library\PlayerDataCache\Win\Data\globalgamemanagers.assets
-    fullPath: F:\Anathema\Blood And Sand\Library\PlayerDataCache\Win\Data\globalgamemanagers.assets
-    projectPath: Library\PlayerDataCache\Win\Data\globalgamemanagers.assets
-    originalPath: 
-    indexStatus: 0
-    workTreeStatus: 3
-  - path: Blood And Sand\Library\PlayerDataCache\Win\Data\level1
-    fullPath: F:\Anathema\Blood And Sand\Library\PlayerDataCache\Win\Data\level1
-    projectPath: Library\PlayerDataCache\Win\Data\level1
-    originalPath: 
-    indexStatus: 0
-    workTreeStatus: 3
-  - path: Blood And Sand\Library\PlayerDataCache\Win\Data\level3
-    fullPath: F:\Anathema\Blood And Sand\Library\PlayerDataCache\Win\Data\level3
-    projectPath: Library\PlayerDataCache\Win\Data\level3
-    originalPath: 
-    indexStatus: 0
-    workTreeStatus: 3
-  - path: Blood And Sand\Library\PlayerDataCache\Win\Data\level4
-    fullPath: F:\Anathema\Blood And Sand\Library\PlayerDataCache\Win\Data\level4
-    projectPath: Library\PlayerDataCache\Win\Data\level4
-    originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
-  - path: Blood And Sand\Library\PlayerDataCache\Win\Data\Managed\Assembly-CSharp.dll
-    fullPath: F:\Anathema\Blood And Sand\Library\PlayerDataCache\Win\Data\Managed\Assembly-CSharp.dll
-    projectPath: Library\PlayerDataCache\Win\Data\Managed\Assembly-CSharp.dll
-    originalPath: 
-    indexStatus: 0
-    workTreeStatus: 3
-  - path: Blood And Sand\Library\PlayerDataCache\Win\Data\Managed\Cinemachine.dll
-    fullPath: F:\Anathema\Blood And Sand\Library\PlayerDataCache\Win\Data\Managed\Cinemachine.dll
-    projectPath: Library\PlayerDataCache\Win\Data\Managed\Cinemachine.dll
-    originalPath: 
-    indexStatus: 0
-    workTreeStatus: 3
-  - path: Blood And Sand\Library\PlayerDataCache\Win\Data\Managed\PhotonChat.dll
-    fullPath: F:\Anathema\Blood And Sand\Library\PlayerDataCache\Win\Data\Managed\PhotonChat.dll
-    projectPath: Library\PlayerDataCache\Win\Data\Managed\PhotonChat.dll
-    originalPath: 
-    indexStatus: 0
-    workTreeStatus: 3
-  - path: Blood And Sand\Library\PlayerDataCache\Win\Data\Managed\PhotonRealtime.dll
-    fullPath: F:\Anathema\Blood And Sand\Library\PlayerDataCache\Win\Data\Managed\PhotonRealtime.dll
-    projectPath: Library\PlayerDataCache\Win\Data\Managed\PhotonRealtime.dll
-    originalPath: 
-    indexStatus: 0
-    workTreeStatus: 3
-  - path: Blood And Sand\Library\PlayerDataCache\Win\Data\Managed\PhotonUnityNetworking.dll
-    fullPath: F:\Anathema\Blood And Sand\Library\PlayerDataCache\Win\Data\Managed\PhotonUnityNetworking.dll
-    projectPath: Library\PlayerDataCache\Win\Data\Managed\PhotonUnityNetworking.dll
-    originalPath: 
-    indexStatus: 0
-    workTreeStatus: 3
-  - path: Blood And Sand\Library\PlayerDataCache\Win\Data\Managed\PhotonUnityNetworking.Utilities.dll
-    fullPath: F:\Anathema\Blood And Sand\Library\PlayerDataCache\Win\Data\Managed\PhotonUnityNetworking.Utilities.dll
-    projectPath: Library\PlayerDataCache\Win\Data\Managed\PhotonUnityNetworking.Utilities.dll
-    originalPath: 
-    indexStatus: 0
-    workTreeStatus: 3
-  - path: Blood And Sand\Library\PlayerDataCache\Win\Data\Managed\PhotonWebSocket.dll
-    fullPath: F:\Anathema\Blood And Sand\Library\PlayerDataCache\Win\Data\Managed\PhotonWebSocket.dll
-    projectPath: Library\PlayerDataCache\Win\Data\Managed\PhotonWebSocket.dll
-    originalPath: 
-    indexStatus: 0
-    workTreeStatus: 3
-  - path: Blood And Sand\Library\PlayerDataCache\Win\Data\Managed\StylizedGrass.Runtime.dll
-    fullPath: F:\Anathema\Blood And Sand\Library\PlayerDataCache\Win\Data\Managed\StylizedGrass.Runtime.dll
-    projectPath: Library\PlayerDataCache\Win\Data\Managed\StylizedGrass.Runtime.dll
-    originalPath: 
-    indexStatus: 0
-    workTreeStatus: 3
-  - path: Blood And Sand\Library\PlayerDataCache\Win\Data\Managed\Unity.RenderPipeline.Universal.ShaderLibrary.dll
-    fullPath: F:\Anathema\Blood And Sand\Library\PlayerDataCache\Win\Data\Managed\Unity.RenderPipeline.Universal.ShaderLibrary.dll
-    projectPath: Library\PlayerDataCache\Win\Data\Managed\Unity.RenderPipeline.Universal.ShaderLibrary.dll
-    originalPath: 
-    indexStatus: 0
-    workTreeStatus: 3
-  - path: Blood And Sand\Library\PlayerDataCache\Win\Data\Managed\Unity.RenderPipelines.Core.Runtime.dll
-    fullPath: F:\Anathema\Blood And Sand\Library\PlayerDataCache\Win\Data\Managed\Unity.RenderPipelines.Core.Runtime.dll
-    projectPath: Library\PlayerDataCache\Win\Data\Managed\Unity.RenderPipelines.Core.Runtime.dll
-    originalPath: 
-    indexStatus: 0
-    workTreeStatus: 3
-  - path: Blood And Sand\Library\PlayerDataCache\Win\Data\Managed\Unity.RenderPipelines.Core.ShaderLibrary.dll
-    fullPath: F:\Anathema\Blood And Sand\Library\PlayerDataCache\Win\Data\Managed\Unity.RenderPipelines.Core.ShaderLibrary.dll
-    projectPath: Library\PlayerDataCache\Win\Data\Managed\Unity.RenderPipelines.Core.ShaderLibrary.dll
-    originalPath: 
-    indexStatus: 0
-    workTreeStatus: 3
-  - path: Blood And Sand\Library\PlayerDataCache\Win\Data\Managed\Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary.dll
-    fullPath: F:\Anathema\Blood And Sand\Library\PlayerDataCache\Win\Data\Managed\Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary.dll
-    projectPath: Library\PlayerDataCache\Win\Data\Managed\Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary.dll
-    originalPath: 
-    indexStatus: 0
-    workTreeStatus: 3
-  - path: Blood And Sand\Library\PlayerDataCache\Win\Data\Managed\Unity.RenderPipelines.Universal.Runtime.dll
-    fullPath: F:\Anathema\Blood And Sand\Library\PlayerDataCache\Win\Data\Managed\Unity.RenderPipelines.Universal.Runtime.dll
-    projectPath: Library\PlayerDataCache\Win\Data\Managed\Unity.RenderPipelines.Universal.Runtime.dll
-    originalPath: 
-    indexStatus: 0
-    workTreeStatus: 3
-  - path: Blood And Sand\Library\PlayerDataCache\Win\Data\Managed\Unity.RenderPipelines.Universal.Shaders.dll
-    fullPath: F:\Anathema\Blood And Sand\Library\PlayerDataCache\Win\Data\Managed\Unity.RenderPipelines.Universal.Shaders.dll
-    projectPath: Library\PlayerDataCache\Win\Data\Managed\Unity.RenderPipelines.Universal.Shaders.dll
-    originalPath: 
-    indexStatus: 0
-    workTreeStatus: 3
-  - path: Blood And Sand\Library\PlayerDataCache\Win\Data\Managed\Unity.TextMeshPro.dll
-    fullPath: F:\Anathema\Blood And Sand\Library\PlayerDataCache\Win\Data\Managed\Unity.TextMeshPro.dll
-    projectPath: Library\PlayerDataCache\Win\Data\Managed\Unity.TextMeshPro.dll
-    originalPath: 
-    indexStatus: 0
-    workTreeStatus: 3
-  - path: Blood And Sand\Library\PlayerDataCache\Win\Data\Managed\Unity.Timeline.dll
-    fullPath: F:\Anathema\Blood And Sand\Library\PlayerDataCache\Win\Data\Managed\Unity.Timeline.dll
-    projectPath: Library\PlayerDataCache\Win\Data\Managed\Unity.Timeline.dll
-    originalPath: 
-    indexStatus: 0
-    workTreeStatus: 3
-  - path: Blood And Sand\Library\PlayerDataCache\Win\Data\Managed\UnityEngine.UI.dll
-    fullPath: F:\Anathema\Blood And Sand\Library\PlayerDataCache\Win\Data\Managed\UnityEngine.UI.dll
-    projectPath: Library\PlayerDataCache\Win\Data\Managed\UnityEngine.UI.dll
-    originalPath: 
-    indexStatus: 0
-    workTreeStatus: 3
-  - path: Blood And Sand\Library\PlayerDataCache\Win\Data\resources.assets
-    fullPath: F:\Anathema\Blood And Sand\Library\PlayerDataCache\Win\Data\resources.assets
-    projectPath: Library\PlayerDataCache\Win\Data\resources.assets
-    originalPath: 
-    indexStatus: 0
-    workTreeStatus: 3
   - path: Blood And Sand\Library\PlayerDataCache\Win\Data\sharedassets1.assets
     fullPath: F:\Anathema\Blood And Sand\Library\PlayerDataCache\Win\Data\sharedassets1.assets
     projectPath: Library\PlayerDataCache\Win\Data\sharedassets1.assets
-    originalPath: 
-    indexStatus: 0
-    workTreeStatus: 3
-  - path: Blood And Sand\Library\PlayerDataCache\Win\Data\sharedassets3.assets
-    fullPath: F:\Anathema\Blood And Sand\Library\PlayerDataCache\Win\Data\sharedassets3.assets
-    projectPath: Library\PlayerDataCache\Win\Data\sharedassets3.assets
-    originalPath: 
-    indexStatus: 0
-    workTreeStatus: 3
-  - path: Blood And Sand\Library\PlayerDataCache\Win\Data\sharedassets4.assets
-    fullPath: F:\Anathema\Blood And Sand\Library\PlayerDataCache\Win\Data\sharedassets4.assets
-    projectPath: Library\PlayerDataCache\Win\Data\sharedassets4.assets
-    originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
-  - path: Blood And Sand\Library\PlayerDataCache\Win\ScriptsOnlyCache.yaml
-    fullPath: F:\Anathema\Blood And Sand\Library\PlayerDataCache\Win\ScriptsOnlyCache.yaml
-    projectPath: Library\PlayerDataCache\Win\ScriptsOnlyCache.yaml
     originalPath: 
     indexStatus: 0
     workTreeStatus: 3
@@ -304,9 +208,219 @@ MonoBehaviour:
     originalPath: 
     indexStatus: 0
     workTreeStatus: 3
-  - path: Blood And Sand\Library\ScriptAssemblies\Assembly-CSharp-Editor.dll
-    fullPath: F:\Anathema\Blood And Sand\Library\ScriptAssemblies\Assembly-CSharp-Editor.dll
-    projectPath: Library\ScriptAssemblies\Assembly-CSharp-Editor.dll
+  - path: Blood And Sand\Library\ScriptAssemblies\Assembly-CSharp-Editor-firstpass.dll
+    fullPath: F:\Anathema\Blood And Sand\Library\ScriptAssemblies\Assembly-CSharp-Editor-firstpass.dll
+    projectPath: Library\ScriptAssemblies\Assembly-CSharp-Editor-firstpass.dll
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 3
+  - path: Blood And Sand\Library\ScriptAssemblies\Cinemachine.dll
+    fullPath: F:\Anathema\Blood And Sand\Library\ScriptAssemblies\Cinemachine.dll
+    projectPath: Library\ScriptAssemblies\Cinemachine.dll
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 3
+  - path: Blood And Sand\Library\ScriptAssemblies\com.unity.cinemachine.editor.dll
+    fullPath: F:\Anathema\Blood And Sand\Library\ScriptAssemblies\com.unity.cinemachine.editor.dll
+    projectPath: Library\ScriptAssemblies\com.unity.cinemachine.editor.dll
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 3
+  - path: Blood And Sand\Library\ScriptAssemblies\PhotonChat.dll
+    fullPath: F:\Anathema\Blood And Sand\Library\ScriptAssemblies\PhotonChat.dll
+    projectPath: Library\ScriptAssemblies\PhotonChat.dll
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 3
+  - path: Blood And Sand\Library\ScriptAssemblies\PhotonRealtime.dll
+    fullPath: F:\Anathema\Blood And Sand\Library\ScriptAssemblies\PhotonRealtime.dll
+    projectPath: Library\ScriptAssemblies\PhotonRealtime.dll
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 3
+  - path: Blood And Sand\Library\ScriptAssemblies\PhotonUnityNetworking.dll
+    fullPath: F:\Anathema\Blood And Sand\Library\ScriptAssemblies\PhotonUnityNetworking.dll
+    projectPath: Library\ScriptAssemblies\PhotonUnityNetworking.dll
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 3
+  - path: Blood And Sand\Library\ScriptAssemblies\PhotonUnityNetworking.Editor.dll
+    fullPath: F:\Anathema\Blood And Sand\Library\ScriptAssemblies\PhotonUnityNetworking.Editor.dll
+    projectPath: Library\ScriptAssemblies\PhotonUnityNetworking.Editor.dll
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 3
+  - path: Blood And Sand\Library\ScriptAssemblies\PhotonUnityNetworking.Utilities.Culling.Editor.dll
+    fullPath: F:\Anathema\Blood And Sand\Library\ScriptAssemblies\PhotonUnityNetworking.Utilities.Culling.Editor.dll
+    projectPath: Library\ScriptAssemblies\PhotonUnityNetworking.Utilities.Culling.Editor.dll
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 3
+  - path: Blood And Sand\Library\ScriptAssemblies\PhotonUnityNetworking.Utilities.dll
+    fullPath: F:\Anathema\Blood And Sand\Library\ScriptAssemblies\PhotonUnityNetworking.Utilities.dll
+    projectPath: Library\ScriptAssemblies\PhotonUnityNetworking.Utilities.dll
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 3
+  - path: Blood And Sand\Library\ScriptAssemblies\PhotonUnityNetworking.Utilities.PhotonPlayer.Editor.dll
+    fullPath: F:\Anathema\Blood And Sand\Library\ScriptAssemblies\PhotonUnityNetworking.Utilities.PhotonPlayer.Editor.dll
+    projectPath: Library\ScriptAssemblies\PhotonUnityNetworking.Utilities.PhotonPlayer.Editor.dll
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 3
+  - path: Blood And Sand\Library\ScriptAssemblies\PhotonWebSocket.dll
+    fullPath: F:\Anathema\Blood And Sand\Library\ScriptAssemblies\PhotonWebSocket.dll
+    projectPath: Library\ScriptAssemblies\PhotonWebSocket.dll
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 3
+  - path: Blood And Sand\Library\ScriptAssemblies\StylizedGrass.Runtime.dll
+    fullPath: F:\Anathema\Blood And Sand\Library\ScriptAssemblies\StylizedGrass.Runtime.dll
+    projectPath: Library\ScriptAssemblies\StylizedGrass.Runtime.dll
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 3
+  - path: Blood And Sand\Library\ScriptAssemblies\StylizedGrass_Editor.dll
+    fullPath: F:\Anathema\Blood And Sand\Library\ScriptAssemblies\StylizedGrass_Editor.dll
+    projectPath: Library\ScriptAssemblies\StylizedGrass_Editor.dll
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 3
+  - path: Blood And Sand\Library\ScriptAssemblies\Unity.CollabProxy.Editor.dll
+    fullPath: F:\Anathema\Blood And Sand\Library\ScriptAssemblies\Unity.CollabProxy.Editor.dll
+    projectPath: Library\ScriptAssemblies\Unity.CollabProxy.Editor.dll
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 3
+  - path: Blood And Sand\Library\ScriptAssemblies\Unity.RenderPipeline.Universal.ShaderLibrary.dll
+    fullPath: F:\Anathema\Blood And Sand\Library\ScriptAssemblies\Unity.RenderPipeline.Universal.ShaderLibrary.dll
+    projectPath: Library\ScriptAssemblies\Unity.RenderPipeline.Universal.ShaderLibrary.dll
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 3
+  - path: Blood And Sand\Library\ScriptAssemblies\Unity.RenderPipelines.Core.Editor.dll
+    fullPath: F:\Anathema\Blood And Sand\Library\ScriptAssemblies\Unity.RenderPipelines.Core.Editor.dll
+    projectPath: Library\ScriptAssemblies\Unity.RenderPipelines.Core.Editor.dll
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 3
+  - path: Blood And Sand\Library\ScriptAssemblies\Unity.RenderPipelines.Core.Runtime.dll
+    fullPath: F:\Anathema\Blood And Sand\Library\ScriptAssemblies\Unity.RenderPipelines.Core.Runtime.dll
+    projectPath: Library\ScriptAssemblies\Unity.RenderPipelines.Core.Runtime.dll
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 3
+  - path: Blood And Sand\Library\ScriptAssemblies\Unity.RenderPipelines.Core.ShaderLibrary.dll
+    fullPath: F:\Anathema\Blood And Sand\Library\ScriptAssemblies\Unity.RenderPipelines.Core.ShaderLibrary.dll
+    projectPath: Library\ScriptAssemblies\Unity.RenderPipelines.Core.ShaderLibrary.dll
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 3
+  - path: Blood And Sand\Library\ScriptAssemblies\Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary.dll
+    fullPath: F:\Anathema\Blood And Sand\Library\ScriptAssemblies\Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary.dll
+    projectPath: Library\ScriptAssemblies\Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary.dll
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 3
+  - path: Blood And Sand\Library\ScriptAssemblies\Unity.RenderPipelines.Universal.Editor.dll
+    fullPath: F:\Anathema\Blood And Sand\Library\ScriptAssemblies\Unity.RenderPipelines.Universal.Editor.dll
+    projectPath: Library\ScriptAssemblies\Unity.RenderPipelines.Universal.Editor.dll
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 3
+  - path: Blood And Sand\Library\ScriptAssemblies\Unity.RenderPipelines.Universal.Runtime.dll
+    fullPath: F:\Anathema\Blood And Sand\Library\ScriptAssemblies\Unity.RenderPipelines.Universal.Runtime.dll
+    projectPath: Library\ScriptAssemblies\Unity.RenderPipelines.Universal.Runtime.dll
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 3
+  - path: Blood And Sand\Library\ScriptAssemblies\Unity.RenderPipelines.Universal.Shaders.dll
+    fullPath: F:\Anathema\Blood And Sand\Library\ScriptAssemblies\Unity.RenderPipelines.Universal.Shaders.dll
+    projectPath: Library\ScriptAssemblies\Unity.RenderPipelines.Universal.Shaders.dll
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 3
+  - path: Blood And Sand\Library\ScriptAssemblies\Unity.Rider.Editor.dll
+    fullPath: F:\Anathema\Blood And Sand\Library\ScriptAssemblies\Unity.Rider.Editor.dll
+    projectPath: Library\ScriptAssemblies\Unity.Rider.Editor.dll
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 3
+  - path: Blood And Sand\Library\ScriptAssemblies\Unity.Searcher.Editor.dll
+    fullPath: F:\Anathema\Blood And Sand\Library\ScriptAssemblies\Unity.Searcher.Editor.dll
+    projectPath: Library\ScriptAssemblies\Unity.Searcher.Editor.dll
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 3
+  - path: Blood And Sand\Library\ScriptAssemblies\Unity.ShaderGraph.Editor.dll
+    fullPath: F:\Anathema\Blood And Sand\Library\ScriptAssemblies\Unity.ShaderGraph.Editor.dll
+    projectPath: Library\ScriptAssemblies\Unity.ShaderGraph.Editor.dll
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 3
+  - path: Blood And Sand\Library\ScriptAssemblies\Unity.ShaderGraph.Utilities.dll
+    fullPath: F:\Anathema\Blood And Sand\Library\ScriptAssemblies\Unity.ShaderGraph.Utilities.dll
+    projectPath: Library\ScriptAssemblies\Unity.ShaderGraph.Utilities.dll
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 3
+  - path: Blood And Sand\Library\ScriptAssemblies\Unity.TextMeshPro.dll
+    fullPath: F:\Anathema\Blood And Sand\Library\ScriptAssemblies\Unity.TextMeshPro.dll
+    projectPath: Library\ScriptAssemblies\Unity.TextMeshPro.dll
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 3
+  - path: Blood And Sand\Library\ScriptAssemblies\Unity.TextMeshPro.Editor.dll
+    fullPath: F:\Anathema\Blood And Sand\Library\ScriptAssemblies\Unity.TextMeshPro.Editor.dll
+    projectPath: Library\ScriptAssemblies\Unity.TextMeshPro.Editor.dll
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 3
+  - path: Blood And Sand\Library\ScriptAssemblies\Unity.Timeline.dll
+    fullPath: F:\Anathema\Blood And Sand\Library\ScriptAssemblies\Unity.Timeline.dll
+    projectPath: Library\ScriptAssemblies\Unity.Timeline.dll
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 3
+  - path: Blood And Sand\Library\ScriptAssemblies\Unity.Timeline.Editor.dll
+    fullPath: F:\Anathema\Blood And Sand\Library\ScriptAssemblies\Unity.Timeline.Editor.dll
+    projectPath: Library\ScriptAssemblies\Unity.Timeline.Editor.dll
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 3
+  - path: Blood And Sand\Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll
+    fullPath: F:\Anathema\Blood And Sand\Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll
+    projectPath: Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 3
+  - path: Blood And Sand\Library\ScriptAssemblies\Unity.VSCode.Editor.dll
+    fullPath: F:\Anathema\Blood And Sand\Library\ScriptAssemblies\Unity.VSCode.Editor.dll
+    projectPath: Library\ScriptAssemblies\Unity.VSCode.Editor.dll
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 3
+  - path: Blood And Sand\Library\ScriptAssemblies\UnityEditor.TestRunner.dll
+    fullPath: F:\Anathema\Blood And Sand\Library\ScriptAssemblies\UnityEditor.TestRunner.dll
+    projectPath: Library\ScriptAssemblies\UnityEditor.TestRunner.dll
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 3
+  - path: Blood And Sand\Library\ScriptAssemblies\UnityEditor.UI.dll
+    fullPath: F:\Anathema\Blood And Sand\Library\ScriptAssemblies\UnityEditor.UI.dll
+    projectPath: Library\ScriptAssemblies\UnityEditor.UI.dll
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 3
+  - path: Blood And Sand\Library\ScriptAssemblies\UnityEngine.TestRunner.dll
+    fullPath: F:\Anathema\Blood And Sand\Library\ScriptAssemblies\UnityEngine.TestRunner.dll
+    projectPath: Library\ScriptAssemblies\UnityEngine.TestRunner.dll
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 3
+  - path: Blood And Sand\Library\ScriptAssemblies\UnityEngine.UI.dll
+    fullPath: F:\Anathema\Blood And Sand\Library\ScriptAssemblies\UnityEngine.UI.dll
+    projectPath: Library\ScriptAssemblies\UnityEngine.UI.dll
     originalPath: 
     indexStatus: 0
     workTreeStatus: 3
@@ -328,48 +442,6 @@ MonoBehaviour:
     originalPath: 
     indexStatus: 0
     workTreeStatus: 3
-  - path: Blood And Sand\Library\shadercompiler-UnityShaderCompiler.exe1.log
-    fullPath: F:\Anathema\Blood And Sand\Library\shadercompiler-UnityShaderCompiler.exe1.log
-    projectPath: Library\shadercompiler-UnityShaderCompiler.exe1.log
-    originalPath: 
-    indexStatus: 0
-    workTreeStatus: 3
-  - path: Blood And Sand\Library\shadercompiler-UnityShaderCompiler.exe2.log
-    fullPath: F:\Anathema\Blood And Sand\Library\shadercompiler-UnityShaderCompiler.exe2.log
-    projectPath: Library\shadercompiler-UnityShaderCompiler.exe2.log
-    originalPath: 
-    indexStatus: 0
-    workTreeStatus: 3
-  - path: Blood And Sand\Library\shadercompiler-UnityShaderCompiler.exe3.log
-    fullPath: F:\Anathema\Blood And Sand\Library\shadercompiler-UnityShaderCompiler.exe3.log
-    projectPath: Library\shadercompiler-UnityShaderCompiler.exe3.log
-    originalPath: 
-    indexStatus: 0
-    workTreeStatus: 3
-  - path: Blood And Sand\Library\shadercompiler-UnityShaderCompiler.exe4.log
-    fullPath: F:\Anathema\Blood And Sand\Library\shadercompiler-UnityShaderCompiler.exe4.log
-    projectPath: Library\shadercompiler-UnityShaderCompiler.exe4.log
-    originalPath: 
-    indexStatus: 0
-    workTreeStatus: 3
-  - path: Blood And Sand\Library\shadercompiler-UnityShaderCompiler.exe5.log
-    fullPath: F:\Anathema\Blood And Sand\Library\shadercompiler-UnityShaderCompiler.exe5.log
-    projectPath: Library\shadercompiler-UnityShaderCompiler.exe5.log
-    originalPath: 
-    indexStatus: 0
-    workTreeStatus: 3
-  - path: Blood And Sand\Library\shadercompiler-UnityShaderCompiler.exe6.log
-    fullPath: F:\Anathema\Blood And Sand\Library\shadercompiler-UnityShaderCompiler.exe6.log
-    projectPath: Library\shadercompiler-UnityShaderCompiler.exe6.log
-    originalPath: 
-    indexStatus: 0
-    workTreeStatus: 3
-  - path: Blood And Sand\Library\shadercompiler-UnityShaderCompiler.exe7.log
-    fullPath: F:\Anathema\Blood And Sand\Library\shadercompiler-UnityShaderCompiler.exe7.log
-    projectPath: Library\shadercompiler-UnityShaderCompiler.exe7.log
-    originalPath: 
-    indexStatus: 0
-    workTreeStatus: 3
   - path: Blood And Sand\Library\SourceAssetDB
     fullPath: F:\Anathema\Blood And Sand\Library\SourceAssetDB
     projectPath: Library\SourceAssetDB
@@ -382,15 +454,45 @@ MonoBehaviour:
     originalPath: 
     indexStatus: 0
     workTreeStatus: 3
-  - path: Blood And Sand\Library\StateCache\SceneView\c5\c53b84471525cf0e8608a3cb65b87400.json
-    fullPath: F:\Anathema\Blood And Sand\Library\StateCache\SceneView\c5\c53b84471525cf0e8608a3cb65b87400.json
-    projectPath: Library\StateCache\SceneView\c5\c53b84471525cf0e8608a3cb65b87400.json
+  - path: Blood And Sand\Library\StateCache\PrefabStageHierarchy\16\16a80170b57a7407ef043c8169767e1e.json
+    fullPath: F:\Anathema\Blood And Sand\Library\StateCache\PrefabStageHierarchy\16\16a80170b57a7407ef043c8169767e1e.json
+    projectPath: Library\StateCache\PrefabStageHierarchy\16\16a80170b57a7407ef043c8169767e1e.json
     originalPath: 
     indexStatus: 0
     workTreeStatus: 3
-  - path: Blood And Sand\ProjectSettings\EditorBuildSettings.asset
-    fullPath: F:\Anathema\Blood And Sand\ProjectSettings\EditorBuildSettings.asset
-    projectPath: ProjectSettings\EditorBuildSettings.asset
+  - path: Blood And Sand\Library\StateCache\PrefabStageHierarchy\24\24ff798be88febe7590ab9cfbb284ec4.json
+    fullPath: F:\Anathema\Blood And Sand\Library\StateCache\PrefabStageHierarchy\24\24ff798be88febe7590ab9cfbb284ec4.json
+    projectPath: Library\StateCache\PrefabStageHierarchy\24\24ff798be88febe7590ab9cfbb284ec4.json
+    originalPath: 
+    indexStatus: 1
+    workTreeStatus: 1
+  - path: Blood And Sand\Library\StateCache\PrefabStageHierarchy\e8\e87b24b6ada6a3374ae23e9e3f9caa81.json
+    fullPath: F:\Anathema\Blood And Sand\Library\StateCache\PrefabStageHierarchy\e8\e87b24b6ada6a3374ae23e9e3f9caa81.json
+    projectPath: Library\StateCache\PrefabStageHierarchy\e8\e87b24b6ada6a3374ae23e9e3f9caa81.json
+    originalPath: 
+    indexStatus: 1
+    workTreeStatus: 1
+  - path: Blood And Sand\Library\StateCache\SceneView\5f\5f7b27c913e26ef665877d4ded229eb4.json
+    fullPath: F:\Anathema\Blood And Sand\Library\StateCache\SceneView\5f\5f7b27c913e26ef665877d4ded229eb4.json
+    projectPath: Library\StateCache\SceneView\5f\5f7b27c913e26ef665877d4ded229eb4.json
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 3
+  - path: Blood And Sand\Library\StateCache\SceneView\6e\6e6afa023f8513d3ebd3e434397d4760.json
+    fullPath: F:\Anathema\Blood And Sand\Library\StateCache\SceneView\6e\6e6afa023f8513d3ebd3e434397d4760.json
+    projectPath: Library\StateCache\SceneView\6e\6e6afa023f8513d3ebd3e434397d4760.json
+    originalPath: 
+    indexStatus: 1
+    workTreeStatus: 1
+  - path: Blood And Sand\Library\StateCache\SceneView\c1\c13cfad8168398fc51bb7c2ba9ce3cf9.json
+    fullPath: F:\Anathema\Blood And Sand\Library\StateCache\SceneView\c1\c13cfad8168398fc51bb7c2ba9ce3cf9.json
+    projectPath: Library\StateCache\SceneView\c1\c13cfad8168398fc51bb7c2ba9ce3cf9.json
+    originalPath: 
+    indexStatus: 1
+    workTreeStatus: 1
+  - path: Blood And Sand\Library\StateCache\SceneView\c5\c53b84471525cf0e8608a3cb65b87400.json
+    fullPath: F:\Anathema\Blood And Sand\Library\StateCache\SceneView\c5\c53b84471525cf0e8608a3cb65b87400.json
+    projectPath: Library\StateCache\SceneView\c5\c53b84471525cf0e8608a3cb65b87400.json
     originalPath: 
     indexStatus: 0
     workTreeStatus: 3
@@ -398,35 +500,89 @@ MonoBehaviour:
     fullPath: F:\Anathema\Blood And Sand\Temp\__Backupscenes\0.backup
     projectPath: Temp\__Backupscenes\0.backup
     originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
+    indexStatus: 0
+    workTreeStatus: 3
   - path: Blood And Sand\Temp\tempFile.res
     fullPath: F:\Anathema\Blood And Sand\Temp\tempFile.res
     projectPath: Temp\tempFile.res
     originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
+    indexStatus: 0
+    workTreeStatus: 5
   - path: Blood And Sand\Temp\tempFile.resG
     fullPath: F:\Anathema\Blood And Sand\Temp\tempFile.resG
     projectPath: Temp\tempFile.resG
     originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
+    indexStatus: 0
+    workTreeStatus: 5
   - path: Blood And Sand\Temp\tempFile.resS
     fullPath: F:\Anathema\Blood And Sand\Temp\tempFile.resS
     projectPath: Temp\tempFile.resS
     originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
+    indexStatus: 0
+    workTreeStatus: 5
   - path: Blood And Sand\Temp\UnityLockfile
     fullPath: F:\Anathema\Blood And Sand\Temp\UnityLockfile
     projectPath: Temp\UnityLockfile
     originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
+    indexStatus: 0
+    workTreeStatus: 3
   - path: Blood And Sand\Temp\UnityTempFile-03562d1685fbb294bb43f3b4a2abe02c
     fullPath: F:\Anathema\Blood And Sand\Temp\UnityTempFile-03562d1685fbb294bb43f3b4a2abe02c
     projectPath: Temp\UnityTempFile-03562d1685fbb294bb43f3b4a2abe02c
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 5
+  - path: Blood And Sand\Temp\UnityTempFile-08c5257790a71bb4ba7e20812ea0081c
+    fullPath: F:\Anathema\Blood And Sand\Temp\UnityTempFile-08c5257790a71bb4ba7e20812ea0081c
+    projectPath: Temp\UnityTempFile-08c5257790a71bb4ba7e20812ea0081c
+    originalPath: 
+    indexStatus: 1
+    workTreeStatus: 1
+  - path: Blood And Sand\Temp\UnityTempFile-0bded218d70ec4042acf82fd3d733fb8
+    fullPath: F:\Anathema\Blood And Sand\Temp\UnityTempFile-0bded218d70ec4042acf82fd3d733fb8
+    projectPath: Temp\UnityTempFile-0bded218d70ec4042acf82fd3d733fb8
+    originalPath: 
+    indexStatus: 1
+    workTreeStatus: 1
+  - path: Blood And Sand\Temp\UnityTempFile-0f21bf8a85c610c4693ef7114a0b72af
+    fullPath: F:\Anathema\Blood And Sand\Temp\UnityTempFile-0f21bf8a85c610c4693ef7114a0b72af
+    projectPath: Temp\UnityTempFile-0f21bf8a85c610c4693ef7114a0b72af
+    originalPath: 
+    indexStatus: 1
+    workTreeStatus: 1
+  - path: Blood And Sand\Temp\UnityTempFile-163da186a5bf0b6468204c77e8bb22dc
+    fullPath: F:\Anathema\Blood And Sand\Temp\UnityTempFile-163da186a5bf0b6468204c77e8bb22dc
+    projectPath: Temp\UnityTempFile-163da186a5bf0b6468204c77e8bb22dc
+    originalPath: 
+    indexStatus: 1
+    workTreeStatus: 1
+  - path: Blood And Sand\Temp\UnityTempFile-17d481174671c8e4d9b2605210e2d5d3
+    fullPath: F:\Anathema\Blood And Sand\Temp\UnityTempFile-17d481174671c8e4d9b2605210e2d5d3
+    projectPath: Temp\UnityTempFile-17d481174671c8e4d9b2605210e2d5d3
+    originalPath: 
+    indexStatus: 1
+    workTreeStatus: 1
+  - path: Blood And Sand\Temp\UnityTempFile-1a052fba378bdcc4ea6968851dc435a4
+    fullPath: F:\Anathema\Blood And Sand\Temp\UnityTempFile-1a052fba378bdcc4ea6968851dc435a4
+    projectPath: Temp\UnityTempFile-1a052fba378bdcc4ea6968851dc435a4
+    originalPath: 
+    indexStatus: 1
+    workTreeStatus: 1
+  - path: Blood And Sand\Temp\UnityTempFile-1ada3c5a9664e27498da2b24f29d4ca0
+    fullPath: F:\Anathema\Blood And Sand\Temp\UnityTempFile-1ada3c5a9664e27498da2b24f29d4ca0
+    projectPath: Temp\UnityTempFile-1ada3c5a9664e27498da2b24f29d4ca0
+    originalPath: 
+    indexStatus: 1
+    workTreeStatus: 1
+  - path: Blood And Sand\Temp\UnityTempFile-1b1eb7165c639e24a955065296c0a0c5
+    fullPath: F:\Anathema\Blood And Sand\Temp\UnityTempFile-1b1eb7165c639e24a955065296c0a0c5
+    projectPath: Temp\UnityTempFile-1b1eb7165c639e24a955065296c0a0c5
+    originalPath: 
+    indexStatus: 1
+    workTreeStatus: 1
+  - path: Blood And Sand\Temp\UnityTempFile-1d40ab7f55680b04d9e75496168a97fa
+    fullPath: F:\Anathema\Blood And Sand\Temp\UnityTempFile-1d40ab7f55680b04d9e75496168a97fa
+    projectPath: Temp\UnityTempFile-1d40ab7f55680b04d9e75496168a97fa
     originalPath: 
     indexStatus: 1
     workTreeStatus: 1
@@ -434,11 +590,53 @@ MonoBehaviour:
     fullPath: F:\Anathema\Blood And Sand\Temp\UnityTempFile-2461d7ed3d746bf41947298719460a86
     projectPath: Temp\UnityTempFile-2461d7ed3d746bf41947298719460a86
     originalPath: 
+    indexStatus: 0
+    workTreeStatus: 5
+  - path: Blood And Sand\Temp\UnityTempFile-27614733771a41441984777236b889b0
+    fullPath: F:\Anathema\Blood And Sand\Temp\UnityTempFile-27614733771a41441984777236b889b0
+    projectPath: Temp\UnityTempFile-27614733771a41441984777236b889b0
+    originalPath: 
+    indexStatus: 1
+    workTreeStatus: 1
+  - path: Blood And Sand\Temp\UnityTempFile-293320d2b081d8d42add15d25c9a7296
+    fullPath: F:\Anathema\Blood And Sand\Temp\UnityTempFile-293320d2b081d8d42add15d25c9a7296
+    projectPath: Temp\UnityTempFile-293320d2b081d8d42add15d25c9a7296
+    originalPath: 
+    indexStatus: 1
+    workTreeStatus: 1
+  - path: Blood And Sand\Temp\UnityTempFile-2d0b9de13a8b7d64ea9502a148671ad4
+    fullPath: F:\Anathema\Blood And Sand\Temp\UnityTempFile-2d0b9de13a8b7d64ea9502a148671ad4
+    projectPath: Temp\UnityTempFile-2d0b9de13a8b7d64ea9502a148671ad4
+    originalPath: 
+    indexStatus: 1
+    workTreeStatus: 1
+  - path: Blood And Sand\Temp\UnityTempFile-300c0e5da5729db418205a8ac0868930
+    fullPath: F:\Anathema\Blood And Sand\Temp\UnityTempFile-300c0e5da5729db418205a8ac0868930
+    projectPath: Temp\UnityTempFile-300c0e5da5729db418205a8ac0868930
+    originalPath: 
+    indexStatus: 1
+    workTreeStatus: 1
+  - path: Blood And Sand\Temp\UnityTempFile-33bf8a2918264ef4f94236fe33fa222c
+    fullPath: F:\Anathema\Blood And Sand\Temp\UnityTempFile-33bf8a2918264ef4f94236fe33fa222c
+    projectPath: Temp\UnityTempFile-33bf8a2918264ef4f94236fe33fa222c
+    originalPath: 
     indexStatus: 1
     workTreeStatus: 1
   - path: Blood And Sand\Temp\UnityTempFile-33c92f705a68e6c409eb61d1ff3f367d
     fullPath: F:\Anathema\Blood And Sand\Temp\UnityTempFile-33c92f705a68e6c409eb61d1ff3f367d
     projectPath: Temp\UnityTempFile-33c92f705a68e6c409eb61d1ff3f367d
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 5
+  - path: Blood And Sand\Temp\UnityTempFile-34adac237563c98459570d5d674ef0ac
+    fullPath: F:\Anathema\Blood And Sand\Temp\UnityTempFile-34adac237563c98459570d5d674ef0ac
+    projectPath: Temp\UnityTempFile-34adac237563c98459570d5d674ef0ac
+    originalPath: 
+    indexStatus: 1
+    workTreeStatus: 1
+  - path: Blood And Sand\Temp\UnityTempFile-398b0e4ae29d8fa42b14e4c7c8a5c72b
+    fullPath: F:\Anathema\Blood And Sand\Temp\UnityTempFile-398b0e4ae29d8fa42b14e4c7c8a5c72b
+    projectPath: Temp\UnityTempFile-398b0e4ae29d8fa42b14e4c7c8a5c72b
     originalPath: 
     indexStatus: 1
     workTreeStatus: 1
@@ -446,11 +644,35 @@ MonoBehaviour:
     fullPath: F:\Anathema\Blood And Sand\Temp\UnityTempFile-3a42cdbcfc17d6240834296d035f26e1
     projectPath: Temp\UnityTempFile-3a42cdbcfc17d6240834296d035f26e1
     originalPath: 
+    indexStatus: 0
+    workTreeStatus: 5
+  - path: Blood And Sand\Temp\UnityTempFile-3d84977728be6f9408db16cbb14c2442
+    fullPath: F:\Anathema\Blood And Sand\Temp\UnityTempFile-3d84977728be6f9408db16cbb14c2442
+    projectPath: Temp\UnityTempFile-3d84977728be6f9408db16cbb14c2442
+    originalPath: 
     indexStatus: 1
     workTreeStatus: 1
   - path: Blood And Sand\Temp\UnityTempFile-3f5b0c7882931384689c8d04eafce888
     fullPath: F:\Anathema\Blood And Sand\Temp\UnityTempFile-3f5b0c7882931384689c8d04eafce888
     projectPath: Temp\UnityTempFile-3f5b0c7882931384689c8d04eafce888
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 5
+  - path: Blood And Sand\Temp\UnityTempFile-42ff62b6cbeab2047a89b83eba8fcf1d
+    fullPath: F:\Anathema\Blood And Sand\Temp\UnityTempFile-42ff62b6cbeab2047a89b83eba8fcf1d
+    projectPath: Temp\UnityTempFile-42ff62b6cbeab2047a89b83eba8fcf1d
+    originalPath: 
+    indexStatus: 1
+    workTreeStatus: 1
+  - path: Blood And Sand\Temp\UnityTempFile-4690a966848167f45bc3756e1aac22ff
+    fullPath: F:\Anathema\Blood And Sand\Temp\UnityTempFile-4690a966848167f45bc3756e1aac22ff
+    projectPath: Temp\UnityTempFile-4690a966848167f45bc3756e1aac22ff
+    originalPath: 
+    indexStatus: 1
+    workTreeStatus: 1
+  - path: Blood And Sand\Temp\UnityTempFile-4e6873c1353d6bb489221ac657ac6e6a
+    fullPath: F:\Anathema\Blood And Sand\Temp\UnityTempFile-4e6873c1353d6bb489221ac657ac6e6a
+    projectPath: Temp\UnityTempFile-4e6873c1353d6bb489221ac657ac6e6a
     originalPath: 
     indexStatus: 1
     workTreeStatus: 1
@@ -458,17 +680,35 @@ MonoBehaviour:
     fullPath: F:\Anathema\Blood And Sand\Temp\UnityTempFile-4e7a994fa0575fe4a85ebc513bc5df5a
     projectPath: Temp\UnityTempFile-4e7a994fa0575fe4a85ebc513bc5df5a
     originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
+    indexStatus: 0
+    workTreeStatus: 5
   - path: Blood And Sand\Temp\UnityTempFile-56a5ac0bc5daa084582cedfbf5e553a6
     fullPath: F:\Anathema\Blood And Sand\Temp\UnityTempFile-56a5ac0bc5daa084582cedfbf5e553a6
     projectPath: Temp\UnityTempFile-56a5ac0bc5daa084582cedfbf5e553a6
     originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
+    indexStatus: 0
+    workTreeStatus: 5
   - path: Blood And Sand\Temp\UnityTempFile-580ffe75d9212774ab3f6beabba5d88c
     fullPath: F:\Anathema\Blood And Sand\Temp\UnityTempFile-580ffe75d9212774ab3f6beabba5d88c
     projectPath: Temp\UnityTempFile-580ffe75d9212774ab3f6beabba5d88c
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 5
+  - path: Blood And Sand\Temp\UnityTempFile-5f3105211d73fbc47a26fe2434085b92
+    fullPath: F:\Anathema\Blood And Sand\Temp\UnityTempFile-5f3105211d73fbc47a26fe2434085b92
+    projectPath: Temp\UnityTempFile-5f3105211d73fbc47a26fe2434085b92
+    originalPath: 
+    indexStatus: 1
+    workTreeStatus: 1
+  - path: Blood And Sand\Temp\UnityTempFile-6294bc4fce963ab4baeaae647d4392a0
+    fullPath: F:\Anathema\Blood And Sand\Temp\UnityTempFile-6294bc4fce963ab4baeaae647d4392a0
+    projectPath: Temp\UnityTempFile-6294bc4fce963ab4baeaae647d4392a0
+    originalPath: 
+    indexStatus: 1
+    workTreeStatus: 1
+  - path: Blood And Sand\Temp\UnityTempFile-6ae31f00e9a677f4b8055932415702e3
+    fullPath: F:\Anathema\Blood And Sand\Temp\UnityTempFile-6ae31f00e9a677f4b8055932415702e3
+    projectPath: Temp\UnityTempFile-6ae31f00e9a677f4b8055932415702e3
     originalPath: 
     indexStatus: 1
     workTreeStatus: 1
@@ -476,11 +716,23 @@ MonoBehaviour:
     fullPath: F:\Anathema\Blood And Sand\Temp\UnityTempFile-6c7b655884cfbda47b51b0808976c6a3
     projectPath: Temp\UnityTempFile-6c7b655884cfbda47b51b0808976c6a3
     originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
+    indexStatus: 0
+    workTreeStatus: 5
   - path: Blood And Sand\Temp\UnityTempFile-6dc55b886c2f80147922bd6463b70ebc
     fullPath: F:\Anathema\Blood And Sand\Temp\UnityTempFile-6dc55b886c2f80147922bd6463b70ebc
     projectPath: Temp\UnityTempFile-6dc55b886c2f80147922bd6463b70ebc
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 5
+  - path: Blood And Sand\Temp\UnityTempFile-7fd6c9308294c5c4f8f136e67006dabf
+    fullPath: F:\Anathema\Blood And Sand\Temp\UnityTempFile-7fd6c9308294c5c4f8f136e67006dabf
+    projectPath: Temp\UnityTempFile-7fd6c9308294c5c4f8f136e67006dabf
+    originalPath: 
+    indexStatus: 1
+    workTreeStatus: 1
+  - path: Blood And Sand\Temp\UnityTempFile-80f371b86ca804b4990dd81fab4fcab5
+    fullPath: F:\Anathema\Blood And Sand\Temp\UnityTempFile-80f371b86ca804b4990dd81fab4fcab5
+    projectPath: Temp\UnityTempFile-80f371b86ca804b4990dd81fab4fcab5
     originalPath: 
     indexStatus: 1
     workTreeStatus: 1
@@ -488,11 +740,23 @@ MonoBehaviour:
     fullPath: F:\Anathema\Blood And Sand\Temp\UnityTempFile-87eedc07eaf83854889d07233fb39217
     projectPath: Temp\UnityTempFile-87eedc07eaf83854889d07233fb39217
     originalPath: 
+    indexStatus: 0
+    workTreeStatus: 5
+  - path: Blood And Sand\Temp\UnityTempFile-88d1308bdea7bbd488cd9ba7cffbc226
+    fullPath: F:\Anathema\Blood And Sand\Temp\UnityTempFile-88d1308bdea7bbd488cd9ba7cffbc226
+    projectPath: Temp\UnityTempFile-88d1308bdea7bbd488cd9ba7cffbc226
+    originalPath: 
     indexStatus: 1
     workTreeStatus: 1
   - path: Blood And Sand\Temp\UnityTempFile-8c18b5860962544409ef9abbb400d37b
     fullPath: F:\Anathema\Blood And Sand\Temp\UnityTempFile-8c18b5860962544409ef9abbb400d37b
     projectPath: Temp\UnityTempFile-8c18b5860962544409ef9abbb400d37b
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 5
+  - path: Blood And Sand\Temp\UnityTempFile-8c6338c52746b554ca35edfd27ec8847
+    fullPath: F:\Anathema\Blood And Sand\Temp\UnityTempFile-8c6338c52746b554ca35edfd27ec8847
+    projectPath: Temp\UnityTempFile-8c6338c52746b554ca35edfd27ec8847
     originalPath: 
     indexStatus: 1
     workTreeStatus: 1
@@ -500,17 +764,23 @@ MonoBehaviour:
     fullPath: F:\Anathema\Blood And Sand\Temp\UnityTempFile-8cb72337e9d9eff45991eecae786672c
     projectPath: Temp\UnityTempFile-8cb72337e9d9eff45991eecae786672c
     originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
+    indexStatus: 0
+    workTreeStatus: 5
   - path: Blood And Sand\Temp\UnityTempFile-8ffe201b4f6b88742b596ae87c347178
     fullPath: F:\Anathema\Blood And Sand\Temp\UnityTempFile-8ffe201b4f6b88742b596ae87c347178
     projectPath: Temp\UnityTempFile-8ffe201b4f6b88742b596ae87c347178
     originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
+    indexStatus: 0
+    workTreeStatus: 5
   - path: Blood And Sand\Temp\UnityTempFile-91a468ebcead1744e87199c3d5e0a952
     fullPath: F:\Anathema\Blood And Sand\Temp\UnityTempFile-91a468ebcead1744e87199c3d5e0a952
     projectPath: Temp\UnityTempFile-91a468ebcead1744e87199c3d5e0a952
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 5
+  - path: Blood And Sand\Temp\UnityTempFile-9e7a2756758982a42a43984bb1c41378
+    fullPath: F:\Anathema\Blood And Sand\Temp\UnityTempFile-9e7a2756758982a42a43984bb1c41378
+    projectPath: Temp\UnityTempFile-9e7a2756758982a42a43984bb1c41378
     originalPath: 
     indexStatus: 1
     workTreeStatus: 1
@@ -518,17 +788,29 @@ MonoBehaviour:
     fullPath: F:\Anathema\Blood And Sand\Temp\UnityTempFile-a32680ba2bf81294fab9238723010872
     projectPath: Temp\UnityTempFile-a32680ba2bf81294fab9238723010872
     originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
+    indexStatus: 0
+    workTreeStatus: 5
   - path: Blood And Sand\Temp\UnityTempFile-b094928e66831274cbf9c449d3dda5b9
     fullPath: F:\Anathema\Blood And Sand\Temp\UnityTempFile-b094928e66831274cbf9c449d3dda5b9
     projectPath: Temp\UnityTempFile-b094928e66831274cbf9c449d3dda5b9
     originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
+    indexStatus: 0
+    workTreeStatus: 5
   - path: Blood And Sand\Temp\UnityTempFile-be528a3c389639249bf07e8a540d1c05
     fullPath: F:\Anathema\Blood And Sand\Temp\UnityTempFile-be528a3c389639249bf07e8a540d1c05
     projectPath: Temp\UnityTempFile-be528a3c389639249bf07e8a540d1c05
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 5
+  - path: Blood And Sand\Temp\UnityTempFile-bed7fabf12c434941bbbad08407586bc
+    fullPath: F:\Anathema\Blood And Sand\Temp\UnityTempFile-bed7fabf12c434941bbbad08407586bc
+    projectPath: Temp\UnityTempFile-bed7fabf12c434941bbbad08407586bc
+    originalPath: 
+    indexStatus: 1
+    workTreeStatus: 1
+  - path: Blood And Sand\Temp\UnityTempFile-bfd40ae3cdbc83e4e9737dac38a0846f
+    fullPath: F:\Anathema\Blood And Sand\Temp\UnityTempFile-bfd40ae3cdbc83e4e9737dac38a0846f
+    projectPath: Temp\UnityTempFile-bfd40ae3cdbc83e4e9737dac38a0846f
     originalPath: 
     indexStatus: 1
     workTreeStatus: 1
@@ -536,23 +818,65 @@ MonoBehaviour:
     fullPath: F:\Anathema\Blood And Sand\Temp\UnityTempFile-c4c2e2172e4e7e142a81491e1220aeb3
     projectPath: Temp\UnityTempFile-c4c2e2172e4e7e142a81491e1220aeb3
     originalPath: 
+    indexStatus: 0
+    workTreeStatus: 5
+  - path: Blood And Sand\Temp\UnityTempFile-c5b32868c08829b4e864d3fc67021272
+    fullPath: F:\Anathema\Blood And Sand\Temp\UnityTempFile-c5b32868c08829b4e864d3fc67021272
+    projectPath: Temp\UnityTempFile-c5b32868c08829b4e864d3fc67021272
+    originalPath: 
     indexStatus: 1
     workTreeStatus: 1
   - path: Blood And Sand\Temp\UnityTempFile-caceb421b0184864cbcde348c0c30a33
     fullPath: F:\Anathema\Blood And Sand\Temp\UnityTempFile-caceb421b0184864cbcde348c0c30a33
     projectPath: Temp\UnityTempFile-caceb421b0184864cbcde348c0c30a33
     originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
+    indexStatus: 0
+    workTreeStatus: 5
   - path: Blood And Sand\Temp\UnityTempFile-d03dc326f5e080f41b0aa91767832d51
     fullPath: F:\Anathema\Blood And Sand\Temp\UnityTempFile-d03dc326f5e080f41b0aa91767832d51
     projectPath: Temp\UnityTempFile-d03dc326f5e080f41b0aa91767832d51
     originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
+    indexStatus: 0
+    workTreeStatus: 5
   - path: Blood And Sand\Temp\UnityTempFile-d2088680e103d584fac273a75bec8b78
     fullPath: F:\Anathema\Blood And Sand\Temp\UnityTempFile-d2088680e103d584fac273a75bec8b78
     projectPath: Temp\UnityTempFile-d2088680e103d584fac273a75bec8b78
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 5
+  - path: Blood And Sand\Temp\UnityTempFile-d275a73ce3e1ae846bdafd930ac7bc4a
+    fullPath: F:\Anathema\Blood And Sand\Temp\UnityTempFile-d275a73ce3e1ae846bdafd930ac7bc4a
+    projectPath: Temp\UnityTempFile-d275a73ce3e1ae846bdafd930ac7bc4a
+    originalPath: 
+    indexStatus: 1
+    workTreeStatus: 1
+  - path: Blood And Sand\Temp\UnityTempFile-d32e7fbd94d9abd49be73a3c3774f8ec
+    fullPath: F:\Anathema\Blood And Sand\Temp\UnityTempFile-d32e7fbd94d9abd49be73a3c3774f8ec
+    projectPath: Temp\UnityTempFile-d32e7fbd94d9abd49be73a3c3774f8ec
+    originalPath: 
+    indexStatus: 1
+    workTreeStatus: 1
+  - path: Blood And Sand\Temp\UnityTempFile-defac1ce5765a9b458bb8d1e06da9fae
+    fullPath: F:\Anathema\Blood And Sand\Temp\UnityTempFile-defac1ce5765a9b458bb8d1e06da9fae
+    projectPath: Temp\UnityTempFile-defac1ce5765a9b458bb8d1e06da9fae
+    originalPath: 
+    indexStatus: 1
+    workTreeStatus: 1
+  - path: Blood And Sand\Temp\UnityTempFile-e402320abbed0b14cb20e01b211af011
+    fullPath: F:\Anathema\Blood And Sand\Temp\UnityTempFile-e402320abbed0b14cb20e01b211af011
+    projectPath: Temp\UnityTempFile-e402320abbed0b14cb20e01b211af011
+    originalPath: 
+    indexStatus: 1
+    workTreeStatus: 1
+  - path: Blood And Sand\Temp\UnityTempFile-e7bbc7792d7cac349a5318fdd60ff7ac
+    fullPath: F:\Anathema\Blood And Sand\Temp\UnityTempFile-e7bbc7792d7cac349a5318fdd60ff7ac
+    projectPath: Temp\UnityTempFile-e7bbc7792d7cac349a5318fdd60ff7ac
+    originalPath: 
+    indexStatus: 1
+    workTreeStatus: 1
+  - path: Blood And Sand\Temp\UnityTempFile-ed0ed20065535c34bb0d1b6f321baacd
+    fullPath: F:\Anathema\Blood And Sand\Temp\UnityTempFile-ed0ed20065535c34bb0d1b6f321baacd
+    projectPath: Temp\UnityTempFile-ed0ed20065535c34bb0d1b6f321baacd
     originalPath: 
     indexStatus: 1
     workTreeStatus: 1
@@ -560,17 +884,29 @@ MonoBehaviour:
     fullPath: F:\Anathema\Blood And Sand\Temp\UnityTempFile-ee334ce1cf086dd41b3bf48d2e475e0f
     projectPath: Temp\UnityTempFile-ee334ce1cf086dd41b3bf48d2e475e0f
     originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
+    indexStatus: 0
+    workTreeStatus: 5
   - path: Blood And Sand\Temp\UnityTempFile-ef5e373c6bd1e244c8f7e3b097ecca7a
     fullPath: F:\Anathema\Blood And Sand\Temp\UnityTempFile-ef5e373c6bd1e244c8f7e3b097ecca7a
     projectPath: Temp\UnityTempFile-ef5e373c6bd1e244c8f7e3b097ecca7a
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 5
+  - path: Blood And Sand\Temp\UnityTempFile-efec929a1890aac4986a1e126405ebbb
+    fullPath: F:\Anathema\Blood And Sand\Temp\UnityTempFile-efec929a1890aac4986a1e126405ebbb
+    projectPath: Temp\UnityTempFile-efec929a1890aac4986a1e126405ebbb
     originalPath: 
     indexStatus: 1
     workTreeStatus: 1
   - path: Blood And Sand\Temp\UnityTempFile-f4e44c31441b3fc48aab23b950203eba
     fullPath: F:\Anathema\Blood And Sand\Temp\UnityTempFile-f4e44c31441b3fc48aab23b950203eba
     projectPath: Temp\UnityTempFile-f4e44c31441b3fc48aab23b950203eba
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 5
+  - path: Blood And Sand\Temp\UnityTempFile-f8f17fe0d53803b4d99ba1c3567398a6
+    fullPath: F:\Anathema\Blood And Sand\Temp\UnityTempFile-f8f17fe0d53803b4d99ba1c3567398a6
+    projectPath: Temp\UnityTempFile-f8f17fe0d53803b4d99ba1c3567398a6
     originalPath: 
     indexStatus: 1
     workTreeStatus: 1

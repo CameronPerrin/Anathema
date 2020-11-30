@@ -481,6 +481,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MainHandWeapon: {fileID: 0}
+  inventoryPanel: {fileID: 0}
   inventoryList: []
 --- !u!1 &3747429205975524519
 GameObject:

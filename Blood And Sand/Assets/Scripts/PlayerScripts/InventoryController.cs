@@ -7,15 +7,22 @@ using System;
 using System.Runtime.Serialization;
 using System.Xml.Linq;
 using System.Text;
+using UnityEngine.UI;
+using TMPro;
 
 public class InventoryController : MonoBehaviour
 {
+
+	private TMP_Text tempInvText;
 
 	private Vector3 moveBy;
 	private int itemCount = 0;
 	private int saveCount = 1;
     // The weapon the player has.
     public GameObject MainHandWeapon;
+
+    //where it loads inventory
+    public Transform inventoryPanel;
 
     public List<GameObject> inventoryList;
 
@@ -119,27 +126,33 @@ public class InventoryController : MonoBehaviour
 	    foreach(var fileName in fileNames)
 	    {
 	    	itemCount++;
-			GameObject invPanel = Instantiate(Resources.Load("prefabs/ItemHolder")) as GameObject;
-			invPanel.transform.SetParent(this.gameObject.transform.GetChild(3).GetChild(0));
-			moveBy = new Vector3 ((Screen.width * 0.5f)+(itemCount*110), Screen.height * 0.5f, 0);
-			invPanel.transform.position = moveBy;
+	    	//old inv panel spawning
+			// GameObject invPanel = Instantiate(Resources.Load("prefabs/ItemHolder")) as GameObject;
+			// invPanel.transform.SetParent(inventoryPanel);
+			// moveBy = new Vector3 ((Screen.width * 0.5f)+(itemCount*110), Screen.height * 0.5f, 0);
+			// invPanel.transform.position = moveBy;
 	    	//Debug.Log(fileName);
 	    	if(File.Exists(fileName)){
 	    		BinaryFormatter bf = new BinaryFormatter();
 				FileStream file = File.Open(fileName, FileMode.Open);
 				Player_Data data = (Player_Data)bf.Deserialize(file);
 				file.Close();
-				GameObject LoadedItem = Instantiate(Resources.Load("prefabs/items/"+data.object_name)) as GameObject;
-				LoadedItem.transform.SetParent(this.gameObject.transform.GetChild(3).GetChild(0));
-				moveBy = new Vector3 ((Screen.width * 0.5f)+(itemCount*110), Screen.height * 0.5f, 0);
+				//how we used to load in the actual 3d object.
+				//GameObject LoadedItem = Instantiate(Resources.Load("prefabs/items/"+data.object_name)) as GameObject;
+				//LoadedItem.transform.SetParent(inventoryPanel);
+				GameObject LoadedItem = Instantiate(Resources.Load("prefabs/invItem")) as GameObject;
+				LoadedItem.transform.SetParent(inventoryPanel);
+				moveBy = new Vector3 (580f, (590f-(itemCount*55)), 0);
 				LoadedItem.transform.position = moveBy;
+				tempInvText = LoadedItem.GetComponentInChildren<TextMeshProUGUI>();
+				tempInvText.text = data.object_name;
 				Debug.Log(data.object_name);
 
     		}
 
 
 	    }
-
+	    itemCount = 0;
 
 
 	}

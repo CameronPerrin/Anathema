@@ -13,6 +13,7 @@ public class PauseMenuController : MonoBehaviour
 	public GameObject InventoryMenu;
 	public GameObject MainPauseMenu;
 	public GameObject SettingsMenu;
+	//public GameObject InventoryMenu;
 
 	public TMP_Dropdown ResDropdown;
 	public Resolution[] resolutions;
@@ -94,6 +95,15 @@ public class PauseMenuController : MonoBehaviour
 	{
 		InventoryMenu.SetActive(true);
 		MainPauseMenu.SetActive(false);
+	}
+
+	public void CloseInv()
+	{
+		MainPauseMenu.SetActive(true);
+		InventoryMenu.SetActive(false);
+		foreach (Transform child in InventoryMenu.transform.GetChild(0)) {
+     		GameObject.Destroy(child.gameObject);
+ 		}
 	}
 
 	public void OpenSettings()
