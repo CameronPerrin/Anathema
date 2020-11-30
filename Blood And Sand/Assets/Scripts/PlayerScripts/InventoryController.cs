@@ -15,6 +15,8 @@ using Photon.Pun;
 public class InventoryController : MonoBehaviour
 {
 
+	private GameObject LoadedWeapon;
+
 	private TMP_Text tempInvText;
 
 	private Vector3 moveBy;
@@ -101,8 +103,14 @@ public class InventoryController : MonoBehaviour
 			file.Close();
 
 			Debug.Log(data.object_name);
+
+			//removing the last equipped weapon for swapping
+			if(LoadedWeapon){
+				Destroy(LoadedWeapon);
+			}
+
 			//find the prfab and store it in a variable to move to the palyer
-			GameObject LoadedWeapon = Instantiate(Resources.Load("prefabs/items/"+data.object_name)) as GameObject;
+			LoadedWeapon = Instantiate(Resources.Load("prefabs/items/"+data.object_name)) as GameObject;
 
 			//give it to the player having issues with 
 				//Setting the parent of a transform which resides in a Prefab Asset is disabled to prevent data corruption
@@ -120,6 +128,9 @@ public class InventoryController : MonoBehaviour
 			//Debug.Log(CurrentPlayer);
 			//Debug.Log(LoadedWeapon);
 			
+
+
+			//setting position of the new item
 			LoadedWeapon.transform.position = CurrentPlayer.transform.GetChild(2).position;
 			LoadedWeapon.transform.rotation = CurrentPlayer.transform.GetChild(2).rotation;
 			LoadedWeapon.transform.parent = CurrentPlayer.transform.GetChild(2);
@@ -138,6 +149,11 @@ public class InventoryController : MonoBehaviour
             LoadedWeapon.GetComponent<WeaponStats>().item_type = data.item_type;
 
     	}
+	}
+
+	public void buttonAssignment(int num, GameObject LoadedItem){
+		Button tempButton = LoadedItem.GetComponent<Button>();
+		tempButton.onClick.AddListener(new UnityAction(() => LoadIntoHand(num)));
 	}
 
 	public void LoadIntoInventory(){
@@ -163,9 +179,11 @@ public class InventoryController : MonoBehaviour
 				//LoadedItem.transform.SetParent(inventoryPanel);
 				GameObject LoadedItem = Instantiate(Resources.Load("prefabs/invItem")) as GameObject;
 				//set the loaded item number passthrough
-				UnityEngine.Events.UnityAction action+itemCount = new UnityAction(() => { LoadIntoHand(itemCount+1); });
-				Button tempButton = LoadedItem.GetComponent<Button>();
-				tempButton.onClick.AddListener(action1);
+				
+				buttonAssignment(itemCount,LoadedItem);
+
+		
+
 				//LoadedItem.GetComponent<Button>().onClick.AddListener( function() { LoadIntoHand (itemCount+1); } );
 				//Debug.Log(LoadedItem.GetComponent<Button>());
 				LoadedItem.transform.SetParent(inventoryPanel);

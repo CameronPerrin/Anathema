@@ -1599,6 +1599,8 @@ MonoBehaviour:
   networkUI: {fileID: 0}
   playerCam: {fileID: 0}
   weaponShowing: {fileID: 0}
+  pauseMenu: {fileID: 6923413154032130168, guid: 14f2b77376e59a746932100ba9cf5c8f,
+    type: 3}
 --- !u!1 &4918103272510698915
 GameObject:
   m_ObjectHideFlags: 0

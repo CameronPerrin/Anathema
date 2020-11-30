@@ -9,11 +9,12 @@ public class Interact : MonoBehaviour
     public GameObject networkUI;
     public Camera playerCam;
 
-    //for case 4 and 5
+    //for case 4
     private GameObject playerBoi;
 
     //for weapon grab case 5
     public Transform weaponShowing;
+    public GameObject pauseMenu;
 
 
     public void interactFunction(GameObject player){
@@ -39,18 +40,26 @@ public class Interact : MonoBehaviour
                 Cursor.lockState = CursorLockMode.None;
                 break;
             case 5: //weapon grab
+            	//Add feedback for when the item is purchased
                 //make it so you can only use this once. rn you can spam this
                 Debug.Log("Weapon Grab");
-                playerBoi = GameObject.FindGameObjectWithTag("Player");
-                //give the weapon to the player
-                weaponShowing.parent = playerBoi.transform.GetChild(2);
-                //reposition it
-                weaponShowing.position = playerBoi.transform.GetChild(2).position;
-                weaponShowing.rotation = playerBoi.transform.GetChild(2).rotation;
+                //pauseMenu = GameObject.FindGameObjectWithTag("PauseMenu");
+		                // //give the weapon to the player
+		                // weaponShowing.parent = playerBoi.transform.GetChild(2);
+		                // //reposition it
+		                // weaponShowing.position = playerBoi.transform.GetChild(2).position;
+		                // weaponShowing.rotation = playerBoi.transform.GetChild(2).rotation;
+                //only continue if you have the money for it
+
                 //remove money from account
+
                 //put it in the save file
-                playerBoi.GetComponent<InventoryController>().MainHandWeapon = weaponShowing.gameObject;
-                playerBoi.GetComponent<InventoryController>().Save();
+                pauseMenu.GetComponent<InventoryController>().MainHandWeapon = weaponShowing.gameObject;
+                pauseMenu.GetComponent<InventoryController>().Save();
+
+                //remove it from the pedestal
+                //this can be better in the future
+                Destroy(gameObject);
 
                 break;
             default: //default

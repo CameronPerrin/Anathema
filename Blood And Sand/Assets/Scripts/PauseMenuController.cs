@@ -23,7 +23,7 @@ public class PauseMenuController : MonoBehaviour
 
 	void Awake()
 	{
-		DontDestroyOnLoad(this.gameObject);
+		//DontDestroyOnLoad(this.gameObject);
 
 		resolutions = Screen.resolutions;
 
