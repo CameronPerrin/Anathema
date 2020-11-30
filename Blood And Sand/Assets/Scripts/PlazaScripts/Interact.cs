@@ -52,7 +52,12 @@ public class Interact : MonoBehaviour
                 //only continue if you have the money for it
 
                 //remove money from account
-
+                Debug.Log("Current Money: "+ pauseMenu.GetComponent<PauseMenuController>().Money);
+                Debug.Log("Current Cost: "+ weaponShowing.gameObject.GetComponent<WeaponStats>().item_value);
+                int tempCurrent = pauseMenu.GetComponent<PauseMenuController>().Money;
+                int tempCost = weaponShowing.gameObject.GetComponent<WeaponStats>().item_value;
+                pauseMenu.GetComponent<PauseMenuController>().Money = tempCurrent - tempCost;
+                Debug.Log("Money After Purchase: "+ pauseMenu.GetComponent<PauseMenuController>().Money);
                 //put it in the save file
                 pauseMenu.GetComponent<InventoryController>().MainHandWeapon = weaponShowing.gameObject;
                 pauseMenu.GetComponent<InventoryController>().Save();

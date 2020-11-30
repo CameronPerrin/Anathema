@@ -10,6 +10,8 @@ public class PauseMenuController : MonoBehaviour
 
 	//public GameObject myCanvas;
 
+	public int Money;
+	public TMP_Text MoneyText;
 	public GameObject InventoryMenu;
 	public GameObject MainPauseMenu;
 	public GameObject SettingsMenu;
@@ -24,7 +26,7 @@ public class PauseMenuController : MonoBehaviour
 	void Awake()
 	{
 		//DontDestroyOnLoad(this.gameObject);
-
+		Money = 1000;
 		resolutions = Screen.resolutions;
 
 		// Print the resolutions
@@ -95,6 +97,7 @@ public class PauseMenuController : MonoBehaviour
 	{
 		InventoryMenu.SetActive(true);
 		MainPauseMenu.SetActive(false);
+		MoneyText.text = "Gil: " + Money.ToString();
 	}
 
 	public void CloseInv()

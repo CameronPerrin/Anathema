@@ -20,7 +20,7 @@ public class WeaponSpawn : MonoBehaviour
 		//set item type (all melee for now)
 		SpawnedWeapon.GetComponent<WeaponStats>().item_type = 1;
 		//math out value
-		SpawnedWeapon.GetComponent<WeaponStats>().item_value = 100;
+		SpawnedWeapon.GetComponent<WeaponStats>().item_value = Random.Range(200, 500);;
 	}
 
     void Start()

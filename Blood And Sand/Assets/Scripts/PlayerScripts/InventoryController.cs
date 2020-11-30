@@ -205,7 +205,7 @@ class Player_Data
 
     //for all items
     //[DataMember]
-	public float item_value;
+	public int item_value;
 
 	//for weapon items	
 	//[DataMember]

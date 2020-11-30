@@ -5,7 +5,7 @@ using UnityEngine;
 public class WeaponStats : MonoBehaviour
 {
 	//for all items
-	public float item_value;
+	public int item_value;
 
 	//for weapon items	
 	public float attack;// 0 to 100 damage per hit
