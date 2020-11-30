@@ -74,6 +74,7 @@ public class InventoryController : MonoBehaviour
 
         // Stream the file with a File Stream. (Note that File.Create() 'Creates' or 'Overwrites' a file.)
         FileStream file = File.Create(Application.persistentDataPath + "/PlayerData"+GetInvNumber()+".dat");
+        saveCount = 1;
         // Create a new Player_Data.
      
         //Save the data.
@@ -108,32 +109,24 @@ public class InventoryController : MonoBehaviour
 			if(LoadedWeapon){
 				Destroy(LoadedWeapon);
 			}
-
+			CurrentPlayer = PhotonNetwork.LocalPlayer.TagObject as GameObject;
 			//find the prfab and store it in a variable to move to the palyer
-			LoadedWeapon = Instantiate(Resources.Load("prefabs/items/"+data.object_name)) as GameObject;
+			LoadedWeapon = Instantiate(Resources.Load("prefabs/items/"+data.object_name),CurrentPlayer.transform.GetChild(1).GetChild(0)) as GameObject;
 
 			//give it to the player having issues with 
 				//Setting the parent of a transform which resides in a Prefab Asset is disabled to prevent data corruption
 			//Debug.Log(this.gameObject);
 
-			// foreach (var player in PhotonNetwork.PlayerList) // 2 Players Room
-			// {
-			// 	if(player == PhotonNetwork.LocalPlayer){
-			// 		Debug.Log(player);
-			// 		CurrentPlayer = player.TagObject as GameObject;
-			// 	}
-			// }
-			//better and faster? version
-			CurrentPlayer = PhotonNetwork.LocalPlayer.TagObject as GameObject;
+			
 			//Debug.Log(CurrentPlayer);
 			//Debug.Log(LoadedWeapon);
 			
 
 
 			//setting position of the new item
-			LoadedWeapon.transform.position = CurrentPlayer.transform.GetChild(2).position;
-			LoadedWeapon.transform.rotation = CurrentPlayer.transform.GetChild(2).rotation;
-			LoadedWeapon.transform.parent = CurrentPlayer.transform.GetChild(2);
+			// LoadedWeapon.transform.position = CurrentPlayer.transform.GetChild(1).GetChild(0).position;
+			// LoadedWeapon.transform.rotation = CurrentPlayer.transform.GetChild(1).GetChild(0).rotation;
+			// LoadedWeapon.transform.parent = CurrentPlayer.transform.GetChild(2);
 			// LoadedWeapon.transform.parent = this.transform.GetChild(2);
    //          LoadedWeapon.transform.position = this.transform.GetChild(2).position;
    //          LoadedWeapon.transform.rotation = this.transform.GetChild(2).rotation;
