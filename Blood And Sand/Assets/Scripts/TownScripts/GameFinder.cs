@@ -31,7 +31,10 @@ public class GameFinder : MonoBehaviourPunCallbacks
 	public void findGame()
     {
         Debug.Log("find a new room and join it");
+        //leaveroom
+        PhotonNetwork.LeaveRoom();
 		//joinorcreateroom based on player level
+			//done in OnLeftRoom()
 		//join room with the name of your player level or make another one if its full 
 		//with name bieng playerlevel + "(2)"
 		//roomName = inputField.GetComponent<InputField>().text;
@@ -39,6 +42,19 @@ public class GameFinder : MonoBehaviourPunCallbacks
 
 
 	}
+
+	public override void OnConnectedToMaster()
+	{
+		RoomOptions roomOptions = new RoomOptions();
+        roomOptions.IsVisible = false;
+        PhotonNetwork.JoinOrCreateRoom("Combat", roomOptions, TypedLobby.Default);
+	}
+
+	public override void OnJoinedRoom()
+    {
+        PhotonNetwork.LoadLevel(4);
+    }
+
 
 	void ListPlayers()
 	{

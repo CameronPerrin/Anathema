@@ -346,6 +346,51 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 224
       Script: {instanceID: 0}
+    Assets/Scenes/Test Scenes/CombatTesting.unity:
+    - Class: 1
+      Script: {instanceID: 0}
+    - Class: 4
+      Script: {instanceID: 0}
+    - Class: 20
+      Script: {instanceID: 0}
+    - Class: 21
+      Script: {instanceID: 0}
+    - Class: 23
+      Script: {instanceID: 0}
+    - Class: 28
+      Script: {instanceID: 0}
+    - Class: 33
+      Script: {instanceID: 0}
+    - Class: 43
+      Script: {instanceID: 0}
+    - Class: 48
+      Script: {instanceID: 0}
+    - Class: 64
+      Script: {instanceID: 0}
+    - Class: 81
+      Script: {instanceID: 0}
+    - Class: 104
+      Script: {instanceID: 0}
+    - Class: 108
+      Script: {instanceID: 0}
+    - Class: 114
+      Script: {instanceID: 12538}
+    - Class: 114
+      Script: {instanceID: 13296}
+    - Class: 114
+      Script: {instanceID: 13576}
+    - Class: 114
+      Script: {instanceID: 16516}
+    - Class: 114
+      Script: {instanceID: 16580}
+    - Class: 114
+      Script: {instanceID: 24484}
+    - Class: 115
+      Script: {instanceID: 0}
+    - Class: 157
+      Script: {instanceID: 0}
+    - Class: 196
+      Script: {instanceID: 0}
     Assets/Scenes/Test Scenes/WeaponTesting.unity:
     - Class: 1
       Script: {instanceID: 0}
@@ -395,6 +440,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 12994}
     - Class: 114
       Script: {instanceID: 13294}
+    - Class: 114
+      Script: {instanceID: 13296}
     - Class: 114
       Script: {instanceID: 13576}
     - Class: 114
@@ -2225,4 +2272,5 @@ ScriptsOnlyBuild:
   - Assets/Scenes/Town.unity
   - Assets/Scenes/MultiplayerScene.unity
   - Assets/Scenes/Test Scenes/WeaponTesting.unity
+  - Assets/Scenes/Test Scenes/CombatTesting.unity
   playerPath: C:/Users/cameron/Downloads/Blood And Sand.exe
