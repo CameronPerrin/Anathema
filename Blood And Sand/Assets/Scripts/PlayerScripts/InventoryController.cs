@@ -8,7 +8,9 @@ using System.Runtime.Serialization;
 using System.Xml.Linq;
 using System.Text;
 using UnityEngine.UI;
+using UnityEngine.Events;
 using TMPro;
+using Photon.Pun;
 
 public class InventoryController : MonoBehaviour
 {
@@ -23,6 +25,9 @@ public class InventoryController : MonoBehaviour
 
     //where it loads inventory
     public Transform inventoryPanel;
+
+    //The current user.
+    public GameObject CurrentPlayer;
 
     public List<GameObject> inventoryList;
 
@@ -88,10 +93,10 @@ public class InventoryController : MonoBehaviour
 
     }
 
-    public void LoadIntoHand(){
-    	if(File.Exists(Application.persistentDataPath + "/PlayerData.dat")){
+    public void LoadIntoHand(int fileNum){
+    	if(File.Exists(Application.persistentDataPath + "/PlayerData"+fileNum+".dat")){
     		BinaryFormatter bf = new BinaryFormatter();
-			FileStream file = File.Open(Application.persistentDataPath + "/PlayerData.dat", FileMode.Open);
+			FileStream file = File.Open(Application.persistentDataPath + "/PlayerData"+fileNum+".dat", FileMode.Open);
 			Player_Data data = (Player_Data)bf.Deserialize(file);
 			file.Close();
 
@@ -101,7 +106,23 @@ public class InventoryController : MonoBehaviour
 
 			//give it to the player having issues with 
 				//Setting the parent of a transform which resides in a Prefab Asset is disabled to prevent data corruption
-			Debug.Log(this.gameObject);
+			//Debug.Log(this.gameObject);
+
+			// foreach (var player in PhotonNetwork.PlayerList) // 2 Players Room
+			// {
+			// 	if(player == PhotonNetwork.LocalPlayer){
+			// 		Debug.Log(player);
+			// 		CurrentPlayer = player.TagObject as GameObject;
+			// 	}
+			// }
+			//better and faster? version
+			CurrentPlayer = PhotonNetwork.LocalPlayer.TagObject as GameObject;
+			//Debug.Log(CurrentPlayer);
+			//Debug.Log(LoadedWeapon);
+			
+			LoadedWeapon.transform.position = CurrentPlayer.transform.GetChild(2).position;
+			LoadedWeapon.transform.rotation = CurrentPlayer.transform.GetChild(2).rotation;
+			LoadedWeapon.transform.parent = CurrentPlayer.transform.GetChild(2);
 			// LoadedWeapon.transform.parent = this.transform.GetChild(2);
    //          LoadedWeapon.transform.position = this.transform.GetChild(2).position;
    //          LoadedWeapon.transform.rotation = this.transform.GetChild(2).rotation;
@@ -141,12 +162,18 @@ public class InventoryController : MonoBehaviour
 				//GameObject LoadedItem = Instantiate(Resources.Load("prefabs/items/"+data.object_name)) as GameObject;
 				//LoadedItem.transform.SetParent(inventoryPanel);
 				GameObject LoadedItem = Instantiate(Resources.Load("prefabs/invItem")) as GameObject;
+				//set the loaded item number passthrough
+				UnityEngine.Events.UnityAction action+itemCount = new UnityAction(() => { LoadIntoHand(itemCount+1); });
+				Button tempButton = LoadedItem.GetComponent<Button>();
+				tempButton.onClick.AddListener(action1);
+				//LoadedItem.GetComponent<Button>().onClick.AddListener( function() { LoadIntoHand (itemCount+1); } );
+				//Debug.Log(LoadedItem.GetComponent<Button>());
 				LoadedItem.transform.SetParent(inventoryPanel);
 				moveBy = new Vector3 (580f, (590f-(itemCount*55)), 0);
 				LoadedItem.transform.position = moveBy;
 				tempInvText = LoadedItem.GetComponentInChildren<TextMeshProUGUI>();
 				tempInvText.text = data.object_name;
-				Debug.Log(data.object_name);
+				//Debug.Log(data.object_name);
 
     		}
 

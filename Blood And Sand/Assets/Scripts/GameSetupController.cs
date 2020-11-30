@@ -13,7 +13,8 @@ public class GameSetupController : MonoBehaviour
     public void CreatePlayer()
     {
     	Debug.Log("Creating Player");
-    	PhotonNetwork.Instantiate(Path.Combine("PhotonPrefabs", "PhotonPlayer"), Vector3.up, Quaternion.identity);
+    	
+        PhotonNetwork.LocalPlayer.TagObject = PhotonNetwork.Instantiate(Path.Combine("PhotonPrefabs", "PhotonPlayer"), Vector3.up, Quaternion.identity);
     }
 
 
