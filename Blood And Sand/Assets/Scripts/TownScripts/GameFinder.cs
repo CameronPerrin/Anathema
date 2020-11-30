@@ -8,6 +8,7 @@ using TMPro;
 
 public class GameFinder : MonoBehaviourPunCallbacks
 {
+	private int numberOfFails;
 	private int playerCount;
 	private GameObject tempListing;
 	[SerializeField]
@@ -80,8 +81,19 @@ public class GameFinder : MonoBehaviourPunCallbacks
 		PhotonNetwork.AutomaticallySyncScene = true;
 		RoomOptions roomOptions = new RoomOptions();
         roomOptions.IsVisible = false;
-        PhotonNetwork.JoinOrCreateRoom("Combat", roomOptions, TypedLobby.Default);
+        roomOptions.MaxPlayers = 4;
+		PhotonNetwork.JoinOrCreateRoom("Combat", roomOptions, TypedLobby.Default);
 	}
+
+	//on fail join room creat another room with the same room options and name combat + numberOfFails
+	public override void OnJoinRoomFailed(short returnCode, string message) {
+		numberOfFails++;
+        Debug.Log("You failed to join room. Attemping to join room combat"+numberOfFails.ToString());
+        RoomOptions roomOptions = new RoomOptions();
+        roomOptions.IsVisible = false;
+        roomOptions.MaxPlayers = 4;
+		PhotonNetwork.JoinOrCreateRoom("Combat"+numberOfFails.ToString(), roomOptions, TypedLobby.Default);
+    }
 
 	public override void OnJoinedRoom()
     {
