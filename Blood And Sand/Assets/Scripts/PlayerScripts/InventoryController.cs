@@ -107,11 +107,11 @@ public class InventoryController : MonoBehaviour
 
 			//removing the last equipped weapon for swapping
 			if(LoadedWeapon){
-				Destroy(LoadedWeapon);
+				 PhotonNetwork.Destroy(LoadedWeapon);
 			}
 			CurrentPlayer = PhotonNetwork.LocalPlayer.TagObject as GameObject;
 			//find the prfab and store it in a variable to move to the palyer
-			LoadedWeapon = Instantiate(Resources.Load("prefabs/items/"+data.object_name),CurrentPlayer.transform.GetChild(1).GetChild(0)) as GameObject;
+			LoadedWeapon = PhotonNetwork.Instantiate((Path.Combine("PhotonPrefabs/Items", data.object_name)),Vector3.up, Quaternion.identity) as GameObject;
 
 			//give it to the player having issues with 
 				//Setting the parent of a transform which resides in a Prefab Asset is disabled to prevent data corruption
@@ -124,9 +124,9 @@ public class InventoryController : MonoBehaviour
 
 
 			//setting position of the new item
-			// LoadedWeapon.transform.position = CurrentPlayer.transform.GetChild(1).GetChild(0).position;
-			// LoadedWeapon.transform.rotation = CurrentPlayer.transform.GetChild(1).GetChild(0).rotation;
-			// LoadedWeapon.transform.parent = CurrentPlayer.transform.GetChild(2);
+			LoadedWeapon.transform.position = CurrentPlayer.transform.GetChild(1).GetChild(0).position;
+			LoadedWeapon.transform.rotation = CurrentPlayer.transform.GetChild(1).GetChild(0).rotation;
+			LoadedWeapon.transform.parent = CurrentPlayer.transform.GetChild(1).GetChild(0);
 			// LoadedWeapon.transform.parent = this.transform.GetChild(2);
    //          LoadedWeapon.transform.position = this.transform.GetChild(2).position;
    //          LoadedWeapon.transform.rotation = this.transform.GetChild(2).rotation;
