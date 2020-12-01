@@ -16,9 +16,10 @@ public class bulletScript : MonoBehaviour
         Destroy(this.gameObject, 0.2f);
     }
 
-    private void OnCollisionEnter(Collision collision)
+    private void OnTriggerEnter(Collider collision)
     {
-        if(collision.collider.tag == "Player")
+    	Debug.Log("Trigger");
+        if(collision.gameObject.tag == "Player")
         {
         	Health hp = collision.gameObject.GetComponent<Health>();
         	hp.Damage();
