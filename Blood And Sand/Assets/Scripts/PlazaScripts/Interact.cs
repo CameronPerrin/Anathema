@@ -16,6 +16,15 @@ public class Interact : MonoBehaviour
     public Transform weaponShowing;
     public GameObject pauseMenu;
 
+    //for highlighting
+    private Color startcolor;
+    private bool highlight;
+
+
+    void Awake(){
+        startcolor = GetComponent<Renderer>().material.color;
+    }
+
 
     public void interactFunction(GameObject player){
         switch (interactItem){
@@ -71,5 +80,20 @@ public class Interact : MonoBehaviour
                 Debug.Log("Default interact msg");
                 break;
         }
+    }
+
+    public void isHighlightOn(bool check){
+        if(check){
+            StartCoroutine(highlightTimer());
+            check = false;
+        }
+    }
+
+    public IEnumerator highlightTimer(){
+        Debug.Log("Changing color to yellow!");
+        GetComponent<Renderer>().material.color = Color.yellow;     //change the color to yellow
+        yield return new WaitForSeconds(1);                         //wait for 3 seconds
+        Debug.Log("BACK TO GRAY");
+        GetComponent<Renderer>().material.color = startcolor;       // change color back to original
     }
 }

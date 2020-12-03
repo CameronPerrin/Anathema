@@ -19,6 +19,9 @@ public class PlayerMovementController : MonoBehaviour
 	public float moveSpeed = 6f;
     public float turnSmoothTime = 0.1f;
     float turnSmoothVelocity;
+
+    // for highliting
+    private GameObject temp;
     // Start is called before the first frame update
     void Start()
     {
@@ -40,18 +43,20 @@ public class PlayerMovementController : MonoBehaviour
         if (PV.IsMine && !isPaused)
         {
 
-            // RAYTRACING for Player to interact with things.
+            // RAYTRACING for Player to interact with things (items, etc).
             RaycastHit hit;
             Ray pointing = ray_camera.ScreenPointToRay(Input.mousePosition);
 
             if(Physics.Raycast(pointing, out hit, 20)){
                     Debug.DrawRay(pointing.origin, pointing.direction * 20);
                     if(hit.collider.tag == "Interact"){
-                        if(Input.GetKeyDown("e")){
+                        hit.collider.gameObject.GetComponent<Interact>().isHighlightOn(true);
+                        if(Input.GetKeyDown("e")){ 
                             hit.collider.gameObject.GetComponent<Interact>().interactFunction(this.gameObject);
                         }
                     }
             }
+            
 
             float horizontal = Input.GetAxisRaw("Horizontal");
             float vertical = Input.GetAxisRaw("Vertical");
