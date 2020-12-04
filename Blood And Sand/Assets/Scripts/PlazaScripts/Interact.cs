@@ -82,6 +82,9 @@ public class Interact : MonoBehaviour
         }
     }
 
+
+
+    /// HIGHLIGHTING FUNCTIONS HERE
     public void isHighlightOn(bool check){
         if(check){
             StartCoroutine(highlightTimer());

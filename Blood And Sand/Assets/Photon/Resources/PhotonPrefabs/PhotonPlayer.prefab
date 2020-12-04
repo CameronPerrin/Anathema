@@ -490,6 +490,7 @@ MonoBehaviour:
   worldHealthBar: {fileID: 709491987561619163}
   oHp: {fileID: 6691666988021276544}
   wHp: {fileID: 8586873480530414400}
+  deathObj: {fileID: 0}
 --- !u!114 &956957041702412034
 MonoBehaviour:
   m_ObjectHideFlags: 0

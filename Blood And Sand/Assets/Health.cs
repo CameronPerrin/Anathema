@@ -7,7 +7,7 @@ using Photon.Realtime;
 using Photon;
 
 
-public class Health : MonoBehaviour
+public class Health : MonoBehaviourPunCallbacks
 {
 
     // Start is called before the first frame update
@@ -18,6 +18,8 @@ public class Health : MonoBehaviour
     public Image worldHealthBar;		// HP images for worldspace overlay
     public GameObject oHp; 				// canvas overlay
     public GameObject wHp; 				// canvas world
+
+    public GameObject deathObj;
 
     void Start()
     {
@@ -35,7 +37,7 @@ public class Health : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-    	// take damage
+    	
             
     }
 
@@ -52,9 +54,10 @@ public class Health : MonoBehaviour
         health -= 10;
         overlayHealthBar.fillAmount = health/maxHp;
         worldHealthBar.fillAmount = health/maxHp;
+        if(health <= 0){
+            GameObject.Find("TheReaper").GetComponent<deathScript>().onDeath(); // Find obj, find script, call function
+        }
     }
-
-
 
     public virtual void OnPhotonSerializeView(PhotonStream stream, PhotonMessageInfo info){
         if(stream.IsWriting)
@@ -69,4 +72,6 @@ public class Health : MonoBehaviour
             health = (float)stream.ReceiveNext();
         }
     }
+
+    
 }
