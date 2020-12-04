@@ -10,7 +10,9 @@ public class deathScript : MonoBehaviourPunCallbacks
     public void onDeath()
 	{ 
         Debug.Log("DEATH IS CALLED");
+
 		PhotonNetwork.LeaveRoom();
+
 	}
 
     public override void OnJoinedRoom()

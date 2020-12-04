@@ -1,5 +1,7 @@
 ScriptsOnlyBuild:
   usedScripts:
+    Assembly-CSharp-Editor.dll:
+    - ReadmeEditor
     Assembly-CSharp.dll:
     - Combat
     - ErosionBrushPlugin.ErosionBrush
@@ -16,6 +18,7 @@ ScriptsOnlyBuild:
     - NetworkController
     - PauseMenuController
     - PlayerMovementController
+    - Readme
     - WeaponSpawn
     - WeaponStats
     - bulletScript
@@ -31,7 +34,6 @@ ScriptsOnlyBuild:
     - Cinemachine.CinemachineVirtualCamera
     GitHub.Unity.45.dll:
     - GitHub.Unity.ApplicationCache
-    - GitHub.Unity.BranchesCache
     - GitHub.Unity.EnvironmentCache
     - GitHub.Unity.GitAheadBehindCache
     - GitHub.Unity.GitLocksCache
@@ -270,9 +272,9 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 16768}
     - Class: 114
-      Script: {instanceID: 24264}
+      Script: {instanceID: 24344}
     - Class: 114
-      Script: {instanceID: 24266}
+      Script: {instanceID: 24346}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -337,9 +339,9 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 16592}
     - Class: 114
-      Script: {instanceID: 24264}
+      Script: {instanceID: 24344}
     - Class: 114
-      Script: {instanceID: 24266}
+      Script: {instanceID: 24346}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 157
@@ -424,7 +426,7 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 16592}
     - Class: 114
-      Script: {instanceID: 24266}
+      Script: {instanceID: 24346}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -517,9 +519,9 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 16592}
     - Class: 114
-      Script: {instanceID: 24264}
+      Script: {instanceID: 24344}
     - Class: 114
-      Script: {instanceID: 24266}
+      Script: {instanceID: 24346}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -636,13 +638,13 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 16592}
     - Class: 114
-      Script: {instanceID: 24264}
+      Script: {instanceID: 24344}
     - Class: 114
-      Script: {instanceID: 24266}
+      Script: {instanceID: 24346}
     - Class: 114
-      Script: {instanceID: 125016}
+      Script: {instanceID: 123228}
     - Class: 114
-      Script: {instanceID: 125018}
+      Script: {instanceID: 123230}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
