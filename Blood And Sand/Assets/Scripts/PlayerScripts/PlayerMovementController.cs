@@ -16,7 +16,7 @@ public class PlayerMovementController : MonoBehaviour
     public Camera ray_camera;
     public GameObject p_camera;
     //public Transform cam;
-	public float moveSpeed = 6f;
+	public float moveSpeed = 7f;
     public float turnSmoothTime = 0.1f;
     float turnSmoothVelocity;
 
@@ -58,6 +58,11 @@ public class PlayerMovementController : MonoBehaviour
             }
             
 
+
+            
+
+
+
             float horizontal = Input.GetAxisRaw("Horizontal");
             float vertical = Input.GetAxisRaw("Vertical");
             Vector3 direction = new Vector3(horizontal, 0f, vertical).normalized;
@@ -65,11 +70,24 @@ public class PlayerMovementController : MonoBehaviour
             if (direction.magnitude >= 0.1f)
             {
                 float targetAngle = Mathf.Atan2(direction.x, direction.z) * Mathf.Rad2Deg + p_camera.transform.eulerAngles.y;
-                float angle = Mathf.SmoothDampAngle(transform.eulerAngles.y, targetAngle, ref turnSmoothVelocity, turnSmoothTime);
-
-                transform.rotation = Quaternion.Euler(0f, angle, 0f);
+                //float angle = Mathf.SmoothDampAngle(transform.eulerAngles.y, targetAngle, ref turnSmoothVelocity, turnSmoothTime);
+                //use angle instead of target angle in order to smooth the turning.
+                // leaving it off intentionally for now
+                //I'm thinking we can do the smoothing with animations.
+                if (Input.GetMouseButton(0)) {
+                    float targetAngle1 = p_camera.transform.eulerAngles.y;
+                    transform.rotation = Quaternion.Euler(0f, targetAngle1, 0f);
+                } else {
+                    transform.rotation = Quaternion.Euler(0f, targetAngle, 0f);
+                }
+                //transform.rotation = Quaternion.Euler(0f, targetAngle, 0f);
                 Vector3 moveDir = Quaternion.Euler(0f, targetAngle, 0f) * Vector3.forward;
-                controller.Move(moveDir.normalized * moveSpeed * Time.deltaTime);
+                if(Input.GetKey(KeyCode.LeftShift)) {
+                    controller.Move(moveDir.normalized * moveSpeed * 2f * Time.deltaTime);
+                } else {
+                    controller.Move(moveDir.normalized * moveSpeed * Time.deltaTime);
+                }
+                
 
             }
         }

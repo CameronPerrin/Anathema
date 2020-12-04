@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Photon.Pun;
 
 public class Interact : MonoBehaviour
 {
@@ -43,7 +44,7 @@ public class Interact : MonoBehaviour
             case 4: // Network UI
                 Debug.Log("NetworkUI");
                 networkUI.SetActive(true);
-                playerBoi = GameObject.FindGameObjectWithTag("Player");
+                playerBoi = PhotonNetwork.LocalPlayer.TagObject as GameObject;
                 //playerBoi.transform.GetChild(0).gameObject.SetActive(false);
                 playerBoi.SetActive(false);
                 Cursor.lockState = CursorLockMode.None;
@@ -93,10 +94,10 @@ public class Interact : MonoBehaviour
     }
 
     public IEnumerator highlightTimer(){
-        Debug.Log("Changing color to yellow!");
+        //Debug.Log("Changing color to yellow!");
         GetComponent<Renderer>().material.color = Color.yellow;     //change the color to yellow
         yield return new WaitForSeconds(1);                         //wait for 3 seconds
-        Debug.Log("BACK TO GRAY");
+        //Debug.Log("BACK TO GRAY");
         GetComponent<Renderer>().material.color = startcolor;       // change color back to original
     }
 }
