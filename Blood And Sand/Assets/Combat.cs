@@ -11,10 +11,12 @@ public class Combat : MonoBehaviour
 	private PhotonView PV;
 	public GameObject attackPrefab;
 	public GameObject shootPoint;
+    public GameObject CurrentPlayer;
     
 	void Start()
 	{
 		PV = GetComponent<PhotonView>();
+        CurrentPlayer = PhotonNetwork.LocalPlayer.TagObject as GameObject;
 	}
 
 	void Update()
@@ -37,6 +39,8 @@ public class Combat : MonoBehaviour
     [PunRPC]
     void RpcShoot()
     {
-    	Instantiate(attackPrefab, shootPoint.transform.position, Quaternion.identity);
+    	GameObject attackHitbox = Instantiate(attackPrefab, shootPoint.transform.position, Quaternion.identity);
+        //attackHitbox.GetComponent<Rigidbody>().velocity = CurrentPlayer.transform.GetChild(1).GetComponent<Rigidbody>().velocity;
+        attackHitbox.transform.parent = CurrentPlayer.transform;
     }
 }

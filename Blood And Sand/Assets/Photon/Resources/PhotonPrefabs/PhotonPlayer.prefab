@@ -506,6 +506,7 @@ MonoBehaviour:
   attackPrefab: {fileID: 6404847672541117547, guid: 3c47d4ed8ace46940903a6148653a2ff,
     type: 3}
   shootPoint: {fileID: 3680925794353910806}
+  CurrentPlayer: {fileID: 0}
 --- !u!1 &3680925794353910806
 GameObject:
   m_ObjectHideFlags: 0

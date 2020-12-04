@@ -13,11 +13,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cacheType: 2
-  lastUpdatedAtString: 2020-10-09T18:05:48.184-04:00
-  initializedAtString: 2020-10-09T18:05:48.178-04:00
-  localBranches: []
+  lastUpdatedAtString: 2020-12-04T02:04:48.575-05:00
+  initializedAtString: 2020-12-04T02:04:48.559-05:00
+  localBranches:
+  - name: master
+    tracking: origin/master
   remoteBranches:
   - name: origin/HEAD
+    tracking: '[None]'
+  - name: origin/master
     tracking: '[None]'
   remotes:
   - name: origin
@@ -28,17 +32,29 @@ MonoBehaviour:
     function: 0
     token: 
   localConfigBranches:
-    keys: []
-    values: []
+    keys:
+    - master
+    values:
+    - name: master
+      remote:
+        name: origin
+        url: https://github.com/CameronPerrin/Anathema.git
+      trackingBranch: master
   remoteConfigBranches:
     keys:
     - origin
     subKeys:
     - Values:
       - HEAD
+      - master
     subKeyValues:
     - Values:
       - name: HEAD
+        remote:
+          name: origin
+          url: https://github.com/CameronPerrin/Anathema.git
+        trackingBranch: 
+      - name: master
         remote:
           name: origin
           url: https://github.com/CameronPerrin/Anathema.git
