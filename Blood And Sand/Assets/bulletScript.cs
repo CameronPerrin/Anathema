@@ -25,7 +25,7 @@ public class bulletScript : MonoBehaviour
         {
         	Health hp = collision.gameObject.GetComponent<Health>();
             if(hp){
-               hp.Damage(); 
+               hp.TakeDamage(); 
             }
         	
             Destroy(this.gameObject);

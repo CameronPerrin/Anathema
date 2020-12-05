@@ -37,7 +37,7 @@ public class Health : MonoBehaviourPunCallbacks
     // Update is called once per frame
     void Update()
     {
-
+        
     }
 
     public void TakeDamage()
@@ -51,13 +51,14 @@ public class Health : MonoBehaviourPunCallbacks
     public void Damage()
     {
         health -= 10;
-        overlayHealthBar.fillAmount = health/maxHp;
-        worldHealthBar.fillAmount = health/maxHp;
         if(PV.IsMine) {
             if(health <= 0){
                 GameObject.Find("TheReaper").GetComponent<deathScript>().onDeath(); // Find obj, find script, call function
             }  
         }
+        overlayHealthBar.fillAmount = health/maxHp;
+        worldHealthBar.fillAmount = health/maxHp;
+        
 
     }
 
