@@ -5,6 +5,7 @@ using UnityEngine.UI;
 using Photon.Pun;
 using Photon.Realtime;
 using Photon;
+using UnityEngine.SceneManagement;
 
 
 public class Health : MonoBehaviourPunCallbacks
@@ -22,6 +23,14 @@ public class Health : MonoBehaviourPunCallbacks
     public GameObject deathObj;
     public GameObject bloodVFX;
     public GameObject bloodSpotInstLocation;
+
+    void Awake()
+    {
+        if(SceneManager.GetActiveScene().buildIndex == 1){
+            Destroy(wHp);
+            Destroy(oHp);
+        }
+    }
 
     void Start()
     {

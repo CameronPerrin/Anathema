@@ -4,6 +4,7 @@ using UnityEngine;
 using Photon.Pun;
 using Photon.Realtime;
 using Photon;
+using UnityEngine.SceneManagement;
 
 public class Combat : MonoBehaviour
 {
@@ -21,7 +22,7 @@ public class Combat : MonoBehaviour
 
 	void Update()
 	{
-		if(Input.GetMouseButtonDown(0))
+		if(Input.GetMouseButtonDown(0) && SceneManager.GetActiveScene().buildIndex != 1)
     	{
     		if(PV.IsMine)
     		{
