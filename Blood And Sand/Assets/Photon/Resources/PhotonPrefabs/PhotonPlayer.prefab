@@ -1459,6 +1459,7 @@ GameObject:
   - component: {fileID: 5593222468109969931}
   - component: {fileID: 972672654147623732}
   - component: {fileID: 1472527162860288723}
+  - component: {fileID: 8256969651613796356}
   m_Layer: 9
   m_Name: Canvas_WS_Overlay
   m_TagString: Untagged
@@ -1546,6 +1547,19 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
+--- !u!114 &8256969651613796356
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8586873480530414400}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d2a4d7ec9ac060c49ab091ff92a2c290, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  myCamera: {fileID: 0}
 --- !u!1 &8819608560191200600
 GameObject:
   m_ObjectHideFlags: 0
