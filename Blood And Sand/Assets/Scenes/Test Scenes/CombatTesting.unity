@@ -2024,6 +2024,7 @@ GameObject:
   - component: {fileID: 667750983}
   - component: {fileID: 667750982}
   - component: {fileID: 667750981}
+  - component: {fileID: 667750984}
   m_Layer: 0
   m_Name: Terrain
   m_TagString: Untagged
@@ -2083,12 +2084,129 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 667750980}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -148, y: -41.6, z: -148.6}
+  m_LocalPosition: {x: -259.109, y: -41.6, z: -318.2821}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &667750984
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 667750980}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 335cca68f149de548b39b11347b96b04, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  terrains:
+  - {fileID: 667750982}
+  preset:
+    brushSize: 71.521
+    brushFallof: 0.6
+    brushSpacing: 0.15
+    downscale: 1
+    blur: 0.1
+    preserveDetail: 0
+    isErosion: 1
+    isNoise: 0
+    noise_seed: 12345
+    noise_amount: 20
+    noise_size: 200
+    noise_detail: 0.55
+    noise_uplift: 0.8
+    noise_ruffle: 1
+    erosion_iterations: 3
+    erosion_durability: 0.9
+    erosion_fluidityIterations: 3
+    erosion_amount: 1
+    sediment_amount: 0.8
+    wind_amount: 0.75
+    erosion_smooth: 0.15
+    ruffle: 0.5
+    foreground:
+      apply: 1
+      opacity: 3.6651573
+      num: 1
+    background:
+      apply: 1
+      opacity: 1.331348
+      num: 0
+    name: splay
+    saveBrushSize: 0
+    saveBrushParams: 1
+    saveErosionNoiseParams: 1
+    saveSplatParams: 1
+  presets:
+  - brushSize: 71.521
+    brushFallof: 0.6
+    brushSpacing: 0.15
+    downscale: 1
+    blur: 0.1
+    preserveDetail: 0
+    isErosion: 1
+    isNoise: 0
+    noise_seed: 12345
+    noise_amount: 20
+    noise_size: 200
+    noise_detail: 0.55
+    noise_uplift: 0.8
+    noise_ruffle: 1
+    erosion_iterations: 3
+    erosion_durability: 0.9
+    erosion_fluidityIterations: 3
+    erosion_amount: 1
+    sediment_amount: 0.8
+    wind_amount: 0.75
+    erosion_smooth: 0.15
+    ruffle: 0.5
+    foreground:
+      apply: 1
+      opacity: 3.6651573
+      num: 1
+    background:
+      apply: 1
+      opacity: 1.331348
+      num: 0
+    name: splay
+    saveBrushSize: 0
+    saveBrushParams: 1
+    saveErosionNoiseParams: 1
+    saveSplatParams: 1
+  guiSelectedPreset: 0
+  paint: 0
+  wasPaint: 0
+  moveDown: 0
+  moveTfm: {fileID: 0}
+  gen: 0
+  undo: 0
+  guiApplyIterations: 15
+  guiChannels: 
+  guiChannelNames: []
+  guiBrushColor: {r: 1, g: 0.98173815, b: 0.9575472, a: 1}
+  guiBrushThickness: 4
+  guiBrushNumCorners: 32
+  recordUndo: 1
+  unity5positioning: 0
+  focusOnBrush: 1
+  guiShowPreset: 1
+  guiShowBrush: 1
+  guiShowErosion: 1
+  guiShowNoise: 1
+  guiShowTextures: 1
+  guiShowGlobal: 1
+  guiShowSettings: 1
+  guiShowAbout: 0
+  guiMaxBrushSize: 100
+  guiSelectPresetsUsingNumkeys: 1
+  guiControlUsed: 1
+  applyCount: 0
+  currentUndoState: 8
+  referenceUndoState: 8
+  allowUndo: 0
 --- !u!1 &720453659
 GameObject:
   m_ObjectHideFlags: 0

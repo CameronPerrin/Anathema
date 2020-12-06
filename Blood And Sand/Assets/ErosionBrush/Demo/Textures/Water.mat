@@ -9,7 +9,7 @@ Material:
   m_PrefabAsset: {fileID: 0}
   m_Name: Water
   m_Shader: {fileID: 4800000, guid: 933532a4fcc9baf4fa0491de14d08ed7, type: 3}
-  m_ShaderKeywords: _EMISSION _ENVIRONMENTREFLECTIONS_OFF _NORMALMAP _SPECULAR_SETUP
+  m_ShaderKeywords: _EMISSION _NORMALMAP _SPECULAR_SETUP
   m_LightmapFlags: 1
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
@@ -74,10 +74,10 @@ Material:
     - _DetailNormalMapScale: 1
     - _DstBlend: 10
     - _EmissionScaleUI: 0
-    - _EnvironmentReflections: 0
-    - _GlossMapScale: 0
+    - _EnvironmentReflections: 1
+    - _GlossMapScale: 1
     - _Glossiness: 0.5
-    - _GlossyReflections: 0
+    - _GlossyReflections: 1
     - _Metallic: 0.73
     - _Mode: 2
     - _OcclusionStrength: 1
@@ -99,7 +99,7 @@ Material:
     - _EmissionColorUI: {r: 1, g: 1, b: 1, a: 1}
     - _SpecColor: {r: 0.43468857, g: 0.47585902, b: 0.49264705, a: 1}
   m_BuildTextureStacks: []
---- !u!114 &5348983843431133269
+--- !u!114 &5820000840552126904
 MonoBehaviour:
   m_ObjectHideFlags: 11
   m_CorrespondingSourceObject: {fileID: 0}
