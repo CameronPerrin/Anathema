@@ -19,9 +19,9 @@ MonoBehaviour:
     width: 2560
     height: 1373
   m_ShowMode: 4
-  m_Title: Scene
+  m_Title: Inspector
   m_RootView: {fileID: 2}
-  m_MinSize: {x: 875, y: 442}
+  m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
   m_Maximized: 1
 --- !u!114 &2
@@ -46,7 +46,7 @@ MonoBehaviour:
     y: 0
     width: 2560
     height: 1373
-  m_MinSize: {x: 875, y: 442}
+  m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
   m_UseTopView: 1
   m_TopViewHeight: 30
@@ -74,8 +74,8 @@ MonoBehaviour:
   m_MinSize: {x: 0, y: 0}
   m_MaxSize: {x: 0, y: 0}
   m_LoadedToolbars:
-  - {fileID: 23}
-  m_MainToolbar: {fileID: 23}
+  - {fileID: 22}
+  m_MainToolbar: {fileID: 22}
   m_LastLoadedLayoutName: 
 --- !u!114 &4
 MonoBehaviour:
@@ -122,7 +122,7 @@ MonoBehaviour:
   m_MinSize: {x: 911, y: 392}
   m_MaxSize: {x: 22006, y: 14042}
   vertical: 0
-  controlID: 25655
+  controlID: 40
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -147,7 +147,7 @@ MonoBehaviour:
   m_MinSize: {x: 635, y: 392}
   m_MaxSize: {x: 18005, y: 14042}
   vertical: 1
-  controlID: 25696
+  controlID: 156
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -173,7 +173,7 @@ MonoBehaviour:
   m_MinSize: {x: 635, y: 271}
   m_MaxSize: {x: 18005, y: 10021}
   vertical: 0
-  controlID: 25697
+  controlID: 157
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -370,9 +370,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 27.583893, y: -8.476833, z: 45.265827}
+    m_Target: {x: -13.148809, y: -0.23487021, z: -46.902782}
     speed: 2
-    m_Value: {x: 27.583893, y: -8.476833, z: 45.265827}
+    m_Value: {x: 0, y: 0, z: 0.032799065}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -419,13 +419,13 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: -0.1523556, y: -0.69378126, z: 0.15276957, w: -0.68691736}
+    m_Target: {x: -0.13706319, y: -0.3523827, z: 0.051578194, w: -0.9241832}
     speed: 2
-    m_Value: {x: -0.15260452, y: -0.69284064, z: 0.1525608, w: -0.6880472}
+    m_Value: {x: -0.019469958, y: 0.054555837, z: -0.0010624266, w: -0.9983141}
   m_Size:
-    m_Target: 35.595978
+    m_Target: 5.1410933
     speed: 2
-    m_Value: 35.595978
+    m_Value: 1.238497
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -479,9 +479,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 126f0600
-      m_LastClickedID: 421650
-      m_ExpandedIDs: 5220e8ff1226e8ff7a98e8ffae04e9ff1409e9ff0c0fe9ff7ae5e9ffdee0eeff30e7eeff52e3f3ff0c29f4ff6e2bf4ffbc2df4ffea3cf4ff5c3df4ff2c43f4ff4457f4ff7462f4ffe662f4ffba6ff4ff0248f5ff824cf5ffa446faff3a4afaff5c44ffff0c48ffff9248ffff5c4efffff8f9ffff60fbffff
+      m_SelectedIDs: 0a5f0000
+      m_LastClickedID: 24330
+      m_ExpandedIDs: 60fbffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -572,11 +572,11 @@ MonoBehaviour:
     m_DrawArea:
       serializedVersion: 2
       x: 0
-      y: 21
+      y: 0
       width: 1278
-      height: 1027
+      height: 1048
     m_Scale: {x: 0.9984375, y: 0.9984375}
-    m_Translation: {x: 639, y: 513.5}
+    m_Translation: {x: 639, y: 524}
     m_MarginLeft: 0
     m_MarginRight: 0
     m_MarginTop: 0
@@ -584,9 +584,9 @@ MonoBehaviour:
     m_LastShownAreaInsideMargins:
       serializedVersion: 2
       x: -640
-      y: -514.3036
+      y: -524.82
       width: 1280
-      height: 1028.6072
+      height: 1049.64
     m_MinimalGUI: 1
   m_defaultScale: 0.9984375
   m_LastWindowPixelSize: {x: 1278, y: 1048}
@@ -660,21 +660,20 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SkipHidden: 0
     m_SearchArea: 1
-    m_Folders:
-    - Assets/Scenes/Test Scenes
+    m_Folders: []
     m_Globs: []
   m_ViewMode: 0
   m_StartGridSize: 64
   m_LastFolders: []
   m_LastFoldersGridSize: -1
-  m_LastProjectPath: G:\Program Files (x86)\BloodAndSand\Blood And Sand
+  m_LastProjectPath: F:\Anathema\Blood And Sand
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 78bd0100
     m_LastClickedID: 114040
-    m_ExpandedIDs: ffffffff0000000058430000c0430000a65f0000a85f0000aa5f0000ac5f0000ae5f0000b05f0000b25f0000b65f0000b85f0000ba5f0000be5f0000c05f0000c25f0000c45f0000c65f0000c85f0000ca5f0000d05f0000d25f0000d65f0000d85f0000226000000c62000042650000c4650000ec650000406e0000846e0000c26e00003670000040700000
+    m_ExpandedIDs: 0000000058430000c0430000ca610000cc610000ce610000d0610000d2610000d4610000d6610000d8610000da610000dc610000de610000e0610000e2610000e4610000e6610000e8610000ea610000ec610000ee610000f0610000f2610000f4610000f6610000f8610000fa610000fc610000fe61000000620000026200000462000006620000086200000a6200000c6200000e620000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -699,10 +698,10 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_AssetTreeState:
-    scrollPos: {x: 0, y: 0}
+    scrollPos: {x: 0, y: 913}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: ffffffff0000000058430000c0430000a65f0000a85f0000aa5f0000ac5f0000ae5f0000b05f0000b25f0000b65f0000b85f0000ba5f0000be5f0000c05f0000c25f0000c45f0000c65f0000c85f0000ca5f0000d05f0000d25f0000d65f0000d85f0000326000009a6000000c62000042650000c4650000ec650000506b0000406e0000846e0000c26e00003670000040700000
+    m_ExpandedIDs: ffffffff0000000058430000c0430000ca610000cc610000ce610000d0610000d2610000d4610000d6610000d8610000da610000dc610000de610000e0610000e2610000e4610000e6610000e8610000ea610000ec610000ee610000f0610000f2610000f4610000f6610000f8610000fa610000fc610000fe61000000620000026200000462000006620000086200000a6200000c6200000e620000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -850,31 +849,6 @@ MonoBehaviour:
     height: 1302
   m_ViewDataDictionary: {fileID: 0}
 --- !u!114 &22
-MonoBehaviour:
-  m_ObjectHideFlags: 52
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 12059, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: 
-  m_EditorClassIdentifier: UnityEditor:UnityEditor.Experimental.TerrainAPI:PaintTextureTool
-  m_MinSize: {x: 100, y: 100}
-  m_MaxSize: {x: 4000, y: 4000}
-  m_TitleContent:
-    m_Text: Failed to load
-    m_Image: {fileID: 0}
-    m_Tooltip: 
-  m_Pos:
-    serializedVersion: 2
-    x: 0
-    y: 0
-    width: 320
-    height: 550
-  m_ViewDataDictionary: {fileID: 0}
---- !u!114 &23
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
