@@ -56,7 +56,9 @@ public class GameFinder : MonoBehaviourPunCallbacks
 
 		}
 		if(playerCount == 4){
-			startButton.SetActive(true);
+			if(PhotonNetwork.IsMasterClient) {
+				startButton.SetActive(true);
+			}
 		}
 		playerCount = 0;
 	}
