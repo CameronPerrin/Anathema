@@ -21,7 +21,7 @@ public class Health : MonoBehaviourPunCallbacks
 
     public GameObject deathObj;
     public GameObject bloodVFX;
-    public GameObject playerCapsule;
+    public GameObject bloodSpotInstLocation;
 
     void Start()
     {
@@ -53,7 +53,7 @@ public class Health : MonoBehaviourPunCallbacks
     public void Damage()
     {
         health -= 10;
-        Instantiate(bloodVFX, playerCapsule.transform.position, Quaternion.identity);
+        Instantiate(bloodVFX, bloodSpotInstLocation.transform.position, Quaternion.identity); // spawn blood vfx
         if(PV.IsMine) {
             if(health <= 0){
                 GameObject.Find("TheReaper").GetComponent<deathScript>().onDeath(); // Find obj, find script, call function
