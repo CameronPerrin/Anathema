@@ -16,7 +16,7 @@ public class PlayerMovementController : MonoBehaviour
     public Camera ray_camera;
     public GameObject p_camera;
     //public Transform cam;
-	public float moveSpeed = 7f;
+	public float moveSpeed = 70f;
     public float turnSmoothTime = 0.1f;
     float turnSmoothVelocity;
 
@@ -83,9 +83,9 @@ public class PlayerMovementController : MonoBehaviour
                 //transform.rotation = Quaternion.Euler(0f, targetAngle, 0f);
                 Vector3 moveDir = Quaternion.Euler(0f, targetAngle, 0f) * Vector3.forward;
                 if(Input.GetKey(KeyCode.LeftShift)) {
-                    controller.Move(moveDir.normalized * moveSpeed * 2f * Time.deltaTime);
+                    controller.SimpleMove(moveDir.normalized * moveSpeed * 2f);
                 } else {
-                    controller.Move(moveDir.normalized * moveSpeed * Time.deltaTime);
+                    controller.SimpleMove(moveDir.normalized * moveSpeed);
                 }
                 
 
