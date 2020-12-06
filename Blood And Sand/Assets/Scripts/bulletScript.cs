@@ -28,6 +28,7 @@ public class bulletScript : MonoBehaviour
                hp.TakeDamage(); 
             }
         	
+            
             Destroy(this.gameObject);
           
         }

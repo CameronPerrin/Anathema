@@ -109,6 +109,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fdab361ad756b2f47ae0b73c8942b667, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  CurrentPlayer: {fileID: 0}
+  bloodVFX: {fileID: 6062716170508370198, guid: a2d0a4f4e6e568842bf9abb6edb2864d,
+    type: 3}
 --- !u!65 &5175721089748540410
 BoxCollider:
   m_ObjectHideFlags: 0

@@ -491,6 +491,9 @@ MonoBehaviour:
   oHp: {fileID: 6691666988021276544}
   wHp: {fileID: 8586873480530414400}
   deathObj: {fileID: 0}
+  bloodVFX: {fileID: 6062716170508370198, guid: a2d0a4f4e6e568842bf9abb6edb2864d,
+    type: 3}
+  playerCapsule: {fileID: 1404866618595192266}
 --- !u!114 &956957041702412034
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -561,7 +564,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3747429205975524519}
-  m_LocalRotation: {x: 0.11315654, y: 0.000000011607166, z: -0.0000000013219168, w: 0.9935772}
+  m_LocalRotation: {x: 0.113156535, y: -0.000000012043565, z: 0.0000000013716176,
+    w: 0.9935772}
   m_LocalPosition: {x: 0, y: 4.66, z: -13}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:

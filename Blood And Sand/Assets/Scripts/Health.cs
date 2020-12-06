@@ -20,6 +20,8 @@ public class Health : MonoBehaviourPunCallbacks
     public GameObject wHp; 				// canvas world
 
     public GameObject deathObj;
+    public GameObject bloodVFX;
+    public GameObject playerCapsule;
 
     void Start()
     {
@@ -51,6 +53,7 @@ public class Health : MonoBehaviourPunCallbacks
     public void Damage()
     {
         health -= 10;
+        Instantiate(bloodVFX, playerCapsule.transform.position, Quaternion.identity);
         if(PV.IsMine) {
             if(health <= 0){
                 GameObject.Find("TheReaper").GetComponent<deathScript>().onDeath(); // Find obj, find script, call function
