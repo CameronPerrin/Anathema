@@ -8,6 +8,8 @@ TagManager:
   - Inventory_Item
   - PauseMenu
   - Bullet
+  - Enemy
+  - EnemyHitbox
   layers:
   - Default
   - TransparentFX

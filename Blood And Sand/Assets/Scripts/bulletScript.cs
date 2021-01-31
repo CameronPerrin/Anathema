@@ -20,6 +20,16 @@ public class bulletScript : MonoBehaviour
 
     private void OnTriggerEnter(Collider collision)
     {
+        if((collision.gameObject.tag == "EnemyHitbox") && (collision.gameObject != CurrentPlayer)){
+            Debug.Log("Step 1: Enemy detected");
+            npcHealth hp = collision.gameObject.GetComponent<npcHealth>();
+            if(hp){
+                Debug.Log("Step 69: Enemy detected");
+               hp.TakeDamage(); 
+            }
+
+            Destroy(this.gameObject);
+        }
         //probably find a wayto do this without assigning a variable each time this spawns if we need to optimize the script in the future
         if((collision.gameObject.tag == "Player") && (collision.gameObject != CurrentPlayer))
         {
@@ -32,5 +42,7 @@ public class bulletScript : MonoBehaviour
             Destroy(this.gameObject);
           
         }
+
+        
     }
 }
