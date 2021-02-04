@@ -11,36 +11,47 @@ public class mindlessFollow : MonoBehaviour
 
     private Vector3 playerPos;
     private GameObject player;
+    private Rigidbody rb;
+
+    // Navmesh stuff
+    [SerializeField]
+    Transform _destination;
+    UnityEngine.AI.NavMeshAgent _navMeshAgent;
     
-    // Start is called before the first frame update
+
     void Start()
     {
-        
+        rb = GetComponent<Rigidbody>();
+        _navMeshAgent = this.GetComponent<UnityEngine.AI.NavMeshAgent>();
+        _navMeshAgent.updateRotation = false;
+    }
+
+    void Update()
+    {
+        player = GameObject.FindGameObjectWithTag("Player");
+        //transform.LookAt(player.transform);
+        //Debug.Log("Player found at position: " + player.transform.position);
+        //transform.position = Vector3.MoveTowards(transform.position, player.transform.position, moveSpeed);
+        //rb.MovePosition(player.transform.position + new Vector3(3f,0f,0f) * moveSpeed * Time.fixedDeltaTime);
+        if(_navMeshAgent == null){
+            Debug.Log("No nav mesh agent is attached to " + gameObject.name);
+        }
+        else{
+            SetDestination();
+        }
+    }
+
+    private void SetDestination()
+    {
+        if(player){
+            Vector3 targetVector = player.transform.position;
+            _navMeshAgent.SetDestination(targetVector);
+        }
+        else{
+            Debug.Log("Player not found to for SetDestination()");
+        }
     }
 
     // Update is called once per frame
-    void Update()
-    {
-        if(followPlayer && !stopMove){
-            transform.LookAt(player.transform);
-            //Debug.Log("Player found at position: " + player.transform.position);
-            transform.position = Vector3.MoveTowards(transform.position, player.transform.position, moveSpeed);
-        }
-
-    }
-
-    void OnTriggerEnter(Collider collision)
-    {
-        if(collision.gameObject.tag == "Player"){
-            followPlayer = true;
-            player = collision.gameObject;
-        }
-    }
     
-    void OnTriggerExit(Collider collision)
-    {
-        if(collision.gameObject.tag == "Player"){
-            followPlayer = false;
-        }
-    }
 }
