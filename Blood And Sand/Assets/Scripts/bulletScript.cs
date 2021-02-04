@@ -23,6 +23,7 @@ public class bulletScript : MonoBehaviour
         if((collision.gameObject.tag == "EnemyHitbox") && (collision.gameObject != CurrentPlayer)){
             Debug.Log("Step 1: Enemy detected");
             npcHealth hp = collision.gameObject.GetComponent<npcHealth>();
+            Debug.Log(hp);
             if(hp){
                 Debug.Log("Step 69: Enemy detected");
                hp.TakeDamage(); 

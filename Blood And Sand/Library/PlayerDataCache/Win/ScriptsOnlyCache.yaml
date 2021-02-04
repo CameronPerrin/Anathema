@@ -26,6 +26,7 @@ ScriptsOnlyBuild:
     - mindlessFollow
     - nTools.PrefabPainter.PrefabPainterSceneSettings
     - nTools.PrefabPainter.PrefabPainterSettings
+    - npcHealth
     - particleDestroy
     - stopMove
     Cinemachine.dll:
@@ -240,19 +241,19 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 15292}
     - Class: 114
-      Script: {instanceID: 15334}
+      Script: {instanceID: 15336}
     - Class: 114
-      Script: {instanceID: 15344}
+      Script: {instanceID: 15346}
     - Class: 114
-      Script: {instanceID: 15480}
+      Script: {instanceID: 15482}
     - Class: 114
-      Script: {instanceID: 15526}
+      Script: {instanceID: 15528}
     - Class: 114
-      Script: {instanceID: 15602}
+      Script: {instanceID: 15604}
     - Class: 114
-      Script: {instanceID: 15716}
+      Script: {instanceID: 15718}
     - Class: 114
-      Script: {instanceID: 15792}
+      Script: {instanceID: 15794}
     - Class: 114
       Script: {instanceID: 15898}
     - Class: 114
@@ -280,9 +281,9 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 16780}
     - Class: 114
-      Script: {instanceID: 24564}
+      Script: {instanceID: 24614}
     - Class: 114
-      Script: {instanceID: 24572}
+      Script: {instanceID: 24622}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -351,9 +352,9 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 16604}
     - Class: 114
-      Script: {instanceID: 24564}
+      Script: {instanceID: 24614}
     - Class: 114
-      Script: {instanceID: 24572}
+      Script: {instanceID: 24622}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 157
@@ -386,6 +387,8 @@ ScriptsOnlyBuild:
     - Class: 43
       Script: {instanceID: 0}
     - Class: 48
+      Script: {instanceID: 0}
+    - Class: 54
       Script: {instanceID: 0}
     - Class: 64
       Script: {instanceID: 0}
@@ -442,7 +445,11 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 15122}
     - Class: 114
-      Script: {instanceID: 15602}
+      Script: {instanceID: 15332}
+    - Class: 114
+      Script: {instanceID: 15604}
+    - Class: 114
+      Script: {instanceID: 15898}
     - Class: 114
       Script: {instanceID: 16094}
     - Class: 114
@@ -452,14 +459,16 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 16604}
     - Class: 114
-      Script: {instanceID: 24564}
+      Script: {instanceID: 24614}
     - Class: 114
-      Script: {instanceID: 24572}
+      Script: {instanceID: 24622}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
       Script: {instanceID: 0}
     - Class: 135
+      Script: {instanceID: 0}
+    - Class: 136
       Script: {instanceID: 0}
     - Class: 154
       Script: {instanceID: 0}
@@ -555,7 +564,7 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 15122}
     - Class: 114
-      Script: {instanceID: 15602}
+      Script: {instanceID: 15604}
     - Class: 114
       Script: {instanceID: 16094}
     - Class: 114
@@ -565,9 +574,9 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 16604}
     - Class: 114
-      Script: {instanceID: 24564}
+      Script: {instanceID: 24614}
     - Class: 114
-      Script: {instanceID: 24572}
+      Script: {instanceID: 24622}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -674,9 +683,9 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 15122}
     - Class: 114
-      Script: {instanceID: 15540}
+      Script: {instanceID: 15542}
     - Class: 114
-      Script: {instanceID: 15602}
+      Script: {instanceID: 15604}
     - Class: 114
       Script: {instanceID: 16094}
     - Class: 114
@@ -686,13 +695,13 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 16604}
     - Class: 114
-      Script: {instanceID: 24564}
+      Script: {instanceID: 24614}
     - Class: 114
-      Script: {instanceID: 24572}
+      Script: {instanceID: 24622}
     - Class: 114
-      Script: {instanceID: 128626}
+      Script: {instanceID: 128242}
     - Class: 114
-      Script: {instanceID: 128628}
+      Script: {instanceID: 128244}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -1872,6 +1881,12 @@ ScriptsOnlyBuild:
     className: PixelPerfectCamera
   - hash:
       serializedVersion: 2
+      Hash: 6e17eb106ece5a74684475324252e555
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: npcHealth
+  - hash:
+      serializedVersion: 2
       Hash: df819f0bc77c8d047eca1df91bbaa90d
     assemblyName: Unity.RenderPipelines.Core.Runtime.dll
     namespaceName: UnityEngine.Rendering.UI
@@ -2014,12 +2029,6 @@ ScriptsOnlyBuild:
     assemblyName: Unity.RenderPipelines.Core.Runtime.dll
     namespaceName: UnityEngine.Rendering.UI
     className: DebugUIHandlerValue
-  - hash:
-      serializedVersion: 2
-      Hash: fb5fcd2d8e27700c2390b05734fa6ed3
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: Aggro
   - hash:
       serializedVersion: 2
       Hash: 6ff1c52123c50b3d73f35cd0e2e65dfd
@@ -2423,4 +2432,4 @@ ScriptsOnlyBuild:
   - Assets/Scenes/MultiplayerScene.unity
   - Assets/Scenes/Test Scenes/WeaponTesting.unity
   - Assets/Scenes/Test Scenes/CombatTesting.unity
-  playerPath: G:/Program Files (x86)/Anathema/Build/Blood And Sand.exe
+  playerPath: C:/Users/Josh/Documents/GitHub/Anathema/New/Blood And Sand.exe
