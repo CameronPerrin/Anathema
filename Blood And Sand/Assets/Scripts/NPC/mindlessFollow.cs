@@ -29,7 +29,7 @@ public class mindlessFollow : MonoBehaviour
     void Update()
     {
         player = GameObject.FindGameObjectWithTag("Player");
-        //transform.LookAt(player.transform);
+        transform.LookAt(player.transform);
         //Debug.Log("Player found at position: " + player.transform.position);
         //transform.position = Vector3.MoveTowards(transform.position, player.transform.position, moveSpeed);
         //rb.MovePosition(player.transform.position + new Vector3(3f,0f,0f) * moveSpeed * Time.fixedDeltaTime);

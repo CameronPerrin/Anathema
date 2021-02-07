@@ -83,6 +83,7 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
+  m_PresetInfoIsWorld: 0
 --- !u!114 &8769901844102017359
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -300,6 +301,7 @@ MonoBehaviour:
   followPlayer: 0
   stopMove: 0
   moveSpeed: 0.02
+  _destination: {fileID: 0}
 --- !u!65 &8769901844118488100
 BoxCollider:
   m_ObjectHideFlags: 0

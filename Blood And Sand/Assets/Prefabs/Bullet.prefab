@@ -110,8 +110,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CurrentPlayer: {fileID: 0}
-  bloodVFX: {fileID: 6062716170508370198, guid: a2d0a4f4e6e568842bf9abb6edb2864d,
-    type: 3}
 --- !u!65 &5175721089748540410
 BoxCollider:
   m_ObjectHideFlags: 0
