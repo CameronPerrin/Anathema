@@ -331,6 +331,8 @@ MonoBehaviour:
   health: 100
   worldHealthBar: {fileID: 8769901845431626841}
   wHp: {fileID: 8769901844102017357}
+  FloatingTextPrefab: {fileID: 223652675918186036, guid: 8c3830ca765f31b4abd2b2dc136f7cb7,
+    type: 3}
 --- !u!54 &8769901844118488105
 Rigidbody:
   m_ObjectHideFlags: 0

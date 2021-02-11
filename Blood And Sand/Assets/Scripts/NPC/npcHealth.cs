@@ -19,6 +19,11 @@ public class npcHealth : MonoBehaviour
     //public GameObject bloodSpotInstLocation;
 
 
+   // public Camera playerCamera;
+    public GameObject FloatingTextPrefab;
+    public int damage; // Placeholder damage for when we add in weapons
+
+
     void Start()
     {
         PV = GetComponent<PhotonView>();
@@ -31,6 +36,12 @@ public class npcHealth : MonoBehaviour
         Debug.Log("Step 2: TakeDamage() function called");
         if(PV.IsMine){
             PV.RPC("Damage", RpcTarget.All);
+
+            // Check if floating text exists and if health is over 0 so that damage text does not spawn at hp 0
+            if(FloatingTextPrefab && health > 0)
+            {
+                ShowFloatingText();
+            }
         }
         
     }
@@ -63,5 +74,16 @@ public class npcHealth : MonoBehaviour
             //everyone else
             health = (float)stream.ReceiveNext();
         }
+    }
+    
+
+    // Spawn in damage text and makes sure that the text rotation is facing the camera
+    // ** This might be changed later because text does not show sometimes in multiplayer session. **
+    void ShowFloatingText()
+    {
+        var go = Instantiate(FloatingTextPrefab, transform.position, Quaternion.identity, transform);
+        go.transform.rotation = Quaternion.LookRotation(transform.position - Camera.main.transform.position);
+        //go.transform.LookAt(Camera.main.transform);
+        go.GetComponent<TextMesh>().text = damage.ToString();
     }
 }

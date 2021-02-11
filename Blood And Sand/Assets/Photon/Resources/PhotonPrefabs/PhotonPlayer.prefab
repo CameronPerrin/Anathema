@@ -478,6 +478,9 @@ MonoBehaviour:
   bloodVFX: {fileID: 6062716170508370198, guid: a2d0a4f4e6e568842bf9abb6edb2864d,
     type: 3}
   bloodSpotInstLocation: {fileID: 5962407366753003688}
+  FloatingTextPrefab: {fileID: 7957747401790915659, guid: e4c38fc68cee0d34ea6cd0bafcad4ae0,
+    type: 3}
+  damage: 10
 --- !u!114 &956957041702412034
 MonoBehaviour:
   m_ObjectHideFlags: 0
