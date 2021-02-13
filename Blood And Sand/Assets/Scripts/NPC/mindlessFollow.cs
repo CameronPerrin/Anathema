@@ -7,6 +7,8 @@ public class mindlessFollow : MonoBehaviour
 
     public bool followPlayer = false;
     public bool stopMove = false;
+    public bool isRangedNPC = false;
+    public bool hitP = false;
     public float moveSpeed = 0.02f;
 
     private Vector3 playerPos;
@@ -44,8 +46,19 @@ public class mindlessFollow : MonoBehaviour
     private void SetDestination()
     {
         if(player){
-            Vector3 targetVector = player.transform.position;
-            _navMeshAgent.SetDestination(targetVector);
+            if(!isRangedNPC){
+                Vector3 targetVector = player.transform.position;
+                _navMeshAgent.SetDestination(targetVector);
+            }
+            else{
+                if(hitP){
+                    _navMeshAgent.SetDestination(transform.position);
+                }
+                else{
+                    Vector3 targetVector = player.transform.position;
+                    _navMeshAgent.SetDestination(targetVector);
+                }
+            }
         }
         else{
             Debug.Log("Player not found to for SetDestination()");
