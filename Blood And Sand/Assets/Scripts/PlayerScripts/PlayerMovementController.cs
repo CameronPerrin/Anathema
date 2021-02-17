@@ -56,12 +56,7 @@ public class PlayerMovementController : MonoBehaviour
                         }
                     }
             }
-            
-
-
-            
-
-
+        
 
             float horizontal = Input.GetAxisRaw("Horizontal");
             float vertical = Input.GetAxisRaw("Vertical");
@@ -82,13 +77,21 @@ public class PlayerMovementController : MonoBehaviour
                 }
                 //transform.rotation = Quaternion.Euler(0f, targetAngle, 0f);
                 Vector3 moveDir = Quaternion.Euler(0f, targetAngle, 0f) * Vector3.forward;
-                if(Input.GetKey(KeyCode.LeftShift)) {
+                if(Input.GetKey(KeyCode.LeftShift)) { // Sprinting
                     controller.SimpleMove(moveDir.normalized * moveSpeed * 2f);
                 } else {
                     controller.SimpleMove(moveDir.normalized * moveSpeed);
                 }
                 
 
+            }
+            else{
+                // Make sure character needs gravity to work before we call it                
+                if(!controller.isGrounded){
+                    // Gravity only works if movement is called
+                    // so we're calling movement but we're making sure it's returning a 0 value so the player doesn't actually move!
+                    controller.SimpleMove(transform.position*0);
+                }
             }
         }
 
