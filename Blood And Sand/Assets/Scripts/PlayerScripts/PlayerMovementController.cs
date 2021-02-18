@@ -27,6 +27,8 @@ public class PlayerMovementController : MonoBehaviour
 
     float turnSmoothVelocity;
 
+    public Vector3 moveDir;
+
     // For highliting
     private GameObject temp;
     // Start is called before the first frame update
@@ -113,7 +115,7 @@ public class PlayerMovementController : MonoBehaviour
                 * I've also added the " * Time.deltaTime" at the end of "controller.Move" function, (I'm not sure
                 * why, but without it I've ran into many unexplainable errors).
                 */
-                Vector3 moveDir = Quaternion.Euler(0f, targetAngle, 0f) * Vector3.forward;
+                moveDir = Quaternion.Euler(0f, targetAngle, 0f) * Vector3.forward;
                 // Sprinting
                 if(Input.GetKey(KeyCode.LeftShift) && IsGrounded()) { 
                     controller.Move(moveDir.normalized * moveSpeed * 2f * Time.deltaTime);
