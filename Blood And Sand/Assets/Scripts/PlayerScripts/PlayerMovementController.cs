@@ -24,10 +24,17 @@ public class PlayerMovementController : MonoBehaviour
     public float gravityValue = -9.81f;
     private bool hasJumped = false;
     private Vector3 playerVelocity;
-
+    // Player falling stuff
+    private bool isFalling = false;
+    private bool setFallingStats = false;
+    private Vector3 fallDir;
+    private bool ifSprint = false;
+    
     float turnSmoothVelocity;
 
     public Vector3 moveDir;
+    
+    
 
     // For highliting
     private GameObject temp;
@@ -65,7 +72,12 @@ public class PlayerMovementController : MonoBehaviour
                         }
                     }
             }
-        
+            // Movement input
+            float horizontal = Input.GetAxisRaw("Horizontal"); 
+            float vertical = Input.GetAxisRaw("Vertical");
+            Vector3 direction = new Vector3(horizontal, 0f, vertical).normalized;
+
+
             /* 
              * Making sure the Vector3 property for Jumping is set to 0 grounded and/or below 0
              * using the custom controller.isGrounded function instead of our custom one, 
@@ -78,18 +90,20 @@ public class PlayerMovementController : MonoBehaviour
             {
                 playerVelocity.y = 0f;
                 playerVelocity.x = 0f;
-                playerVelocity.z = 0f;
+                playerVelocity.z = 0f;                
+
                 // Set hasJumped back to false to allow for more jumping;
                 hasJumped = false;
-            }
+                // Since the player has landed, he is no longer falling ;)
+                isFalling = false;
+            } 
 
-            // Movement input
-            float horizontal = Input.GetAxisRaw("Horizontal"); 
-            float vertical = Input.GetAxisRaw("Vertical");
-            Vector3 direction = new Vector3(horizontal, 0f, vertical).normalized;
 
-            /*      - [PLAYER MOVEMENT] -
-            * Making sure player is currently moving. If direction.magnitude == 0, then no movement.
+
+            /********************************************************************************************
+            *      - [PLAYER MOVEMENT] -                                                                *
+            * Making sure player is currently moving. If direction.magnitude == 0, then no movement.    *
+            *********************************************************************************************
             */
             if (direction.magnitude >= 0.1f)
             {
@@ -122,15 +136,64 @@ public class PlayerMovementController : MonoBehaviour
                 }
                 // If not sprinting, then move normally.
                 else { 
-                    if(IsGrounded())
+                    /*
+                    * This long line of code is meant to check if the player is falling but hasn't jumped.
+                    * It also has a bool check if the player had sprinted or not, this so that when
+                    * forward falling momentum is applied it matches with the movement speed before
+                    * the player started falling.
+                    */
+                    if(!IsGrounded() && !hasJumped || (Input.GetKey(KeyCode.LeftShift) && !IsGrounded() && !hasJumped)){
+                        if(Input.GetKey(KeyCode.LeftShift))
+                            ifSprint = true;
+                        isFalling = true;
+                    }
+                    // Move normally.
+                    else if(IsGrounded()){
                         controller.Move(moveDir.normalized * moveSpeed * Time.deltaTime);
+                    }
                 }
-
             }
+
+
+
+            /************************************************************************************************************      
+            *        - [PLAYER FALLING] -                                                                               *
+            * This part of the code makes sure there is "natural" momentum applied to a player when they begin falling. *
+            * Falling, in this case, means to fall with directional momentum without the player pressing Jump prior     *
+            * to finding themselves in this situation.                                                                  *
+            *************************************************************************************************************
+            */
+            if(isFalling){
+                // This bool makes sure that the direction is only set once, so the player cannot change directions mid-air.
+                if(!setFallingStats){
+                    // Set target direction.
+                    float targetAngle = Mathf.Atan2(direction.x, direction.z) * Mathf.Rad2Deg + p_camera.transform.eulerAngles.y;
+                    // Checks to see if the player was sprinting before they fell.
+                    if(ifSprint)
+                        fallDir += Quaternion.Euler(0f, targetAngle, 0f) * Vector3.forward * 2 * jumpForwardForce;
+                    else
+                        fallDir += Quaternion.Euler(0f, targetAngle, 0f) * Vector3.forward * jumpForwardForce;
+                    // This bool makes sure that the direction is only set once, so the player cannot change directions mid-air.
+                    setFallingStats = true;
+                }
+                
+            }
+            // Reset all the falling stats back to 0 or false so as to not cause conflicts with anything else.
+            else{
+                fallDir.x = 0;
+                fallDir.z = 0;
+                setFallingStats = false;
+            }
+            // Apply the forward momentum when falling.
+            controller.Move(fallDir * Time.deltaTime);
+
             
-            /*      - [PLAYER JUMPING] -
-            * Need to check if sprint key is being held down as the player is jumping
-            * to adjust the forward push when they jump.
+            
+            /****************************************************************************
+            *        - [PLAYER JUMPING] -                                               *
+            * Need to check if sprint key is being held down as the player is jumping   *
+            * to adjust the forward push when they jump.                                *
+            *****************************************************************************
             */
             if(IsGrounded() && Input.GetKey(KeyCode.LeftShift) && Input.GetButtonDown("Jump") && !hasJumped){
                 /*
@@ -166,11 +229,16 @@ public class PlayerMovementController : MonoBehaviour
             controller.Move(playerVelocity * Time.deltaTime);
         }
 
+        // Player falling off edge with momentum
+        
+
     }
 
-    /*
-     * Character controller input is unreliable and gives off false-positives,
-     * so I made our own way of checking if the player is grounded using raycasts
+    /********************************************************************************
+    *       - [CHECK IF PLAYER GROUNDED] -                                          *
+    * Character controller input is unreliable and gives off false-positives,       *
+    * so I made our own way of checking if the player is grounded using raycasts    *
+    *********************************************************************************
     */
 
     bool IsGrounded()
