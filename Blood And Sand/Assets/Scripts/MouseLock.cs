@@ -27,13 +27,14 @@ public class MouseLock : MonoBehaviour
                 pauseScreen.SetActive(true);
                 this.GetComponent<PlayerMovementController>().isPaused = true;
                 this.gameObject.transform.GetChild(0).gameObject.SetActive(false);
-
+                this.GetComponent<Combat>().isPaused = true;
             }
             else if(!paused)
             {
                 pauseScreen.SetActive(false);
                 this.GetComponent<PlayerMovementController>().isPaused = false;
                 this.gameObject.transform.GetChild(0).gameObject.SetActive(true);
+                this.GetComponent<Combat>().isPaused = false;
             }
         }
 

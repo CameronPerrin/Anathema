@@ -28,7 +28,7 @@ public class mindlessFollow : MonoBehaviour
         _navMeshAgent.updateRotation = false;
     }
 
-    void Update()
+    void FixedUpdate()
     {
         player = GameObject.FindGameObjectWithTag("Player");
         transform.LookAt(player.transform);

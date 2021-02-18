@@ -502,6 +502,7 @@ MonoBehaviour:
     type: 3}
   shootPoint: {fileID: 3680925794353910806}
   CurrentPlayer: {fileID: 0}
+  isPaused: 0
 --- !u!114 &174224487514714548
 MonoBehaviour:
   m_ObjectHideFlags: 0

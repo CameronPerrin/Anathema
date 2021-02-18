@@ -13,24 +13,48 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cacheType: 6
-  lastUpdatedAtString: 2021-02-18T17:37:41.997-05:00
-  initializedAtString: 2021-02-18T15:30:14.412-05:00
+  lastUpdatedAtString: 2021-02-18T18:44:45.631-05:00
+  initializedAtString: 2021-02-18T17:50:38.592-05:00
   entries:
-  - path: Blood And Sand\Assets\Photon\PhotonUnityNetworking\Resources\PhotonServerSettings.asset
-    fullPath: G:\Program Files (x86)\Anathema\Blood And Sand\Assets\Photon\PhotonUnityNetworking\Resources\PhotonServerSettings.asset
-    projectPath: Assets\Photon\PhotonUnityNetworking\Resources\PhotonServerSettings.asset
-    originalPath: 
-    indexStatus: 0
-    workTreeStatus: 3
   - path: Blood And Sand\Assets\Photon\Resources\PhotonPrefabs\PhotonPlayer.prefab
     fullPath: G:\Program Files (x86)\Anathema\Blood And Sand\Assets\Photon\Resources\PhotonPrefabs\PhotonPlayer.prefab
     projectPath: Assets\Photon\Resources\PhotonPrefabs\PhotonPlayer.prefab
     originalPath: 
     indexStatus: 0
     workTreeStatus: 3
-  - path: Blood And Sand\Assets\Scripts\PlayerScripts\PlayerMovementController.cs
-    fullPath: G:\Program Files (x86)\Anathema\Blood And Sand\Assets\Scripts\PlayerScripts\PlayerMovementController.cs
-    projectPath: Assets\Scripts\PlayerScripts\PlayerMovementController.cs
+  - path: Blood And Sand\Assets\Prefabs\NPC\SimpleNPC.prefab
+    fullPath: G:\Program Files (x86)\Anathema\Blood And Sand\Assets\Prefabs\NPC\SimpleNPC.prefab
+    projectPath: Assets\Prefabs\NPC\SimpleNPC.prefab
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 3
+  - path: Blood And Sand\Assets\Prefabs\NPC\SimpleNPC.prefab.meta
+    fullPath: G:\Program Files (x86)\Anathema\Blood And Sand\Assets\Prefabs\NPC\SimpleNPC.prefab.meta
+    projectPath: Assets\Prefabs\NPC\SimpleNPC.prefab.meta
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 3
+  - path: Blood And Sand\Assets\Scenes\Test Scenes\CombatTesting.unity
+    fullPath: G:\Program Files (x86)\Anathema\Blood And Sand\Assets\Scenes\Test Scenes\CombatTesting.unity
+    projectPath: Assets\Scenes\Test Scenes\CombatTesting.unity
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 3
+  - path: Blood And Sand\Assets\Scripts\Combat.cs
+    fullPath: G:\Program Files (x86)\Anathema\Blood And Sand\Assets\Scripts\Combat.cs
+    projectPath: Assets\Scripts\Combat.cs
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 3
+  - path: Blood And Sand\Assets\Scripts\MouseLock.cs
+    fullPath: G:\Program Files (x86)\Anathema\Blood And Sand\Assets\Scripts\MouseLock.cs
+    projectPath: Assets\Scripts\MouseLock.cs
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 3
+  - path: Blood And Sand\Assets\Scripts\NPC\mindlessFollow.cs
+    fullPath: G:\Program Files (x86)\Anathema\Blood And Sand\Assets\Scripts\NPC\mindlessFollow.cs
+    projectPath: Assets\Scripts\NPC\mindlessFollow.cs
     originalPath: 
     indexStatus: 0
     workTreeStatus: 3
@@ -40,15 +64,21 @@ MonoBehaviour:
     originalPath: 
     indexStatus: 0
     workTreeStatus: 3
+  - path: Blood And Sand\Library\Artifacts\02\02012fae7a5058c055829ed8aa9103ff
+    fullPath: G:\Program Files (x86)\Anathema\Blood And Sand\Library\Artifacts\02\02012fae7a5058c055829ed8aa9103ff
+    projectPath: Library\Artifacts\02\02012fae7a5058c055829ed8aa9103ff
+    originalPath: 
+    indexStatus: 1
+    workTreeStatus: 1
   - path: Blood And Sand\Library\Artifacts\06\06428aec7926f29c8ea22d440065ea89
     fullPath: G:\Program Files (x86)\Anathema\Blood And Sand\Library\Artifacts\06\06428aec7926f29c8ea22d440065ea89
     projectPath: Library\Artifacts\06\06428aec7926f29c8ea22d440065ea89
     originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
-  - path: Blood And Sand\Library\Artifacts\07\079c5443e5cf93a47f8ee3873fce0daf
-    fullPath: G:\Program Files (x86)\Anathema\Blood And Sand\Library\Artifacts\07\079c5443e5cf93a47f8ee3873fce0daf
-    projectPath: Library\Artifacts\07\079c5443e5cf93a47f8ee3873fce0daf
+    indexStatus: 0
+    workTreeStatus: 5
+  - path: Blood And Sand\Library\Artifacts\0c\0ca75060d642d1926caf20c32f74b018
+    fullPath: G:\Program Files (x86)\Anathema\Blood And Sand\Library\Artifacts\0c\0ca75060d642d1926caf20c32f74b018
+    projectPath: Library\Artifacts\0c\0ca75060d642d1926caf20c32f74b018
     originalPath: 
     indexStatus: 1
     workTreeStatus: 1
@@ -56,35 +86,47 @@ MonoBehaviour:
     fullPath: G:\Program Files (x86)\Anathema\Blood And Sand\Library\Artifacts\0d\0d941210caae1c730082939f4c753cdd
     projectPath: Library\Artifacts\0d\0d941210caae1c730082939f4c753cdd
     originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
-  - path: Blood And Sand\Library\Artifacts\1c\1cfabdd8a4ae3c9bb6173335186b05de
-    fullPath: G:\Program Files (x86)\Anathema\Blood And Sand\Library\Artifacts\1c\1cfabdd8a4ae3c9bb6173335186b05de
-    projectPath: Library\Artifacts\1c\1cfabdd8a4ae3c9bb6173335186b05de
-    originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
-  - path: Blood And Sand\Library\Artifacts\1d\1d48012112a2edb63f9d2456a2a25ea7
-    fullPath: G:\Program Files (x86)\Anathema\Blood And Sand\Library\Artifacts\1d\1d48012112a2edb63f9d2456a2a25ea7
-    projectPath: Library\Artifacts\1d\1d48012112a2edb63f9d2456a2a25ea7
-    originalPath: 
     indexStatus: 0
     workTreeStatus: 5
+  - path: Blood And Sand\Library\Artifacts\10\1072ec48351f19e89688cee4fc960994
+    fullPath: G:\Program Files (x86)\Anathema\Blood And Sand\Library\Artifacts\10\1072ec48351f19e89688cee4fc960994
+    projectPath: Library\Artifacts\10\1072ec48351f19e89688cee4fc960994
+    originalPath: 
+    indexStatus: 1
+    workTreeStatus: 1
+  - path: Blood And Sand\Library\Artifacts\1c\1cf7c5266fe668885b5433bf8e9637f2
+    fullPath: G:\Program Files (x86)\Anathema\Blood And Sand\Library\Artifacts\1c\1cf7c5266fe668885b5433bf8e9637f2
+    projectPath: Library\Artifacts\1c\1cf7c5266fe668885b5433bf8e9637f2
+    originalPath: 
+    indexStatus: 1
+    workTreeStatus: 1
   - path: Blood And Sand\Library\Artifacts\1f\1f2e37bcd7f555d6459bb4a3cd76c2b7
     fullPath: G:\Program Files (x86)\Anathema\Blood And Sand\Library\Artifacts\1f\1f2e37bcd7f555d6459bb4a3cd76c2b7
     projectPath: Library\Artifacts\1f\1f2e37bcd7f555d6459bb4a3cd76c2b7
     originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
+    indexStatus: 0
+    workTreeStatus: 5
   - path: Blood And Sand\Library\Artifacts\1f\1ff87a8a0002906b4f63cf578b9b6372
     fullPath: G:\Program Files (x86)\Anathema\Blood And Sand\Library\Artifacts\1f\1ff87a8a0002906b4f63cf578b9b6372
     projectPath: Library\Artifacts\1f\1ff87a8a0002906b4f63cf578b9b6372
     originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
+    indexStatus: 0
+    workTreeStatus: 5
   - path: Blood And Sand\Library\Artifacts\20\205e772310058c41f2031034d38dacb3
     fullPath: G:\Program Files (x86)\Anathema\Blood And Sand\Library\Artifacts\20\205e772310058c41f2031034d38dacb3
     projectPath: Library\Artifacts\20\205e772310058c41f2031034d38dacb3
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 5
+  - path: Blood And Sand\Library\Artifacts\27\278e21ff633681cea1cc150d6c97f1fa
+    fullPath: G:\Program Files (x86)\Anathema\Blood And Sand\Library\Artifacts\27\278e21ff633681cea1cc150d6c97f1fa
+    projectPath: Library\Artifacts\27\278e21ff633681cea1cc150d6c97f1fa
+    originalPath: 
+    indexStatus: 1
+    workTreeStatus: 1
+  - path: Blood And Sand\Library\Artifacts\29\2981752a29099c9700bf131d1d1e116c
+    fullPath: G:\Program Files (x86)\Anathema\Blood And Sand\Library\Artifacts\29\2981752a29099c9700bf131d1d1e116c
+    projectPath: Library\Artifacts\29\2981752a29099c9700bf131d1d1e116c
     originalPath: 
     indexStatus: 1
     workTreeStatus: 1
@@ -92,23 +134,29 @@ MonoBehaviour:
     fullPath: G:\Program Files (x86)\Anathema\Blood And Sand\Library\Artifacts\2b\2bf92f714135e328577e3481bb2ff3d8
     projectPath: Library\Artifacts\2b\2bf92f714135e328577e3481bb2ff3d8
     originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
+    indexStatus: 0
+    workTreeStatus: 5
   - path: Blood And Sand\Library\Artifacts\2f\2f883ea8718c315fc9a4c5d69e950f63
     fullPath: G:\Program Files (x86)\Anathema\Blood And Sand\Library\Artifacts\2f\2f883ea8718c315fc9a4c5d69e950f63
     projectPath: Library\Artifacts\2f\2f883ea8718c315fc9a4c5d69e950f63
     originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
-  - path: Blood And Sand\Library\Artifacts\3a\3a47569ada098cda7c517f219f7acd52
-    fullPath: G:\Program Files (x86)\Anathema\Blood And Sand\Library\Artifacts\3a\3a47569ada098cda7c517f219f7acd52
-    projectPath: Library\Artifacts\3a\3a47569ada098cda7c517f219f7acd52
-    originalPath: 
     indexStatus: 0
     workTreeStatus: 5
+  - path: Blood And Sand\Library\Artifacts\30\3030980c820f03b38f6704d34002ed76
+    fullPath: G:\Program Files (x86)\Anathema\Blood And Sand\Library\Artifacts\30\3030980c820f03b38f6704d34002ed76
+    projectPath: Library\Artifacts\30\3030980c820f03b38f6704d34002ed76
+    originalPath: 
+    indexStatus: 1
+    workTreeStatus: 1
   - path: Blood And Sand\Library\Artifacts\40\40e6c213f33c9280a9cf9335cbecf54b
     fullPath: G:\Program Files (x86)\Anathema\Blood And Sand\Library\Artifacts\40\40e6c213f33c9280a9cf9335cbecf54b
     projectPath: Library\Artifacts\40\40e6c213f33c9280a9cf9335cbecf54b
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 5
+  - path: Blood And Sand\Library\Artifacts\42\42edffcc48c5527f128d7629665a5b32
+    fullPath: G:\Program Files (x86)\Anathema\Blood And Sand\Library\Artifacts\42\42edffcc48c5527f128d7629665a5b32
+    projectPath: Library\Artifacts\42\42edffcc48c5527f128d7629665a5b32
     originalPath: 
     indexStatus: 1
     workTreeStatus: 1
@@ -116,23 +164,17 @@ MonoBehaviour:
     fullPath: G:\Program Files (x86)\Anathema\Blood And Sand\Library\Artifacts\47\471e0934c55ecd7a95780bcd4e3befd2
     projectPath: Library\Artifacts\47\471e0934c55ecd7a95780bcd4e3befd2
     originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
-  - path: Blood And Sand\Library\Artifacts\47\47d06e50c963e8d97cfcc074c5d6d7aa
-    fullPath: G:\Program Files (x86)\Anathema\Blood And Sand\Library\Artifacts\47\47d06e50c963e8d97cfcc074c5d6d7aa
-    projectPath: Library\Artifacts\47\47d06e50c963e8d97cfcc074c5d6d7aa
-    originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
+    indexStatus: 0
+    workTreeStatus: 5
   - path: Blood And Sand\Library\Artifacts\48\482207a0347b2b3abbfe1b7d96f1a159
     fullPath: G:\Program Files (x86)\Anathema\Blood And Sand\Library\Artifacts\48\482207a0347b2b3abbfe1b7d96f1a159
     projectPath: Library\Artifacts\48\482207a0347b2b3abbfe1b7d96f1a159
     originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
-  - path: Blood And Sand\Library\Artifacts\48\4853e410bf0faf55148092a300ef4b81
-    fullPath: G:\Program Files (x86)\Anathema\Blood And Sand\Library\Artifacts\48\4853e410bf0faf55148092a300ef4b81
-    projectPath: Library\Artifacts\48\4853e410bf0faf55148092a300ef4b81
+    indexStatus: 0
+    workTreeStatus: 5
+  - path: Blood And Sand\Library\Artifacts\4a\4a009c67af87119b774bf6c8538d1ac4
+    fullPath: G:\Program Files (x86)\Anathema\Blood And Sand\Library\Artifacts\4a\4a009c67af87119b774bf6c8538d1ac4
+    projectPath: Library\Artifacts\4a\4a009c67af87119b774bf6c8538d1ac4
     originalPath: 
     indexStatus: 0
     workTreeStatus: 5
@@ -140,29 +182,41 @@ MonoBehaviour:
     fullPath: G:\Program Files (x86)\Anathema\Blood And Sand\Library\Artifacts\4a\4a45478a7601a4ab811f850ed1d92fcc
     projectPath: Library\Artifacts\4a\4a45478a7601a4ab811f850ed1d92fcc
     originalPath: 
+    indexStatus: 0
+    workTreeStatus: 5
+  - path: Blood And Sand\Library\Artifacts\4d\4d7e93fa176347fd3403696edbd85f48
+    fullPath: G:\Program Files (x86)\Anathema\Blood And Sand\Library\Artifacts\4d\4d7e93fa176347fd3403696edbd85f48
+    projectPath: Library\Artifacts\4d\4d7e93fa176347fd3403696edbd85f48
+    originalPath: 
+    indexStatus: 1
+    workTreeStatus: 1
+  - path: Blood And Sand\Library\Artifacts\4f\4fc08aa1086bad705c3ecbd755f0fa10
+    fullPath: G:\Program Files (x86)\Anathema\Blood And Sand\Library\Artifacts\4f\4fc08aa1086bad705c3ecbd755f0fa10
+    projectPath: Library\Artifacts\4f\4fc08aa1086bad705c3ecbd755f0fa10
+    originalPath: 
     indexStatus: 1
     workTreeStatus: 1
   - path: Blood And Sand\Library\Artifacts\60\60d7f5570580033dbcf6e4a856f7b0fd
     fullPath: G:\Program Files (x86)\Anathema\Blood And Sand\Library\Artifacts\60\60d7f5570580033dbcf6e4a856f7b0fd
     projectPath: Library\Artifacts\60\60d7f5570580033dbcf6e4a856f7b0fd
     originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
+    indexStatus: 0
+    workTreeStatus: 5
   - path: Blood And Sand\Library\Artifacts\60\60f63d986deda5af44f65db6639a5cb0
     fullPath: G:\Program Files (x86)\Anathema\Blood And Sand\Library\Artifacts\60\60f63d986deda5af44f65db6639a5cb0
     projectPath: Library\Artifacts\60\60f63d986deda5af44f65db6639a5cb0
     originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
+    indexStatus: 0
+    workTreeStatus: 5
   - path: Blood And Sand\Library\Artifacts\61\6122a3318e2f56d9abb539ef658e444f
     fullPath: G:\Program Files (x86)\Anathema\Blood And Sand\Library\Artifacts\61\6122a3318e2f56d9abb539ef658e444f
     projectPath: Library\Artifacts\61\6122a3318e2f56d9abb539ef658e444f
     originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
-  - path: Blood And Sand\Library\Artifacts\62\627871ec649293454081c9e69c9108cc
-    fullPath: G:\Program Files (x86)\Anathema\Blood And Sand\Library\Artifacts\62\627871ec649293454081c9e69c9108cc
-    projectPath: Library\Artifacts\62\627871ec649293454081c9e69c9108cc
+    indexStatus: 0
+    workTreeStatus: 5
+  - path: Blood And Sand\Library\Artifacts\66\66b6d8e0db5ea9fdad8c2cf248b0697c
+    fullPath: G:\Program Files (x86)\Anathema\Blood And Sand\Library\Artifacts\66\66b6d8e0db5ea9fdad8c2cf248b0697c
+    projectPath: Library\Artifacts\66\66b6d8e0db5ea9fdad8c2cf248b0697c
     originalPath: 
     indexStatus: 1
     workTreeStatus: 1
@@ -170,11 +224,35 @@ MonoBehaviour:
     fullPath: G:\Program Files (x86)\Anathema\Blood And Sand\Library\Artifacts\6a\6a7539cf51e08b43d59a0d85e0113512
     projectPath: Library\Artifacts\6a\6a7539cf51e08b43d59a0d85e0113512
     originalPath: 
+    indexStatus: 0
+    workTreeStatus: 5
+  - path: Blood And Sand\Library\Artifacts\6b\6ba7c8e9c6ca7338ab9000d05a7b6081
+    fullPath: G:\Program Files (x86)\Anathema\Blood And Sand\Library\Artifacts\6b\6ba7c8e9c6ca7338ab9000d05a7b6081
+    projectPath: Library\Artifacts\6b\6ba7c8e9c6ca7338ab9000d05a7b6081
+    originalPath: 
+    indexStatus: 1
+    workTreeStatus: 1
+  - path: Blood And Sand\Library\Artifacts\6c\6cf438c45261cc295832292a9e7501ee
+    fullPath: G:\Program Files (x86)\Anathema\Blood And Sand\Library\Artifacts\6c\6cf438c45261cc295832292a9e7501ee
+    projectPath: Library\Artifacts\6c\6cf438c45261cc295832292a9e7501ee
+    originalPath: 
+    indexStatus: 1
+    workTreeStatus: 1
+  - path: Blood And Sand\Library\Artifacts\6d\6df6a6bd97926da4a3ab95a47f4d2e92
+    fullPath: G:\Program Files (x86)\Anathema\Blood And Sand\Library\Artifacts\6d\6df6a6bd97926da4a3ab95a47f4d2e92
+    projectPath: Library\Artifacts\6d\6df6a6bd97926da4a3ab95a47f4d2e92
+    originalPath: 
     indexStatus: 1
     workTreeStatus: 1
   - path: Blood And Sand\Library\Artifacts\6e\6ee60bc88e768d92ffcd3333cde2e92b
     fullPath: G:\Program Files (x86)\Anathema\Blood And Sand\Library\Artifacts\6e\6ee60bc88e768d92ffcd3333cde2e92b
     projectPath: Library\Artifacts\6e\6ee60bc88e768d92ffcd3333cde2e92b
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 5
+  - path: Blood And Sand\Library\Artifacts\6f\6f97e6f73bcc76e49465c2db329a3a38
+    fullPath: G:\Program Files (x86)\Anathema\Blood And Sand\Library\Artifacts\6f\6f97e6f73bcc76e49465c2db329a3a38
+    projectPath: Library\Artifacts\6f\6f97e6f73bcc76e49465c2db329a3a38
     originalPath: 
     indexStatus: 1
     workTreeStatus: 1
@@ -182,17 +260,29 @@ MonoBehaviour:
     fullPath: G:\Program Files (x86)\Anathema\Blood And Sand\Library\Artifacts\70\709a7430749c9f72f26017692d5f3fa1
     projectPath: Library\Artifacts\70\709a7430749c9f72f26017692d5f3fa1
     originalPath: 
+    indexStatus: 0
+    workTreeStatus: 5
+  - path: Blood And Sand\Library\Artifacts\7d\7dfeddba7c44ba5cb7fa69f06b517cb1
+    fullPath: G:\Program Files (x86)\Anathema\Blood And Sand\Library\Artifacts\7d\7dfeddba7c44ba5cb7fa69f06b517cb1
+    projectPath: Library\Artifacts\7d\7dfeddba7c44ba5cb7fa69f06b517cb1
+    originalPath: 
     indexStatus: 1
     workTreeStatus: 1
   - path: Blood And Sand\Library\Artifacts\7e\7e5da0cfa5d74b3808053a322c8cb266
     fullPath: G:\Program Files (x86)\Anathema\Blood And Sand\Library\Artifacts\7e\7e5da0cfa5d74b3808053a322c8cb266
     projectPath: Library\Artifacts\7e\7e5da0cfa5d74b3808053a322c8cb266
     originalPath: 
+    indexStatus: 0
+    workTreeStatus: 5
+  - path: Blood And Sand\Library\Artifacts\81\81778c77945ea9f2c6f7b1fd9ea0dc1a
+    fullPath: G:\Program Files (x86)\Anathema\Blood And Sand\Library\Artifacts\81\81778c77945ea9f2c6f7b1fd9ea0dc1a
+    projectPath: Library\Artifacts\81\81778c77945ea9f2c6f7b1fd9ea0dc1a
+    originalPath: 
     indexStatus: 1
     workTreeStatus: 1
-  - path: Blood And Sand\Library\Artifacts\84\840ecfef5b72831d0318244068a20ee4
-    fullPath: G:\Program Files (x86)\Anathema\Blood And Sand\Library\Artifacts\84\840ecfef5b72831d0318244068a20ee4
-    projectPath: Library\Artifacts\84\840ecfef5b72831d0318244068a20ee4
+  - path: Blood And Sand\Library\Artifacts\84\84210a34d8eca45bf29a384379880c1a
+    fullPath: G:\Program Files (x86)\Anathema\Blood And Sand\Library\Artifacts\84\84210a34d8eca45bf29a384379880c1a
+    projectPath: Library\Artifacts\84\84210a34d8eca45bf29a384379880c1a
     originalPath: 
     indexStatus: 1
     workTreeStatus: 1
@@ -200,17 +290,23 @@ MonoBehaviour:
     fullPath: G:\Program Files (x86)\Anathema\Blood And Sand\Library\Artifacts\84\84ad5dbfcdd3bde94ca8ec46bdd5a3ac
     projectPath: Library\Artifacts\84\84ad5dbfcdd3bde94ca8ec46bdd5a3ac
     originalPath: 
+    indexStatus: 0
+    workTreeStatus: 5
+  - path: Blood And Sand\Library\Artifacts\86\86acbe7c9b8b569bf305be63044a1d78
+    fullPath: G:\Program Files (x86)\Anathema\Blood And Sand\Library\Artifacts\86\86acbe7c9b8b569bf305be63044a1d78
+    projectPath: Library\Artifacts\86\86acbe7c9b8b569bf305be63044a1d78
+    originalPath: 
     indexStatus: 1
     workTreeStatus: 1
   - path: Blood And Sand\Library\Artifacts\88\88ba4d540c5e40deee9693e82dd1c923
     fullPath: G:\Program Files (x86)\Anathema\Blood And Sand\Library\Artifacts\88\88ba4d540c5e40deee9693e82dd1c923
     projectPath: Library\Artifacts\88\88ba4d540c5e40deee9693e82dd1c923
     originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
-  - path: Blood And Sand\Library\Artifacts\8e\8ecbaa5bf94147d9370dc80140e83218
-    fullPath: G:\Program Files (x86)\Anathema\Blood And Sand\Library\Artifacts\8e\8ecbaa5bf94147d9370dc80140e83218
-    projectPath: Library\Artifacts\8e\8ecbaa5bf94147d9370dc80140e83218
+    indexStatus: 0
+    workTreeStatus: 5
+  - path: Blood And Sand\Library\Artifacts\94\94c90bc1f253a1b9968f360f5dccec2b
+    fullPath: G:\Program Files (x86)\Anathema\Blood And Sand\Library\Artifacts\94\94c90bc1f253a1b9968f360f5dccec2b
+    projectPath: Library\Artifacts\94\94c90bc1f253a1b9968f360f5dccec2b
     originalPath: 
     indexStatus: 1
     workTreeStatus: 1
@@ -218,11 +314,17 @@ MonoBehaviour:
     fullPath: G:\Program Files (x86)\Anathema\Blood And Sand\Library\Artifacts\96\96727adc903f15bb63530483fb1ccff5
     projectPath: Library\Artifacts\96\96727adc903f15bb63530483fb1ccff5
     originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
+    indexStatus: 0
+    workTreeStatus: 5
   - path: Blood And Sand\Library\Artifacts\9b\9b5fca67879c84bf33c9cafb50ff0b15
     fullPath: G:\Program Files (x86)\Anathema\Blood And Sand\Library\Artifacts\9b\9b5fca67879c84bf33c9cafb50ff0b15
     projectPath: Library\Artifacts\9b\9b5fca67879c84bf33c9cafb50ff0b15
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 5
+  - path: Blood And Sand\Library\Artifacts\9d\9d9572e9ac9e9a809bdbc93fbd2ee928
+    fullPath: G:\Program Files (x86)\Anathema\Blood And Sand\Library\Artifacts\9d\9d9572e9ac9e9a809bdbc93fbd2ee928
+    projectPath: Library\Artifacts\9d\9d9572e9ac9e9a809bdbc93fbd2ee928
     originalPath: 
     indexStatus: 1
     workTreeStatus: 1
@@ -230,11 +332,11 @@ MonoBehaviour:
     fullPath: G:\Program Files (x86)\Anathema\Blood And Sand\Library\Artifacts\a2\a264c043bcc8c50d590cafdb560cc643
     projectPath: Library\Artifacts\a2\a264c043bcc8c50d590cafdb560cc643
     originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
-  - path: Blood And Sand\Library\Artifacts\a3\a398b8513122193ac69297d505a15aba
-    fullPath: G:\Program Files (x86)\Anathema\Blood And Sand\Library\Artifacts\a3\a398b8513122193ac69297d505a15aba
-    projectPath: Library\Artifacts\a3\a398b8513122193ac69297d505a15aba
+    indexStatus: 0
+    workTreeStatus: 5
+  - path: Blood And Sand\Library\Artifacts\a4\a440c27ef1ea23727d4e7a46d0bd5414
+    fullPath: G:\Program Files (x86)\Anathema\Blood And Sand\Library\Artifacts\a4\a440c27ef1ea23727d4e7a46d0bd5414
+    projectPath: Library\Artifacts\a4\a440c27ef1ea23727d4e7a46d0bd5414
     originalPath: 
     indexStatus: 1
     workTreeStatus: 1
@@ -242,35 +344,53 @@ MonoBehaviour:
     fullPath: G:\Program Files (x86)\Anathema\Blood And Sand\Library\Artifacts\a4\a4894109600b74aac050735eda7ecf00
     projectPath: Library\Artifacts\a4\a4894109600b74aac050735eda7ecf00
     originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
+    indexStatus: 0
+    workTreeStatus: 5
   - path: Blood And Sand\Library\Artifacts\a5\a53441529a8aadba02280a55f0342de7
     fullPath: G:\Program Files (x86)\Anathema\Blood And Sand\Library\Artifacts\a5\a53441529a8aadba02280a55f0342de7
     projectPath: Library\Artifacts\a5\a53441529a8aadba02280a55f0342de7
     originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
-  - path: Blood And Sand\Library\Artifacts\b4\b43354603f6dfc5324d9922e8bf594b4
-    fullPath: G:\Program Files (x86)\Anathema\Blood And Sand\Library\Artifacts\b4\b43354603f6dfc5324d9922e8bf594b4
-    projectPath: Library\Artifacts\b4\b43354603f6dfc5324d9922e8bf594b4
-    originalPath: 
     indexStatus: 0
     workTreeStatus: 5
+  - path: Blood And Sand\Library\Artifacts\b0\b09e9b5f6b1a9d0622dbae12cb18347f
+    fullPath: G:\Program Files (x86)\Anathema\Blood And Sand\Library\Artifacts\b0\b09e9b5f6b1a9d0622dbae12cb18347f
+    projectPath: Library\Artifacts\b0\b09e9b5f6b1a9d0622dbae12cb18347f
+    originalPath: 
+    indexStatus: 1
+    workTreeStatus: 1
+  - path: Blood And Sand\Library\Artifacts\b9\b975a9065e23a776ebc80600f59f735d
+    fullPath: G:\Program Files (x86)\Anathema\Blood And Sand\Library\Artifacts\b9\b975a9065e23a776ebc80600f59f735d
+    projectPath: Library\Artifacts\b9\b975a9065e23a776ebc80600f59f735d
+    originalPath: 
+    indexStatus: 1
+    workTreeStatus: 1
   - path: Blood And Sand\Library\Artifacts\ba\ba91dd5351f8acbebe3bedf1e7c9ebb8
     fullPath: G:\Program Files (x86)\Anathema\Blood And Sand\Library\Artifacts\ba\ba91dd5351f8acbebe3bedf1e7c9ebb8
     projectPath: Library\Artifacts\ba\ba91dd5351f8acbebe3bedf1e7c9ebb8
     originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
+    indexStatus: 0
+    workTreeStatus: 5
   - path: Blood And Sand\Library\Artifacts\bb\bbf1233f791302ffe1eb8e4db821fb11
     fullPath: G:\Program Files (x86)\Anathema\Blood And Sand\Library\Artifacts\bb\bbf1233f791302ffe1eb8e4db821fb11
     projectPath: Library\Artifacts\bb\bbf1233f791302ffe1eb8e4db821fb11
     originalPath: 
+    indexStatus: 0
+    workTreeStatus: 5
+  - path: Blood And Sand\Library\Artifacts\c5\c56972027425df435c4ac7ec3e229371
+    fullPath: G:\Program Files (x86)\Anathema\Blood And Sand\Library\Artifacts\c5\c56972027425df435c4ac7ec3e229371
+    projectPath: Library\Artifacts\c5\c56972027425df435c4ac7ec3e229371
+    originalPath: 
     indexStatus: 1
     workTreeStatus: 1
-  - path: Blood And Sand\Library\Artifacts\c3\c362f716888fcc89695c90c66665c1bd
-    fullPath: G:\Program Files (x86)\Anathema\Blood And Sand\Library\Artifacts\c3\c362f716888fcc89695c90c66665c1bd
-    projectPath: Library\Artifacts\c3\c362f716888fcc89695c90c66665c1bd
+  - path: Blood And Sand\Library\Artifacts\c5\c5e6f0a2bb295a6494080f88dfe4c1c6
+    fullPath: G:\Program Files (x86)\Anathema\Blood And Sand\Library\Artifacts\c5\c5e6f0a2bb295a6494080f88dfe4c1c6
+    projectPath: Library\Artifacts\c5\c5e6f0a2bb295a6494080f88dfe4c1c6
+    originalPath: 
+    indexStatus: 1
+    workTreeStatus: 1
+  - path: Blood And Sand\Library\Artifacts\d6\d657b048700bbce9a016a35d8b113493
+    fullPath: G:\Program Files (x86)\Anathema\Blood And Sand\Library\Artifacts\d6\d657b048700bbce9a016a35d8b113493
+    projectPath: Library\Artifacts\d6\d657b048700bbce9a016a35d8b113493
     originalPath: 
     indexStatus: 1
     workTreeStatus: 1
@@ -278,44 +398,56 @@ MonoBehaviour:
     fullPath: G:\Program Files (x86)\Anathema\Blood And Sand\Library\Artifacts\d6\d6889b875315ace813eea6e81e2eae70
     projectPath: Library\Artifacts\d6\d6889b875315ace813eea6e81e2eae70
     originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
+    indexStatus: 0
+    workTreeStatus: 5
   - path: Blood And Sand\Library\Artifacts\dd\dd1b6519f062412f43da6c5687b7d830
     fullPath: G:\Program Files (x86)\Anathema\Blood And Sand\Library\Artifacts\dd\dd1b6519f062412f43da6c5687b7d830
     projectPath: Library\Artifacts\dd\dd1b6519f062412f43da6c5687b7d830
     originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
+    indexStatus: 0
+    workTreeStatus: 5
   - path: Blood And Sand\Library\Artifacts\df\df76f8057ed2e37f58ce538047834391
     fullPath: G:\Program Files (x86)\Anathema\Blood And Sand\Library\Artifacts\df\df76f8057ed2e37f58ce538047834391
     projectPath: Library\Artifacts\df\df76f8057ed2e37f58ce538047834391
     originalPath: 
+    indexStatus: 0
+    workTreeStatus: 5
+  - path: Blood And Sand\Library\Artifacts\e7\e75721ea3a7a4b1e735939ed108e3cfb
+    fullPath: G:\Program Files (x86)\Anathema\Blood And Sand\Library\Artifacts\e7\e75721ea3a7a4b1e735939ed108e3cfb
+    projectPath: Library\Artifacts\e7\e75721ea3a7a4b1e735939ed108e3cfb
+    originalPath: 
     indexStatus: 1
     workTreeStatus: 1
-  - path: Blood And Sand\Library\Artifacts\e9\e9137f8023d6915c17b214b5e3ad2faa
-    fullPath: G:\Program Files (x86)\Anathema\Blood And Sand\Library\Artifacts\e9\e9137f8023d6915c17b214b5e3ad2faa
-    projectPath: Library\Artifacts\e9\e9137f8023d6915c17b214b5e3ad2faa
+  - path: Blood And Sand\Library\Artifacts\f6\f621b8b550033227f08c90ce38f41950
+    fullPath: G:\Program Files (x86)\Anathema\Blood And Sand\Library\Artifacts\f6\f621b8b550033227f08c90ce38f41950
+    projectPath: Library\Artifacts\f6\f621b8b550033227f08c90ce38f41950
     originalPath: 
     indexStatus: 1
     workTreeStatus: 1
-  - path: Blood And Sand\Library\Artifacts\f5\f55431266dba6aad24592041428e9ab8
-    fullPath: G:\Program Files (x86)\Anathema\Blood And Sand\Library\Artifacts\f5\f55431266dba6aad24592041428e9ab8
-    projectPath: Library\Artifacts\f5\f55431266dba6aad24592041428e9ab8
+  - path: Blood And Sand\Library\Artifacts\f7\f7b253db003582f7af860cfaded5f33f
+    fullPath: G:\Program Files (x86)\Anathema\Blood And Sand\Library\Artifacts\f7\f7b253db003582f7af860cfaded5f33f
+    projectPath: Library\Artifacts\f7\f7b253db003582f7af860cfaded5f33f
     originalPath: 
-    indexStatus: 0
-    workTreeStatus: 5
-  - path: Blood And Sand\Library\Artifacts\f7\f72abfeb77434afce355701b9cecabe2
-    fullPath: G:\Program Files (x86)\Anathema\Blood And Sand\Library\Artifacts\f7\f72abfeb77434afce355701b9cecabe2
-    projectPath: Library\Artifacts\f7\f72abfeb77434afce355701b9cecabe2
+    indexStatus: 1
+    workTreeStatus: 1
+  - path: Blood And Sand\Library\Artifacts\fc\fc96db637b819a56f1b8e1ea3c8da14c
+    fullPath: G:\Program Files (x86)\Anathema\Blood And Sand\Library\Artifacts\fc\fc96db637b819a56f1b8e1ea3c8da14c
+    projectPath: Library\Artifacts\fc\fc96db637b819a56f1b8e1ea3c8da14c
     originalPath: 
-    indexStatus: 0
-    workTreeStatus: 5
-  - path: Blood And Sand\Library\Artifacts\fd\fd62ae7597a706040cfa7a3a472b7471
-    fullPath: G:\Program Files (x86)\Anathema\Blood And Sand\Library\Artifacts\fd\fd62ae7597a706040cfa7a3a472b7471
-    projectPath: Library\Artifacts\fd\fd62ae7597a706040cfa7a3a472b7471
+    indexStatus: 1
+    workTreeStatus: 1
+  - path: Blood And Sand\Library\Artifacts\fd\fdb344a53b98a571eaa830f87e08dfe8
+    fullPath: G:\Program Files (x86)\Anathema\Blood And Sand\Library\Artifacts\fd\fdb344a53b98a571eaa830f87e08dfe8
+    projectPath: Library\Artifacts\fd\fdb344a53b98a571eaa830f87e08dfe8
     originalPath: 
-    indexStatus: 0
-    workTreeStatus: 5
+    indexStatus: 1
+    workTreeStatus: 1
+  - path: Blood And Sand\Library\Artifacts\fe\feb90d55f4ba7e86f23201fe0d2f82d6
+    fullPath: G:\Program Files (x86)\Anathema\Blood And Sand\Library\Artifacts\fe\feb90d55f4ba7e86f23201fe0d2f82d6
+    projectPath: Library\Artifacts\fe\feb90d55f4ba7e86f23201fe0d2f82d6
+    originalPath: 
+    indexStatus: 1
+    workTreeStatus: 1
   - path: Blood And Sand\Library\EditorInstance.json
     fullPath: G:\Program Files (x86)\Anathema\Blood And Sand\Library\EditorInstance.json
     projectPath: Library\EditorInstance.json
@@ -346,24 +478,6 @@ MonoBehaviour:
     originalPath: 
     indexStatus: 0
     workTreeStatus: 3
-  - path: Blood And Sand\Library\InspectorExpandedItems.asset
-    fullPath: G:\Program Files (x86)\Anathema\Blood And Sand\Library\InspectorExpandedItems.asset
-    projectPath: Library\InspectorExpandedItems.asset
-    originalPath: 
-    indexStatus: 0
-    workTreeStatus: 3
-  - path: Blood And Sand\Library\PackageManager\ProjectCache
-    fullPath: G:\Program Files (x86)\Anathema\Blood And Sand\Library\PackageManager\ProjectCache
-    projectPath: Library\PackageManager\ProjectCache
-    originalPath: 
-    indexStatus: 0
-    workTreeStatus: 3
-  - path: Blood And Sand\Library\PackageManager\ProjectCache.md5
-    fullPath: G:\Program Files (x86)\Anathema\Blood And Sand\Library\PackageManager\ProjectCache.md5
-    projectPath: Library\PackageManager\ProjectCache.md5
-    originalPath: 
-    indexStatus: 0
-    workTreeStatus: 3
   - path: Blood And Sand\Library\SceneVisibilityState.asset
     fullPath: G:\Program Files (x86)\Anathema\Blood And Sand\Library\SceneVisibilityState.asset
     projectPath: Library\SceneVisibilityState.asset
@@ -376,24 +490,30 @@ MonoBehaviour:
     originalPath: 
     indexStatus: 0
     workTreeStatus: 3
-  - path: Blood And Sand\Library\ScriptAssemblies\Assembly-CSharp-Editor.dll
-    fullPath: G:\Program Files (x86)\Anathema\Blood And Sand\Library\ScriptAssemblies\Assembly-CSharp-Editor.dll
-    projectPath: Library\ScriptAssemblies\Assembly-CSharp-Editor.dll
-    originalPath: 
-    indexStatus: 0
-    workTreeStatus: 3
   - path: Blood And Sand\Library\ShaderCache.db
     fullPath: G:\Program Files (x86)\Anathema\Blood And Sand\Library\ShaderCache.db
     projectPath: Library\ShaderCache.db
     originalPath: 
     indexStatus: 0
     workTreeStatus: 3
+  - path: Blood And Sand\Library\ShaderCache\a\a0ab2b74c1df565677cf4d30a500a580.bin
+    fullPath: G:\Program Files (x86)\Anathema\Blood And Sand\Library\ShaderCache\a\a0ab2b74c1df565677cf4d30a500a580.bin
+    projectPath: Library\ShaderCache\a\a0ab2b74c1df565677cf4d30a500a580.bin
+    originalPath: 
+    indexStatus: 1
+    workTreeStatus: 1
   - path: Blood And Sand\Library\ShaderCache\EditorEncounteredVariants
     fullPath: G:\Program Files (x86)\Anathema\Blood And Sand\Library\ShaderCache\EditorEncounteredVariants
     projectPath: Library\ShaderCache\EditorEncounteredVariants
     originalPath: 
     indexStatus: 0
     workTreeStatus: 3
+  - path: Blood And Sand\Library\ShaderCache\f\f920aa97101a10340444b9cad204a466.bin
+    fullPath: G:\Program Files (x86)\Anathema\Blood And Sand\Library\ShaderCache\f\f920aa97101a10340444b9cad204a466.bin
+    projectPath: Library\ShaderCache\f\f920aa97101a10340444b9cad204a466.bin
+    originalPath: 
+    indexStatus: 1
+    workTreeStatus: 1
   - path: Blood And Sand\Library\shadercompiler-UnityShaderCompiler.exe0.log
     fullPath: G:\Program Files (x86)\Anathema\Blood And Sand\Library\shadercompiler-UnityShaderCompiler.exe0.log
     projectPath: Library\shadercompiler-UnityShaderCompiler.exe0.log
@@ -412,6 +532,36 @@ MonoBehaviour:
     originalPath: 
     indexStatus: 0
     workTreeStatus: 3
+  - path: Blood And Sand\Library\shadercompiler-UnityShaderCompiler.exe3.log
+    fullPath: G:\Program Files (x86)\Anathema\Blood And Sand\Library\shadercompiler-UnityShaderCompiler.exe3.log
+    projectPath: Library\shadercompiler-UnityShaderCompiler.exe3.log
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 3
+  - path: Blood And Sand\Library\shadercompiler-UnityShaderCompiler.exe4.log
+    fullPath: G:\Program Files (x86)\Anathema\Blood And Sand\Library\shadercompiler-UnityShaderCompiler.exe4.log
+    projectPath: Library\shadercompiler-UnityShaderCompiler.exe4.log
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 3
+  - path: Blood And Sand\Library\shadercompiler-UnityShaderCompiler.exe5.log
+    fullPath: G:\Program Files (x86)\Anathema\Blood And Sand\Library\shadercompiler-UnityShaderCompiler.exe5.log
+    projectPath: Library\shadercompiler-UnityShaderCompiler.exe5.log
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 3
+  - path: Blood And Sand\Library\shadercompiler-UnityShaderCompiler.exe6.log
+    fullPath: G:\Program Files (x86)\Anathema\Blood And Sand\Library\shadercompiler-UnityShaderCompiler.exe6.log
+    projectPath: Library\shadercompiler-UnityShaderCompiler.exe6.log
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 3
+  - path: Blood And Sand\Library\shadercompiler-UnityShaderCompiler.exe7.log
+    fullPath: G:\Program Files (x86)\Anathema\Blood And Sand\Library\shadercompiler-UnityShaderCompiler.exe7.log
+    projectPath: Library\shadercompiler-UnityShaderCompiler.exe7.log
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 3
   - path: Blood And Sand\Library\SourceAssetDB
     fullPath: G:\Program Files (x86)\Anathema\Blood And Sand\Library\SourceAssetDB
     projectPath: Library\SourceAssetDB
@@ -421,6 +571,24 @@ MonoBehaviour:
   - path: Blood And Sand\Library\StateCache\MainStageHierarchy\cb\cb0b55a5730c0a2e2923e591190e5aa8.json
     fullPath: G:\Program Files (x86)\Anathema\Blood And Sand\Library\StateCache\MainStageHierarchy\cb\cb0b55a5730c0a2e2923e591190e5aa8.json
     projectPath: Library\StateCache\MainStageHierarchy\cb\cb0b55a5730c0a2e2923e591190e5aa8.json
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 3
+  - path: Blood And Sand\Library\StateCache\PrefabStageHierarchy\4d\4d7602b81453b04b0c298e2d590a402e.json
+    fullPath: G:\Program Files (x86)\Anathema\Blood And Sand\Library\StateCache\PrefabStageHierarchy\4d\4d7602b81453b04b0c298e2d590a402e.json
+    projectPath: Library\StateCache\PrefabStageHierarchy\4d\4d7602b81453b04b0c298e2d590a402e.json
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 3
+  - path: Blood And Sand\Library\StateCache\SceneView\c5\c53b84471525cf0e8608a3cb65b87400.json
+    fullPath: G:\Program Files (x86)\Anathema\Blood And Sand\Library\StateCache\SceneView\c5\c53b84471525cf0e8608a3cb65b87400.json
+    projectPath: Library\StateCache\SceneView\c5\c53b84471525cf0e8608a3cb65b87400.json
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 3
+  - path: Blood And Sand\Logs\ApiUpdaterCheck.txt
+    fullPath: G:\Program Files (x86)\Anathema\Blood And Sand\Logs\ApiUpdaterCheck.txt
+    projectPath: Logs\ApiUpdaterCheck.txt
     originalPath: 
     indexStatus: 0
     workTreeStatus: 3
@@ -434,11 +602,17 @@ MonoBehaviour:
     fullPath: G:\Program Files (x86)\Anathema\Blood And Sand\Logs\AssetImportWorker0-prev.log
     projectPath: Logs\AssetImportWorker0-prev.log
     originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
+    indexStatus: 0
+    workTreeStatus: 3
   - path: Blood And Sand\Temp\__Backupscenes\0.backup
     fullPath: G:\Program Files (x86)\Anathema\Blood And Sand\Temp\__Backupscenes\0.backup
     projectPath: Temp\__Backupscenes\0.backup
+    originalPath: 
+    indexStatus: 1
+    workTreeStatus: 1
+  - path: Blood And Sand\Temp\ApiUpdater_CheckMovedFromc15973b56a55739409c39f7e1b60b6fa
+    fullPath: G:\Program Files (x86)\Anathema\Blood And Sand\Temp\ApiUpdater_CheckMovedFromc15973b56a55739409c39f7e1b60b6fa
+    projectPath: Temp\ApiUpdater_CheckMovedFromc15973b56a55739409c39f7e1b60b6fa
     originalPath: 
     indexStatus: 1
     workTreeStatus: 1
@@ -466,219 +640,93 @@ MonoBehaviour:
     originalPath: 
     indexStatus: 1
     workTreeStatus: 1
-  - path: Blood And Sand\Temp\UnityTempFile-10a07022aac291f41b44795b2ae15e2c
-    fullPath: G:\Program Files (x86)\Anathema\Blood And Sand\Temp\UnityTempFile-10a07022aac291f41b44795b2ae15e2c
-    projectPath: Temp\UnityTempFile-10a07022aac291f41b44795b2ae15e2c
+  - path: Blood And Sand\Temp\UnityTempFile-0ebe753736ab1a24db858d47eb162a22
+    fullPath: G:\Program Files (x86)\Anathema\Blood And Sand\Temp\UnityTempFile-0ebe753736ab1a24db858d47eb162a22
+    projectPath: Temp\UnityTempFile-0ebe753736ab1a24db858d47eb162a22
     originalPath: 
     indexStatus: 1
     workTreeStatus: 1
-  - path: Blood And Sand\Temp\UnityTempFile-126ed7938f0417944a64362b4121e068
-    fullPath: G:\Program Files (x86)\Anathema\Blood And Sand\Temp\UnityTempFile-126ed7938f0417944a64362b4121e068
-    projectPath: Temp\UnityTempFile-126ed7938f0417944a64362b4121e068
+  - path: Blood And Sand\Temp\UnityTempFile-197878e8511cf7e49b28e541df910a9c
+    fullPath: G:\Program Files (x86)\Anathema\Blood And Sand\Temp\UnityTempFile-197878e8511cf7e49b28e541df910a9c
+    projectPath: Temp\UnityTempFile-197878e8511cf7e49b28e541df910a9c
     originalPath: 
     indexStatus: 1
     workTreeStatus: 1
-  - path: Blood And Sand\Temp\UnityTempFile-1847c63694cd7554eb7b7d13745d5c05
-    fullPath: G:\Program Files (x86)\Anathema\Blood And Sand\Temp\UnityTempFile-1847c63694cd7554eb7b7d13745d5c05
-    projectPath: Temp\UnityTempFile-1847c63694cd7554eb7b7d13745d5c05
+  - path: Blood And Sand\Temp\UnityTempFile-1a9a7a3343c9c4d4795060e5aded7a7f
+    fullPath: G:\Program Files (x86)\Anathema\Blood And Sand\Temp\UnityTempFile-1a9a7a3343c9c4d4795060e5aded7a7f
+    projectPath: Temp\UnityTempFile-1a9a7a3343c9c4d4795060e5aded7a7f
     originalPath: 
     indexStatus: 1
     workTreeStatus: 1
-  - path: Blood And Sand\Temp\UnityTempFile-1e68d9a8d293f8c4089c9752d6148e64
-    fullPath: G:\Program Files (x86)\Anathema\Blood And Sand\Temp\UnityTempFile-1e68d9a8d293f8c4089c9752d6148e64
-    projectPath: Temp\UnityTempFile-1e68d9a8d293f8c4089c9752d6148e64
+  - path: Blood And Sand\Temp\UnityTempFile-3347a1c3de82a434fa05f88b6a847ccd
+    fullPath: G:\Program Files (x86)\Anathema\Blood And Sand\Temp\UnityTempFile-3347a1c3de82a434fa05f88b6a847ccd
+    projectPath: Temp\UnityTempFile-3347a1c3de82a434fa05f88b6a847ccd
     originalPath: 
     indexStatus: 1
     workTreeStatus: 1
-  - path: Blood And Sand\Temp\UnityTempFile-1faf332d9dfe71a43a65ffc1692ea84e
-    fullPath: G:\Program Files (x86)\Anathema\Blood And Sand\Temp\UnityTempFile-1faf332d9dfe71a43a65ffc1692ea84e
-    projectPath: Temp\UnityTempFile-1faf332d9dfe71a43a65ffc1692ea84e
+  - path: Blood And Sand\Temp\UnityTempFile-46f5caf200b6e264c912f7d11bd5c863
+    fullPath: G:\Program Files (x86)\Anathema\Blood And Sand\Temp\UnityTempFile-46f5caf200b6e264c912f7d11bd5c863
+    projectPath: Temp\UnityTempFile-46f5caf200b6e264c912f7d11bd5c863
     originalPath: 
     indexStatus: 1
     workTreeStatus: 1
-  - path: Blood And Sand\Temp\UnityTempFile-2da123456d66aeb40ba52afc44bbf77d
-    fullPath: G:\Program Files (x86)\Anathema\Blood And Sand\Temp\UnityTempFile-2da123456d66aeb40ba52afc44bbf77d
-    projectPath: Temp\UnityTempFile-2da123456d66aeb40ba52afc44bbf77d
+  - path: Blood And Sand\Temp\UnityTempFile-4a9ba0e0771b0ef4c90dbf6f401f8beb
+    fullPath: G:\Program Files (x86)\Anathema\Blood And Sand\Temp\UnityTempFile-4a9ba0e0771b0ef4c90dbf6f401f8beb
+    projectPath: Temp\UnityTempFile-4a9ba0e0771b0ef4c90dbf6f401f8beb
     originalPath: 
     indexStatus: 1
     workTreeStatus: 1
-  - path: Blood And Sand\Temp\UnityTempFile-2f60da2bfa9cd0b4594ab08c8cddefdf
-    fullPath: G:\Program Files (x86)\Anathema\Blood And Sand\Temp\UnityTempFile-2f60da2bfa9cd0b4594ab08c8cddefdf
-    projectPath: Temp\UnityTempFile-2f60da2bfa9cd0b4594ab08c8cddefdf
+  - path: Blood And Sand\Temp\UnityTempFile-51c84c77b84e5bb4dacc917b659cfa71
+    fullPath: G:\Program Files (x86)\Anathema\Blood And Sand\Temp\UnityTempFile-51c84c77b84e5bb4dacc917b659cfa71
+    projectPath: Temp\UnityTempFile-51c84c77b84e5bb4dacc917b659cfa71
     originalPath: 
     indexStatus: 1
     workTreeStatus: 1
-  - path: Blood And Sand\Temp\UnityTempFile-339ef7961dc72264b9918126d0e34004
-    fullPath: G:\Program Files (x86)\Anathema\Blood And Sand\Temp\UnityTempFile-339ef7961dc72264b9918126d0e34004
-    projectPath: Temp\UnityTempFile-339ef7961dc72264b9918126d0e34004
+  - path: Blood And Sand\Temp\UnityTempFile-89b9dc7d942b66e47a691e2cfdcf618c
+    fullPath: G:\Program Files (x86)\Anathema\Blood And Sand\Temp\UnityTempFile-89b9dc7d942b66e47a691e2cfdcf618c
+    projectPath: Temp\UnityTempFile-89b9dc7d942b66e47a691e2cfdcf618c
     originalPath: 
     indexStatus: 1
     workTreeStatus: 1
-  - path: Blood And Sand\Temp\UnityTempFile-49673dc148428e74c9b9b1deddfec037
-    fullPath: G:\Program Files (x86)\Anathema\Blood And Sand\Temp\UnityTempFile-49673dc148428e74c9b9b1deddfec037
-    projectPath: Temp\UnityTempFile-49673dc148428e74c9b9b1deddfec037
+  - path: Blood And Sand\Temp\UnityTempFile-8a36b1b93d6f4174fbccc5c88c81bf90
+    fullPath: G:\Program Files (x86)\Anathema\Blood And Sand\Temp\UnityTempFile-8a36b1b93d6f4174fbccc5c88c81bf90
+    projectPath: Temp\UnityTempFile-8a36b1b93d6f4174fbccc5c88c81bf90
     originalPath: 
     indexStatus: 1
     workTreeStatus: 1
-  - path: Blood And Sand\Temp\UnityTempFile-4dfe75dffce98c948b4c74c1764d7827
-    fullPath: G:\Program Files (x86)\Anathema\Blood And Sand\Temp\UnityTempFile-4dfe75dffce98c948b4c74c1764d7827
-    projectPath: Temp\UnityTempFile-4dfe75dffce98c948b4c74c1764d7827
+  - path: Blood And Sand\Temp\UnityTempFile-a53c9f2bfd3606745a87b66df9f64655
+    fullPath: G:\Program Files (x86)\Anathema\Blood And Sand\Temp\UnityTempFile-a53c9f2bfd3606745a87b66df9f64655
+    projectPath: Temp\UnityTempFile-a53c9f2bfd3606745a87b66df9f64655
     originalPath: 
     indexStatus: 1
     workTreeStatus: 1
-  - path: Blood And Sand\Temp\UnityTempFile-55e7c7433d52bde45a955fc12ac202e7
-    fullPath: G:\Program Files (x86)\Anathema\Blood And Sand\Temp\UnityTempFile-55e7c7433d52bde45a955fc12ac202e7
-    projectPath: Temp\UnityTempFile-55e7c7433d52bde45a955fc12ac202e7
+  - path: Blood And Sand\Temp\UnityTempFile-be97bbc86bb73224ba2ad035c6e04e76
+    fullPath: G:\Program Files (x86)\Anathema\Blood And Sand\Temp\UnityTempFile-be97bbc86bb73224ba2ad035c6e04e76
+    projectPath: Temp\UnityTempFile-be97bbc86bb73224ba2ad035c6e04e76
     originalPath: 
     indexStatus: 1
     workTreeStatus: 1
-  - path: Blood And Sand\Temp\UnityTempFile-57fcbf6ca5f348842b0161bc02df30e0
-    fullPath: G:\Program Files (x86)\Anathema\Blood And Sand\Temp\UnityTempFile-57fcbf6ca5f348842b0161bc02df30e0
-    projectPath: Temp\UnityTempFile-57fcbf6ca5f348842b0161bc02df30e0
+  - path: Blood And Sand\Temp\UnityTempFile-c4c922965b5072d42af4a493304bbaae
+    fullPath: G:\Program Files (x86)\Anathema\Blood And Sand\Temp\UnityTempFile-c4c922965b5072d42af4a493304bbaae
+    projectPath: Temp\UnityTempFile-c4c922965b5072d42af4a493304bbaae
     originalPath: 
     indexStatus: 1
     workTreeStatus: 1
-  - path: Blood And Sand\Temp\UnityTempFile-5c2c4c41abfbdc843a0d49e743720c73
-    fullPath: G:\Program Files (x86)\Anathema\Blood And Sand\Temp\UnityTempFile-5c2c4c41abfbdc843a0d49e743720c73
-    projectPath: Temp\UnityTempFile-5c2c4c41abfbdc843a0d49e743720c73
+  - path: Blood And Sand\Temp\UnityTempFile-d33bafe832433fa46a2e0b83e654be66
+    fullPath: G:\Program Files (x86)\Anathema\Blood And Sand\Temp\UnityTempFile-d33bafe832433fa46a2e0b83e654be66
+    projectPath: Temp\UnityTempFile-d33bafe832433fa46a2e0b83e654be66
     originalPath: 
     indexStatus: 1
     workTreeStatus: 1
-  - path: Blood And Sand\Temp\UnityTempFile-65761393723ea5842ba59a219982bcde
-    fullPath: G:\Program Files (x86)\Anathema\Blood And Sand\Temp\UnityTempFile-65761393723ea5842ba59a219982bcde
-    projectPath: Temp\UnityTempFile-65761393723ea5842ba59a219982bcde
+  - path: Blood And Sand\Temp\UnityTempFile-da68186b60355044784634ca1cef09ad
+    fullPath: G:\Program Files (x86)\Anathema\Blood And Sand\Temp\UnityTempFile-da68186b60355044784634ca1cef09ad
+    projectPath: Temp\UnityTempFile-da68186b60355044784634ca1cef09ad
     originalPath: 
     indexStatus: 1
     workTreeStatus: 1
-  - path: Blood And Sand\Temp\UnityTempFile-675c7c852e58bca4ba4c2c694e76671b
-    fullPath: G:\Program Files (x86)\Anathema\Blood And Sand\Temp\UnityTempFile-675c7c852e58bca4ba4c2c694e76671b
-    projectPath: Temp\UnityTempFile-675c7c852e58bca4ba4c2c694e76671b
-    originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
-  - path: Blood And Sand\Temp\UnityTempFile-6b147f482bcce8c45baa8dd7d4fc598d
-    fullPath: G:\Program Files (x86)\Anathema\Blood And Sand\Temp\UnityTempFile-6b147f482bcce8c45baa8dd7d4fc598d
-    projectPath: Temp\UnityTempFile-6b147f482bcce8c45baa8dd7d4fc598d
-    originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
-  - path: Blood And Sand\Temp\UnityTempFile-6be49ba657653784790051dde1836837
-    fullPath: G:\Program Files (x86)\Anathema\Blood And Sand\Temp\UnityTempFile-6be49ba657653784790051dde1836837
-    projectPath: Temp\UnityTempFile-6be49ba657653784790051dde1836837
-    originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
-  - path: Blood And Sand\Temp\UnityTempFile-706698c39115b5e4a9227977bf180882
-    fullPath: G:\Program Files (x86)\Anathema\Blood And Sand\Temp\UnityTempFile-706698c39115b5e4a9227977bf180882
-    projectPath: Temp\UnityTempFile-706698c39115b5e4a9227977bf180882
-    originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
-  - path: Blood And Sand\Temp\UnityTempFile-710f0fec49729a040b333f7cab1aab1e
-    fullPath: G:\Program Files (x86)\Anathema\Blood And Sand\Temp\UnityTempFile-710f0fec49729a040b333f7cab1aab1e
-    projectPath: Temp\UnityTempFile-710f0fec49729a040b333f7cab1aab1e
-    originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
-  - path: Blood And Sand\Temp\UnityTempFile-754e7846e738a5049b4598296d6179a4
-    fullPath: G:\Program Files (x86)\Anathema\Blood And Sand\Temp\UnityTempFile-754e7846e738a5049b4598296d6179a4
-    projectPath: Temp\UnityTempFile-754e7846e738a5049b4598296d6179a4
-    originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
-  - path: Blood And Sand\Temp\UnityTempFile-78f972391632a9f45ae24618339465a8
-    fullPath: G:\Program Files (x86)\Anathema\Blood And Sand\Temp\UnityTempFile-78f972391632a9f45ae24618339465a8
-    projectPath: Temp\UnityTempFile-78f972391632a9f45ae24618339465a8
-    originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
-  - path: Blood And Sand\Temp\UnityTempFile-8a34502d56c01414caf0e9dcef225aa1
-    fullPath: G:\Program Files (x86)\Anathema\Blood And Sand\Temp\UnityTempFile-8a34502d56c01414caf0e9dcef225aa1
-    projectPath: Temp\UnityTempFile-8a34502d56c01414caf0e9dcef225aa1
-    originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
-  - path: Blood And Sand\Temp\UnityTempFile-8cee5a3a0c296034c9d82e4dd3071e90
-    fullPath: G:\Program Files (x86)\Anathema\Blood And Sand\Temp\UnityTempFile-8cee5a3a0c296034c9d82e4dd3071e90
-    projectPath: Temp\UnityTempFile-8cee5a3a0c296034c9d82e4dd3071e90
-    originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
-  - path: Blood And Sand\Temp\UnityTempFile-8dfcd6f055238d949bf3850559c9d065
-    fullPath: G:\Program Files (x86)\Anathema\Blood And Sand\Temp\UnityTempFile-8dfcd6f055238d949bf3850559c9d065
-    projectPath: Temp\UnityTempFile-8dfcd6f055238d949bf3850559c9d065
-    originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
-  - path: Blood And Sand\Temp\UnityTempFile-8e630801cacc74340b549f23bf3fb02e
-    fullPath: G:\Program Files (x86)\Anathema\Blood And Sand\Temp\UnityTempFile-8e630801cacc74340b549f23bf3fb02e
-    projectPath: Temp\UnityTempFile-8e630801cacc74340b549f23bf3fb02e
-    originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
-  - path: Blood And Sand\Temp\UnityTempFile-a19193891139c1a43a59b3e724120768
-    fullPath: G:\Program Files (x86)\Anathema\Blood And Sand\Temp\UnityTempFile-a19193891139c1a43a59b3e724120768
-    projectPath: Temp\UnityTempFile-a19193891139c1a43a59b3e724120768
-    originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
-  - path: Blood And Sand\Temp\UnityTempFile-a91be069ca5f9cd4e9a14354a9fa61f6
-    fullPath: G:\Program Files (x86)\Anathema\Blood And Sand\Temp\UnityTempFile-a91be069ca5f9cd4e9a14354a9fa61f6
-    projectPath: Temp\UnityTempFile-a91be069ca5f9cd4e9a14354a9fa61f6
-    originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
-  - path: Blood And Sand\Temp\UnityTempFile-b936afb3e74e1324bbf82742647309f5
-    fullPath: G:\Program Files (x86)\Anathema\Blood And Sand\Temp\UnityTempFile-b936afb3e74e1324bbf82742647309f5
-    projectPath: Temp\UnityTempFile-b936afb3e74e1324bbf82742647309f5
-    originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
-  - path: Blood And Sand\Temp\UnityTempFile-c476b68c5ec43d545a8c78166c806368
-    fullPath: G:\Program Files (x86)\Anathema\Blood And Sand\Temp\UnityTempFile-c476b68c5ec43d545a8c78166c806368
-    projectPath: Temp\UnityTempFile-c476b68c5ec43d545a8c78166c806368
-    originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
-  - path: Blood And Sand\Temp\UnityTempFile-c91f2a651fe8af141ad3ebb790acde80
-    fullPath: G:\Program Files (x86)\Anathema\Blood And Sand\Temp\UnityTempFile-c91f2a651fe8af141ad3ebb790acde80
-    projectPath: Temp\UnityTempFile-c91f2a651fe8af141ad3ebb790acde80
-    originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
-  - path: Blood And Sand\Temp\UnityTempFile-d14bfbed6377ea5429ef0ef6be983f7a
-    fullPath: G:\Program Files (x86)\Anathema\Blood And Sand\Temp\UnityTempFile-d14bfbed6377ea5429ef0ef6be983f7a
-    projectPath: Temp\UnityTempFile-d14bfbed6377ea5429ef0ef6be983f7a
-    originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
-  - path: Blood And Sand\Temp\UnityTempFile-d28959647a82c114e95af005e990a225
-    fullPath: G:\Program Files (x86)\Anathema\Blood And Sand\Temp\UnityTempFile-d28959647a82c114e95af005e990a225
-    projectPath: Temp\UnityTempFile-d28959647a82c114e95af005e990a225
-    originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
-  - path: Blood And Sand\Temp\UnityTempFile-d9a61508e9560db4f9a2934065c71cbf
-    fullPath: G:\Program Files (x86)\Anathema\Blood And Sand\Temp\UnityTempFile-d9a61508e9560db4f9a2934065c71cbf
-    projectPath: Temp\UnityTempFile-d9a61508e9560db4f9a2934065c71cbf
-    originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
-  - path: Blood And Sand\Temp\UnityTempFile-edf3ffb96dcd0be41883afda4307ca74
-    fullPath: G:\Program Files (x86)\Anathema\Blood And Sand\Temp\UnityTempFile-edf3ffb96dcd0be41883afda4307ca74
-    projectPath: Temp\UnityTempFile-edf3ffb96dcd0be41883afda4307ca74
-    originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
-  - path: Blood And Sand\Temp\UnityTempFile-fcae1134d755a8b4185ad8c1f367834b
-    fullPath: G:\Program Files (x86)\Anathema\Blood And Sand\Temp\UnityTempFile-fcae1134d755a8b4185ad8c1f367834b
-    projectPath: Temp\UnityTempFile-fcae1134d755a8b4185ad8c1f367834b
-    originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
-  - path: Blood And Sand\Temp\UnityTempFile-fcedb527928bf7a48bab716e69e81255
-    fullPath: G:\Program Files (x86)\Anathema\Blood And Sand\Temp\UnityTempFile-fcedb527928bf7a48bab716e69e81255
-    projectPath: Temp\UnityTempFile-fcedb527928bf7a48bab716e69e81255
+  - path: Blood And Sand\Temp\UnityTempFile-e8c0769d544a18b468045639a32825ff
+    fullPath: G:\Program Files (x86)\Anathema\Blood And Sand\Temp\UnityTempFile-e8c0769d544a18b468045639a32825ff
+    projectPath: Temp\UnityTempFile-e8c0769d544a18b468045639a32825ff
     originalPath: 
     indexStatus: 1
     workTreeStatus: 1
@@ -688,3 +736,9 @@ MonoBehaviour:
     originalPath: 
     indexStatus: 1
     workTreeStatus: 1
+  - path: Blood And Sand\UserSettings\EditorUserSettings.asset
+    fullPath: G:\Program Files (x86)\Anathema\Blood And Sand\UserSettings\EditorUserSettings.asset
+    projectPath: UserSettings\EditorUserSettings.asset
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 3

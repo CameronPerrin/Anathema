@@ -13,6 +13,7 @@ public class Combat : MonoBehaviour
 	public GameObject attackPrefab;
 	public GameObject shootPoint;
     public GameObject CurrentPlayer;
+	public bool isPaused;
     
 	void Start()
 	{
@@ -26,7 +27,10 @@ public class Combat : MonoBehaviour
     	{
     		if(PV.IsMine)
     		{
-    			Attack();
+				if(!isPaused)
+				{
+    				Attack();
+				}
     		}
     	}
 	}
