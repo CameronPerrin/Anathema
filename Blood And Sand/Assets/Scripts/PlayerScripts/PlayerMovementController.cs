@@ -18,9 +18,16 @@ public class PlayerMovementController : MonoBehaviour
     //public Transform cam;
 	public float moveSpeed = 70f;
     public float turnSmoothTime = 0.1f;
+    // Jumping stuff
+    public float jumpHeight = 2.0f;
+    public float jumpForwardForce = 5.0f;
+    public float gravityValue = -9.81f;
+    private bool hasJumped = false;
+    private Vector3 playerVelocity;
+
     float turnSmoothVelocity;
 
-    // for highliting
+    // For highliting
     private GameObject temp;
     // Start is called before the first frame update
     void Start()
@@ -57,43 +64,139 @@ public class PlayerMovementController : MonoBehaviour
                     }
             }
         
+            /* 
+             * Making sure the Vector3 property for Jumping is set to 0 grounded and/or below 0
+             * using the custom controller.isGrounded function instead of our custom one, 
+             * or else the player will stop mid-air at the distance we set for the raytracing.
+             *
+             * I'm also setting the velocity of 'x' and 'z' of the player back to zero so the player doesn't
+             * move forward on it's own without user input.
+            */
+            if (controller.isGrounded && playerVelocity.y < 0)
+            {
+                playerVelocity.y = 0f;
+                playerVelocity.x = 0f;
+                playerVelocity.z = 0f;
+                // Set hasJumped back to false to allow for more jumping;
+                hasJumped = false;
+            }
 
-            float horizontal = Input.GetAxisRaw("Horizontal");
+            // Movement input
+            float horizontal = Input.GetAxisRaw("Horizontal"); 
             float vertical = Input.GetAxisRaw("Vertical");
             Vector3 direction = new Vector3(horizontal, 0f, vertical).normalized;
 
+            /*      - [PLAYER MOVEMENT] -
+            * Making sure player is currently moving. If direction.magnitude == 0, then no movement.
+            */
             if (direction.magnitude >= 0.1f)
             {
+                // If player is moving, adjust movement based off of camera direction.
+                // Set targetAngle to be the angle and direction at which the camera is pointing.
                 float targetAngle = Mathf.Atan2(direction.x, direction.z) * Mathf.Rad2Deg + p_camera.transform.eulerAngles.y;
-                //float angle = Mathf.SmoothDampAngle(transform.eulerAngles.y, targetAngle, ref turnSmoothVelocity, turnSmoothTime);
-                //use angle instead of target angle in order to smooth the turning.
-                // leaving it off intentionally for now
-                //I'm thinking we can do the smoothing with animations.
+                // [OLD ATTEMPT] --> float angle = Mathf.SmoothDampAngle(transform.eulerAngles.y, targetAngle, ref turnSmoothVelocity, turnSmoothTime);
+                /*
+                * Use angle instead of target angle in order to smooth the turning, but
+                * I'm leaving it off intentionally for now.
+                * I'm thinking we can do the smoothing with animations.
+                */
                 if (Input.GetMouseButton(0)) {
                     float targetAngle1 = p_camera.transform.eulerAngles.y;
                     transform.rotation = Quaternion.Euler(0f, targetAngle1, 0f);
                 } else {
                     transform.rotation = Quaternion.Euler(0f, targetAngle, 0f);
                 }
-                //transform.rotation = Quaternion.Euler(0f, targetAngle, 0f);
+                // [OLD ATTEMPT] --> transform.rotation = Quaternion.Euler(0f, targetAngle, 0f);
+                /*
+                * Using Move instead of SimpleMove because we've implemented Jumping for our character,
+                * and SimpleMove ignores the 'y'-axis, therefore not allowing us to make the character jump.
+                * I've also added the " * Time.deltaTime" at the end of "controller.Move" function, (I'm not sure
+                * why, but without it I've ran into many unexplainable errors).
+                */
                 Vector3 moveDir = Quaternion.Euler(0f, targetAngle, 0f) * Vector3.forward;
-                if(Input.GetKey(KeyCode.LeftShift)) { // Sprinting
-                    controller.SimpleMove(moveDir.normalized * moveSpeed * 2f);
-                } else {
-                    controller.SimpleMove(moveDir.normalized * moveSpeed);
+                // Sprinting
+                if(Input.GetKey(KeyCode.LeftShift) && IsGrounded()) { 
+                    controller.Move(moveDir.normalized * moveSpeed * 2f * Time.deltaTime);
                 }
-                
+                // If not sprinting, then move normally.
+                else { 
+                    if(IsGrounded())
+                        controller.Move(moveDir.normalized * moveSpeed * Time.deltaTime);
+                }
 
             }
-            else{
-                // Make sure character needs gravity to work before we call it                
-                if(!controller.isGrounded){
-                    // Gravity only works if movement is called
-                    // so we're calling movement but we're making sure it's returning a 0 value so the player doesn't actually move!
-                    controller.SimpleMove(transform.position*0);
-                }
+            
+            /*      - [PLAYER JUMPING] -
+            * Need to check if sprint key is being held down as the player is jumping
+            * to adjust the forward push when they jump.
+            */
+            if(IsGrounded() && Input.GetKey(KeyCode.LeftShift) && Input.GetButtonDown("Jump") && !hasJumped){
+                /*
+                * Since I've changed our controller movement function from "SimpleMove" to "Move", this meant that
+                * once you've stopped inputting movement and you'd be falling, you're character would stop
+                * any movement on the 'x' and 'z'-axis and would plument straight down.
+                *
+                * So because of this, I've had to manually introduce a "push" in the direction that the
+                * player was facing initially as they pressed the "jump" button.
+                */
+                // Set hasJumped equal to true before anything else is done, so as to prevent multiple jumps.
+                hasJumped = true;
+                // 1. Grab the direction of the initial direction the player is facing.
+                float targetAngle = Mathf.Atan2(direction.x, direction.z) * Mathf.Rad2Deg + p_camera.transform.eulerAngles.y;
+                // 2. Add force to that direction. 
+                playerVelocity += Quaternion.Euler(0f, targetAngle, 0f) * Vector3.forward * 2 * jumpForwardForce;
+                playerVelocity.y += Mathf.Sqrt(jumpHeight * -3.0f * gravityValue);
+            
             }
+            // Jumping WITHOUT holding sprint key.
+            else if(IsGrounded() && Input.GetButtonDown("Jump") && !hasJumped){
+                // Set hasJumped equal to true before anything else is done, so as to prevent multiple jumps.
+                hasJumped = true;
+                // 1. Grab the direction of the initial direction the player is facing.
+                float targetAngle = Mathf.Atan2(direction.x, direction.z) * Mathf.Rad2Deg + p_camera.transform.eulerAngles.y;
+                // 2. Add force to that direction. 
+                playerVelocity += Quaternion.Euler(0f, targetAngle, 0f) * Vector3.forward * jumpForwardForce;
+                playerVelocity.y += Mathf.Sqrt(jumpHeight * -3.0f * gravityValue);
+            }
+            // Make sure player falls back down after launch.
+            playerVelocity.y += gravityValue * Time.deltaTime;
+            // This "controller.Move" function controls the player "Jump" and "Push forward while Jumping".
+            controller.Move(playerVelocity * Time.deltaTime);
         }
 
     }
+
+    /*
+     * Character controller input is unreliable and gives off false-positives,
+     * so I made our own way of checking if the player is grounded using raycasts
+    */
+
+    bool IsGrounded()
+    {
+        // Bit shifting from the first layer mask (1. Transparent FX) to the player mask (9. Players).
+        int layerMask = 1 << 9;
+        // I'm inverting the layer mask so that the raycast will hit everything except the player.
+        layerMask = ~layerMask;
+        /*
+        * Switched from Raycast to Spherecast to get a wider area to detect for collision.
+        * Spherecasting downard (-transform.up), at a short distance (1.5f), while using the
+        * newly made Layer mask (layerMask) to check if something is right under the player
+        * and that the player is touching it.
+        */
+        RaycastHit hit;
+        // [OLD ATTEMPT] --> if (Physics.Raycast(transform.position, -transform.up, out hit, 1.5f, layerMask)){
+        if (Physics.SphereCast(transform.position, 0.5f, -transform.up, out hit, 1.5f, layerMask)){
+            return true;
+        }
+        else{
+            return false;
+        }
+    }
+
+    // Used to attempt to debug and imitate the shape of the Spherecast. Will be disabled to avoid confusion.
+    // void OnDrawGizmos()
+    // {
+    //     Gizmos.color = Color.red;
+    //     Gizmos.DrawSphere(transform.position, 0.5f);
+    // }
 }

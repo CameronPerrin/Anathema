@@ -409,6 +409,9 @@ MonoBehaviour:
   p_camera: {fileID: 0}
   moveSpeed: 5
   turnSmoothTime: 0.1
+  jumpHeight: 2
+  jumpForwardForce: 5
+  gravityValue: -9.81
 --- !u!114 &2188337182655465566
 MonoBehaviour:
   m_ObjectHideFlags: 0
