@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cacheType: 1
-  lastUpdatedAtString: 2021-02-23T15:14:54.624-05:00
-  initializedAtString: 2021-02-23T15:14:54.624-05:00
+  lastUpdatedAtString: 2021-02-23T18:54:46.268-05:00
+  initializedAtString: 2021-02-23T18:05:07.847-05:00
   currentGitRemote:
     name: origin
     url: https://github.com/CameronPerrin/Anathema.git
@@ -24,14 +24,14 @@ MonoBehaviour:
     function: 0
     token: 
   currentGitBranch:
-    name: master
-    tracking: origin/master
+    name: test-branch
+    tracking: origin/test-branch
   currentConfigBranch:
-    name: master
+    name: test-branch
     remote:
       name: origin
       url: https://github.com/CameronPerrin/Anathema.git
-    trackingBranch: master
+    trackingBranch: test-branch
   currentConfigRemote:
     name: origin
     url: https://github.com/CameronPerrin/Anathema.git
