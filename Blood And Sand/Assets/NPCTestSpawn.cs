@@ -14,8 +14,8 @@ public class NPCTestSpawn : MonoBehaviour
     {
     	Debug.Log("SpawnNPC");
     	
-        PhotonNetwork.LocalPlayer.TagObject = PhotonNetwork.Instantiate(Path.Combine("PhotonPrefabs", "SimpleMeleeNPC"), transform.position, Quaternion.identity);
-        PhotonNetwork.LocalPlayer.TagObject = PhotonNetwork.Instantiate(Path.Combine("PhotonPrefabs", "SimpleRangedNPC"), transform.position, Quaternion.identity);
+        PhotonNetwork.Instantiate(Path.Combine("PhotonPrefabs", "SimpleMeleeNPC"), transform.position, Quaternion.identity);
+        PhotonNetwork.Instantiate(Path.Combine("PhotonPrefabs", "SimpleRangedNPC"), transform.position, Quaternion.identity);
     }
 
 
