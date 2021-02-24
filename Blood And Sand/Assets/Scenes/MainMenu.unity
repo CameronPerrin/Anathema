@@ -1167,6 +1167,7 @@ MonoBehaviour:
   sceneIndex: 4
   startButton: {fileID: 1129544554}
   loadButton: {fileID: 1041610692}
+  text: 
 --- !u!4 &1401880664
 Transform:
   m_ObjectHideFlags: 0
