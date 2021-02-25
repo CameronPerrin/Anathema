@@ -414,10 +414,10 @@
  <HintPath>C:/Program Files/Unity/Hub/Editor/2020.2.3f1/Editor/Data/Managed/UnityEngine/UnityEditor.UnityConnectModule.dll</HintPath>
  </Reference>
  <Reference Include="Photon3Unity3D">
- <HintPath>C:/Users/Josh/Documents/GitHub/Anathema/Blood And Sand/Assets/Photon/PhotonLibs/Photon3Unity3D.dll</HintPath>
+ <HintPath>G:/Program Files (x86)/Anathema/Blood And Sand/Assets/Photon/PhotonLibs/Photon3Unity3D.dll</HintPath>
  </Reference>
  <Reference Include="websocket-sharp">
- <HintPath>C:/Users/Josh/Documents/GitHub/Anathema/Blood And Sand/Assets/Photon/PhotonLibs/WebSocket/websocket-sharp.dll</HintPath>
+ <HintPath>G:/Program Files (x86)/Anathema/Blood And Sand/Assets/Photon/PhotonLibs/WebSocket/websocket-sharp.dll</HintPath>
  </Reference>
  <Reference Include="netstandard">
  <HintPath>C:/Program Files/Unity/Hub/Editor/2020.2.3f1/Editor/Data/NetStandard/ref/2.0.0/netstandard.dll</HintPath>
@@ -765,73 +765,73 @@
  <HintPath>C:/Program Files/Unity/Hub/Editor/2020.2.3f1/Editor/Data/NetStandard/compat/2.0.0/shims/netfx/System.Xml.Serialization.dll</HintPath>
  </Reference>
  <Reference Include="Unity.VSCode.Editor">
- <HintPath>C:/Users/Josh/Documents/GitHub/Anathema/Blood And Sand/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
+ <HintPath>G:/Program Files (x86)/Anathema/Blood And Sand/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.RenderPipelines.Universal.Shaders">
- <HintPath>C:/Users/Josh/Documents/GitHub/Anathema/Blood And Sand/Library/ScriptAssemblies/Unity.RenderPipelines.Universal.Shaders.dll</HintPath>
+ <HintPath>G:/Program Files (x86)/Anathema/Blood And Sand/Library/ScriptAssemblies/Unity.RenderPipelines.Universal.Shaders.dll</HintPath>
  </Reference>
  <Reference Include="Unity.RenderPipelines.Universal.Runtime">
- <HintPath>C:/Users/Josh/Documents/GitHub/Anathema/Blood And Sand/Library/ScriptAssemblies/Unity.RenderPipelines.Universal.Runtime.dll</HintPath>
+ <HintPath>G:/Program Files (x86)/Anathema/Blood And Sand/Library/ScriptAssemblies/Unity.RenderPipelines.Universal.Runtime.dll</HintPath>
  </Reference>
  <Reference Include="Unity.TextMeshPro.Editor">
- <HintPath>C:/Users/Josh/Documents/GitHub/Anathema/Blood And Sand/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
+ <HintPath>G:/Program Files (x86)/Anathema/Blood And Sand/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.VisualStudio.Editor">
- <HintPath>C:/Users/Josh/Documents/GitHub/Anathema/Blood And Sand/Library/ScriptAssemblies/Unity.VisualStudio.Editor.dll</HintPath>
+ <HintPath>G:/Program Files (x86)/Anathema/Blood And Sand/Library/ScriptAssemblies/Unity.VisualStudio.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Timeline">
- <HintPath>C:/Users/Josh/Documents/GitHub/Anathema/Blood And Sand/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
+ <HintPath>G:/Program Files (x86)/Anathema/Blood And Sand/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
  </Reference>
  <Reference Include="Unity.TextMeshPro">
- <HintPath>C:/Users/Josh/Documents/GitHub/Anathema/Blood And Sand/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+ <HintPath>G:/Program Files (x86)/Anathema/Blood And Sand/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Searcher.Editor">
- <HintPath>C:/Users/Josh/Documents/GitHub/Anathema/Blood And Sand/Library/ScriptAssemblies/Unity.Searcher.Editor.dll</HintPath>
+ <HintPath>G:/Program Files (x86)/Anathema/Blood And Sand/Library/ScriptAssemblies/Unity.Searcher.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.RenderPipelines.Core.Runtime">
- <HintPath>C:/Users/Josh/Documents/GitHub/Anathema/Blood And Sand/Library/ScriptAssemblies/Unity.RenderPipelines.Core.Runtime.dll</HintPath>
+ <HintPath>G:/Program Files (x86)/Anathema/Blood And Sand/Library/ScriptAssemblies/Unity.RenderPipelines.Core.Runtime.dll</HintPath>
  </Reference>
  <Reference Include="UnityEditor.UI">
- <HintPath>C:/Users/Josh/Documents/GitHub/Anathema/Blood And Sand/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
+ <HintPath>G:/Program Files (x86)/Anathema/Blood And Sand/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Rider.Editor">
- <HintPath>C:/Users/Josh/Documents/GitHub/Anathema/Blood And Sand/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
+ <HintPath>G:/Program Files (x86)/Anathema/Blood And Sand/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.RenderPipelines.Core.ShaderLibrary">
- <HintPath>C:/Users/Josh/Documents/GitHub/Anathema/Blood And Sand/Library/ScriptAssemblies/Unity.RenderPipelines.Core.ShaderLibrary.dll</HintPath>
+ <HintPath>G:/Program Files (x86)/Anathema/Blood And Sand/Library/ScriptAssemblies/Unity.RenderPipelines.Core.ShaderLibrary.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.UI">
- <HintPath>C:/Users/Josh/Documents/GitHub/Anathema/Blood And Sand/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
+ <HintPath>G:/Program Files (x86)/Anathema/Blood And Sand/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Mathematics">
- <HintPath>C:/Users/Josh/Documents/GitHub/Anathema/Blood And Sand/Library/ScriptAssemblies/Unity.Mathematics.dll</HintPath>
+ <HintPath>G:/Program Files (x86)/Anathema/Blood And Sand/Library/ScriptAssemblies/Unity.Mathematics.dll</HintPath>
  </Reference>
  <Reference Include="Unity.ShaderGraph.Editor">
- <HintPath>C:/Users/Josh/Documents/GitHub/Anathema/Blood And Sand/Library/ScriptAssemblies/Unity.ShaderGraph.Editor.dll</HintPath>
+ <HintPath>G:/Program Files (x86)/Anathema/Blood And Sand/Library/ScriptAssemblies/Unity.ShaderGraph.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Cinemachine">
- <HintPath>C:/Users/Josh/Documents/GitHub/Anathema/Blood And Sand/Library/ScriptAssemblies/Cinemachine.dll</HintPath>
+ <HintPath>G:/Program Files (x86)/Anathema/Blood And Sand/Library/ScriptAssemblies/Cinemachine.dll</HintPath>
  </Reference>
  <Reference Include="com.unity.cinemachine.editor">
- <HintPath>C:/Users/Josh/Documents/GitHub/Anathema/Blood And Sand/Library/ScriptAssemblies/com.unity.cinemachine.editor.dll</HintPath>
+ <HintPath>G:/Program Files (x86)/Anathema/Blood And Sand/Library/ScriptAssemblies/com.unity.cinemachine.editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.RenderPipelines.Universal.Editor">
- <HintPath>C:/Users/Josh/Documents/GitHub/Anathema/Blood And Sand/Library/ScriptAssemblies/Unity.RenderPipelines.Universal.Editor.dll</HintPath>
+ <HintPath>G:/Program Files (x86)/Anathema/Blood And Sand/Library/ScriptAssemblies/Unity.RenderPipelines.Universal.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.RenderPipeline.Universal.ShaderLibrary">
- <HintPath>C:/Users/Josh/Documents/GitHub/Anathema/Blood And Sand/Library/ScriptAssemblies/Unity.RenderPipeline.Universal.ShaderLibrary.dll</HintPath>
+ <HintPath>G:/Program Files (x86)/Anathema/Blood And Sand/Library/ScriptAssemblies/Unity.RenderPipeline.Universal.ShaderLibrary.dll</HintPath>
  </Reference>
  <Reference Include="Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary">
- <HintPath>C:/Users/Josh/Documents/GitHub/Anathema/Blood And Sand/Library/ScriptAssemblies/Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary.dll</HintPath>
+ <HintPath>G:/Program Files (x86)/Anathema/Blood And Sand/Library/ScriptAssemblies/Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Timeline.Editor">
- <HintPath>C:/Users/Josh/Documents/GitHub/Anathema/Blood And Sand/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
+ <HintPath>G:/Program Files (x86)/Anathema/Blood And Sand/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Mathematics.Editor">
- <HintPath>C:/Users/Josh/Documents/GitHub/Anathema/Blood And Sand/Library/ScriptAssemblies/Unity.Mathematics.Editor.dll</HintPath>
+ <HintPath>G:/Program Files (x86)/Anathema/Blood And Sand/Library/ScriptAssemblies/Unity.Mathematics.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.RenderPipelines.Core.Editor">
- <HintPath>C:/Users/Josh/Documents/GitHub/Anathema/Blood And Sand/Library/ScriptAssemblies/Unity.RenderPipelines.Core.Editor.dll</HintPath>
+ <HintPath>G:/Program Files (x86)/Anathema/Blood And Sand/Library/ScriptAssemblies/Unity.RenderPipelines.Core.Editor.dll</HintPath>
  </Reference>
   </ItemGroup>
   <ItemGroup>

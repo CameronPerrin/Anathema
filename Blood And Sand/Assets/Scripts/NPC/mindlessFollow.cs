@@ -17,10 +17,14 @@ public class mindlessFollow : MonoBehaviour
     private Vector3 playerPos;
     private GameObject player;
     private Rigidbody rb;
-    private bool isTargetPlayer;
-    private int []distList;
-    private GameObject netController;
+    private bool isTargetPlayer = false;
+    
 
+    private GameObject netController;
+    private List<GameObject> pObjects;
+    private List<float> distList = new List<float>();
+    private int pCounter;
+    float temp, min;
 
     // Navmesh stuff
     [SerializeField]
@@ -32,32 +36,55 @@ public class mindlessFollow : MonoBehaviour
     {
         netController = GameObject.Find("TheReaper");
         if(netController){
-            netController.GetComponent<deathScript>().playerObjects.Add(gameObject);
+            pObjects = netController.GetComponent<deathScript>().playerObjects;
         }
 
         rb = GetComponent<Rigidbody>();
         _navMeshAgent = this.GetComponent<UnityEngine.AI.NavMeshAgent>();
         _navMeshAgent.updateRotation = false;
         
-        for()        
+        //for()        
         
     }
 
     void FixedUpdate()
     {
         if(!isTargetPlayer){
+            int cIndex = 0;
+            foreach (GameObject gamers in pObjects){
+                pCounter++;
+                Vector3 npos = new Vector3 (transform.position.x, 0, transform.position.z);
+                Vector3 ppos = new Vector3 (gamers.transform.position.x, 0, gamers.transform.position.z);
+                
+                distList.Add((npos - ppos).magnitude);
+            }
+
             
-
-            int temp, max;
-            for(int i = 0; i < 4; i++){
+            for(int i = 0; i < pCounter; ++i){
                 if(i == 0){
-
+                    min = distList[0];
+                    cIndex = i;
+                }
+                temp = distList[i];
+                if(temp < min){
+                    cIndex = i;
+                    min = temp;
                 }
             }
+            player = pObjects[cIndex];
+            min = 0;
+            pCounter = 0;
+            cIndex = 0;
+            isTargetPlayer = true;
         }
-        player = GameObject.FindGameObjectWithTag("Player");
-
-        transform.LookAt(player.transform);
+        //player = GameObject.FindGameObjectWithTag("Player");
+        if(player)
+            transform.LookAt(player.transform);
+        else{
+            Debug.Log("NPC: Can't find a player to look at?");
+            isTargetPlayer = false;
+        }
+            
         //Debug.Log("Player found at position: " + player.transform.position);
         //transform.position = Vector3.MoveTowards(transform.position, player.transform.position, moveSpeed);
         //rb.MovePosition(player.transform.position + new Vector3(3f,0f,0f) * moveSpeed * Time.fixedDeltaTime);
@@ -66,7 +93,7 @@ public class mindlessFollow : MonoBehaviour
         }
         else{
             SetDestination();
-        }
+        }        
     }
 
     private void SetDestination()
@@ -88,6 +115,7 @@ public class mindlessFollow : MonoBehaviour
         }
         else{
             Debug.Log("Player not found to for SetDestination()");
+            isTargetPlayer = false;
         }
     }
 

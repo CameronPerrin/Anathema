@@ -285,28 +285,28 @@
  <HintPath>C:/Program Files/Unity/Hub/Editor/2020.2.3f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll</HintPath>
  </Reference>
  <Reference Include="GitHub.Logging">
- <HintPath>C:/Users/Josh/Documents/GitHub/Anathema/Blood And Sand/Assets/Plugins/GitHub/Editor/GitHub.Logging.dll</HintPath>
+ <HintPath>G:/Program Files (x86)/Anathema/Blood And Sand/Assets/Plugins/GitHub/Editor/GitHub.Logging.dll</HintPath>
  </Reference>
  <Reference Include="Photon3Unity3D">
- <HintPath>C:/Users/Josh/Documents/GitHub/Anathema/Blood And Sand/Assets/Photon/PhotonLibs/Photon3Unity3D.dll</HintPath>
+ <HintPath>G:/Program Files (x86)/Anathema/Blood And Sand/Assets/Photon/PhotonLibs/Photon3Unity3D.dll</HintPath>
  </Reference>
  <Reference Include="websocket-sharp">
- <HintPath>C:/Users/Josh/Documents/GitHub/Anathema/Blood And Sand/Assets/Photon/PhotonLibs/WebSocket/websocket-sharp.dll</HintPath>
+ <HintPath>G:/Program Files (x86)/Anathema/Blood And Sand/Assets/Photon/PhotonLibs/WebSocket/websocket-sharp.dll</HintPath>
  </Reference>
  <Reference Include="sfw.net">
- <HintPath>C:/Users/Josh/Documents/GitHub/Anathema/Blood And Sand/Assets/Plugins/GitHub/Editor/sfw.net.dll</HintPath>
+ <HintPath>G:/Program Files (x86)/Anathema/Blood And Sand/Assets/Plugins/GitHub/Editor/sfw.net.dll</HintPath>
  </Reference>
  <Reference Include="GitHub.Unity.45">
- <HintPath>C:/Users/Josh/Documents/GitHub/Anathema/Blood And Sand/Assets/Plugins/GitHub/Editor/GitHub.Unity.45.dll</HintPath>
+ <HintPath>G:/Program Files (x86)/Anathema/Blood And Sand/Assets/Plugins/GitHub/Editor/GitHub.Unity.45.dll</HintPath>
  </Reference>
  <Reference Include="GitHub.UnityShim">
- <HintPath>C:/Users/Josh/Documents/GitHub/Anathema/Blood And Sand/Assets/Plugins/GitHub/Editor/GitHub.UnityShim.dll</HintPath>
+ <HintPath>G:/Program Files (x86)/Anathema/Blood And Sand/Assets/Plugins/GitHub/Editor/GitHub.UnityShim.dll</HintPath>
  </Reference>
  <Reference Include="GitHub.Api.45">
- <HintPath>C:/Users/Josh/Documents/GitHub/Anathema/Blood And Sand/Assets/Plugins/GitHub/Editor/GitHub.Api.45.dll</HintPath>
+ <HintPath>G:/Program Files (x86)/Anathema/Blood And Sand/Assets/Plugins/GitHub/Editor/GitHub.Api.45.dll</HintPath>
  </Reference>
  <Reference Include="ICSharpCode.NRefactory">
- <HintPath>C:/Users/Josh/Documents/GitHub/Anathema/Blood And Sand/Library/PackageCache/com.unity.render-pipelines.core@10.2.2/Editor/ShaderGenerator/ICSharpCode.NRefactory.dll</HintPath>
+ <HintPath>G:/Program Files (x86)/Anathema/Blood And Sand/Library/PackageCache/com.unity.render-pipelines.core@10.2.2/Editor/ShaderGenerator/ICSharpCode.NRefactory.dll</HintPath>
  </Reference>
  <Reference Include="netstandard">
  <HintPath>C:/Program Files/Unity/Hub/Editor/2020.2.3f1/Editor/Data/NetStandard/ref/2.0.0/netstandard.dll</HintPath>
@@ -654,16 +654,16 @@
  <HintPath>C:/Program Files/Unity/Hub/Editor/2020.2.3f1/Editor/Data/NetStandard/compat/2.0.0/shims/netfx/System.Xml.Serialization.dll</HintPath>
  </Reference>
  <Reference Include="Unity.RenderPipelines.Universal.Runtime">
- <HintPath>C:/Users/Josh/Documents/GitHub/Anathema/Blood And Sand/Library/ScriptAssemblies/Unity.RenderPipelines.Universal.Runtime.dll</HintPath>
+ <HintPath>G:/Program Files (x86)/Anathema/Blood And Sand/Library/ScriptAssemblies/Unity.RenderPipelines.Universal.Runtime.dll</HintPath>
  </Reference>
  <Reference Include="Unity.RenderPipelines.Core.Runtime">
- <HintPath>C:/Users/Josh/Documents/GitHub/Anathema/Blood And Sand/Library/ScriptAssemblies/Unity.RenderPipelines.Core.Runtime.dll</HintPath>
+ <HintPath>G:/Program Files (x86)/Anathema/Blood And Sand/Library/ScriptAssemblies/Unity.RenderPipelines.Core.Runtime.dll</HintPath>
  </Reference>
  <Reference Include="UnityEditor.UI">
- <HintPath>C:/Users/Josh/Documents/GitHub/Anathema/Blood And Sand/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
+ <HintPath>G:/Program Files (x86)/Anathema/Blood And Sand/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.UI">
- <HintPath>C:/Users/Josh/Documents/GitHub/Anathema/Blood And Sand/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
+ <HintPath>G:/Program Files (x86)/Anathema/Blood And Sand/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
  </Reference>
   </ItemGroup>
   <ItemGroup>
