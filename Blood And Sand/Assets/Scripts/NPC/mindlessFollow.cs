@@ -51,6 +51,7 @@ public class mindlessFollow : MonoBehaviour
     {
         if(!isTargetPlayer){
             int cIndex = 0;
+            if(pObjects !=null){
             foreach (GameObject gamers in pObjects){
                 pCounter++;
                 Vector3 npos = new Vector3 (transform.position.x, 0, transform.position.z);
@@ -76,19 +77,21 @@ public class mindlessFollow : MonoBehaviour
             pCounter = 0;
             cIndex = 0;
             isTargetPlayer = true;
+            }
         }
         //player = GameObject.FindGameObjectWithTag("Player");
-        if(player)
-            transform.LookAt(player.transform);
-        else{
-            Debug.Log("NPC: Can't find a player to look at?");
-            isTargetPlayer = false;
-        }
+        Debug.Log(player.name);
+        //if(player)
+        
+        //else{
+           // Debug.Log("NPC: Can't find a player to look at?");
+            //isTargetPlayer = false;
+        //}
             
         //Debug.Log("Player found at position: " + player.transform.position);
         //transform.position = Vector3.MoveTowards(transform.position, player.transform.position, moveSpeed);
         //rb.MovePosition(player.transform.position + new Vector3(3f,0f,0f) * moveSpeed * Time.fixedDeltaTime);
-        if(_navMeshAgent == null){
+        if(_navMeshAgent == null && isTargetPlayer){
             Debug.Log("No nav mesh agent is attached to " + gameObject.name);
         }
         else{
@@ -101,6 +104,7 @@ public class mindlessFollow : MonoBehaviour
         if(player){
             if(!isRangedNPC){
                 Vector3 targetVector = player.transform.position;
+                transform.LookAt(targetVector);
                 _navMeshAgent.SetDestination(targetVector);
             }
             else{
@@ -109,6 +113,7 @@ public class mindlessFollow : MonoBehaviour
                 }
                 else{
                     Vector3 targetVector = player.transform.position;
+                    transform.LookAt(targetVector);
                     _navMeshAgent.SetDestination(targetVector);
                 }
             }

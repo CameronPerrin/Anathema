@@ -74,9 +74,12 @@ public class Health : MonoBehaviourPunCallbacks
     {
         health -= 10;
         Instantiate(bloodVFX, bloodSpotInstLocation.transform.position, Quaternion.identity); // spawn blood vfx
+        if(health <= 0){
+            GameObject.Find("TheReaper").GetComponent<deathScript>().killPlayer(this.gameObject);
+        }
         if(PV.IsMine) {
             if(health <= 0){
-                GameObject.Find("TheReaper").GetComponent<deathScript>().onDeath(); // Find obj, find script, call function
+                GameObject.Find("TheReaper").GetComponent<deathScript>().onDeath(); // Find obj, find script, call function     
             }  
         }
         overlayHealthBar.fillAmount = health/maxHp;

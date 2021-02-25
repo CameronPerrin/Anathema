@@ -8,10 +8,22 @@ public class deathScript : MonoBehaviourPunCallbacks
 {
     public List<GameObject> playerObjects;
 
+    public void killPlayer(GameObject dedp)
+    {
+        for (int i = 0; i < playerObjects.Count; i++)
+        {
+            if(dedp == playerObjects[i]){
+                playerObjects.RemoveAt(i);
+            }
+        }
+    }
+
     public void onDeath()
 	{ 
         Debug.Log("DEATH IS CALLED");
-        playerObjects.Remove(gameObject);
+        //playerObjects.RemoveAt(0);
+        //playerObjects[0] = null;
+
 		PhotonNetwork.LeaveRoom();
 
 	}
@@ -28,4 +40,6 @@ public class deathScript : MonoBehaviourPunCallbacks
         roomOptions.IsVisible = false;
         PhotonNetwork.JoinOrCreateRoom("Anathema", roomOptions, TypedLobby.Default);
     }
+
+
 }
