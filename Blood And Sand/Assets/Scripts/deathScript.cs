@@ -6,11 +6,12 @@ using Photon.Realtime;
 /// DEATH COMES FOR US ALL
 public class deathScript : MonoBehaviourPunCallbacks
 {
+    public List<GameObject> playerObjects;
 
     public void onDeath()
 	{ 
         Debug.Log("DEATH IS CALLED");
-
+        playerObjects.Remove(gameObject);
 		PhotonNetwork.LeaveRoom();
 
 	}

@@ -34,11 +34,12 @@ public class PlayerMovementController : MonoBehaviour
 
     public Vector3 moveDir;
     
-    
+    private GameObject netController;
 
     // For highliting
     private GameObject temp;
     // Start is called before the first frame update
+
     void Start()
     {
         PV = GetComponent<PhotonView>();
@@ -49,6 +50,10 @@ public class PlayerMovementController : MonoBehaviour
             CFL = transform.GetChild(0).GetComponent<CinemachineFreeLook>();
             //CFL.Follow = transform.GetChild(1);
             CFL.enabled = true;
+        }
+        netController = GameObject.Find("TheReaper");
+        if(netController){
+            netController.GetComponent<deathScript>().playerObjects.Add(gameObject);
         }
         
     }

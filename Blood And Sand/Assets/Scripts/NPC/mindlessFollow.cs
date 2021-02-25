@@ -1,6 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Photon.Pun;
+using Photon.Realtime;
 
 public class mindlessFollow : MonoBehaviour
 {
@@ -10,10 +12,15 @@ public class mindlessFollow : MonoBehaviour
     public bool isRangedNPC = false;
     public bool hitP = false;
     public float moveSpeed = 0.02f;
+    public List<Player> playerInScene;
 
     private Vector3 playerPos;
     private GameObject player;
     private Rigidbody rb;
+    private bool isTargetPlayer;
+    private int []distList;
+    private GameObject netController;
+
 
     // Navmesh stuff
     [SerializeField]
@@ -23,14 +30,33 @@ public class mindlessFollow : MonoBehaviour
 
     void Start()
     {
+        netController = GameObject.Find("TheReaper");
+        if(netController){
+            netController.GetComponent<deathScript>().playerObjects.Add(gameObject);
+        }
+
         rb = GetComponent<Rigidbody>();
         _navMeshAgent = this.GetComponent<UnityEngine.AI.NavMeshAgent>();
         _navMeshAgent.updateRotation = false;
+        
+        for()        
+        
     }
 
     void FixedUpdate()
     {
+        if(!isTargetPlayer){
+            
+
+            int temp, max;
+            for(int i = 0; i < 4; i++){
+                if(i == 0){
+
+                }
+            }
+        }
         player = GameObject.FindGameObjectWithTag("Player");
+
         transform.LookAt(player.transform);
         //Debug.Log("Player found at position: " + player.transform.position);
         //transform.position = Vector3.MoveTowards(transform.position, player.transform.position, moveSpeed);
