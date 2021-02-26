@@ -2163,49 +2163,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 576395372}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &639880795
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 639880796}
-  - component: {fileID: 639880797}
-  m_Layer: 0
-  m_Name: NPC_SpawnPoint
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &639880796
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 639880795}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -48.34, y: 0, z: 22.32}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 16
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &639880797
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 639880795}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 867104e6672fb6246ad78e7b9c9a7327, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &667750980
 GameObject:
   m_ObjectHideFlags: 0
@@ -7392,6 +7349,93 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 861311866}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &870849809
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 870849811}
+  - component: {fileID: 870849810}
+  m_Layer: 0
+  m_Name: EnemyGenerator
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &870849810
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 870849809}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f93c89c2d425f514d9f182bf8afb7ead, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  waves:
+  - name: First Wave
+    enemies:
+    - spawnObject: {fileID: 4832338527365570554, guid: 57af95181810f5e42816887b93800996,
+        type: 3}
+      minProbabilityRange: 0
+      maxProbabilityRange: 90
+    - spawnObject: {fileID: 5401975044253669403, guid: 765f7e76edda7614292d7137bd056992,
+        type: 3}
+      minProbabilityRange: 91
+      maxProbabilityRange: 100
+    maxSpawnCount: 50
+    enemyCount: 0
+    timeBetweenSpawns: 20
+    startingSpawnMin: 1
+    startingSpawnMax: 3
+    spawnMultiplier: 1.1
+  - name: Second Wave
+    enemies:
+    - spawnObject: {fileID: 5401975044253669403, guid: 765f7e76edda7614292d7137bd056992,
+        type: 3}
+      minProbabilityRange: 0
+      maxProbabilityRange: 50
+    - spawnObject: {fileID: 4832338527365570554, guid: 57af95181810f5e42816887b93800996,
+        type: 3}
+      minProbabilityRange: 51
+      maxProbabilityRange: 100
+    maxSpawnCount: 5
+    enemyCount: 0
+    timeBetweenSpawns: 20
+    startingSpawnMin: 2
+    startingSpawnMax: 4
+    spawnMultiplier: 1.2
+  - name: Third Wave (Boss Wave)
+    enemies: []
+    maxSpawnCount: 0
+    enemyCount: 0
+    timeBetweenSpawns: 0
+    startingSpawnMin: 0
+    startingSpawnMax: 0
+    spawnMultiplier: 1
+  timeBetweenWaves: 4
+  waveCountdown: 0
+  size: {x: 40, y: 1, z: 20}
+--- !u!4 &870849811
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 870849809}
+  m_LocalRotation: {x: -0, y: -0.0058380626, z: -0, w: 0.99998295}
+  m_LocalPosition: {x: 8.91, y: 0, z: 59.23}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 16
+  m_LocalEulerAnglesHint: {x: 0, y: -0.669, z: 0}
 --- !u!1001 &951868288
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13954,6 +13998,93 @@ ParticleSystem:
         m_PostInfinity: 2
         m_RotationOrder: 4
     vectorLabel1_3: W
+--- !u!1 &1525256335
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1525256337}
+  - component: {fileID: 1525256336}
+  m_Layer: 0
+  m_Name: EnemyGenerator (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1525256336
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1525256335}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f93c89c2d425f514d9f182bf8afb7ead, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  waves:
+  - name: First Wave
+    enemies:
+    - spawnObject: {fileID: 4832338527365570554, guid: 57af95181810f5e42816887b93800996,
+        type: 3}
+      minProbabilityRange: 0
+      maxProbabilityRange: 90
+    - spawnObject: {fileID: 5401975044253669403, guid: 765f7e76edda7614292d7137bd056992,
+        type: 3}
+      minProbabilityRange: 91
+      maxProbabilityRange: 100
+    maxSpawnCount: 50
+    enemyCount: 0
+    timeBetweenSpawns: 20
+    startingSpawnMin: 1
+    startingSpawnMax: 3
+    spawnMultiplier: 1.1
+  - name: Second Wave
+    enemies:
+    - spawnObject: {fileID: 5401975044253669403, guid: 765f7e76edda7614292d7137bd056992,
+        type: 3}
+      minProbabilityRange: 0
+      maxProbabilityRange: 50
+    - spawnObject: {fileID: 4832338527365570554, guid: 57af95181810f5e42816887b93800996,
+        type: 3}
+      minProbabilityRange: 51
+      maxProbabilityRange: 100
+    maxSpawnCount: 5
+    enemyCount: 0
+    timeBetweenSpawns: 20
+    startingSpawnMin: 2
+    startingSpawnMax: 4
+    spawnMultiplier: 1.2
+  - name: Third Wave (Boss Wave)
+    enemies: []
+    maxSpawnCount: 0
+    enemyCount: 0
+    timeBetweenSpawns: 0
+    startingSpawnMin: 0
+    startingSpawnMax: 0
+    spawnMultiplier: 1
+  timeBetweenWaves: 4
+  waveCountdown: 0
+  size: {x: 40, y: 1, z: 20}
+--- !u!4 &1525256337
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1525256335}
+  m_LocalRotation: {x: -0, y: -0.0058380626, z: -0, w: 0.99998295}
+  m_LocalPosition: {x: 10.21, y: 0, z: -52.64}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 17
+  m_LocalEulerAnglesHint: {x: 0, y: -0.669, z: 0}
 --- !u!1001 &1525750721
 PrefabInstance:
   m_ObjectHideFlags: 0
