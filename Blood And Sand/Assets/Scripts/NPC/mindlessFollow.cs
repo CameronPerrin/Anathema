@@ -1,12 +1,13 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Photon;
 using Photon.Pun;
 using Photon.Realtime;
 
-public class mindlessFollow : MonoBehaviour
+public class mindlessFollow : MonoBehaviourPunCallbacks, IPunObservable
 {
-
+    private PhotonView PV;
     public bool followPlayer = false;
     public bool stopMove = false;
     public bool isRangedNPC = false;
@@ -25,7 +26,7 @@ public class mindlessFollow : MonoBehaviour
     private List<float> distList = new List<float>();
     private int pCounter;
     float temp, min;
-
+    //Vector3 direction;
     // Navmesh stuff
     [SerializeField]
     Transform _destination;
@@ -34,6 +35,7 @@ public class mindlessFollow : MonoBehaviour
 
     void Start()
     {
+        PV = GetComponent<PhotonView>();
         netController = GameObject.Find("TheReaper");
         if(netController){
             pObjects = netController.GetComponent<deathScript>().playerObjects;
@@ -42,6 +44,8 @@ public class mindlessFollow : MonoBehaviour
         rb = GetComponent<Rigidbody>();
         _navMeshAgent = this.GetComponent<UnityEngine.AI.NavMeshAgent>();
         _navMeshAgent.updateRotation = false;
+
+        //direction = new Vector3(horizontal, 0f, vertical).normalized;
         
         //for()        
         
@@ -50,6 +54,7 @@ public class mindlessFollow : MonoBehaviour
     void FixedUpdate()
     {
         if(!isTargetPlayer){
+            Debug.Log("NPC: TRYING TO FIND PLAYER");
             int cIndex = 0;
             if(pObjects !=null){
             foreach (GameObject gamers in pObjects){
@@ -60,8 +65,7 @@ public class mindlessFollow : MonoBehaviour
                 distList.Add((npos - ppos).magnitude);
             }
 
-            
-            for(int i = 0; i < pCounter; ++i){
+            for(int i = 0; i < distList.Count; ++i){
                 if(i == 0){
                     min = distList[0];
                     cIndex = i;
@@ -72,26 +76,28 @@ public class mindlessFollow : MonoBehaviour
                     min = temp;
                 }
             }
+            //Debug.Log(cIndex);
             player = pObjects[cIndex];
+            
             min = 0;
-            pCounter = 0;
+            //pCounter = 0;
             cIndex = 0;
             isTargetPlayer = true;
             }
         }
         //player = GameObject.FindGameObjectWithTag("Player");
-        Debug.Log(player.name);
+
+        if(PhotonNetwork.IsMasterClient)
+            transform.LookAt(player.transform);
         //if(player)
-        
         //else{
            // Debug.Log("NPC: Can't find a player to look at?");
             //isTargetPlayer = false;
         //}
-            
         //Debug.Log("Player found at position: " + player.transform.position);
         //transform.position = Vector3.MoveTowards(transform.position, player.transform.position, moveSpeed);
         //rb.MovePosition(player.transform.position + new Vector3(3f,0f,0f) * moveSpeed * Time.fixedDeltaTime);
-        if(_navMeshAgent == null && isTargetPlayer){
+        if(_navMeshAgent == null && !isTargetPlayer){
             Debug.Log("No nav mesh agent is attached to " + gameObject.name);
         }
         else{
@@ -99,12 +105,18 @@ public class mindlessFollow : MonoBehaviour
         }        
     }
 
+    // [PunRPC]
+    // private bool targetSet(bool isTarg){
+    //     isTargetPlayer = isTarg;
+    //     return isTargetPlayer;
+    // }
+
+
     private void SetDestination()
     {
         if(player){
             if(!isRangedNPC){
                 Vector3 targetVector = player.transform.position;
-                transform.LookAt(targetVector);
                 _navMeshAgent.SetDestination(targetVector);
             }
             else{
@@ -113,7 +125,6 @@ public class mindlessFollow : MonoBehaviour
                 }
                 else{
                     Vector3 targetVector = player.transform.position;
-                    transform.LookAt(targetVector);
                     _navMeshAgent.SetDestination(targetVector);
                 }
             }
@@ -124,6 +135,16 @@ public class mindlessFollow : MonoBehaviour
         }
     }
 
-    // Update is called once per frame
+    public void OnPhotonSerializeView(PhotonStream stream, PhotonMessageInfo info)
+    {
+        if(stream.IsWriting){
+            stream.SendNext(transform.rotation);
+            stream.SendNext(transform.position);
+        }
+        else{
+            this.transform.rotation = (Quaternion)stream.ReceiveNext();
+            this.transform.position = (Vector3)stream.ReceiveNext();
+        }
+    }
     
 }
