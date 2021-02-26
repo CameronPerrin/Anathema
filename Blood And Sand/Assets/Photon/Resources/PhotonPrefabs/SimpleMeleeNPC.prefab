@@ -88,13 +88,13 @@ GameObject:
   - component: {fileID: 5147282427089577408}
   - component: {fileID: 8582072512446206649}
   - component: {fileID: 4958428087277550511}
-  - component: {fileID: 2915868483673093250}
   - component: {fileID: 7377978433598944555}
+  - component: {fileID: 5613429092966685003}
   - component: {fileID: 2177950460104439366}
-  - component: {fileID: 15015552694678672}
   - component: {fileID: 2270198912495404562}
   - component: {fileID: 3359526728829031157}
   - component: {fileID: 3473372572003979569}
+  - component: {fileID: -1656729832637366600}
   m_Layer: 0
   m_Name: SimpleMeleeNPC
   m_TagString: EnemyHitbox
@@ -184,29 +184,14 @@ MonoBehaviour:
   ObservedComponentsFoldoutOpen: 1
   Group: 0
   prefixField: -1
-  Synchronization: 1
+  Synchronization: 3
   OwnershipTransfer: 0
   ObservedComponents:
-  - {fileID: 2915868483673093250}
   - {fileID: 7377978433598944555}
+  - {fileID: 5613429092966685003}
   viewIdField: 0
   InstantiationId: 0
   isRuntimeInstantiated: 0
---- !u!114 &2915868483673093250
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4832338527365570554}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 627855c7f81362d41938ffe0b1475957, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_SynchronizePosition: 1
-  m_SynchronizeRotation: 1
-  m_SynchronizeScale: 0
 --- !u!114 &7377978433598944555
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -225,6 +210,20 @@ MonoBehaviour:
   hitP: 0
   moveSpeed: 0.02
   _destination: {fileID: 0}
+--- !u!114 &5613429092966685003
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4832338527365570554}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 91e625b1d9de9634cad9a52f4bcca2f7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  predictionCoeff: 1
+  isAuthoritative: 0
 --- !u!114 &2177950460104439366
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -244,22 +243,6 @@ MonoBehaviour:
   FloatingTextPrefab: {fileID: 7957747401790915659, guid: 7b2549c15f36d544490e6208a44c1357,
     type: 3}
   damage: 10
---- !u!54 &15015552694678672
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4832338527365570554}
-  serializedVersion: 2
-  m_Mass: 0.0000001
-  m_Drag: 0
-  m_AngularDrag: 0
-  m_UseGravity: 0
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 6
-  m_CollisionDetection: 0
 --- !u!136 &2270198912495404562
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -319,6 +302,22 @@ MonoBehaviour:
   attackRange: 1
   playerInSightRange: 0
   playerInAttackRange: 0
+--- !u!54 &-1656729832637366600
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4832338527365570554}
+  serializedVersion: 2
+  m_Mass: 1000
+  m_Drag: 0
+  m_AngularDrag: 0
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 6
+  m_CollisionDetection: 0
 --- !u!1 &4851886772284154037
 GameObject:
   m_ObjectHideFlags: 0

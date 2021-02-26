@@ -228,13 +228,13 @@ GameObject:
   - component: {fileID: 5662876307860759073}
   - component: {fileID: 9142840085078398296}
   - component: {fileID: 5564093934825880654}
-  - component: {fileID: 2418291201508356963}
   - component: {fileID: 8042190526556189386}
+  - component: {fileID: 7146931657096019357}
   - component: {fileID: 1711899473759744423}
-  - component: {fileID: 706248719421682545}
   - component: {fileID: 1619356349429744115}
   - component: {fileID: 2839288828760691988}
   - component: {fileID: -4341296220435896966}
+  - component: {fileID: 4490400799984215499}
   m_Layer: 0
   m_Name: SimpleRangedNPC
   m_TagString: EnemyHitbox
@@ -287,7 +287,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 0}
+  - {fileID: 2100000, guid: 91187d0012488a146bd7b1eb9c087107, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -324,29 +324,14 @@ MonoBehaviour:
   ObservedComponentsFoldoutOpen: 1
   Group: 0
   prefixField: -1
-  Synchronization: 1
+  Synchronization: 3
   OwnershipTransfer: 0
   ObservedComponents:
-  - {fileID: 2418291201508356963}
   - {fileID: 8042190526556189386}
+  - {fileID: 7146931657096019357}
   viewIdField: 0
   InstantiationId: 0
   isRuntimeInstantiated: 0
---- !u!114 &2418291201508356963
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5401975044253669403}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 627855c7f81362d41938ffe0b1475957, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_SynchronizePosition: 1
-  m_SynchronizeRotation: 1
-  m_SynchronizeScale: 0
 --- !u!114 &8042190526556189386
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -365,6 +350,20 @@ MonoBehaviour:
   hitP: 0
   moveSpeed: 0.02
   _destination: {fileID: 0}
+--- !u!114 &7146931657096019357
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5401975044253669403}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 91e625b1d9de9634cad9a52f4bcca2f7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  predictionCoeff: 1
+  isAuthoritative: 0
 --- !u!114 &1711899473759744423
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -384,22 +383,6 @@ MonoBehaviour:
   FloatingTextPrefab: {fileID: 7957747401790915659, guid: 7b2549c15f36d544490e6208a44c1357,
     type: 3}
   damage: 10
---- !u!54 &706248719421682545
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5401975044253669403}
-  serializedVersion: 2
-  m_Mass: 0.0000001
-  m_Drag: 0
-  m_AngularDrag: 0
-  m_UseGravity: 0
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 6
-  m_CollisionDetection: 0
 --- !u!136 &1619356349429744115
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -453,6 +436,22 @@ MonoBehaviour:
   attackPrefab: {fileID: 8710979580092825000, guid: d86a50465dacf5a4fb4832beaf943559,
     type: 3}
   shootPoint: {fileID: 6487698837137998205}
+--- !u!54 &4490400799984215499
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5401975044253669403}
+  serializedVersion: 2
+  m_Mass: 1000
+  m_Drag: 0
+  m_AngularDrag: 0
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 1
+  m_Constraints: 6
+  m_CollisionDetection: 0
 --- !u!1 &6240555181705799631
 GameObject:
   m_ObjectHideFlags: 0

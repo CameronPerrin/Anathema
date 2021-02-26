@@ -26,6 +26,7 @@ public class mindlessFollow : MonoBehaviourPunCallbacks, IPunObservable
     private List<float> distList = new List<float>();
     private int pCounter;
     float temp, min;
+   
     //Vector3 direction;
     // Navmesh stuff
     [SerializeField]
@@ -53,8 +54,8 @@ public class mindlessFollow : MonoBehaviourPunCallbacks, IPunObservable
 
     void FixedUpdate()
     {
-        if(!isTargetPlayer){
-            Debug.Log("NPC: TRYING TO FIND PLAYER");
+        //lastPos = realPos;
+        if(!isTargetPlayer && PhotonNetwork.IsMasterClient){
             int cIndex = 0;
             if(pObjects !=null){
             foreach (GameObject gamers in pObjects){
@@ -101,7 +102,12 @@ public class mindlessFollow : MonoBehaviourPunCallbacks, IPunObservable
             Debug.Log("No nav mesh agent is attached to " + gameObject.name);
         }
         else{
-            SetDestination();
+            if(PhotonNetwork.IsMasterClient)
+            {
+                SetDestination();
+                //transform.position = Vector3.Lerp(transform.position, realPos + (predictionCoeff*velocity*Time.deltaTime), Time.deltaTime);
+                //transform.rotation = Quaternion.Lerp(transform.rotation, realRot, Time.deltaTime);
+            }
         }        
     }
 
@@ -121,9 +127,10 @@ public class mindlessFollow : MonoBehaviourPunCallbacks, IPunObservable
             }
             else{
                 if(hitP){
-                    _navMeshAgent.SetDestination(transform.position);
+                    _navMeshAgent.isStopped = true;
                 }
                 else{
+                    _navMeshAgent.isStopped = false;
                     Vector3 targetVector = player.transform.position;
                     _navMeshAgent.SetDestination(targetVector);
                 }
@@ -140,8 +147,13 @@ public class mindlessFollow : MonoBehaviourPunCallbacks, IPunObservable
         if(stream.IsWriting){
             stream.SendNext(transform.rotation);
             stream.SendNext(transform.position);
+            // Send velocity over network (interpolate)
+            //stream.SendNext((realPos - lastPos) / Time.deltaTime);
         }
         else{
+            //realPos = (Vector3)(stream.ReceiveNext());
+            //realRot = (Quaternion) (stream.ReceiveNext());
+            //velocity = (Vector3)(stream.ReceiveNext());
             this.transform.rotation = (Quaternion)stream.ReceiveNext();
             this.transform.position = (Vector3)stream.ReceiveNext();
         }
