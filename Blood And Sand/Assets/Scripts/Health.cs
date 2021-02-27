@@ -8,7 +8,7 @@ using Photon;
 using UnityEngine.SceneManagement;
 
 
-public class Health : MonoBehaviourPunCallbacks
+public class Health : MonoBehaviourPunCallbacks, IPunObservable
 {
 
     // Start is called before the first frame update
@@ -59,13 +59,6 @@ public class Health : MonoBehaviourPunCallbacks
     {
         if(PV.IsMine){
             PV.RPC("Damage", RpcTarget.All);
-
-            // Check if floating text exists and if health is over 0 so that damage text does not spawn at hp 0
-            if (FloatingTextPrefab && health > 0)
-            {
-                ShowFloatingText();
-            }
-
         }
     }
 
@@ -85,7 +78,10 @@ public class Health : MonoBehaviourPunCallbacks
         overlayHealthBar.fillAmount = health/maxHp;
         worldHealthBar.fillAmount = health/maxHp;
         
-
+        if(FloatingTextPrefab)
+        {
+            ShowFloatingText();
+        }
     }
 
     public virtual void OnPhotonSerializeView(PhotonStream stream, PhotonMessageInfo info){

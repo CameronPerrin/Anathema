@@ -94,7 +94,7 @@ GameObject:
   - component: {fileID: 2270198912495404562}
   - component: {fileID: 3359526728829031157}
   - component: {fileID: 3473372572003979569}
-  - component: {fileID: -5143540937394059022}
+  - component: {fileID: 7347207314952128312}
   m_Layer: 0
   m_Name: SimpleMeleeNPC
   m_TagString: EnemyHitbox
@@ -221,7 +221,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 91e625b1d9de9634cad9a52f4bcca2f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  predictionCoeff: 1
+  predictionCoeff: 0.1
   isAuthoritative: 0
 --- !u!114 &2177950460104439366
 MonoBehaviour:
@@ -239,6 +239,8 @@ MonoBehaviour:
   health: 100
   worldHealthBar: {fileID: 1808448123854856402}
   wHp: {fileID: 6873238743294205998}
+  bloodVFX: {fileID: 6062716170508370198, guid: a2d0a4f4e6e568842bf9abb6edb2864d,
+    type: 3}
   FloatingTextPrefab: {fileID: 7957747401790915659, guid: 7b2549c15f36d544490e6208a44c1357,
     type: 3}
   damage: 10
@@ -301,7 +303,7 @@ MonoBehaviour:
   attackRange: 1
   playerInSightRange: 0
   playerInAttackRange: 0
---- !u!54 &-5143540937394059022
+--- !u!54 &7347207314952128312
 Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -315,7 +317,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 80
   m_CollisionDetection: 0
 --- !u!1 &4851886772284154037
 GameObject:

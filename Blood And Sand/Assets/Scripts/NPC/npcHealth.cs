@@ -7,7 +7,7 @@ using Photon.Realtime;
 using Photon;
 using UnityEngine.SceneManagement;
 
-public class npcHealth : MonoBehaviour
+public class npcHealth : MonoBehaviourPunCallbacks
 {
     // Start is called before the first frame update
 	private PhotonView PV;
@@ -15,7 +15,7 @@ public class npcHealth : MonoBehaviour
     public float health;
     public Image worldHealthBar;		// HP images for worldspace overlay
     public GameObject wHp; 				// canvas world
-    //public GameObject bloodVFX;
+    public GameObject bloodVFX;
     //public GameObject bloodSpotInstLocation;
 
 
@@ -37,11 +37,7 @@ public class npcHealth : MonoBehaviour
         if(PV.IsMine){
             PV.RPC("Damage", RpcTarget.All);
 
-            // Check if floating text exists and if health is over 0 so that damage text does not spawn at hp 0
-            if(FloatingTextPrefab && health > 0)
-            {
-                ShowFloatingText();
-            }
+            
         }
         
     }
@@ -53,11 +49,18 @@ public class npcHealth : MonoBehaviour
     {
         Debug.Log("Step 3: Damage() function called");
         health -= 10;
+        Instantiate(bloodVFX, this.transform.position, Quaternion.identity); // spawn blood vfx
         //Instantiate(bloodVFX, bloodSpotInstLocation.transform.position, Quaternion.identity); // spawn blood vfx
             if(health <= 0){
                 Destroy(this.gameObject);
             }  
         worldHealthBar.fillAmount = health/maxHp;
+
+        // Check if floating text exists and if health is over 0 so that damage text does not spawn at hp 0
+            if(FloatingTextPrefab)
+            {
+                ShowFloatingText();
+            }
     }
 
 

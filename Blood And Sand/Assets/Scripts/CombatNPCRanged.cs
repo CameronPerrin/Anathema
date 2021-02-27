@@ -40,7 +40,7 @@ public class CombatNPCRanged : MonoBehaviour
     {
         if(alreadyAttacked == false)
         {
-            Debug.Log("Attacking Range");
+            //Debug.Log("Attacking Range");
             //attack code
             GameObject attackHitbox = Instantiate(attackPrefab, shootPoint.transform.position, shootPoint.transform.rotation);
             //attackHitbox.transform.parent = player.transform;
@@ -52,7 +52,7 @@ public class CombatNPCRanged : MonoBehaviour
 
     private void ResetAttack()
     {
-        Debug.Log("ResetAttack invoked");
+        //Debug.Log("ResetAttack invoked");
         alreadyAttacked = false;
     }
 }

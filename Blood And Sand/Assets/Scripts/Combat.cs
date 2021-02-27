@@ -37,7 +37,6 @@ public class Combat : MonoBehaviour
 
     public void Attack()
     {
-
     	PV.RPC("RpcShoot", RpcTarget.All);
     }
 

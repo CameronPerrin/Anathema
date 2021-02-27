@@ -55,6 +55,7 @@ public class CombatNPCMelee : MonoBehaviour
 
     }
 
+    // might have to run RPC if we want the players to see the bullets
     private void AttackPlayer()
     {
         //Make sure enemy doesn't move
@@ -74,7 +75,7 @@ public class CombatNPCMelee : MonoBehaviour
 
     private void ResetAttack()
     {
-        Debug.Log("ResetAttack invoked");
+        //Debug.Log("ResetAttack invoked");
         alreadyAttacked = false;
     }
 

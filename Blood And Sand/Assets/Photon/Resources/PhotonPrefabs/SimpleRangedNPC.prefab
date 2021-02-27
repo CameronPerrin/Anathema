@@ -234,7 +234,7 @@ GameObject:
   - component: {fileID: 1619356349429744115}
   - component: {fileID: 2839288828760691988}
   - component: {fileID: -4341296220435896966}
-  - component: {fileID: -6947478879812053041}
+  - component: {fileID: 805081309431314000}
   m_Layer: 0
   m_Name: SimpleRangedNPC
   m_TagString: EnemyHitbox
@@ -361,7 +361,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 91e625b1d9de9634cad9a52f4bcca2f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  predictionCoeff: 1
+  predictionCoeff: 0.1
   isAuthoritative: 0
 --- !u!114 &1711899473759744423
 MonoBehaviour:
@@ -379,6 +379,8 @@ MonoBehaviour:
   health: 100
   worldHealthBar: {fileID: 1216152337699825459}
   wHp: {fileID: 6240555181705799631}
+  bloodVFX: {fileID: 6062716170508370198, guid: a2d0a4f4e6e568842bf9abb6edb2864d,
+    type: 3}
   FloatingTextPrefab: {fileID: 7957747401790915659, guid: 7b2549c15f36d544490e6208a44c1357,
     type: 3}
   damage: 10
@@ -435,7 +437,7 @@ MonoBehaviour:
   attackPrefab: {fileID: 8710979580092825000, guid: d86a50465dacf5a4fb4832beaf943559,
     type: 3}
   shootPoint: {fileID: 6487698837137998205}
---- !u!54 &-6947478879812053041
+--- !u!54 &805081309431314000
 Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -449,7 +451,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 80
   m_CollisionDetection: 0
 --- !u!1 &6240555181705799631
 GameObject:

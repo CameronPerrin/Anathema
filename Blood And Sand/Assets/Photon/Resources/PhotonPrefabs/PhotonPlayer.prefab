@@ -388,6 +388,7 @@ MonoBehaviour:
   OwnershipTransfer: 0
   ObservedComponents:
   - {fileID: 2188337182655465566}
+  - {fileID: 4154899573533838182}
   viewIdField: 0
   InstantiationId: 0
   isRuntimeInstantiated: 0
@@ -473,7 +474,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9bb9d182e1b803e43bb1c8bbccd7a8e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHp: 100
+  maxHp: 1000
   health: 0
   overlayHealthBar: {fileID: 7738224452872692261}
   worldHealthBar: {fileID: 709491987561619163}
