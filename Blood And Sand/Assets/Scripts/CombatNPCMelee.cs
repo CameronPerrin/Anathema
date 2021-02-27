@@ -2,6 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
+using Photon;
+using Photon.Pun;
+using Photon.Realtime;
 
 
 
@@ -23,20 +26,31 @@ public class CombatNPCMelee : MonoBehaviour
 
     private void Awake()
     {
-        agent = GetComponent<NavMeshAgent>();
+        
+    }
+
+    private void Start()
+    {
+        agent = this.GetComponent<NavMeshAgent>();
+        if(!PhotonNetwork.IsMasterClient){
+            agent.enabled = false;
+        }
     }
 
     private void Update()
     {
         playerInAttackRange = Physics.CheckSphere(transform.position, attackRange, whatIsPlayer);
+        if(PhotonNetwork.IsMasterClient){
         if (playerInAttackRange)
         {
+            
             AttackPlayer();
             agent.isStopped = true;
         }
         else
         {
             agent.isStopped = false;
+        }
         }
 
     }

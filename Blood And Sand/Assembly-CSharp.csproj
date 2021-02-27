@@ -107,6 +107,7 @@
      <Compile Include="Assets\IL3DN\Scripts\IL3DN_SimpleMouseLook.cs" />
      <Compile Include="Assets\IL3DN\Scripts\IL3DN_SimpleFPSController.cs" />
      <Compile Include="Assets\Photon\PhotonChat\Demos\DemoChat\ChatGui.cs" />
+     <Compile Include="Assets\networkSmoothing.cs" />
      <Compile Include="Assets\Scripts\NPC\npcHealth.cs" />
      <Compile Include="Assets\IL3DN\Scripts\IL3DN_ColorController.cs" />
      <Compile Include="Assets\Scripts\NPC\mindlessFollow.cs" />

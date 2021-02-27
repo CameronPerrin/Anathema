@@ -5,7 +5,7 @@ using Photon;
 using Photon.Pun;
 using Photon.Realtime;
 
-public class mindlessFollow : MonoBehaviourPunCallbacks, IPunObservable
+public class mindlessFollow : MonoBehaviour
 {
     private PhotonView PV;
     public bool followPlayer = false;
@@ -32,7 +32,7 @@ public class mindlessFollow : MonoBehaviourPunCallbacks, IPunObservable
     [SerializeField]
     Transform _destination;
     UnityEngine.AI.NavMeshAgent _navMeshAgent;
-    
+
 
     void Start()
     {
@@ -45,6 +45,10 @@ public class mindlessFollow : MonoBehaviourPunCallbacks, IPunObservable
         rb = GetComponent<Rigidbody>();
         _navMeshAgent = this.GetComponent<UnityEngine.AI.NavMeshAgent>();
         _navMeshAgent.updateRotation = false;
+
+        if(!PhotonNetwork.IsMasterClient){
+            _navMeshAgent.enabled = false;
+        }
 
         //direction = new Vector3(horizontal, 0f, vertical).normalized;
         
@@ -142,21 +146,21 @@ public class mindlessFollow : MonoBehaviourPunCallbacks, IPunObservable
         }
     }
 
-    public void OnPhotonSerializeView(PhotonStream stream, PhotonMessageInfo info)
-    {
-        if(stream.IsWriting){
-            stream.SendNext(transform.rotation);
-            stream.SendNext(transform.position);
-            // Send velocity over network (interpolate)
-            //stream.SendNext((realPos - lastPos) / Time.deltaTime);
-        }
-        else{
-            //realPos = (Vector3)(stream.ReceiveNext());
-            //realRot = (Quaternion) (stream.ReceiveNext());
-            //velocity = (Vector3)(stream.ReceiveNext());
-            this.transform.rotation = (Quaternion)stream.ReceiveNext();
-            this.transform.position = (Vector3)stream.ReceiveNext();
-        }
-    }
+    // public void OnPhotonSerializeView(PhotonStream stream, PhotonMessageInfo info)
+    // {
+    //     if(stream.IsWriting){
+    //         stream.SendNext(transform.rotation);
+    //         stream.SendNext(transform.position);
+    //         // Send velocity over network (interpolate)
+    //         //stream.SendNext((realPos - lastPos) / Time.deltaTime);
+    //     }
+    //     else{
+    //         //realPos = (Vector3)(stream.ReceiveNext());
+    //         //realRot = (Quaternion) (stream.ReceiveNext());
+    //         //velocity = (Vector3)(stream.ReceiveNext());
+    //         this.transform.rotation = (Quaternion)stream.ReceiveNext();
+    //         this.transform.position = (Vector3)stream.ReceiveNext();
+    //     }
+    // }
     
 }
