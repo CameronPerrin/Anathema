@@ -1,3 +1,4 @@
+// Author: Calvin Le
 // Wave System script coordinates and controls NPC spawning in the map.
 
 using System.Collections;
