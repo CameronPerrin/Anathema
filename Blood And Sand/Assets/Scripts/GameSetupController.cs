@@ -5,9 +5,12 @@ using UnityEngine;
 public class GameSetupController : MonoBehaviour
 {
     public Transform SpawnPoint;
+
+    private GameObject pNameObj;
     // Start is called before the first frame update
     void Start()
     {
+        pNameObj = GameObject.Find("NameSaver");
         CreatePlayer();
     }
 
@@ -16,7 +19,7 @@ public class GameSetupController : MonoBehaviour
     	Debug.Log("Creating Player");
     	
         PhotonNetwork.LocalPlayer.TagObject = PhotonNetwork.Instantiate(Path.Combine("PhotonPrefabs", "PhotonPlayer"), SpawnPoint.position, Quaternion.identity);
-        PhotonNetwork.NickName = "Player " + Random.Range(0, 1000);
+        PhotonNetwork.NickName = pNameObj.GetComponent<playerName>().pName;
     }
 
 

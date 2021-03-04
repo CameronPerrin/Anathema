@@ -14,6 +14,7 @@ public class npcHealth : MonoBehaviourPunCallbacks
     public float maxHp = 100f;
     public float health;
     public Image worldHealthBar;		// HP images for worldspace overlay
+    public Image redWorldHealthBackdrop;
     public GameObject wHp; 				// canvas world
     public GameObject bloodVFX;
     //public GameObject bloodSpotInstLocation;
@@ -42,6 +43,12 @@ public class npcHealth : MonoBehaviourPunCallbacks
         
     }
 
+    public void Update()
+    {
+        if(health/maxHp != redWorldHealthBackdrop.fillAmount)
+            redWorldHealthBackdrop.fillAmount = Mathf.Lerp(redWorldHealthBackdrop.fillAmount, health/maxHp, Time.deltaTime * 4);
+    }
+
 
     // this stuff sends info to all network
     [PunRPC]
@@ -55,7 +62,7 @@ public class npcHealth : MonoBehaviourPunCallbacks
                 Destroy(this.gameObject);
             }  
         worldHealthBar.fillAmount = health/maxHp;
-
+        
         // Check if floating text exists and if health is over 0 so that damage text does not spawn at hp 0
             if(FloatingTextPrefab)
             {

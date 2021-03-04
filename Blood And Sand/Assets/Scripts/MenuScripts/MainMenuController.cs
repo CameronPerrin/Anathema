@@ -19,10 +19,22 @@ public class MainMenuController : MonoBehaviourPunCallbacks
     private GameObject loadButton;
 
     [SerializeField]
-    //private GameObject inputField;
+    private GameObject enterWorld;
+
+    [SerializeField]
+    private GameObject inputField;
 
     // input field
+    private GameObject pName;
     private string text;
+
+    void Start()
+    {
+        pName = GameObject.Find("NameSaver");
+        if(!pName){
+            Debug.Log("CAN'T FIND OBJECT NameSaver");
+        }
+    }
 
     public override void OnConnectedToMaster()
     {
@@ -35,16 +47,19 @@ public class MainMenuController : MonoBehaviourPunCallbacks
     public void JoinTown()
     {
         // grab text from input field
-        //text = inputField.GetComponent<TMP_InputField>().text;
+        text = inputField.GetComponent<TMP_InputField>().text;
         // text has to be a minimum of 3 characters to work
-        //if(text.Length >= 3){
+        if(text.Length >= 3 && text.Length <= 12){
             RoomOptions roomOptions = new RoomOptions();
             roomOptions.IsVisible = false;
+            startButton.SetActive(false);
+            enterWorld.SetActive(true);
+            pName.GetComponent<playerName>().saveName(text);
             PhotonNetwork.JoinOrCreateRoom("Anathema", roomOptions, TypedLobby.Default);
-        //}
-        //else{
-        //    Debug.Log("You entered: " + text + ". Invalid username!");
-       // }
+        }
+        else{
+            Debug.Log("You entered: " + text + ". Invalid username!");
+        }
         
     }
     public override void OnJoinedRoom()

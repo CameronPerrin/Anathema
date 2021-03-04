@@ -16,7 +16,9 @@ public class Health : MonoBehaviourPunCallbacks, IPunObservable
     public float maxHp = 100f;
     public float health;
     public Image overlayHealthBar; 		// HP images for screenspace overlay
+    public Image redScreenHealthBackdrop;
     public Image worldHealthBar;		// HP images for worldspace overlay
+    public Image redWorldHealthBackdrop;
     public GameObject oHp; 				// canvas overlay
     public GameObject wHp; 				// canvas world
 
@@ -52,7 +54,11 @@ public class Health : MonoBehaviourPunCallbacks, IPunObservable
     // Update is called once per frame
     void Update()
     {
-        
+        if(health/maxHp != redWorldHealthBackdrop.fillAmount)
+        {
+            redWorldHealthBackdrop.fillAmount = Mathf.Lerp(redWorldHealthBackdrop.fillAmount, health/maxHp, Time.deltaTime * 4);
+            redScreenHealthBackdrop.fillAmount = Mathf.Lerp(redScreenHealthBackdrop.fillAmount, health/maxHp, Time.deltaTime * 4);
+        }
     }
 
     public void TakeDamage()
@@ -77,7 +83,7 @@ public class Health : MonoBehaviourPunCallbacks, IPunObservable
         }
         overlayHealthBar.fillAmount = health/maxHp;
         worldHealthBar.fillAmount = health/maxHp;
-        
+
         if(FloatingTextPrefab)
         {
             ShowFloatingText();
@@ -87,7 +93,7 @@ public class Health : MonoBehaviourPunCallbacks, IPunObservable
     public virtual void OnPhotonSerializeView(PhotonStream stream, PhotonMessageInfo info){
         if(stream.IsWriting)
         {
-            //this is my player! >:(
+            //this is my player!
             stream.SendNext(health);
         }
 

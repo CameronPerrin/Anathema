@@ -119,6 +119,7 @@
      <Compile Include="Assets\Scripts\QuickStartLobbyController.cs" />
      <Compile Include="Assets\ErosionBrush\Scripts\Matrix.cs" />
      <Compile Include="Assets\Photon\PhotonChat\Demos\Common\OnStartDelete.cs" />
+     <Compile Include="Assets\Scripts\NPC\waveSystem.cs" />
      <Compile Include="Assets\Scripts\LobbyMenuScripts\RoomController.cs" />
      <Compile Include="Assets\Scripts\SimpleCameraController.cs" />
      <Compile Include="Assets\Scripts\particleDestroy.cs" />
