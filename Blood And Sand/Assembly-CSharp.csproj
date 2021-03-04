@@ -48,6 +48,7 @@
   </PropertyGroup>
   <ItemGroup>
      <Compile Include="Assets\Photon\PhotonRealtime\Demos\DemoLoadBalancing\ConnectAndJoinRandomLb.cs" />
+     <Compile Include="Assets\playerName.cs" />
      <Compile Include="Assets\Scripts\Health.cs" />
      <Compile Include="Assets\IL3DN\Scripts\IL3DN_PlayRandomSound.cs" />
      <Compile Include="Assets\Scripts\PlazaScripts\Interact.cs" />
@@ -62,6 +63,7 @@
      <Compile Include="Assets\IL3DN\Scripts\IL3DN_Fog.cs" />
      <Compile Include="Assets\Scripts\billboardHealthScript.cs" />
      <Compile Include="Assets\Stylized Grass Shader\_Demo\DemoAssets\Scripts\PlayerController.cs" />
+     <Compile Include="Assets\playerNameDisplayer.cs" />
      <Compile Include="Assets\Scripts\CombatNPCRanged.cs" />
      <Compile Include="Assets\Photon\PhotonChat\Demos\DemoChat\ChatAppIdCheckerUI.cs" />
      <Compile Include="Assets\Photon\PhotonChat\Demos\DemoChat\AppSettingsExtensions.cs" />

@@ -17,7 +17,7 @@ public class playerNameDisplayer : MonoBehaviourPun
     void Start()
     {   
         PV = GetComponent<PhotonView>();
-        pNameObj = GameObject.Find("NameSaver");
+        //pNameObj = GameObject.Find("NameSaver");
         if(!pNameObj){
             Debug.Log("CAN'T FIND OBJECT NameSaver");
         }

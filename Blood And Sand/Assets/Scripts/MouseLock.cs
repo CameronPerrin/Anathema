@@ -41,7 +41,7 @@ public class MouseLock : MonoBehaviour
         if(!paused)
         {
             Cursor.lockState = CursorLockMode.Locked;
-            this.GetComponent<PlayerMovementController>().isPaused = false;
+            //this.GetComponent<PlayerMovementController>().isPaused = false;
             this.gameObject.transform.GetChild(0).gameObject.SetActive(true);
         }
         else if(paused)
