@@ -80,12 +80,14 @@
      <Compile Include="Assets\ErosionBrush\Scripts\Matrix2.cs" />
      <Compile Include="Assets\Scripts\TEST SCRIPT 2.cs" />
      <Compile Include="Assets\IL3DN\Scripts\IL3DN_Wind.cs" />
+     <Compile Include="Assets\dontDestroyOnLoad.cs" />
      <Compile Include="Assets\ErosionBrush\Scripts\Erosion.cs" />
      <Compile Include="Assets\ErosionBrush\Scripts\Extensions.cs" />
      <Compile Include="Assets\Photon\PhotonChat\Demos\DemoChat\ChannelSelector.cs" />
      <Compile Include="Assets\Scripts\NPC\stopMove.cs" />
      <Compile Include="Assets\Scripts\PauseMenuController.cs" />
      <Compile Include="Assets\ErosionBrush\Scripts\Noise.cs" />
+     <Compile Include="Assets\ChatScript.cs" />
      <Compile Include="Assets\Scripts\meleeBullet.cs" />
      <Compile Include="Assets\Photon\PhotonChat\Demos\DemoChat\IgnoreUiRaycastWhenInactive.cs" />
      <Compile Include="Assets\Scripts\bulletScript.cs" />

@@ -10,6 +10,7 @@ public class PlayerDash : MonoBehaviour
 
     public float dashSpeed;
     public float dashTime;
+    public bool isPaused = false;
 
 
 
@@ -21,7 +22,7 @@ public class PlayerDash : MonoBehaviour
     void Update()
     {
 
-        if(Input.GetKeyDown(KeyCode.F))
+        if(Input.GetKeyDown(KeyCode.F) && !isPaused)
         {
             //Couroutine is used to model behavior over several frames
             StartCoroutine(Dash());

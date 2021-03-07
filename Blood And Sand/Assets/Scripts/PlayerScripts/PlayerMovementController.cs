@@ -30,8 +30,10 @@ public class PlayerMovementController : MonoBehaviour
     private Vector3 fallDir;
     private bool ifSprint = false;
     
-    float turnSmoothVelocity;
+    float horizontal; 
+    float vertical;
 
+    float turnSmoothVelocity;
     public Vector3 moveDir;
     
     private GameObject netController;
@@ -55,13 +57,14 @@ public class PlayerMovementController : MonoBehaviour
         if(netController){
             netController.GetComponent<deathScript>().playerObjects.Add(gameObject);
         }
-        
+        float horizontal = Input.GetAxisRaw("Horizontal"); 
+        float vertical = Input.GetAxisRaw("Vertical");
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (PV.IsMine && !isPaused)
+        if (PV.IsMine)
         {
 
             // RAYTRACING for Player to interact with things (items, etc).
@@ -78,8 +81,10 @@ public class PlayerMovementController : MonoBehaviour
                     }
             }
             // Movement input
-            float horizontal = Input.GetAxisRaw("Horizontal"); 
-            float vertical = Input.GetAxisRaw("Vertical");
+            if(!isPaused){
+                horizontal = Input.GetAxisRaw("Horizontal"); 
+                vertical = Input.GetAxisRaw("Vertical");
+            }
             Vector3 direction = new Vector3(horizontal, 0f, vertical).normalized;
 
 
@@ -136,7 +141,7 @@ public class PlayerMovementController : MonoBehaviour
                 */
                 moveDir = Quaternion.Euler(0f, targetAngle, 0f) * Vector3.forward;
                 // Sprinting
-                if(Input.GetKey(KeyCode.LeftShift) && IsGrounded()) { 
+                if(Input.GetKey(KeyCode.LeftShift) && IsGrounded() && (!isPaused)) { 
                     controller.Move(moveDir.normalized * moveSpeed * 2f * Time.deltaTime);
                 }
                 // If not sprinting, then move normally.
@@ -153,7 +158,7 @@ public class PlayerMovementController : MonoBehaviour
                         isFalling = true;
                     }
                     // Move normally.
-                    else if(IsGrounded()){
+                    else if(IsGrounded() && (!isPaused)){
                         controller.Move(moveDir.normalized * moveSpeed * Time.deltaTime);
                     }
                 }
@@ -200,7 +205,7 @@ public class PlayerMovementController : MonoBehaviour
             * to adjust the forward push when they jump.                                *
             *****************************************************************************
             */
-            if(IsGrounded() && Input.GetKey(KeyCode.LeftShift) && Input.GetButtonDown("Jump") && !hasJumped){
+            if(IsGrounded() && Input.GetKey(KeyCode.LeftShift) && Input.GetButtonDown("Jump") && !hasJumped && !isPaused){
                 /*
                 * Since I've changed our controller movement function from "SimpleMove" to "Move", this meant that
                 * once you've stopped inputting movement and you'd be falling, you're character would stop
@@ -219,7 +224,7 @@ public class PlayerMovementController : MonoBehaviour
             
             }
             // Jumping WITHOUT holding sprint key.
-            else if(IsGrounded() && Input.GetButtonDown("Jump") && !hasJumped){
+            else if(IsGrounded() && Input.GetButtonDown("Jump") && !hasJumped && !isPaused){
                 // Set hasJumped equal to true before anything else is done, so as to prevent multiple jumps.
                 hasJumped = true;
                 // 1. Grab the direction of the initial direction the player is facing.

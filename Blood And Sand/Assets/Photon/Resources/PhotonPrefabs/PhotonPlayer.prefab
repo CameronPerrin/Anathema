@@ -1010,6 +1010,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dashSpeed: 25
   dashTime: 0.25
+  isPaused: 0
 --- !u!114 &7991041869338575788
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1038,6 +1039,7 @@ MonoBehaviour:
   inputBox: {fileID: 8560240666095706406}
   chatBox: {fileID: 0}
   chatCanvas: {fileID: 4664544431964007537}
+  chatPanel: {fileID: 0}
 --- !u!1 &3680925794353910806
 GameObject:
   m_ObjectHideFlags: 0
@@ -1536,7 +1538,7 @@ Canvas:
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 25
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 2
   m_TargetDisplay: 0
 --- !u!114 &1492165833641260259
 MonoBehaviour:
@@ -1593,6 +1595,7 @@ MonoBehaviour:
   inputBox: {fileID: 8560240666095706406}
   chatBox: {fileID: 0}
   chatCanvas: {fileID: 0}
+  chatPanel: {fileID: 0}
 --- !u!1 &4816360832675179670
 GameObject:
   m_ObjectHideFlags: 0
@@ -2814,13 +2817,13 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7637655332438135809}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 0.5019608}
+  m_Color: {r: 0, g: 0, b: 0, a: 0.78431374}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
