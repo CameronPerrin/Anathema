@@ -3,6 +3,7 @@
 * #     [Contributors: Calvin Lee]          #
 * ###########################################
 */
+// Lasted Edited: 3/7/2021
 
 using System.Collections;
 using System.Collections.Generic;
@@ -17,6 +18,7 @@ public class mindlessFollow : MonoBehaviour
     public bool followPlayer = false;
     public bool stopMove = false;
     public bool isRangedNPC = false;
+    public bool isBossNPC = false;
     public bool hitP = false;
     public float moveSpeed = 0.02f;
     public List<Player> playerInScene;
@@ -156,6 +158,12 @@ public class mindlessFollow : MonoBehaviour
                 _navMeshAgent.SetDestination(targetVector);
             }
             // RANGED NPC
+            else if(isBossNPC)
+            {
+                Vector3 targetVector = player.transform.position;
+                // -----------  If Boss NPC, do nothing. Might change this later. -------
+                return;
+            }
             else{
                 // Checking to make sure RANGED NPC can SEE the player.
                 if(hitP){

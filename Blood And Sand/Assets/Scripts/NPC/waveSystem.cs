@@ -27,6 +27,9 @@ public class waveSystem : MonoBehaviour
 
     public Wave[] waves;
     private int nextWave = 0;
+    public bool hasBossWave;
+    public BossSpawner bossSpawnerScript;
+    [HideInInspector] public bool isBossDead;
 
     // Used to show state of wave system
     public enum SpawnState { SPAWNING, WAITING, COUNTING };
@@ -96,6 +99,17 @@ public class waveSystem : MonoBehaviour
         if (nextWave + 1 > waves.Length - 1)
         {
             nextWave = 0;
+
+
+            /// Hold until boss wave completed
+            if(hasBossWave)
+            {
+                StartCoroutine(spawnBoss());
+            }
+
+
+            ///
+
             Debug.Log("ALL WAVES COMPLETE! Looping...");
             // Multipliers goes here
 
@@ -106,6 +120,19 @@ public class waveSystem : MonoBehaviour
         }
 
     }
+
+    IEnumerator spawnBoss()
+    {
+
+        //Set active boss
+        bossSpawnerScript.boss.SetActive(true);
+
+
+
+        yield return new WaitUntil(() => isBossDead == true);
+
+    }
+
     bool EnemyIsAlive()
     {
         //searchCountdown is used so the function doesn't check every frame.

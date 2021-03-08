@@ -347,6 +347,7 @@ MonoBehaviour:
   followPlayer: 0
   stopMove: 0
   isRangedNPC: 1
+  isBossNPC: 0
   hitP: 0
   moveSpeed: 0.02
   _destination: {fileID: 0}
