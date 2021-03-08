@@ -16,8 +16,14 @@ public class bossCloneMechanics : MonoBehaviour
 {
 
     public GameObject bossClone;
-    public GameObject mainBoss;
+    private GameObject mainBoss;
 
+
+    private void Start()
+    {
+        // Change to BossMainNPC(Clone) later
+        mainBoss = GameObject.Find("BossMainNPC(Clone)");
+    }
 
     private void OnTriggerEnter(Collider collider)
     {

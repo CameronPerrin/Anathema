@@ -319,7 +319,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1859679386586658590}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 10.25, y: -4.65, z: 5.17}
+  m_LocalPosition: {x: 10.25, y: -4.65, z: 5.43}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 6168673595183111505}
@@ -399,13 +399,8 @@ MonoBehaviour:
   numShots: 3
   spreadAngle: 15
   enemyBoss: {fileID: 1859679386586658590}
-  colliderTrigger: {fileID: 1755474443886585172, guid: efb2ce2060c48c742bfb9c92e270d9bd,
-    type: 3}
-  clone_1: {fileID: 8841508036710474816, guid: 745240d43d990c44d8f3b9f83f91a3d4, type: 3}
-  clone_2: {fileID: 8841508036710474816, guid: 745240d43d990c44d8f3b9f83f91a3d4, type: 3}
-  bosses: {fileID: 400630723845771898, guid: 008c4dea749d675448a5b07601d3536a, type: 3}
-  portalController: {fileID: 1233765222853807589, guid: f4caf277cf50fe54dbeb5249d29b512c,
-    type: 3}
+  clone: {fileID: 8841508036710474816, guid: 745240d43d990c44d8f3b9f83f91a3d4, type: 3}
+  bosses: {fileID: 1859679386586658590}
 --- !u!114 &2165917880333194059
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -528,9 +523,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ba913e27cb50eaa4180e1ef652f71474, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bosses: {fileID: 400630723845771898, guid: 008c4dea749d675448a5b07601d3536a, type: 3}
-  mainBoss: {fileID: 0}
-  portal: {fileID: 1233765222853807589, guid: f4caf277cf50fe54dbeb5249d29b512c, type: 3}
+  mainBoss: {fileID: 1859679386586658590}
   teleportTime: 2
   cloneDamageTaken: 0
 --- !u!114 &-1026374074130883855

@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Photon.Pun;
+using System.IO;
 
 public class CombatNPCBoss: MonoBehaviour
 {
@@ -29,13 +31,13 @@ public class CombatNPCBoss: MonoBehaviour
     private float atkTimer;
     private int chosenAtk;
 
-    [SerializeField] private GameObject enemyBoss;
-    [SerializeField] private BossColliderTrigger colliderTrigger;
-    [SerializeField] private GameObject clone_1;
-    [SerializeField] private GameObject clone_2;
-    [SerializeField] private GameObject bosses;
+    [SerializeField] public GameObject enemyBoss;
+    private GameObject colliderTrigger;
+    [SerializeField] public GameObject clone;
+    private int cloneLocation;
+    [SerializeField] public GameObject bosses;
 
-    public BossTeleportationController portalController;
+    private GameObject portalController;
 
     private Phase phase;
 
@@ -46,16 +48,16 @@ public class CombatNPCBoss: MonoBehaviour
     private void Awake()
     {
         phase = Phase.WaitingToStart;
+        colliderTrigger = GameObject.Find("BossColliderTrigger");
+        portalController = GameObject.Find("BossTeleportationController");
     }
 
     private void Start()
     {
-        colliderTrigger.OnPlayerEnterTrigger += ColliderTrigger_OnPlayerEnterTrigger;
+        colliderTrigger.GetComponent<BossColliderTrigger>().OnPlayerEnterTrigger += ColliderTrigger_OnPlayerEnterTrigger;
         bossHealth = enemyBoss.GetComponent<npcHealth>();
         atkTimer = Random.Range(5, 10);
 
-        clone_1.SetActive(false);
-        clone_2.SetActive(false);
     }
 
 
@@ -120,7 +122,7 @@ public class CombatNPCBoss: MonoBehaviour
     private void ColliderTrigger_OnPlayerEnterTrigger(object sender, System.EventArgs e)
     {
         StartBattle();
-        colliderTrigger.OnPlayerEnterTrigger -= ColliderTrigger_OnPlayerEnterTrigger;
+        colliderTrigger.GetComponent<BossColliderTrigger>().OnPlayerEnterTrigger -= ColliderTrigger_OnPlayerEnterTrigger;
     }    
 
 
@@ -191,19 +193,17 @@ public class CombatNPCBoss: MonoBehaviour
             case Phase.Phase_1:
                 phase = Phase.Phase_2;
                 Debug.Log("SPAWNING CLONES!!!!!!!!!!!!!!!");
-                clone_1.SetActive(true);
-                int cloneLocation_1 = portalController.findVacantPortal();
-                //clone_1.transform.position = portalController.portals[cloneLocation_1].transform.position;
-                clone_1.GetComponent<UnityEngine.AI.NavMeshAgent>().Warp(portalController.portals[cloneLocation_1].transform.position);
-                portalController.portals[cloneLocation_1].GetComponent<BossPortal>().isVacant = false;
+                cloneLocation = portalController.GetComponent<BossTeleportationController>().findVacantPortal();
+                PhotonNetwork.InstantiateSceneObject(Path.Combine("PhotonPrefabs", clone.name), portalController.GetComponent<BossTeleportationController>().portals[cloneLocation].transform.position, Quaternion.identity);
+                clone.GetComponent<UnityEngine.AI.NavMeshAgent>().Warp(portalController.GetComponent<BossTeleportationController>().portals[cloneLocation].transform.position);
+                portalController.GetComponent<BossTeleportationController>().portals[cloneLocation].GetComponent<BossPortal>().isVacant = false;
                 break;
             case Phase.Phase_2:
                 phase = Phase.Phase_3;
-                clone_2.SetActive(true);
-                int cloneLocation_2 = portalController.findVacantPortal();
-                clone_2.GetComponent<UnityEngine.AI.NavMeshAgent>().Warp(portalController.portals[cloneLocation_2].transform.position);
-                //clone_2.transform.position = portalController.portals[cloneLocation_2].transform.position;
-                portalController.portals[cloneLocation_2].GetComponent<BossPortal>().isVacant = false;
+                cloneLocation = portalController.GetComponent<BossTeleportationController>().findVacantPortal();
+                PhotonNetwork.InstantiateSceneObject(Path.Combine("PhotonPrefabs", clone.name), portalController.GetComponent<BossTeleportationController>().portals[cloneLocation].transform.position, Quaternion.identity);
+                clone.GetComponent<UnityEngine.AI.NavMeshAgent>().Warp(portalController.GetComponent<BossTeleportationController>().portals[cloneLocation].transform.position);
+                portalController.GetComponent<BossTeleportationController>().portals[cloneLocation].GetComponent<BossPortal>().isVacant = false;
                 //////////     Enable mines here
 
 

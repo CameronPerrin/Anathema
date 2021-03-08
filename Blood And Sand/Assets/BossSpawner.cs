@@ -15,14 +15,6 @@ public class BossSpawner : MonoBehaviour
     public waveSystem waveSystem;
     private float searchCountdown = 3f;
 
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        boss.SetActive(false);
-
-    }
-
     void Update()
     {
         if(!BossIsAlive())

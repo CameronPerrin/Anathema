@@ -14,7 +14,6 @@ public class CombatNPCBossClone: MonoBehaviour
     bool alreadyAttacked = false;
     public GameObject attackPrefab;
     public GameObject shootPoint;
-    public GameObject clone;
 
 
     public int numShots; 

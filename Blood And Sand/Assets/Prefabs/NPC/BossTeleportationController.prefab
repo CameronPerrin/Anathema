@@ -44,3 +44,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   portals: []
+  boss:
+  - {fileID: 1859679386586658590, guid: f2e8f3f083cd72d4389f5b1c9ed75968, type: 3}

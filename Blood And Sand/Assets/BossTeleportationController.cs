@@ -6,7 +6,7 @@ public class BossTeleportationController : MonoBehaviour
 {
     public GameObject[] portals;
     public GameObject[] boss;
-    void Start()
+    void Awake()
     { 
         portals = GameObject.FindGameObjectsWithTag("Boss_Portal");
         //portals[0].GetComponent<BossPortal>().isVacant = false;

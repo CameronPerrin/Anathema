@@ -1,7 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using Photon.Pun;
+using System.IO;
 
 // At start, set all portals to true, spawn boss at random portal, set portal that is occupied to false;
 // Once player hits boss, start timer
@@ -10,9 +11,9 @@ using UnityEngine;
 
 public class BossMovement : MonoBehaviour
 {
-    public GameObject bosses;
+    private GameObject[] bosses;
     public GameObject mainBoss;
-    public BossTeleportationController portal;
+    private GameObject portalController;
     public float teleportTime;
     private float teleportTimer;
     private bool hasTakenDamage;
@@ -20,17 +21,18 @@ public class BossMovement : MonoBehaviour
     public bool cloneDamageTaken;
     int spawnLocation;
 
-    private void OnEnable()
+    private void Awake()
     {
-        spawnLocation = Random.Range(0, portal.portals.Length - 1);
-        mainBoss.GetComponent<UnityEngine.AI.NavMeshAgent>().Warp(portal.portals[spawnLocation].transform.position);
-        portal.portals[spawnLocation].GetComponent<BossPortal>().isVacant = false;
+        portalController = GameObject.Find("BossTeleportationController");
     }
-
 
     void Start()
     { 
         teleportTimer = teleportTime;
+        spawnLocation = Random.Range(0, portalController.GetComponent<BossTeleportationController>().portals.Length - 1);
+        // Causes the index out of range error, will fix later
+        mainBoss.GetComponent<UnityEngine.AI.NavMeshAgent>().Warp(portalController.GetComponent<BossTeleportationController>().portals[spawnLocation].transform.position);
+        portalController.GetComponent<BossTeleportationController>().portals[spawnLocation].GetComponent<BossPortal>().isVacant = false;
         //portal.boss = GameObject.FindGameObjectsWithTag("Boss");
     }
 
@@ -63,8 +65,14 @@ public class BossMovement : MonoBehaviour
         if (teleportTimer <= 0f)
         {
             teleportTimer = teleportTime;
-            portal.boss = GameObject.FindGameObjectsWithTag("Boss");
-            bosses.transform.localScale = new Vector3(0, 0, 0);
+            bosses = GameObject.FindGameObjectsWithTag("Boss");
+            portalController.GetComponent<BossTeleportationController>().boss = GameObject.FindGameObjectsWithTag("Boss");
+
+            for(int i = 0; i < bosses.Length; i++)
+            {
+                bosses[i].transform.localScale = new Vector3(0, 0, 0);
+            }
+            
             StartCoroutine(Teleport());
         }
     }
@@ -74,37 +82,39 @@ public class BossMovement : MonoBehaviour
         yield return new WaitForSeconds(1);
 
         // Set all portals to vacant since All bosses teleports out.
-        portal.setAllPortalsVacant();
+        portalController.GetComponent<BossTeleportationController>().setAllPortalsVacant();
 
         List<int> uniqueNumbers = new List<int>();
         List<int> portalIndexes = new List<int>();
 
-        for (int i = 0; i < portal.portals.Length; i++)
+        for (int i = 0; i < portalController.GetComponent<BossTeleportationController>().portals.Length; i++)
         {
             uniqueNumbers.Add(i);
         }
 
-        for (int i = 0; i < portal.portals.Length; i++)
+        for (int i = 0; i < portalController.GetComponent<BossTeleportationController>().portals.Length; i++)
         {
             int ranNum = uniqueNumbers[Random.Range(0, uniqueNumbers.Count)];
             portalIndexes.Add(ranNum);
             uniqueNumbers.Remove(ranNum);
         }
-        Debug.Log("Boss Length: " + portal.boss.Length);
-        for (int j = 0; j < portal.boss.Length; j++)
+        Debug.Log("Boss Length: " + portalController.GetComponent<BossTeleportationController>().boss.Length);
+        for (int j = 0; j < portalController.GetComponent<BossTeleportationController>().boss.Length; j++)
             {
               Debug.Log("Iterating through boss length.");
-              if (portal.portals[portalIndexes[j]].GetComponent<BossPortal>().isVacant == true)
+              if (portalController.GetComponent<BossTeleportationController>().portals[portalIndexes[j]].GetComponent<BossPortal>().isVacant == true)
                   {
                         Debug.Log("Teleporting to portal...: " + portalIndexes[j]);
-                        portal.portals[portalIndexes[j]].GetComponent<BossPortal>().isVacant = false;
+                        portalController.GetComponent<BossTeleportationController>().portals[portalIndexes[j]].GetComponent<BossPortal>().isVacant = false;
 
-                        bosses.transform.localScale = new Vector3(1, 1, 1);
-
-                        portal.boss[j].GetComponent<UnityEngine.AI.NavMeshAgent>().Warp(portal.portals[portalIndexes[j]].transform.position);
+                for (int i = 0; i < bosses.Length; i++)
+                {
+                    bosses[i].transform.localScale = new Vector3(1, 1, 1);
+                }
+                        portalController.GetComponent<BossTeleportationController>().boss[j].GetComponent<UnityEngine.AI.NavMeshAgent>().Warp(portalController.GetComponent<BossTeleportationController>().portals[portalIndexes[j]].transform.position);
                   }
             }
-        portalIndexes.Clear();
+        //portalIndexes.Clear();
         hasTakenDamage = false;
         collisionOccured = false;
         cloneDamageTaken = false;

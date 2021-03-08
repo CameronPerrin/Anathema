@@ -426,7 +426,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8841508036710474816}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 15.16, y: -0.56, z: 45.75}
+  m_LocalPosition: {x: -21.72, y: 1.85, z: 48.39}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 3955910655751884303}
@@ -632,7 +632,6 @@ MonoBehaviour:
   attackPrefab: {fileID: 8710979580092825000, guid: 0cf14e5f446db6f499198d3c5fa1c812,
     type: 3}
   shootPoint: {fileID: 7659528546581429542}
-  clone: {fileID: 0}
   numShots: 3
   spreadAngle: 15
 --- !u!114 &-6316698471492455406
@@ -648,8 +647,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bossClone: {fileID: 8841508036710474816}
-  mainBoss: {fileID: 1859679386586658590, guid: f2e8f3f083cd72d4389f5b1c9ed75968,
-    type: 3}
 --- !u!1 &8856873674960362255
 GameObject:
   m_ObjectHideFlags: 0

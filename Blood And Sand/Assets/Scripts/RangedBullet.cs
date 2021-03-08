@@ -28,6 +28,11 @@ public class RangedBullet : MonoBehaviour
                 hp.TakeDamage();
             }
         }
-        Destroy(this.gameObject);
+
+        if(collision.gameObject.tag == "Untagged")
+        {
+            Destroy(this.gameObject);
+        }
+
     }
 }

@@ -26,9 +26,10 @@ public class waveSystem : MonoBehaviour
     }
 
     public Wave[] waves;
+    public GameObject boss;
     private int nextWave = 0;
     public bool hasBossWave;
-    public BossSpawner bossSpawnerScript;
+    public BossTeleportationController portal;
     [HideInInspector] public bool isBossDead;
 
     // Used to show state of wave system
@@ -38,7 +39,7 @@ public class waveSystem : MonoBehaviour
     public float timeBetweenWaves = 30f;
     public float waveCountdown;
     private float searchCountdown = 1f;
-    private SpawnState state = SpawnState.COUNTING;
+    public SpawnState state = SpawnState.COUNTING;
 
     //Variables to draw Gizmo Cube (Spawn Box)
     private Vector3 center;
@@ -67,6 +68,7 @@ public class waveSystem : MonoBehaviour
             //Check if enemies are still alive
             if(!EnemyIsAlive())
             {
+
                 //Begin a new round
                 beginNewRound();
             }
@@ -100,36 +102,30 @@ public class waveSystem : MonoBehaviour
         {
             nextWave = 0;
 
-
+            //state = SpawnState.WAITING;
             /// Hold until boss wave completed
-            if(hasBossWave)
+            if (hasBossWave)
             {
-                StartCoroutine(spawnBoss());
+                PhotonNetwork.InstantiateSceneObject(Path.Combine("PhotonPrefabs", boss.name), portal.portals[0].transform.position, Quaternion.identity);
+                hasBossWave = false;
+            }
+            ///
+            Debug.Log("ALL WAVES COMPLETE! Looping...");
+            for(int i = 0; i < waves.Length; i++)
+            {
+                waves[i].enemyCount = 0;
             }
 
 
-            ///
 
-            Debug.Log("ALL WAVES COMPLETE! Looping...");
             // Multipliers goes here
 
         }
         else
         {
+            Debug.Log("nextWave incremented");
             nextWave++;
         }
-
-    }
-
-    IEnumerator spawnBoss()
-    {
-
-        //Set active boss
-        bossSpawnerScript.boss.SetActive(true);
-
-
-
-        yield return new WaitUntil(() => isBossDead == true);
 
     }
 
@@ -140,6 +136,13 @@ public class waveSystem : MonoBehaviour
         if(searchCountdown <= 0f)
         {
             searchCountdown = 1f;
+
+            if (GameObject.FindGameObjectWithTag("Boss") != null)
+            {
+                return true;
+            }
+
+
             if (GameObject.FindGameObjectWithTag("EnemyHitbox") == null)
             {
                 return false;
