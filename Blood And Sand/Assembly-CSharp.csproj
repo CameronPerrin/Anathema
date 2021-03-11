@@ -60,6 +60,7 @@
     <Compile Include="Assets\playerName.cs" />
     <Compile Include="Assets\Scripts\Health.cs" />
     <Compile Include="Assets\IL3DN\Scripts\IL3DN_PlayRandomSound.cs" />
+    <Compile Include="Assets\Scripts\NPC\bossCloneMechanics.cs" />
     <Compile Include="Assets\Scripts\PlazaScripts\Interact.cs" />
     <Compile Include="Assets\Stylized Grass Shader\_Demo\DemoAssets\Scripts\MoveInCircle.cs" />
     <Compile Include="Assets\Photon\PhotonChat\Demos\Common\TextButtonTransition.cs" />
@@ -112,6 +113,7 @@
     <Compile Include="Assets\Scripts\PlayerScripts\PlayerDash.cs" />
     <Compile Include="Assets\Scripts\CombatNPCBoss.cs" />
     <Compile Include="Assets\Photon\PhotonChat\Demos\Common\EventSystemSpawner.cs" />
+    <Compile Include="Assets\BossSpawner.cs" />
     <Compile Include="Assets\Scripts\WeaponScripts\WeaponStats.cs" />
     <Compile Include="Assets\Stylized Grass Shader\_Demo\DemoAssets\Scripts\FreeCamera.cs" />
     <Compile Include="Assets\Scripts\MenuScripts\MainMenuController.cs" />
@@ -144,8 +146,6 @@
     <Compile Include="Assets\Scripts\SimpleCameraController.cs" />
     <Compile Include="Assets\Scripts\particleDestroy.cs" />
     <Compile Include="Assets\nTools\PrefabPainter\Scripts\PrefabPainterSceneSettings.cs" />
-    <Compile Include="Assets\Scripts\NPC\bossCloneMechanics.cs" />
-    <Compile Include="Assets\BossSpawner.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets\nTools\PrefabPainter\Shaders\GUITextureClipLevels.shader" />
