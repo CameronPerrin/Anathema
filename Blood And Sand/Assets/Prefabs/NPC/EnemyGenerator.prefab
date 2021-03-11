@@ -1,0 +1,89 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1802244474339495359
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1802244474339495357}
+  - component: {fileID: 1802244474339495356}
+  m_Layer: 0
+  m_Name: EnemyGenerator
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1802244474339495357
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1802244474339495359}
+  m_LocalRotation: {x: -0, y: -0.0058380626, z: -0, w: 0.99998295}
+  m_LocalPosition: {x: 8.91, y: 0, z: 59.23}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: -0.669, z: 0}
+--- !u!114 &1802244474339495356
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1802244474339495359}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f93c89c2d425f514d9f182bf8afb7ead, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  waves:
+  - name: First Wave
+    enemies:
+    - spawnObject: {fileID: 4832338527365570554, guid: 57af95181810f5e42816887b93800996,
+        type: 3}
+      minProbabilityRange: 0
+      maxProbabilityRange: 90
+    - spawnObject: {fileID: 5401975044253669403, guid: 765f7e76edda7614292d7137bd056992,
+        type: 3}
+      minProbabilityRange: 91
+      maxProbabilityRange: 100
+    maxSpawnCount: 50
+    enemyCount: 0
+    timeBetweenSpawns: 20
+    startingSpawnMin: 1
+    startingSpawnMax: 3
+    spawnMultiplier: 1.1
+  - name: Second Wave
+    enemies:
+    - spawnObject: {fileID: 5401975044253669403, guid: 765f7e76edda7614292d7137bd056992,
+        type: 3}
+      minProbabilityRange: 0
+      maxProbabilityRange: 50
+    - spawnObject: {fileID: 4832338527365570554, guid: 57af95181810f5e42816887b93800996,
+        type: 3}
+      minProbabilityRange: 51
+      maxProbabilityRange: 100
+    maxSpawnCount: 5
+    enemyCount: 0
+    timeBetweenSpawns: 20
+    startingSpawnMin: 2
+    startingSpawnMax: 4
+    spawnMultiplier: 1.2
+  - name: Third Wave (Boss Wave)
+    enemies: []
+    maxSpawnCount: 1
+    enemyCount: 1
+    timeBetweenSpawns: 0
+    startingSpawnMin: 0
+    startingSpawnMax: 0
+    spawnMultiplier: 1
+  timeBetweenWaves: 4
+  waveCountdown: 0
+  size: {x: 40, y: 1, z: 20}

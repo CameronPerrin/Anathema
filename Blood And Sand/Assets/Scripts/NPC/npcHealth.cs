@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -25,6 +26,8 @@ public class npcHealth : MonoBehaviourPunCallbacks
     public int damage; // Placeholder damage for when we add in weapons
 
 
+    public event EventHandler OnDamaged;
+
     void Start()
     {
         PV = GetComponent<PhotonView>();
@@ -34,7 +37,6 @@ public class npcHealth : MonoBehaviourPunCallbacks
     // This function is called in another script to tell this script when to take damage.
     public void TakeDamage()
     {
-        Debug.Log("Step 2: TakeDamage() function called");
         if(PV.IsMine){
             PV.RPC("Damage", RpcTarget.All);
 
@@ -54,7 +56,6 @@ public class npcHealth : MonoBehaviourPunCallbacks
     [PunRPC]
     public void Damage()
     {
-        Debug.Log("Step 3: Damage() function called");
         health -= 10;
         Instantiate(bloodVFX, this.transform.position, Quaternion.identity); // spawn blood vfx
         //Instantiate(bloodVFX, bloodSpotInstLocation.transform.position, Quaternion.identity); // spawn blood vfx

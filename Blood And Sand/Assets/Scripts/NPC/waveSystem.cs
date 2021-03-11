@@ -26,7 +26,11 @@ public class waveSystem : MonoBehaviour
     }
 
     public Wave[] waves;
+    public GameObject boss;
     private int nextWave = 0;
+    public bool hasBossWave;
+    public BossTeleportationController portal;
+    [HideInInspector] public bool isBossDead;
 
     // Used to show state of wave system
     public enum SpawnState { SPAWNING, WAITING, COUNTING };
@@ -35,7 +39,7 @@ public class waveSystem : MonoBehaviour
     public float timeBetweenWaves = 30f;
     public float waveCountdown;
     private float searchCountdown = 1f;
-    private SpawnState state = SpawnState.COUNTING;
+    public SpawnState state = SpawnState.COUNTING;
 
     //Variables to draw Gizmo Cube (Spawn Box)
     private Vector3 center;
@@ -64,6 +68,7 @@ public class waveSystem : MonoBehaviour
             //Check if enemies are still alive
             if(!EnemyIsAlive())
             {
+
                 //Begin a new round
                 beginNewRound();
             }
@@ -96,16 +101,34 @@ public class waveSystem : MonoBehaviour
         if (nextWave + 1 > waves.Length - 1)
         {
             nextWave = 0;
+
+            //state = SpawnState.WAITING;
+            /// Hold until boss wave completed
+            if (hasBossWave)
+            {
+                PhotonNetwork.InstantiateSceneObject(Path.Combine("PhotonPrefabs", boss.name), portal.portals[0].transform.position, Quaternion.identity);
+                hasBossWave = false;
+            }
+            ///
             Debug.Log("ALL WAVES COMPLETE! Looping...");
+            for(int i = 0; i < waves.Length; i++)
+            {
+                waves[i].enemyCount = 0;
+            }
+
+
+
             // Multipliers goes here
 
         }
         else
         {
+            Debug.Log("nextWave incremented");
             nextWave++;
         }
 
     }
+
     bool EnemyIsAlive()
     {
         //searchCountdown is used so the function doesn't check every frame.
@@ -113,6 +136,13 @@ public class waveSystem : MonoBehaviour
         if(searchCountdown <= 0f)
         {
             searchCountdown = 1f;
+
+            if (GameObject.FindGameObjectWithTag("Boss") != null)
+            {
+                return true;
+            }
+
+
             if (GameObject.FindGameObjectWithTag("EnemyHitbox") == null)
             {
                 return false;
