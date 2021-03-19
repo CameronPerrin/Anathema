@@ -9,6 +9,9 @@ public class PlayerMovementController : MonoBehaviour
     public bool isPaused = false;
 
     public GameObject rayOrigin;
+    //variables for animation
+    public Animator PlayerAnimator;
+    public bool isMoving = false;
 
     private PhotonView PV;
     private CinemachineFreeLook CFL;
@@ -82,9 +85,13 @@ public class PlayerMovementController : MonoBehaviour
             }
             // Movement input
             if(!isPaused){
-                horizontal = Input.GetAxisRaw("Horizontal"); 
+                horizontal = Input.GetAxisRaw("Horizontal");
+                PlayerAnimator.SetFloat("moving sideways", horizontal);
                 vertical = Input.GetAxisRaw("Vertical");
+                PlayerAnimator.SetFloat("moving forward", vertical);
+
             }
+
             Vector3 direction = new Vector3(horizontal, 0f, vertical).normalized;
 
 
@@ -117,6 +124,8 @@ public class PlayerMovementController : MonoBehaviour
             */
             if (direction.magnitude >= 0.1f)
             {
+                isMoving = true;
+                PlayerAnimator.SetBool("moving?", isMoving);
                 // If player is moving, adjust movement based off of camera direction.
                 // Set targetAngle to be the angle and direction at which the camera is pointing.
                 float targetAngle = Mathf.Atan2(direction.x, direction.z) * Mathf.Rad2Deg + p_camera.transform.eulerAngles.y;
@@ -162,6 +171,11 @@ public class PlayerMovementController : MonoBehaviour
                         controller.Move(moveDir.normalized * moveSpeed * Time.deltaTime);
                     }
                 }
+            } 
+            else
+            {
+                isMoving = false;
+                PlayerAnimator.SetBool("moving?", isMoving);
             }
 
 

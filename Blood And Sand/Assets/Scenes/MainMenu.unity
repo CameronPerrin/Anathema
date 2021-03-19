@@ -2243,7 +2243,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a2371425200b82d4398e03f0a1166df3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneIndex: 4
+  sceneIndex: 1
   startButton: {fileID: 1129544554}
   loadButton: {fileID: 1041610692}
   enterWorld: {fileID: 1354386644}
