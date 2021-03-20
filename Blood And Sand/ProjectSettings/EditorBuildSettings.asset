@@ -29,4 +29,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Test Scenes/CombatTesting.unity
     guid: 9c631033138e52f4c891904ff99345ec
+  - enabled: 1
+    path: Assets/Scenes/AdventureZone.unity
+    guid: b62ced9727b3ab148a194fa194dcb833
   m_configObjects: {}

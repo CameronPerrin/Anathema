@@ -16,11 +16,11 @@ MonoBehaviour:
   m_AdvancedMode: 0
   threshold:
     m_OverrideState: 1
-    m_Value: 0.6
+    m_Value: 0
     min: 0
   intensity:
     m_OverrideState: 1
-    m_Value: 1
+    m_Value: 0.89
     min: 0
   scatter:
     m_OverrideState: 0
@@ -40,12 +40,17 @@ MonoBehaviour:
   highQualityFiltering:
     m_OverrideState: 0
     m_Value: 0
+  skipIterations:
+    m_OverrideState: 0
+    m_Value: 1
+    min: 0
+    max: 16
   dirtTexture:
     m_OverrideState: 0
-    m_Value: {fileID: 0}
+    m_Value: {fileID: 2800000, guid: d9575597438004e4f8b5af1d2b6cf3ba, type: 3}
   dirtIntensity:
     m_OverrideState: 0
-    m_Value: 0
+    m_Value: 3.75
     min: 0
 --- !u!114 &-1703968785816107919
 MonoBehaviour:
@@ -63,13 +68,13 @@ MonoBehaviour:
   m_AdvancedMode: 0
   shadows:
     m_OverrideState: 1
-    m_Value: {x: 0.9326627, y: 0.41099405, z: 1, w: 0.050370183}
+    m_Value: {x: 1, y: 0.9828924, z: 0.76088506, w: 0.017793603}
   midtones:
     m_OverrideState: 1
-    m_Value: {x: 1, y: 0.8963789, z: 0.98546135, w: 0.025125628}
+    m_Value: {x: 1, y: 0.8963789, z: 0.98546135, w: 0.042919222}
   highlights:
     m_OverrideState: 1
-    m_Value: {x: 0.92668223, y: 0.92603624, z: 1, w: 0.02512563}
+    m_Value: {x: 0.92668223, y: 0.92603624, z: 1, w: 0.14968076}
   shadowsStart:
     m_OverrideState: 0
     m_Value: 0
@@ -121,10 +126,10 @@ MonoBehaviour:
   m_AdvancedMode: 0
   postExposure:
     m_OverrideState: 1
-    m_Value: 1.5
+    m_Value: 0.1
   contrast:
     m_OverrideState: 1
-    m_Value: 1
+    m_Value: 22
     min: -100
     max: 100
   colorFilter:
@@ -135,12 +140,12 @@ MonoBehaviour:
     showEyeDropper: 1
   hueShift:
     m_OverrideState: 0
-    m_Value: 0
+    m_Value: -54
     min: -180
     max: 180
   saturation:
-    m_OverrideState: 1
-    m_Value: 10
+    m_OverrideState: 0
+    m_Value: -32
     min: -100
     max: 100
 --- !u!114 &3540053158585561239
@@ -168,12 +173,12 @@ MonoBehaviour:
     m_Value: {x: 0.5, y: 0.5}
   intensity:
     m_OverrideState: 1
-    m_Value: 0.4
+    m_Value: 0.399
     min: 0
     max: 1
   smoothness:
     m_OverrideState: 0
-    m_Value: 0.2
+    m_Value: 0.527
     min: 0.01
     max: 1
   rounded:
@@ -211,7 +216,7 @@ MonoBehaviour:
   active: 1
   m_AdvancedMode: 0
   master:
-    m_OverrideState: 0
+    m_OverrideState: 1
     m_Value:
       <length>k__BackingField: 2
       m_Loop: 0
@@ -223,7 +228,7 @@ MonoBehaviour:
         - serializedVersion: 3
           time: 0
           value: 0
-          inSlope: 1
+          inSlope: 0
           outSlope: 1
           tangentMode: 0
           weightedMode: 0
@@ -233,7 +238,7 @@ MonoBehaviour:
           time: 1
           value: 1
           inSlope: 1
-          outSlope: 1
+          outSlope: 0
           tangentMode: 0
           weightedMode: 0
           inWeight: 0
