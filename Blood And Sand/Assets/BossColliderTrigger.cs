@@ -10,6 +10,7 @@ public class BossColliderTrigger : MonoBehaviour
 
     private void OnTriggerEnter(Collider collider)
     {
+        OnPlayerEnterTrigger?.Invoke(this, EventArgs.Empty);
         //https://answers.unity.com/questions/554003/check-if-player-is-colliding-with-a-trigger.html
         if (collider.gameObject.tag == "Player")
         {

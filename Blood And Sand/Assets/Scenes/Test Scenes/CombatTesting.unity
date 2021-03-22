@@ -2203,6 +2203,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: BossColliderTrigger
       objectReference: {fileID: 0}
+    - target: {fileID: 1755474443886585174, guid: efb2ce2060c48c742bfb9c92e270d9bd,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: efb2ce2060c48c742bfb9c92e270d9bd, type: 3}
 --- !u!1 &481550852 stripped
