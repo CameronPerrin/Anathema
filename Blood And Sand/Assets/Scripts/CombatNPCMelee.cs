@@ -16,6 +16,7 @@ public class CombatNPCMelee : MonoBehaviour
     //Attacking
     public float timeBetweenAttacks;
     bool alreadyAttacked = false;
+    public float damage = 10;
     public GameObject attackPrefab;
     public GameObject shootPoint;
 
@@ -66,6 +67,8 @@ public class CombatNPCMelee : MonoBehaviour
         {
             //attack code
             GameObject attackHitbox = Instantiate(attackPrefab, shootPoint.transform.position, Quaternion.identity);
+            attackPrefab.GetComponent<meleeBullet>().damage = damage;
+            attackPrefab.GetComponent<meleeBullet>().type = 1;
             //attackHitbox.transform.parent = player.transform;
             //
             alreadyAttacked = true;

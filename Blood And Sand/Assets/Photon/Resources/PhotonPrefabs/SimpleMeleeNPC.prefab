@@ -379,6 +379,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 512
   timeBetweenAttacks: 3
+  damage: 7
   attackPrefab: {fileID: 8710979580092825000, guid: 924f70b1ca16fbc43888f8c0d9da6b62,
     type: 3}
   shootPoint: {fileID: 6048526023494960796}

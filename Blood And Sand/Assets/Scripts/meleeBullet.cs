@@ -5,6 +5,8 @@ using UnityEngine;
 public class meleeBullet : MonoBehaviour
 {
     // Start is called before the first frame update
+    public float damage = 0;
+    public int type = 0;
     void Start()
     {
         
@@ -23,7 +25,7 @@ public class meleeBullet : MonoBehaviour
             Health hp = collision.gameObject.GetComponent<Health>();
             if (hp)
             {
-                hp.TakeDamage();
+                hp.TakeDamage(damage, type);
             }
 
 

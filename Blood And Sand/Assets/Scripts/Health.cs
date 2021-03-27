@@ -17,6 +17,8 @@ public class Health : MonoBehaviourPunCallbacks, IPunObservable
     public float health;
     public float hpRegen = 0f;
     public float hpRegenSpeed = 1f;
+    public float physicalDefense = 0;
+    public float magicDefense = 0;
     public Image overlayHealthBar; 		// HP images for screenspace overlay
     public Image redScreenHealthBackdrop;
     public Image worldHealthBar;		// HP images for worldspace overlay
@@ -29,7 +31,7 @@ public class Health : MonoBehaviourPunCallbacks, IPunObservable
     public GameObject bloodSpotInstLocation;
 
     public GameObject FloatingTextPrefab;
-    public int damage; // Placeholder damage for when we add in weapons
+    public float dmgTake; // Placeholder damage for when we add in weapons
 
 
     void Awake()
@@ -75,8 +77,15 @@ public class Health : MonoBehaviourPunCallbacks, IPunObservable
         
     }
 
-    public void TakeDamage()
+    public void TakeDamage(float dmage, int type)
     {
+        
+        if(type == 1){ // physical defense
+            dmgTake = dmage - physicalDefense;
+        }
+        else if(type == 2){ // magic defense
+            dmgTake = dmage - magicDefense;
+        }
         if(PV.IsMine){
             PV.RPC("Damage", RpcTarget.All);
         }
@@ -85,7 +94,7 @@ public class Health : MonoBehaviourPunCallbacks, IPunObservable
     [PunRPC]
     public void Damage()
     {
-        health -= 10;
+        health -= dmgTake;
         Instantiate(bloodVFX, bloodSpotInstLocation.transform.position, Quaternion.identity); // spawn blood vfx
         if(health <= 0){
             GameObject.Find("TheReaper").GetComponent<deathScript>().killPlayer(this.gameObject);
@@ -125,7 +134,7 @@ public class Health : MonoBehaviourPunCallbacks, IPunObservable
         var go = Instantiate(FloatingTextPrefab, transform.position, Quaternion.identity, transform);
         go.transform.rotation = Quaternion.LookRotation(transform.position - Camera.main.transform.position);
         //go.transform.LookAt(Camera.main.transform);
-        go.GetComponent<TextMesh>().text = damage.ToString();
+        go.GetComponent<TextMesh>().text = dmgTake.ToString();
     }
 
 

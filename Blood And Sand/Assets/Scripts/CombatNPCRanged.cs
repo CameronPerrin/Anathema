@@ -14,6 +14,7 @@ public class CombatNPCRanged : MonoBehaviour
     bool alreadyAttacked = false;
     public GameObject attackPrefab;
     public GameObject shootPoint;
+    public float damage = 10;
 
     void FixedUpdate()
     {
@@ -43,6 +44,8 @@ public class CombatNPCRanged : MonoBehaviour
             //Debug.Log("Attacking Range");
             //attack code
             GameObject attackHitbox = Instantiate(attackPrefab, shootPoint.transform.position, shootPoint.transform.rotation);
+            attackHitbox.GetComponent<RangedBullet>().damage = damage;
+            attackHitbox.GetComponent<RangedBullet>().type = 2;
             //attackHitbox.transform.parent = player.transform;
             //
             alreadyAttacked = true;

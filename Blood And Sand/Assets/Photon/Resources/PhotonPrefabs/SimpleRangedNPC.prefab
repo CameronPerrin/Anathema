@@ -444,6 +444,7 @@ MonoBehaviour:
   attackPrefab: {fileID: 8710979580092825000, guid: d86a50465dacf5a4fb4832beaf943559,
     type: 3}
   shootPoint: {fileID: 6487698837137998205}
+  damage: 16
 --- !u!54 &805081309431314000
 Rigidbody:
   m_ObjectHideFlags: 0

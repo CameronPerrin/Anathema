@@ -396,6 +396,7 @@ MonoBehaviour:
   attackPrefab: {fileID: 8710979580092825000, guid: 0cf14e5f446db6f499198d3c5fa1c812,
     type: 3}
   shootPoint: {fileID: 662500397802172024}
+  damage: 10
   numShots: 3
   spreadAngle: 15
   enemyBoss: {fileID: 1859679386586658590}

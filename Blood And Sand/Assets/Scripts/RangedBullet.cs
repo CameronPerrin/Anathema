@@ -6,6 +6,8 @@ public class RangedBullet : MonoBehaviour
 {
     public Rigidbody rb;
     public int projectileSpeed = 10;
+    public float damage = 0;
+    public int type = 0;
     // Start is called before the first frame update
     void Start()
     {
@@ -25,7 +27,7 @@ public class RangedBullet : MonoBehaviour
             Health hp = collision.gameObject.GetComponent<Health>();
             if (hp)
             {
-                hp.TakeDamage();
+                hp.TakeDamage(damage, type);
             }
         }
 

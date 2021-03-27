@@ -25,6 +25,7 @@ public class CombatNPCBoss: MonoBehaviour
     bool alreadyAttacked = false;
     public GameObject attackPrefab;
     public GameObject shootPoint;
+    public float damage = 10;
 
     public int numShots; 
     public int spreadAngle;
@@ -225,6 +226,8 @@ public class CombatNPCBoss: MonoBehaviour
             for (int i = 0; i < numShots; i++)
             {
                 GameObject attackHitbox = Instantiate(attackPrefab, shootPoint.transform.position, qAngle);
+                attackHitbox.GetComponent<RangedBossBullet>().damage = damage;
+                attackHitbox.GetComponent<RangedBossBullet>().type = 1;
                 qAngle = qDelta * qAngle;
             }
 
@@ -238,6 +241,8 @@ public class CombatNPCBoss: MonoBehaviour
         {
 
             GameObject attackHitbox = Instantiate(attackPrefab, shootPoint.transform.position, shootPoint.transform.rotation);
+            attackHitbox.GetComponent<RangedBossBullet>().damage = damage;
+            attackHitbox.GetComponent<RangedBossBullet>().type = 2;
             shootPoint.transform.Rotate(new Vector3(0, 1000f * Time.deltaTime , 0f));
 
 
