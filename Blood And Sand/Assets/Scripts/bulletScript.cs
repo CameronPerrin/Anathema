@@ -6,6 +6,9 @@ using Photon.Pun;
 public class bulletScript : MonoBehaviour
 {
     public GameObject CurrentPlayer;
+    public float dmg = 0;
+    public int type;
+    public bool DOT = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -24,7 +27,7 @@ public class bulletScript : MonoBehaviour
             npcHealth hp = collision.gameObject.GetComponent<npcHealth>();
             //Debug.Log(hp);
             if(hp){
-               hp.TakeDamage(); 
+               hp.TakeDamage(dmg, type, DOT); 
             }
 
             Destroy(this.gameObject);
@@ -36,7 +39,7 @@ public class bulletScript : MonoBehaviour
             //Debug.Log(hp);
             if (hp)
             {
-                hp.TakeDamage();
+                hp.TakeDamage(dmg, type, DOT);
             }
 
             Destroy(this.gameObject);
@@ -47,7 +50,7 @@ public class bulletScript : MonoBehaviour
         {
         	Health hp = collision.gameObject.GetComponent<Health>();
             if(hp){
-               hp.TakeDamage(); 
+               //hp.TakeDamage(dmg); 
             }
         	
             

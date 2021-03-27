@@ -11,6 +11,7 @@ public class WeaponStats : MonoBehaviour
 	public float attack;// 0 to 100 damage per hit
 	public float attack_speed;//0 to 10 times per second
 	public float crit_chance;//0 to 100% chance
+	public float bleed_chance;//0 to 100% chance
 	public float range; //0 to 100 meters
 
 	//for armor
@@ -23,10 +24,10 @@ public class WeaponStats : MonoBehaviour
 	//item type
 	public int item_type;
 	//1. Melee
-	//2. Armor
-	//3. boots
-	//4. Ranged
-	//5. Magic
+	//2. Magic
+	//3. Melee DOT
+	//4. Magic DOT
+	//5. Armor
 
     void updateValue(){
     	//call this to change the value of the item based on the stats

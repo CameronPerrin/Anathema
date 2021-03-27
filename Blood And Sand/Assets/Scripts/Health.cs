@@ -15,6 +15,8 @@ public class Health : MonoBehaviourPunCallbacks, IPunObservable
 	private PhotonView PV;
     public float maxHp = 100f;
     public float health;
+    public float hpRegen = 0f;
+    public float hpRegenSpeed = 1f;
     public Image overlayHealthBar; 		// HP images for screenspace overlay
     public Image redScreenHealthBackdrop;
     public Image worldHealthBar;		// HP images for worldspace overlay
@@ -49,6 +51,17 @@ public class Health : MonoBehaviourPunCallbacks, IPunObservable
     	else{
     		oHp.SetActive(false);
     	}
+        InvokeRepeating ("RegenHealth", 0f, hpRegenSpeed);
+    }
+
+    void RegenHealth ()
+    {
+        if(health < maxHp){
+            health += hpRegen;
+            if(health > maxHp)
+                health = maxHp;
+            overlayHealthBar.fillAmount = health/maxHp;
+        }
     }
 
     // Update is called once per frame
@@ -59,6 +72,7 @@ public class Health : MonoBehaviourPunCallbacks, IPunObservable
             redWorldHealthBackdrop.fillAmount = Mathf.Lerp(redWorldHealthBackdrop.fillAmount, health/maxHp, Time.deltaTime * 4);
             redScreenHealthBackdrop.fillAmount = Mathf.Lerp(redScreenHealthBackdrop.fillAmount, health/maxHp, Time.deltaTime * 4);
         }
+        
     }
 
     public void TakeDamage()

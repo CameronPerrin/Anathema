@@ -967,8 +967,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9bb9d182e1b803e43bb1c8bbccd7a8e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHp: 1000
+  maxHp: 100
   health: 0
+  hpRegen: 5
+  hpRegenSpeed: 1
   overlayHealthBar: {fileID: 7738224452872692261}
   redScreenHealthBackdrop: {fileID: 3447164253107990170}
   worldHealthBar: {fileID: 709491987561619163}
@@ -998,6 +1000,8 @@ MonoBehaviour:
     type: 3}
   shootPoint: {fileID: 3680925794353910806}
   CurrentPlayer: {fileID: 0}
+  attackSpeed: 0
+  attackTimer: 0
   isPaused: 0
 --- !u!114 &174224487514714548
 MonoBehaviour:

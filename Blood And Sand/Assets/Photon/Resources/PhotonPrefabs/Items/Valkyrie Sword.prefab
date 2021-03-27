@@ -118,7 +118,7 @@ MonoBehaviour:
   defense: 0
   magic_defense: 0
   move_speed: 0
-  item_type: 0
+  item_type: 1
 --- !u!114 &4781083946187321499
 MonoBehaviour:
   m_ObjectHideFlags: 0

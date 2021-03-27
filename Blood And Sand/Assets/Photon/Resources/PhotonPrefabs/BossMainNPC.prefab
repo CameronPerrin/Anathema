@@ -451,6 +451,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHp: 1000
   health: 100
+  defense: 7
+  magicDefense: 7
+  dotTimer: 0.5
   worldHealthBar: {fileID: 4889193104877619254}
   redWorldHealthBackdrop: {fileID: 6351306223837131392}
   wHp: {fileID: 406349800763738314}
@@ -458,7 +461,8 @@ MonoBehaviour:
     type: 3}
   FloatingTextPrefab: {fileID: 7957747401790915659, guid: 7b2549c15f36d544490e6208a44c1357,
     type: 3}
-  damage: 10
+  dmgTemp: 0
+  dmg: 0
 --- !u!136 &4990093009230393078
 CapsuleCollider:
   m_ObjectHideFlags: 0

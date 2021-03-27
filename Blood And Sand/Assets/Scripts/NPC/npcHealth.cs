@@ -14,6 +14,9 @@ public class npcHealth : MonoBehaviourPunCallbacks
 	private PhotonView PV;
     public float maxHp = 100f;
     public float health;
+    public int defense = 0;
+    public int magicDefense = 0;
+    public float dotTimer = 0.5f;
     public Image worldHealthBar;		// HP images for worldspace overlay
     public Image redWorldHealthBackdrop;
     public GameObject wHp; 				// canvas world
@@ -23,7 +26,8 @@ public class npcHealth : MonoBehaviourPunCallbacks
 
    // public Camera playerCamera;
     public GameObject FloatingTextPrefab;
-    public int damage; // Placeholder damage for when we add in weapons
+    public float dmgTemp;
+    public float dmg; // Placeholder damage for when we add in weapons
 
 
     public event EventHandler OnDamaged;
@@ -35,14 +39,49 @@ public class npcHealth : MonoBehaviourPunCallbacks
     }
 
     // This function is called in another script to tell this script when to take damage.
-    public void TakeDamage()
+    public void TakeDamage(float dmage, int type, bool dot)
     {
-        if(PV.IsMine){
-            PV.RPC("Damage", RpcTarget.All);
-
-            
+        if(type == 1){          // Physical damage
+            dmg = dmage - defense;
+            if(PV.IsMine){
+                PV.RPC("Damage", RpcTarget.All, dmg);    
+            }
         }
-        
+        else if(type == 2){     // Magic damage
+            dmg = dmage - magicDefense;
+            if(PV.IsMine){
+                PV.RPC("Damage", RpcTarget.All, dmg);    
+            }
+        }
+        else if(type == 3){     // Physical DOT damage
+            dmg = dmage - defense;
+            if(PV.IsMine){
+                PV.RPC("Damage", RpcTarget.All, dmg); 
+                //Debug.Log("Hit for " + dmg + " damage!");   
+            }
+            if(dot){
+                dmgTemp = dmage;
+                dmg = (dmage - defense) / 4;
+                InvokeRepeating ("PhysicalDOTDmg", 0f, dotTimer);
+            }
+        }
+        else if(type == 4){     // Magic DOT damage
+            dmg = dmage - magicDefense;
+        }
+    }
+
+    public void PhysicalDOTDmg()
+    {
+        if(dmgTemp > 0){
+            //Debug.Log("Bleeding for " + dmg + " damage!");
+            if(PV.IsMine){
+                PV.RPC("Damage", RpcTarget.All, dmg);
+            }
+            dmgTemp -= dmg;
+        }
+        else{
+            this.CancelInvoke("PhysicalDOTDmg");
+        }
     }
 
     public void Update()
@@ -54,9 +93,9 @@ public class npcHealth : MonoBehaviourPunCallbacks
 
     // this stuff sends info to all network
     [PunRPC]
-    public void Damage()
+    public void Damage(float dmage)
     {
-        health -= 10;
+        health -= dmage;
         Instantiate(bloodVFX, this.transform.position, Quaternion.identity); // spawn blood vfx
         //Instantiate(bloodVFX, bloodSpotInstLocation.transform.position, Quaternion.identity); // spawn blood vfx
             if(health <= 0){
@@ -95,6 +134,6 @@ public class npcHealth : MonoBehaviourPunCallbacks
         var go = Instantiate(FloatingTextPrefab, transform.position, Quaternion.identity, transform);
         go.transform.rotation = Quaternion.LookRotation(transform.position - Camera.main.transform.position);
         //go.transform.LookAt(Camera.main.transform);
-        go.GetComponent<TextMesh>().text = damage.ToString();
+        go.GetComponent<TextMesh>().text = dmg.ToString();
     }
 }
