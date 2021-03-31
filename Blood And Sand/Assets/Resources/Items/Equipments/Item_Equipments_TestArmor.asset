@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4e83e3705a8d5641bc643da9e8240d9, type: 3}
+  m_Name: Item_Equipments_TestArmor
+  m_EditorClassIdentifier: 
+  name: Test Armour
+  description: Testing  Armour
+  icon: {fileID: 21300000, guid: 9c283ae7480a56149abbf0fbe1dce057, type: 3}
+  isEquipment: 1
+  equipmentType: 2
+  rarity: {fileID: 11400000, guid: 7d506617b03991f438316682f1448d6e, type: 2}
+  sellPrice: 1
+  maxStack: 1
+  equipSlot: {fileID: 0}
+  armorModifier: 0
+  damageModifier: 0

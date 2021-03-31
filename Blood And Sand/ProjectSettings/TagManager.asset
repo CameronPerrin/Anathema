@@ -13,6 +13,10 @@ TagManager:
   - Boss_Portal
   - Boss
   - Boss_Area
+  - Inventory_Slot
+  - Hotbar_Slot
+  - InventoryPanel
+  - EquipmentPanel
   layers:
   - Default
   - TransparentFX
@@ -49,4 +53,7 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: UI
+    uniqueID: 130888861
     locked: 0
