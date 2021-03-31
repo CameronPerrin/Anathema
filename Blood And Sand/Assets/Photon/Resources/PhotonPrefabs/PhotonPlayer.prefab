@@ -833,6 +833,7 @@ GameObject:
   - component: {fileID: 174224487514714548}
   - component: {fileID: 7991041869338575788}
   - component: {fileID: 2939558711176660642}
+  - component: {fileID: -2388538057121418057}
   m_Layer: 9
   m_Name: PhotonPlayer
   m_TagString: Player
@@ -952,6 +953,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   paused: 0
   pauseScreen: {fileID: 0}
+  inventoryToToggle: {fileID: 0}
+  equipmentToToggle: {fileID: 0}
 --- !u!114 &4154899573533838182
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1040,6 +1043,18 @@ MonoBehaviour:
   chatBox: {fileID: 0}
   chatCanvas: {fileID: 4664544431964007537}
   chatPanel: {fileID: 0}
+--- !u!114 &-2388538057121418057
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3536456245099357511}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 37e8c72af06dfa34facc1147c10cb609, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &3680925794353910806
 GameObject:
   m_ObjectHideFlags: 0

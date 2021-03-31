@@ -277,7 +277,7 @@ GameObject:
   - component: {fileID: 5479921782299200978}
   m_Layer: 0
   m_Name: Slot_Hotbar
-  m_TagString: Untagged
+  m_TagString: Hotbar_Slot
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -353,6 +353,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemIconImage: {fileID: 6284842478582931930}
+  slot: 1
+  slotIndexController: {fileID: 2041146792761633862, guid: 3522e4f8ca599fd4eabd3ca8febd2083,
+    type: 3}
+  thisSlot: {fileID: 4996481542540770629}
   inventory: {fileID: 11400000, guid: da31aee719a5fd84fa22325266365481, type: 2}
   itemQuantityText: {fileID: 5081833095495093125}
 --- !u!114 &5479921782299200978

@@ -60,6 +60,7 @@
     <Compile Include="Assets\playerName.cs" />
     <Compile Include="Assets\Scripts\Health.cs" />
     <Compile Include="Assets\IL3DN\Scripts\IL3DN_PlayRandomSound.cs" />
+    <Compile Include="Assets\Scripts\Item System\Item Data\ItemSlot.cs" />
     <Compile Include="Assets\Scripts\NPC\bossCloneMechanics.cs" />
     <Compile Include="Assets\Scripts\PlazaScripts\Interact.cs" />
     <Compile Include="Assets\Stylized Grass Shader\_Demo\DemoAssets\Scripts\MoveInCircle.cs" />
@@ -71,8 +72,10 @@
     <Compile Include="Assets\Scripts\LobbyMenuScripts\RoomButton.cs" />
     <Compile Include="Assets\IL3DN\Scripts\IL3DN_ChangeWalkingSound.cs" />
     <Compile Include="Assets\Scripts\PlayerScripts\PlayerMovementController.cs" />
+    <Compile Include="Assets\Scripts\Item System\UI_CharacterEquipment.cs" />
     <Compile Include="Assets\Scripts\LobbyMenuScripts\LobbyController.cs" />
     <Compile Include="Assets\IL3DN\Scripts\IL3DN_Fog.cs" />
+    <Compile Include="Assets\Scripts\Item System\Item Data\EquipmentItem.cs" />
     <Compile Include="Assets\Scripts\billboardHealthScript.cs" />
     <Compile Include="Assets\Scripts\GameEvents\Listeners\VoidListener.cs" />
     <Compile Include="Assets\Scripts\GameEvents\UnityEvents\UnityVoidEvent.cs" />
@@ -83,6 +86,7 @@
     <Compile Include="Assets\Scripts\CombatNPCRanged.cs" />
     <Compile Include="Assets\Photon\PhotonChat\Demos\DemoChat\ChatAppIdCheckerUI.cs" />
     <Compile Include="Assets\Scripts\GameEvents\Listeners\BaseGameEventListener.cs" />
+    <Compile Include="Assets\Scripts\Item System\InitializeEquipment.cs" />
     <Compile Include="Assets\Scripts\Item System\HoverInfoPopup.cs" />
     <Compile Include="Assets\Photon\PhotonChat\Demos\DemoChat\AppSettingsExtensions.cs" />
     <Compile Include="Assets\Scripts\GameSetupController.cs" />
@@ -98,6 +102,7 @@
     <Compile Include="Assets\Scripts\QuickStartRoomController.cs" />
     <Compile Include="Assets\TutorialInfo\Scripts\Readme.cs" />
     <Compile Include="Assets\Scripts\Item System\InventoryItemDragHandler.cs" />
+    <Compile Include="Assets\Scripts\Item System\Equipment\EquipmentSlot.cs" />
     <Compile Include="Assets\IL3DN\Scripts\IL3DN_ColorManagerEffects.cs" />
     <Compile Include="Assets\Scripts\MouseLock.cs" />
     <Compile Include="Assets\Scripts\GameEvents\Listeners\HotbarItemListener.cs" />
@@ -109,6 +114,8 @@
     <Compile Include="Assets\IL3DN\Scripts\IL3DN_Wind.cs" />
     <Compile Include="Assets\dontDestroyOnLoad.cs" />
     <Compile Include="Assets\ErosionBrush\Scripts\Erosion.cs" />
+    <Compile Include="Assets\Scripts\Item System\SlotIndexController.cs" />
+    <Compile Include="Assets\Scripts\Item System\Item Data\ConsumableItem.cs" />
     <Compile Include="Assets\ErosionBrush\Scripts\Extensions.cs" />
     <Compile Include="Assets\disableImage.cs" />
     <Compile Include="Assets\Photon\PhotonChat\Demos\DemoChat\ChannelSelector.cs" />
@@ -132,8 +139,10 @@
     <Compile Include="Assets\Photon\PhotonChat\Demos\Common\EventSystemSpawner.cs" />
     <Compile Include="Assets\BossSpawner.cs" />
     <Compile Include="Assets\Scripts\GameEvents\Listeners\IGameEventListener.cs" />
+    <Compile Include="Assets\Scripts\Item System\Equipment\EquipmentBar.cs" />
     <Compile Include="Assets\Scripts\WeaponScripts\WeaponStats.cs" />
     <Compile Include="Assets\Stylized Grass Shader\_Demo\DemoAssets\Scripts\FreeCamera.cs" />
+    <Compile Include="Assets\Scripts\Item System\Inventory Logic\IItemContainer.cs" />
     <Compile Include="Assets\Scripts\MenuScripts\MainMenuController.cs" />
     <Compile Include="Assets\Photon\PhotonChat\Demos\DemoChat\FriendItem.cs" />
     <Compile Include="Assets\Scripts\NetworkController.cs" />
@@ -152,9 +161,12 @@
     <Compile Include="Assets\Scripts\NPC\npcHealth.cs" />
     <Compile Include="Assets\IL3DN\Scripts\IL3DN_ColorController.cs" />
     <Compile Include="Assets\Scripts\GameEvents\Custom Events\HotbarItemEvent.cs" />
+    <Compile Include="Assets\EquipmentManager.cs" />
     <Compile Include="Assets\Scripts\Item System\Inventory Logic\ItemContainer.cs" />
     <Compile Include="Assets\Scripts\Item System\Hotbar.cs" />
     <Compile Include="Assets\Scripts\Item System\ItemDestroyer.cs" />
+    <Compile Include="Assets\Scripts\Items\Consumables\HealthPotion.cs" />
+    <Compile Include="Assets\Scripts\Item System\PlayerEquipment.cs" />
     <Compile Include="Assets\Scripts\NPC\mindlessFollow.cs" />
     <Compile Include="Assets\Scripts\deathScript.cs" />
     <Compile Include="Assets\Scripts\GameEvents\Events\VoidEvent.cs" />
@@ -162,6 +174,7 @@
     <Compile Include="Assets\Scripts\PlayerScripts\PlayerController.cs" />
     <Compile Include="Assets\Scripts\GameEvents\Events\BaseGameEvent.cs" />
     <Compile Include="Assets\IL3DN\Scripts\IL3DN_ColorManagerTextures.cs" />
+    <Compile Include="Assets\Scripts\Item System\Equipment\EquipmentItemDragHandler.cs" />
     <Compile Include="Assets\ErosionBrush\ErosionBrush.cs" />
     <Compile Include="Assets\Scripts\QuickStartLobbyController.cs" />
     <Compile Include="Assets\ErosionBrush\Scripts\Matrix.cs" />
@@ -172,11 +185,7 @@
     <Compile Include="Assets\Scripts\particleDestroy.cs" />
     <Compile Include="Assets\Scripts\Item System\Inventory.cs" />
     <Compile Include="Assets\nTools\PrefabPainter\Scripts\PrefabPainterSceneSettings.cs" />
-    <Compile Include="Assets\Scripts\Item System\Item Data\EquipmentItem.cs" />
-    <Compile Include="Assets\EquipmentManager.cs" />
-    <Compile Include="Assets\Scripts\Item System\Inventory Logic\IItemContainer.cs" />
-    <Compile Include="Assets\Scripts\Item System\Item Data\ConsumableItem.cs" />
-    <Compile Include="Assets\Scripts\Item System\Item Data\ItemSlot.cs" />
+    <Compile Include="Assets\Scripts\Item System\CurrencyCounter.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets\nTools\PrefabPainter\Shaders\GUITextureClipLevels.shader" />

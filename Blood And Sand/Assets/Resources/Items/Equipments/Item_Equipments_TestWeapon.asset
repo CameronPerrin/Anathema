@@ -9,13 +9,17 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f12260b76f3d3e949999350d1981fd89, type: 3}
-  m_Name: Item_Consumables_S1mpleCrosshair
+  m_Script: {fileID: 11500000, guid: f4e83e3705a8d5641bc643da9e8240d9, type: 3}
+  m_Name: Item_Equipments_TestWeapon
   m_EditorClassIdentifier: 
-  name: s1mple's Crosshair
-  description: s1mple's ultra gigus dick chadicus crosshair
+  name: Weapon
+  description: Weapon Description
   icon: {fileID: 21300000, guid: 2bbe4fd634538f74a943054d6aea536c, type: 3}
-  rarity: {fileID: 11400000, guid: 7d506617b03991f438316682f1448d6e, type: 2}
-  sellPrice: 2147483647
+  isEquipment: 1
+  equipmentType: 4
+  rarity: {fileID: 11400000, guid: b72a55d28f3a2a7458955a326eecf768, type: 2}
+  sellPrice: 1
   maxStack: 1
-  useText: BECOME EDSHOT MASHINE
+  equipSlot: {fileID: 0}
+  armorModifier: 0
+  damageModifier: 0

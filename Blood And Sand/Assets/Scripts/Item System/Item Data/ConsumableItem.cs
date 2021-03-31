@@ -9,7 +9,6 @@ public class ConsumableItem : InventoryItem
 {
     [Header("Consumable Data")]
     [SerializeField] private string useText = "Does Something, maybe?";
-
     public override string GetInfoDisplayText()
     {
         StringBuilder builder = new StringBuilder();
@@ -21,4 +20,9 @@ public class ConsumableItem : InventoryItem
 
         return builder.ToString();
     }
+    public virtual void Use()
+    {
+        Debug.Log($"Using {Name}");
+    }
+
 }

@@ -19,7 +19,7 @@ public class ItemContainer : IItemContainer
     {
         // Deals with adding to existing item in the inventory
         // Loop through item slots
-        for(int i = 0; i < itemSlots.Length; i++)
+        for(int i = 0; i < itemSlots.Length - 4; i++)
         {
             // If item slot has an item
             if(itemSlots[i].item != null)
@@ -49,7 +49,7 @@ public class ItemContainer : IItemContainer
         }
 
         // Deals with adding new items or empty inventory
-        for(int i = 0; i < itemSlots.Length; i++)
+        for(int i = 0; i < itemSlots.Length - 4; i++)
         {
             if(itemSlots[i].item == null)
             {
@@ -106,6 +106,30 @@ public class ItemContainer : IItemContainer
 
     }
 
+    public void UseItem(InventoryItem item)
+    {
+        for (int i = 0; i < itemSlots.Length; i++)
+        {
+            // Checks if item slot is not empty
+            if (itemSlots[i].item != null)
+            {
+                // Check if the item is the item we want to remove
+                if (itemSlots[i].item == item)
+                {
+                    Debug.Log("Item Quantity Before: " + itemSlots[i].quantity);
+                    itemSlots[i].quantity--;
+                    Debug.Log("Item Quantity After: " + itemSlots[i].quantity);
+                    if(itemSlots[i].quantity == 0)
+                    {
+                        itemSlots[i] = new ItemSlot();
+                    }
+                    OnItemsUpdated.Invoke();
+                    return;
+                }
+            }
+        }
+    }
+
     // Removes item in item slot entirely
     public void RemoveAt(int slotIndex)
     {
@@ -158,6 +182,8 @@ public class ItemContainer : IItemContainer
         // See item slot operator in ItemSlot
         if (firstSlot == secondSlot) { return; }
 
+
+
         // If item is dropped onto an occupied slot
         if(secondSlot.item != null)
         {
@@ -185,4 +211,41 @@ public class ItemContainer : IItemContainer
         itemSlots[indexTwo] = firstSlot;
         OnItemsUpdated.Invoke();
     }
+    public void SwapEquip(int indexOne, int indexTwo)
+    {
+        ItemSlot firstSlot = itemSlots[indexOne];
+        ItemSlot secondSlot = itemSlots[indexTwo];
+
+        if(secondSlot.item == null)
+        {
+            itemSlots[indexOne] = secondSlot;
+            itemSlots[indexTwo] = firstSlot;
+            OnItemsUpdated.Invoke();
+            return;
+        }
+        else if (secondSlot.item.IsEquipment)
+        {
+                if (firstSlot.item.equipmentType == secondSlot.item.equipmentType)
+                {
+                    Debug.Log("Second slot same equipment detected");
+                    itemSlots[indexOne] = secondSlot;
+                    itemSlots[indexTwo] = firstSlot;
+                    OnItemsUpdated.Invoke();
+                    return;
+                }
+                else
+                {
+                    return;
+                }
+        }
+        else
+        {
+            return;
+        }
+        
+        itemSlots[indexOne] = secondSlot;
+        itemSlots[indexTwo] = firstSlot;
+        OnItemsUpdated.Invoke(); 
+    }
+
 }

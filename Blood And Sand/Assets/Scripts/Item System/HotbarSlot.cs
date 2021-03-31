@@ -25,10 +25,22 @@ public class HotbarSlot : ItemSlotUI, IDropHandler
 
     public void UseSlot(int index)
     {
-        if(index != SlotIndex) { return; }
+        Debug.Log(SlotIndex);
+        if (index != SlotIndex) { Debug.Log("Can't find inventory slot"); return; }
         //Use Item
+        // When key is pressed, loop through inventory slots
+        if (slotItem is InventoryItem inventoryItem && slotItem is ConsumableItem consumableItem)
+        {
+            if (inventory.ItemContainer.HasItem(inventoryItem))
+            {
+                inventory.ItemContainer.UseItem(inventoryItem);
+                consumableItem.Use();
+            }
+            else
+                SlotItem = null;
+        }
 
-        ///
+
     }
 
     public override void OnDrop(PointerEventData eventData)

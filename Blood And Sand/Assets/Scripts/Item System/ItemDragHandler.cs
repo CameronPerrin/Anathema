@@ -9,6 +9,7 @@ public class ItemDragHandler : MonoBehaviour, IPointerDownHandler, IDragHandler,
     [SerializeField] protected HotbarItemEvent onMouseStartHoverItem = null;
     [SerializeField] protected VoidEvent onMouseEndHoverItem = null;
 
+
     private CanvasGroup canvasGroup = null;
     private Transform originalParent = null;
     private bool isHovering = false;
@@ -31,7 +32,7 @@ public class ItemDragHandler : MonoBehaviour, IPointerDownHandler, IDragHandler,
 
         if(eventData.button == PointerEventData.InputButton.Left)
         {
-            Debug.Log("Slot Hovered: " + eventData.button.ToString());
+            Debug.Log(ItemSlotUI.SlotIndex);
             onMouseEndHoverItem.Raise();
 
             originalParent = transform.parent;

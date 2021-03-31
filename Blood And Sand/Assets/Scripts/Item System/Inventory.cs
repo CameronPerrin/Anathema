@@ -6,9 +6,15 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "New Inventory", menuName = "Items/Inventory")]
 public class Inventory : ScriptableObject
 {
+    public int Money;
     [SerializeField] private VoidEvent onInventoryItemsUpdated = null;
     [SerializeField] private ItemSlot testItemSlot = new ItemSlot();
-    public ItemContainer ItemContainer { get; } = new ItemContainer(16);
+    public ItemContainer ItemContainer { get; } = new ItemContainer(20);
+
+    private void Awake()
+    {
+        Money = 1000;
+    }
 
     public void OnEnable() => ItemContainer.OnItemsUpdated += onInventoryItemsUpdated.Raise;
     public void OnDisable() => ItemContainer.OnItemsUpdated -= onInventoryItemsUpdated.Raise;

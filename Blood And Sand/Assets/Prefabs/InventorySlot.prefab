@@ -124,6 +124,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemSlotUI: {fileID: 4847530022933521623}
+  onMouseStartHoverItem: {fileID: 11400000, guid: 3802c8b8a8a5bec459cc13ccac676e8c,
+    type: 2}
+  onMouseEndHoverItem: {fileID: 11400000, guid: 3b47d38aab73ce446abce562e52dfcff,
+    type: 2}
+  itemDestroyer: {fileID: 0}
 --- !u!1 &4847530022933521620
 GameObject:
   m_ObjectHideFlags: 0
@@ -163,7 +168,7 @@ RectTransform:
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
-  m_Pivot: {x: 0.5, y: 0.5}
+  m_Pivot: {x: 0.5000001, y: 0.49999985}
 --- !u!222 &4847530022933521617
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -215,6 +220,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemIconImage: {fileID: 4847530021927890026}
+  slot: 0
+  slotIndexController: {fileID: 2041146792761633862, guid: 3522e4f8ca599fd4eabd3ca8febd2083,
+    type: 3}
+  thisSlot: {fileID: 4847530022933521620}
   inventory: {fileID: 11400000, guid: da31aee719a5fd84fa22325266365481, type: 2}
   itemQuantityText: {fileID: 4538031602931159138}
 --- !u!114 &4847530022933521622

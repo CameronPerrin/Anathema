@@ -18,7 +18,5 @@ public class InventoryItemDragHandler : ItemDragHandler
                 itemDestroyer.Activate(thisSlot.ItemSlot, thisSlot.SlotIndex);
             }
         }
-
     }
-
 }

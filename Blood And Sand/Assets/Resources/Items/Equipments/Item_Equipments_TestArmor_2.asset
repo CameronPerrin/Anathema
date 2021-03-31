@@ -9,13 +9,17 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f12260b76f3d3e949999350d1981fd89, type: 3}
-  m_Name: Item_Consumables_CamCrosshair
+  m_Script: {fileID: 11500000, guid: f4e83e3705a8d5641bc643da9e8240d9, type: 3}
+  m_Name: Item_Equipments_TestArmor_2
   m_EditorClassIdentifier: 
-  name: Cam's Crosshair
-  description: Cam's poopy valorass crosshair
+  name: Test Armour 2
+  description: Testing  Armour
   icon: {fileID: 21300000, guid: 9c283ae7480a56149abbf0fbe1dce057, type: 3}
-  rarity: {fileID: 11400000, guid: 33b41d029e1e8ae48beb24b9f8616728, type: 2}
-  sellPrice: 0
+  isEquipment: 1
+  equipmentType: 2
+  rarity: {fileID: 11400000, guid: 90618505a0572c04dbe04f80a3de4880, type: 2}
+  sellPrice: 1
   maxStack: 1
-  useText: Useless
+  equipSlot: {fileID: 0}
+  armorModifier: 0
+  damageModifier: 0
