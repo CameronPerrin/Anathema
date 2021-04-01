@@ -96,14 +96,18 @@ public class Combat : MonoBehaviour
 		else
 			attackPrefab.GetComponent<bulletScript>().DOT = false;
 			
+		// set final damage for attack
 		attackPrefab.GetComponent<bulletScript>().dmg = weap.GetComponent<WeaponStats>().attack * critMultiplier;
-		// Initiate attack
+		// Instatiate attack
     	GameObject attackHitbox = Instantiate(attackPrefab, shootPoint.transform.position, Quaternion.identity);
 
         // [OLD] -- >attackHitbox.GetComponent<Rigidbody>().velocity = CurrentPlayer.transform.GetChild(1).GetComponent<Rigidbody>().velocity;
 
 		if(weap.GetComponent<WeaponStats>().item_type == 2 || weap.GetComponent<WeaponStats>().item_type == 7){
-			attackHitbox.transform.rotation = CurrentPlayer.transform.rotation;
+			Camera ray_camera = GetComponent<PlayerMovementController>().ray_camera;
+			Vector3 position = new Vector3(Input.mousePosition.x, Input.mousePosition.y, 100);
+         	position = ray_camera.ScreenToWorldPoint(position);
+         	attackHitbox.transform.LookAt(position); 
 		}
 		else
         	attackHitbox.transform.parent = CurrentPlayer.transform;
