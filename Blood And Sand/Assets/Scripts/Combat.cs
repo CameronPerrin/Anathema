@@ -12,12 +12,18 @@ public class Combat : MonoBehaviour
 
 	private PhotonView PV;
 	public GameObject attackPrefab;
+	public GameObject meleeSlash;
+	public GameObject meleeStab;
+	public GameObject magicFast;
+	public GameObject magicStrong;
 	public GameObject shootPoint;
     public GameObject CurrentPlayer;
 	public float attackSpeed = 0;
 	public float attackTimer = 0;
 	GameObject weap;
 	public bool isPaused;
+
+	[HideInInspector] public int critMultiplier = 1;
     
 	void Start()
 	{
@@ -57,23 +63,49 @@ public class Combat : MonoBehaviour
     [PunRPC]
     void RpcShoot()
     {
+		// Decide what type of weapon attack it is
+		if(weap.GetComponent<WeaponStats>().item_type == 1)
+			attackPrefab = meleeSlash;
+		else if(weap.GetComponent<WeaponStats>().item_type == 6)
+			attackPrefab = meleeStab;
+		else if(weap.GetComponent<WeaponStats>().item_type == 2)
+			attackPrefab = magicFast;
+		else if(weap.GetComponent<WeaponStats>().item_type == 7)
+			attackPrefab = magicStrong;
+
+		// Secondary active stats
 		float critChance = weap.GetComponent<WeaponStats>().crit_chance;
 		float bleedChance = weap.GetComponent<WeaponStats>().bleed_chance;
 		attackSpeed = weap.GetComponent<WeaponStats>().attack_speed;
 		attackTimer = attackSpeed;
 		float rand = UnityEngine.Random.Range(0.01f, 1.0f);
-    	GameObject attackHitbox = Instantiate(attackPrefab, shootPoint.transform.position, Quaternion.identity);
-		attackHitbox.GetComponent<bulletScript>().type = weap.GetComponent<WeaponStats>().item_type;
-		if( rand <= critChance){
-			attackHitbox.GetComponent<bulletScript>().dmg = weap.GetComponent<WeaponStats>().attack * 2;
-		}
-		if(rand <= bleedChance){
-			attackHitbox.GetComponent<bulletScript>().dmg = weap.GetComponent<WeaponStats>().attack;
-			attackHitbox.GetComponent<bulletScript>().DOT = true;
+
+		
+
+		// Tell the damage prefab what type of specials it has, and calculate the chances of secondary active stats activating
+		attackPrefab.GetComponent<bulletScript>().type = weap.GetComponent<WeaponStats>().item_type;
+		if(rand <= critChance){
+			critMultiplier = 2;
+			Debug.Log("Here comes the CRIT: " + attackPrefab.GetComponent<bulletScript>().dmg);
 		}
 		else
-			attackHitbox.GetComponent<bulletScript>().dmg = weap.GetComponent<WeaponStats>().attack;
-        //attackHitbox.GetComponent<Rigidbody>().velocity = CurrentPlayer.transform.GetChild(1).GetComponent<Rigidbody>().velocity;
-        attackHitbox.transform.parent = CurrentPlayer.transform;
+			critMultiplier = 1;
+		if(rand <= bleedChance){
+			attackPrefab.GetComponent<bulletScript>().DOT = true;
+		}
+		else
+			attackPrefab.GetComponent<bulletScript>().DOT = false;
+			
+		attackPrefab.GetComponent<bulletScript>().dmg = weap.GetComponent<WeaponStats>().attack * critMultiplier;
+		// Initiate attack
+    	GameObject attackHitbox = Instantiate(attackPrefab, shootPoint.transform.position, Quaternion.identity);
+
+        // [OLD] -- >attackHitbox.GetComponent<Rigidbody>().velocity = CurrentPlayer.transform.GetChild(1).GetComponent<Rigidbody>().velocity;
+
+		if(weap.GetComponent<WeaponStats>().item_type == 2 || weap.GetComponent<WeaponStats>().item_type == 7){
+			attackHitbox.transform.rotation = CurrentPlayer.transform.rotation;
+		}
+		else
+        	attackHitbox.transform.parent = CurrentPlayer.transform;
     }
 }

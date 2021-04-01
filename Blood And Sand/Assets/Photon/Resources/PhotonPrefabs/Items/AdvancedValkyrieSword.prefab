@@ -114,12 +114,12 @@ MonoBehaviour:
   attack: 0
   attack_speed: 0
   crit_chance: 0
-  bleed_chance: 0.25
+  bleed_chance: 0.1
   range: 0
   defense: 0
   magic_defense: 0
   move_speed: 0
-  item_type: 3
+  item_type: 2
 --- !u!114 &5561066817771026668
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -5,20 +5,36 @@ using Photon.Pun;
 
 public class bulletScript : MonoBehaviour
 {
-    public GameObject CurrentPlayer;
-    public float dmg = 0;
-    public int type;
-    public bool DOT = false;
+    [HideInInspector]public GameObject CurrentPlayer;
+    [HideInInspector]public float dmg = 0;
+    [HideInInspector]public int type;
+    [HideInInspector]public bool DOT = false;
+
+    [HideInInspector]public Rigidbody rb;
+    public bool slashMeleeAttack = false;
+    public bool stabMeleeAttack = false;
+    public bool fastMagicAttack = false;
+    public bool strongMagicAttack = false;
+    public int projectileSpeed = 10;
     // Start is called before the first frame update
     void Start()
     {
+        Debug.Log("Spawned with " + dmg + " damage.");
         CurrentPlayer = PhotonNetwork.LocalPlayer.TagObject as GameObject;
+        if(fastMagicAttack || strongMagicAttack)
+            rb = GetComponent<Rigidbody>();
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
-        Destroy(this.gameObject, 0.2f);
+        if(!fastMagicAttack && !strongMagicAttack)
+            Destroy(this.gameObject, 0.2f);
+
+        else{
+            rb.velocity = transform.forward * projectileSpeed;
+            Destroy(this.gameObject, 5f);
+        }
     }
 
     private void OnTriggerEnter(Collider collision)

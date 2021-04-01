@@ -23,11 +23,13 @@ public class WeaponStats : MonoBehaviour
 
 	//item type
 	public int item_type;
-	//1. Melee
-	//2. Magic
+	//1. Melee Slash
+	//2. Magic Fast
 	//3. Melee DOT
 	//4. Magic DOT
 	//5. Armor
+	//6. Melee Stab
+	//7. Magic Strong
 
     void updateValue(){
     	//call this to change the value of the item based on the stats

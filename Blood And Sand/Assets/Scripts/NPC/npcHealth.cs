@@ -41,32 +41,23 @@ public class npcHealth : MonoBehaviourPunCallbacks
     // This function is called in another script to tell this script when to take damage.
     public void TakeDamage(float dmage, int type, bool dot)
     {
-        if(type == 1){          // Physical damage
+        if(type == 1 || type == 6){          // Physical damage
             dmg = dmage - defense;
             if(PV.IsMine){
                 PV.RPC("Damage", RpcTarget.All, dmg);    
             }
+            
         }
-        else if(type == 2){     // Magic damage
+        else if(type == 2 || type == 7){     // Magic damage
             dmg = dmage - magicDefense;
             if(PV.IsMine){
                 PV.RPC("Damage", RpcTarget.All, dmg);    
             }
         }
-        else if(type == 3){     // Physical DOT damage
-            dmg = dmage - defense;
-            if(PV.IsMine){
-                PV.RPC("Damage", RpcTarget.All, dmg); 
-                //Debug.Log("Hit for " + dmg + " damage!");   
-            }
-            if(dot){
-                dmgTemp = dmage;
-                dmg = (dmage - defense) / 4;
-                InvokeRepeating ("PhysicalDOTDmg", 0f, dotTimer);
-            }
-        }
-        else if(type == 4){     // Magic DOT damage
-            dmg = dmage - magicDefense;
+        if(dot){
+            dmgTemp = dmage;
+            dmg = (dmage - defense) / 4;
+            InvokeRepeating ("PhysicalDOTDmg", 0f, dotTimer);
         }
     }
 
