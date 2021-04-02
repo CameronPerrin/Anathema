@@ -16,10 +16,10 @@ public class bulletScript : MonoBehaviour
     public bool fastMagicAttack = false;
     public bool strongMagicAttack = false;
     public int projectileSpeed = 10;
+    public Vector3 aim;
     // Start is called before the first frame update
     void Start()
     {
-        Debug.Log("Spawned with " + dmg + " damage.");
         CurrentPlayer = PhotonNetwork.LocalPlayer.TagObject as GameObject;
         if(fastMagicAttack || strongMagicAttack)
             rb = GetComponent<Rigidbody>();
@@ -32,8 +32,9 @@ public class bulletScript : MonoBehaviour
             Destroy(this.gameObject, 0.2f);
 
         else{
+            transform.LookAt(aim);
             rb.velocity = transform.forward * projectileSpeed;
-            Destroy(this.gameObject, 5f);
+            Destroy(this.gameObject, 2f);
         }
     }
 

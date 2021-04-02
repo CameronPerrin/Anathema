@@ -15,11 +15,11 @@ G:/Program Files (x86)/Anathema/Blood And Sand
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-52626
+64303
 Successfully changed project path to: G:/Program Files (x86)/Anathema/Blood And Sand
 G:/Program Files (x86)/Anathema/Blood And Sand
 Using Asset Import Pipeline V2.
-Refreshing native plugins compatible for Editor in 59.17 ms, found 2 plugins.
+Refreshing native plugins compatible for Editor in 65.51 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2020.2.3f1 (8ff31bc5bf5b)
 [Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2020.2.3f1/Editor/Data/Resources/UnitySubsystems
@@ -36,99 +36,59 @@ Initialize mono
 Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2020.2.3f1/Editor/Data/Managed'
 Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2020.2.3f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
 Mono config path = 'C:/Program Files/Unity/Hub/Editor/2020.2.3f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56692
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56976
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.2.3f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.002397 seconds.
+Registered in 0.002697 seconds.
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 53.14 ms, found 2 plugins.
+Refreshing native plugins compatible for Editor in 67.27 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Invoked RoslynAnalysisRunner static constructor.
 RoslynAnalysisRunner will not be running.
 RoslynAnalysisRunner has terminated.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.950 seconds
+- Completed reload, in  1.125 seconds
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.007258 seconds.
+Registered in 0.007502 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 56.29 ms, found 2 plugins.
+Refreshing native plugins compatible for Editor in 65.07 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Invoked RoslynAnalysisRunner static constructor.
 RoslynAnalysisRunner will not be running.
 RoslynAnalysisRunner has terminated.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.915 seconds
+- Completed reload, in  1.433 seconds
 Platform modules already initialized, skipping
 ========================================================================
 Worker process is ready to serve import requests
 Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.05 seconds
-Refreshing native plugins compatible for Editor in 0.67 ms, found 2 plugins.
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.10 seconds
+Refreshing native plugins compatible for Editor in 0.64 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 2834 Unused Serialized files (Serialized files now loaded: 0)
 System memory in use before: 147.4 MB.
 System memory in use after: 147.2 MB.
 
 Unloading 34 unused Assets to reduce memory usage. Loaded Objects now: 3311.
-Total: 2.467400 ms (FindLiveObjects: 0.301000 ms CreateObjectMapping: 0.102000 ms MarkObjects: 1.769300 ms  DeleteObjects: 0.293600 ms)
+Total: 2.646800 ms (FindLiveObjects: 0.281100 ms CreateObjectMapping: 0.148200 ms MarkObjects: 1.923900 ms  DeleteObjects: 0.292800 ms)
 
 ========================================================================
 Received Import Request.
-  path: Assets/Prefabs/FloatingTextPlayer.prefab
-  artifactKey: Guid(e4c38fc68cee0d34ea6cd0bafcad4ae0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/FloatingTextPlayer.prefab using Guid(e4c38fc68cee0d34ea6cd0bafcad4ae0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '57b8e3101d7f0136a107f42df3b0026d') in 0.045671 seconds
-  Import took 0.080812 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000354 seconds.
-  path: Assets/Prefabs/PlayerListing.prefab
-  artifactKey: Guid(cfc3764ca2533914eb701d0f08c6f117) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/PlayerListing.prefab using Guid(cfc3764ca2533914eb701d0f08c6f117) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3f5f77c97813e670ee95673154925a9b') in 0.013235 seconds
-  Import took 0.043011 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000187 seconds.
-  path: Assets/Prefabs/FloatingText.prefab
-  artifactKey: Guid(7b2549c15f36d544490e6208a44c1357) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/FloatingText.prefab using Guid(7b2549c15f36d544490e6208a44c1357) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5761939656e286e083006c101bf3e14d') in 0.004252 seconds
-  Import took 0.015761 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 53.606269 seconds.
-  path: Assets/Prefabs/magicFast.prefab
-  artifactKey: Guid(6131eb11a67d7fe448491ae4d9ce7093) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/magicFast.prefab using Guid(6131eb11a67d7fe448491ae4d9ce7093) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '615351ac341d572f41d125300a1e5b61') in 0.164680 seconds
-  Import took 0.169962 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 1.860981 seconds.
-  path: Assets/Prefabs/magicFast.prefab
-  artifactKey: Guid(6131eb11a67d7fe448491ae4d9ce7093) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/magicFast.prefab using Guid(6131eb11a67d7fe448491ae4d9ce7093) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '829f43e815432cc8d26e273dae0d2182') in 0.008572 seconds
-  Import took 0.013989 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 5.805251 seconds.
-  path: Assets/Prefabs/magicFast.prefab
-  artifactKey: Guid(6131eb11a67d7fe448491ae4d9ce7093) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/magicFast.prefab using Guid(6131eb11a67d7fe448491ae4d9ce7093) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8a5054ee4fc5c7ff2b4c70c817e528d6') in 0.009766 seconds
-  Import took 0.015576 seconds .
+  path: Assets/Scripts/Combat.cs
+  artifactKey: Guid(62a461c4fc273e14f858dfd3d131f2d1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Combat.cs using Guid(62a461c4fc273e14f858dfd3d131f2d1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ce0c3757ea40d4f9c1f4b5c4fe4a5de9') in 0.044508 seconds
+  Import took 0.049339 seconds .
 
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
-Registered in 0.007800 seconds.
+Registered in 0.007551 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 1.40 ms, found 2 plugins.
+Refreshing native plugins compatible for Editor in 0.65 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Invoked RoslynAnalysisRunner static constructor.
 RoslynAnalysisRunner will not be running.
@@ -145,25 +105,231 @@ UnityEngine.Rendering.Universal.ScriptableRendererData:OnValidate () (at Library
 (Filename: Library/PackageCache/com.unity.render-pipelines.universal@10.2.2/Runtime/ScriptableRendererData.cs Line: 135)
 
 Mono: successfully reloaded assembly
-- Completed reload, in  1.117 seconds
+- Completed reload, in  0.866 seconds
 Platform modules already initialized, skipping
 Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
-Refreshing native plugins compatible for Editor in 0.92 ms, found 2 plugins.
+Refreshing native plugins compatible for Editor in 0.85 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 2683 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 143.6 MB.
-System memory in use after: 143.4 MB.
+System memory in use before: 138.2 MB.
+System memory in use after: 138.1 MB.
 
-Unloading 31 unused Assets to reduce memory usage. Loaded Objects now: 3360.
-Total: 3.114400 ms (FindLiveObjects: 0.377800 ms CreateObjectMapping: 0.166600 ms MarkObjects: 2.173400 ms  DeleteObjects: 0.395300 ms)
+Unloading 31 unused Assets to reduce memory usage. Loaded Objects now: 3312.
+Total: 3.374800 ms (FindLiveObjects: 0.324200 ms CreateObjectMapping: 0.136800 ms MarkObjects: 2.569100 ms  DeleteObjects: 0.343700 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 97.595463 seconds.
+  path: Assets/Scripts/Combat.cs
+  artifactKey: Guid(62a461c4fc273e14f858dfd3d131f2d1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Combat.cs using Guid(62a461c4fc273e14f858dfd3d131f2d1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3aea871c5c043677c5a20f7ebff15b4c') in 0.006035 seconds
+  Import took 0.011434 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.031806 seconds.
+  path: Assets/Scripts/Combat.cs
+  artifactKey: Guid(62a461c4fc273e14f858dfd3d131f2d1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Combat.cs using Guid(62a461c4fc273e14f858dfd3d131f2d1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3aea871c5c043677c5a20f7ebff15b4c') in 0.003736 seconds
+  Import took 0.009684 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 71.140797 seconds.
+  path: Assets/Sprites/white circle.png
+  artifactKey: Guid(7653c91062222e740813656d37dba908) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/white circle.png using Guid(7653c91062222e740813656d37dba908) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cfd4829583da0149c322f995560f801f') in 0.046605 seconds
+  Import took 0.051348 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 79.860429 seconds.
+  path: Assets/Photon/Resources/crosshair.png
+  artifactKey: Guid(9c283ae7480a56149abbf0fbe1dce057) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Photon/Resources/crosshair.png using Guid(9c283ae7480a56149abbf0fbe1dce057) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '445837ef512eff6f1c79270a9be568f5') in 0.057747 seconds
+  Import took 0.062422 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000278 seconds.
+  path: Assets/Sprites/menu_bar_back.png
+  artifactKey: Guid(c9d12088322c14d41a23d5e73de90b21) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/menu_bar_back.png using Guid(c9d12088322c14d41a23d5e73de90b21) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a74547ef9fdd2a7350f3fe957d654e21') in 0.015078 seconds
+  Import took 0.020280 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000293 seconds.
+  path: Assets/Sprites/ItemHolder.png
+  artifactKey: Guid(ec5c023d2d100324a8d7c99747bd8c23) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/ItemHolder.png using Guid(ec5c023d2d100324a8d7c99747bd8c23) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '332f4b9481b2041e9ba8ee9f0aa35b43') in 0.033818 seconds
+  Import took 0.038706 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000304 seconds.
+  path: Assets/Photon/PhotonUnityNetworking/Icons/PunIconApp512.png
+  artifactKey: Guid(7377013011b4c3348809ff574abe799e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Photon/PhotonUnityNetworking/Icons/PunIconApp512.png using Guid(7377013011b4c3348809ff574abe799e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '02c2bde7fb8b39cc65321e4ccf482587') in 0.020806 seconds
+  Import took 0.025788 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000251 seconds.
+  path: Assets/Photon/PhotonUnityNetworking/Icons/PunIconApp128.png
+  artifactKey: Guid(f00feafcf0675cd47a48f83ae42b06d4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Photon/PhotonUnityNetworking/Icons/PunIconApp128.png using Guid(f00feafcf0675cd47a48f83ae42b06d4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b064e830ca6107b565de3497f910c551') in 0.040845 seconds
+  Import took 0.046270 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000219 seconds.
+  path: Assets/Photon/PhotonUnityNetworking/Icons/PunIconApp32.png
+  artifactKey: Guid(436c5e63723127948af8857e903f658a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Photon/PhotonUnityNetworking/Icons/PunIconApp32.png using Guid(436c5e63723127948af8857e903f658a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4febeaa5e4476580ae3a728184cffcb7') in 0.022706 seconds
+  Import took 0.027705 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000274 seconds.
+  path: Assets/Photon/PhotonUnityNetworking/Icons/PunIconApp48.png
+  artifactKey: Guid(44ebd8e6f42cae445ab4b22f0a9b48a0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Photon/PhotonUnityNetworking/Icons/PunIconApp48.png using Guid(44ebd8e6f42cae445ab4b22f0a9b48a0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '65ff2a9c9e5b993aebd8a1fd7106f5b6') in 0.021541 seconds
+  Import took 0.026672 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000208 seconds.
+  path: Assets/IL3DN/EditorImages/IL3DN_Logo.png
+  artifactKey: Guid(8ce5ab41ecb07b942a1042a85f585feb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/IL3DN/EditorImages/IL3DN_Logo.png using Guid(8ce5ab41ecb07b942a1042a85f585feb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cc31d7907cbf5c0e78cf6198a2860ebf') in 0.051522 seconds
+  Import took 0.056320 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000244 seconds.
+  path: Assets/Photon/Resources/s1mples_crosshair.png
+  artifactKey: Guid(2bbe4fd634538f74a943054d6aea536c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Photon/Resources/s1mples_crosshair.png using Guid(2bbe4fd634538f74a943054d6aea536c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '40a596cddf78859da317e1379d353617') in 0.049007 seconds
+  Import took 0.054558 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000287 seconds.
+  path: Assets/Sprites/menu_bar.png
+  artifactKey: Guid(608c98905185ad74bada08d3cf787d51) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/menu_bar.png using Guid(608c98905185ad74bada08d3cf787d51) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5468e6ba41076feb33ae5c2058fa7f53') in 0.010367 seconds
+  Import took 0.015055 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000320 seconds.
+  path: Assets/Sprites/grenn map.png
+  artifactKey: Guid(3e83863df81b1a74f9b1e1e6e3af9f6a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/grenn map.png using Guid(3e83863df81b1a74f9b1e1e6e3af9f6a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '175567b8271b786f8c76f1f10d9c878b') in 0.077367 seconds
+  Import took 0.082379 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000311 seconds.
+  path: Assets/Photon/PhotonUnityNetworking/Icons/PunIcon-128.png
+  artifactKey: Guid(bd293dc32f4aaf94e8274f2fac2cdf89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Photon/PhotonUnityNetworking/Icons/PunIcon-128.png using Guid(bd293dc32f4aaf94e8274f2fac2cdf89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f34272a605a7f97506972a6dd9d59611') in 0.026393 seconds
+  Import took 0.032223 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.002268 seconds.
+  path: Assets/Photon/PhotonUnityNetworking/Icons/PunIcon-128.png
+  artifactKey: Guid(bd293dc32f4aaf94e8274f2fac2cdf89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Photon/PhotonUnityNetworking/Icons/PunIcon-128.png using Guid(bd293dc32f4aaf94e8274f2fac2cdf89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f34272a605a7f97506972a6dd9d59611') in 0.011752 seconds
+  Import took 0.017336 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 11.705344 seconds.
+  path: Assets/Sprites/white circle.png
+  artifactKey: Guid(7653c91062222e740813656d37dba908) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/white circle.png using Guid(7653c91062222e740813656d37dba908) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c2c34c1a33c148c25c14ab781b01ca02') in 0.025924 seconds
+  Import took 0.031765 seconds .
 
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
-Registered in 0.007932 seconds.
+Registered in 0.007148 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.65 ms, found 2 plugins.
+Refreshing native plugins compatible for Editor in 0.71 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+GrassBendRenderer is missing RendererFeatures
+This could be due to missing scripts or compile error.
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object,UnityEngine.Object)
+UnityEngine.Debug:LogError (object,UnityEngine.Object)
+UnityEngine.Rendering.Universal.ScriptableRendererData:ValidateRendererFeatures () (at Library/PackageCache/com.unity.render-pipelines.universal@10.2.2/Runtime/ScriptableRendererData.cs:135)
+UnityEngine.Rendering.Universal.ScriptableRendererData:OnValidate () (at Library/PackageCache/com.unity.render-pipelines.universal@10.2.2/Runtime/ScriptableRendererData.cs:59)
+
+(Filename: Library/PackageCache/com.unity.render-pipelines.universal@10.2.2/Runtime/ScriptableRendererData.cs Line: 135)
+
+Mono: successfully reloaded assembly
+- Completed reload, in  0.818 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 0.88 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2683 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 141.2 MB.
+System memory in use after: 141.1 MB.
+
+Unloading 31 unused Assets to reduce memory usage. Loaded Objects now: 3332.
+Total: 3.240200 ms (FindLiveObjects: 0.455000 ms CreateObjectMapping: 0.185100 ms MarkObjects: 2.235700 ms  DeleteObjects: 0.363300 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.006685 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.89 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+GrassBendRenderer is missing RendererFeatures
+This could be due to missing scripts or compile error.
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object,UnityEngine.Object)
+UnityEngine.Debug:LogError (object,UnityEngine.Object)
+UnityEngine.Rendering.Universal.ScriptableRendererData:ValidateRendererFeatures () (at Library/PackageCache/com.unity.render-pipelines.universal@10.2.2/Runtime/ScriptableRendererData.cs:135)
+UnityEngine.Rendering.Universal.ScriptableRendererData:OnValidate () (at Library/PackageCache/com.unity.render-pipelines.universal@10.2.2/Runtime/ScriptableRendererData.cs:59)
+
+(Filename: Library/PackageCache/com.unity.render-pipelines.universal@10.2.2/Runtime/ScriptableRendererData.cs Line: 135)
+
+Mono: successfully reloaded assembly
+- Completed reload, in  1.163 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 0.98 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2683 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 141.3 MB.
+System memory in use after: 141.2 MB.
+
+Unloading 31 unused Assets to reduce memory usage. Loaded Objects now: 3334.
+Total: 7.296600 ms (FindLiveObjects: 0.588100 ms CreateObjectMapping: 0.334400 ms MarkObjects: 5.815300 ms  DeleteObjects: 0.555900 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.006760 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.64 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Invoked RoslynAnalysisRunner static constructor.
 RoslynAnalysisRunner will not be running.
@@ -183,22 +349,22 @@ Mono: successfully reloaded assembly
 - Completed reload, in  0.802 seconds
 Platform modules already initialized, skipping
 Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
-Refreshing native plugins compatible for Editor in 0.70 ms, found 2 plugins.
+Refreshing native plugins compatible for Editor in 0.75 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 2683 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 143.6 MB.
-System memory in use after: 143.5 MB.
+System memory in use before: 141.3 MB.
+System memory in use after: 141.2 MB.
 
-Unloading 31 unused Assets to reduce memory usage. Loaded Objects now: 3362.
-Total: 2.971300 ms (FindLiveObjects: 0.438500 ms CreateObjectMapping: 0.192500 ms MarkObjects: 1.995600 ms  DeleteObjects: 0.343800 ms)
+Unloading 31 unused Assets to reduce memory usage. Loaded Objects now: 3336.
+Total: 4.175400 ms (FindLiveObjects: 0.699200 ms CreateObjectMapping: 0.258700 ms MarkObjects: 2.784800 ms  DeleteObjects: 0.431100 ms)
 
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
-Registered in 0.007793 seconds.
+Registered in 0.007398 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.80 ms, found 2 plugins.
+Refreshing native plugins compatible for Editor in 1.28 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Invoked RoslynAnalysisRunner static constructor.
 RoslynAnalysisRunner will not be running.
@@ -215,22 +381,361 @@ UnityEngine.Rendering.Universal.ScriptableRendererData:OnValidate () (at Library
 (Filename: Library/PackageCache/com.unity.render-pipelines.universal@10.2.2/Runtime/ScriptableRendererData.cs Line: 135)
 
 Mono: successfully reloaded assembly
-- Completed reload, in  1.090 seconds
+- Completed reload, in  1.022 seconds
 Platform modules already initialized, skipping
 Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
-Refreshing native plugins compatible for Editor in 1.34 ms, found 2 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
+Refreshing native plugins compatible for Editor in 0.93 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.01 ms.
 Unloading 2683 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 143.6 MB.
-System memory in use after: 143.5 MB.
+System memory in use before: 141.3 MB.
+System memory in use after: 141.2 MB.
 
-Unloading 31 unused Assets to reduce memory usage. Loaded Objects now: 3364.
-Total: 7.084900 ms (FindLiveObjects: 0.387600 ms CreateObjectMapping: 0.158700 ms MarkObjects: 6.100700 ms  DeleteObjects: 0.435800 ms)
+Unloading 31 unused Assets to reduce memory usage. Loaded Objects now: 3338.
+Total: 4.781800 ms (FindLiveObjects: 0.437300 ms CreateObjectMapping: 0.200200 ms MarkObjects: 3.474400 ms  DeleteObjects: 0.668200 ms)
 
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
-Registered in 0.006302 seconds.
+Registered in 0.008448 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.70 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+GrassBendRenderer is missing RendererFeatures
+This could be due to missing scripts or compile error.
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object,UnityEngine.Object)
+UnityEngine.Debug:LogError (object,UnityEngine.Object)
+UnityEngine.Rendering.Universal.ScriptableRendererData:ValidateRendererFeatures () (at Library/PackageCache/com.unity.render-pipelines.universal@10.2.2/Runtime/ScriptableRendererData.cs:135)
+UnityEngine.Rendering.Universal.ScriptableRendererData:OnValidate () (at Library/PackageCache/com.unity.render-pipelines.universal@10.2.2/Runtime/ScriptableRendererData.cs:59)
+
+(Filename: Library/PackageCache/com.unity.render-pipelines.universal@10.2.2/Runtime/ScriptableRendererData.cs Line: 135)
+
+Mono: successfully reloaded assembly
+- Completed reload, in  0.823 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 0.67 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2683 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 141.3 MB.
+System memory in use after: 141.2 MB.
+
+Unloading 31 unused Assets to reduce memory usage. Loaded Objects now: 3340.
+Total: 3.429600 ms (FindLiveObjects: 0.561800 ms CreateObjectMapping: 0.295700 ms MarkObjects: 2.200200 ms  DeleteObjects: 0.370500 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.009569 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.74 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+GrassBendRenderer is missing RendererFeatures
+This could be due to missing scripts or compile error.
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object,UnityEngine.Object)
+UnityEngine.Debug:LogError (object,UnityEngine.Object)
+UnityEngine.Rendering.Universal.ScriptableRendererData:ValidateRendererFeatures () (at Library/PackageCache/com.unity.render-pipelines.universal@10.2.2/Runtime/ScriptableRendererData.cs:135)
+UnityEngine.Rendering.Universal.ScriptableRendererData:OnValidate () (at Library/PackageCache/com.unity.render-pipelines.universal@10.2.2/Runtime/ScriptableRendererData.cs:59)
+
+(Filename: Library/PackageCache/com.unity.render-pipelines.universal@10.2.2/Runtime/ScriptableRendererData.cs Line: 135)
+
+Mono: successfully reloaded assembly
+- Completed reload, in  0.999 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 0.77 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2683 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 141.3 MB.
+System memory in use after: 141.2 MB.
+
+Unloading 31 unused Assets to reduce memory usage. Loaded Objects now: 3342.
+Total: 4.565700 ms (FindLiveObjects: 0.572700 ms CreateObjectMapping: 0.294600 ms MarkObjects: 3.217100 ms  DeleteObjects: 0.479000 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.007166 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.64 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+GrassBendRenderer is missing RendererFeatures
+This could be due to missing scripts or compile error.
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object,UnityEngine.Object)
+UnityEngine.Debug:LogError (object,UnityEngine.Object)
+UnityEngine.Rendering.Universal.ScriptableRendererData:ValidateRendererFeatures () (at Library/PackageCache/com.unity.render-pipelines.universal@10.2.2/Runtime/ScriptableRendererData.cs:135)
+UnityEngine.Rendering.Universal.ScriptableRendererData:OnValidate () (at Library/PackageCache/com.unity.render-pipelines.universal@10.2.2/Runtime/ScriptableRendererData.cs:59)
+
+(Filename: Library/PackageCache/com.unity.render-pipelines.universal@10.2.2/Runtime/ScriptableRendererData.cs Line: 135)
+
+Mono: successfully reloaded assembly
+- Completed reload, in  0.792 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 0.67 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2683 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 141.3 MB.
+System memory in use after: 141.2 MB.
+
+Unloading 31 unused Assets to reduce memory usage. Loaded Objects now: 3344.
+Total: 3.621900 ms (FindLiveObjects: 0.394900 ms CreateObjectMapping: 0.229900 ms MarkObjects: 2.499700 ms  DeleteObjects: 0.495400 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 1129.507195 seconds.
+  path: Assets/Photon/Resources/PhotonPrefabs/PhotonPlayer.prefab
+  artifactKey: Guid(b663b7ce322b288458daa2a6708b4a3c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Photon/Resources/PhotonPrefabs/PhotonPlayer.prefab using Guid(b663b7ce322b288458daa2a6708b4a3c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3229b4ad0464e9ac5a3f68091c2ee669') in 0.352875 seconds
+  Import took 0.359893 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.006694 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.68 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+GrassBendRenderer is missing RendererFeatures
+This could be due to missing scripts or compile error.
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object,UnityEngine.Object)
+UnityEngine.Debug:LogError (object,UnityEngine.Object)
+UnityEngine.Rendering.Universal.ScriptableRendererData:ValidateRendererFeatures () (at Library/PackageCache/com.unity.render-pipelines.universal@10.2.2/Runtime/ScriptableRendererData.cs:135)
+UnityEngine.Rendering.Universal.ScriptableRendererData:OnValidate () (at Library/PackageCache/com.unity.render-pipelines.universal@10.2.2/Runtime/ScriptableRendererData.cs:59)
+
+(Filename: Library/PackageCache/com.unity.render-pipelines.universal@10.2.2/Runtime/ScriptableRendererData.cs Line: 135)
+
+Mono: successfully reloaded assembly
+- Completed reload, in  0.867 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 0.66 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2683 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 155.1 MB.
+System memory in use after: 155.0 MB.
+
+Unloading 35 unused Assets to reduce memory usage. Loaded Objects now: 3392.
+Total: 2.973400 ms (FindLiveObjects: 0.387100 ms CreateObjectMapping: 0.223400 ms MarkObjects: 1.936900 ms  DeleteObjects: 0.424900 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.007483 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.77 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+GrassBendRenderer is missing RendererFeatures
+This could be due to missing scripts or compile error.
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object,UnityEngine.Object)
+UnityEngine.Debug:LogError (object,UnityEngine.Object)
+UnityEngine.Rendering.Universal.ScriptableRendererData:ValidateRendererFeatures () (at Library/PackageCache/com.unity.render-pipelines.universal@10.2.2/Runtime/ScriptableRendererData.cs:135)
+UnityEngine.Rendering.Universal.ScriptableRendererData:OnValidate () (at Library/PackageCache/com.unity.render-pipelines.universal@10.2.2/Runtime/ScriptableRendererData.cs:59)
+
+(Filename: Library/PackageCache/com.unity.render-pipelines.universal@10.2.2/Runtime/ScriptableRendererData.cs Line: 135)
+
+Mono: successfully reloaded assembly
+- Completed reload, in  1.087 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 1.00 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2683 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 155.1 MB.
+System memory in use after: 155.0 MB.
+
+Unloading 31 unused Assets to reduce memory usage. Loaded Objects now: 3394.
+Total: 4.785500 ms (FindLiveObjects: 0.505300 ms CreateObjectMapping: 0.256700 ms MarkObjects: 3.575700 ms  DeleteObjects: 0.445600 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 152.832331 seconds.
+  path: Assets/Prefabs/magicFast.prefab
+  artifactKey: Guid(6131eb11a67d7fe448491ae4d9ce7093) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/magicFast.prefab using Guid(6131eb11a67d7fe448491ae4d9ce7093) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a27032fdba7a3cf6f9ea34c860a179a6') in 0.145503 seconds
+  Import took 0.151354 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.652343 seconds.
+  path: Assets/Prefabs/magicStrong.prefab
+  artifactKey: Guid(7aaa0e9916d6e7c488ef168721f53193) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/magicStrong.prefab using Guid(7aaa0e9916d6e7c488ef168721f53193) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '321b5aac146234afea9f7b5f9e8abdc4') in 0.029639 seconds
+  Import took 0.034372 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.007557 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.68 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+GrassBendRenderer is missing RendererFeatures
+This could be due to missing scripts or compile error.
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object,UnityEngine.Object)
+UnityEngine.Debug:LogError (object,UnityEngine.Object)
+UnityEngine.Rendering.Universal.ScriptableRendererData:ValidateRendererFeatures () (at Library/PackageCache/com.unity.render-pipelines.universal@10.2.2/Runtime/ScriptableRendererData.cs:135)
+UnityEngine.Rendering.Universal.ScriptableRendererData:OnValidate () (at Library/PackageCache/com.unity.render-pipelines.universal@10.2.2/Runtime/ScriptableRendererData.cs:59)
+
+(Filename: Library/PackageCache/com.unity.render-pipelines.universal@10.2.2/Runtime/ScriptableRendererData.cs Line: 135)
+
+Mono: successfully reloaded assembly
+- Completed reload, in  1.140 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 1.59 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2683 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 155.2 MB.
+System memory in use after: 155.1 MB.
+
+Unloading 31 unused Assets to reduce memory usage. Loaded Objects now: 3432.
+Total: 4.723600 ms (FindLiveObjects: 0.871800 ms CreateObjectMapping: 0.570000 ms MarkObjects: 2.740300 ms  DeleteObjects: 0.538800 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.007082 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.68 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+GrassBendRenderer is missing RendererFeatures
+This could be due to missing scripts or compile error.
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object,UnityEngine.Object)
+UnityEngine.Debug:LogError (object,UnityEngine.Object)
+UnityEngine.Rendering.Universal.ScriptableRendererData:ValidateRendererFeatures () (at Library/PackageCache/com.unity.render-pipelines.universal@10.2.2/Runtime/ScriptableRendererData.cs:135)
+UnityEngine.Rendering.Universal.ScriptableRendererData:OnValidate () (at Library/PackageCache/com.unity.render-pipelines.universal@10.2.2/Runtime/ScriptableRendererData.cs:59)
+
+(Filename: Library/PackageCache/com.unity.render-pipelines.universal@10.2.2/Runtime/ScriptableRendererData.cs Line: 135)
+
+Mono: successfully reloaded assembly
+- Completed reload, in  0.850 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 0.84 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2683 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 155.2 MB.
+System memory in use after: 155.1 MB.
+
+Unloading 31 unused Assets to reduce memory usage. Loaded Objects now: 3434.
+Total: 3.559500 ms (FindLiveObjects: 0.529700 ms CreateObjectMapping: 0.432200 ms MarkObjects: 2.233600 ms  DeleteObjects: 0.362600 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.008754 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 1.65 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+GrassBendRenderer is missing RendererFeatures
+This could be due to missing scripts or compile error.
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object,UnityEngine.Object)
+UnityEngine.Debug:LogError (object,UnityEngine.Object)
+UnityEngine.Rendering.Universal.ScriptableRendererData:ValidateRendererFeatures () (at Library/PackageCache/com.unity.render-pipelines.universal@10.2.2/Runtime/ScriptableRendererData.cs:135)
+UnityEngine.Rendering.Universal.ScriptableRendererData:OnValidate () (at Library/PackageCache/com.unity.render-pipelines.universal@10.2.2/Runtime/ScriptableRendererData.cs:59)
+
+(Filename: Library/PackageCache/com.unity.render-pipelines.universal@10.2.2/Runtime/ScriptableRendererData.cs Line: 135)
+
+Mono: successfully reloaded assembly
+- Completed reload, in  1.248 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 1.10 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2683 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 155.2 MB.
+System memory in use after: 155.1 MB.
+
+Unloading 31 unused Assets to reduce memory usage. Loaded Objects now: 3436.
+Total: 4.645800 ms (FindLiveObjects: 0.573700 ms CreateObjectMapping: 0.569600 ms MarkObjects: 3.026800 ms  DeleteObjects: 0.472300 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.006731 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.64 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+GrassBendRenderer is missing RendererFeatures
+This could be due to missing scripts or compile error.
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object,UnityEngine.Object)
+UnityEngine.Debug:LogError (object,UnityEngine.Object)
+UnityEngine.Rendering.Universal.ScriptableRendererData:ValidateRendererFeatures () (at Library/PackageCache/com.unity.render-pipelines.universal@10.2.2/Runtime/ScriptableRendererData.cs:135)
+UnityEngine.Rendering.Universal.ScriptableRendererData:OnValidate () (at Library/PackageCache/com.unity.render-pipelines.universal@10.2.2/Runtime/ScriptableRendererData.cs:59)
+
+(Filename: Library/PackageCache/com.unity.render-pipelines.universal@10.2.2/Runtime/ScriptableRendererData.cs Line: 135)
+
+Mono: successfully reloaded assembly
+- Completed reload, in  0.818 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 0.68 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2683 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 155.2 MB.
+System memory in use after: 155.1 MB.
+
+Unloading 31 unused Assets to reduce memory usage. Loaded Objects now: 3438.
+Total: 2.927000 ms (FindLiveObjects: 0.358400 ms CreateObjectMapping: 0.149600 ms MarkObjects: 2.012900 ms  DeleteObjects: 0.405100 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.009132 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
 Refreshing native plugins compatible for Editor in 0.65 ms, found 2 plugins.
@@ -250,22 +755,267 @@ UnityEngine.Rendering.Universal.ScriptableRendererData:OnValidate () (at Library
 (Filename: Library/PackageCache/com.unity.render-pipelines.universal@10.2.2/Runtime/ScriptableRendererData.cs Line: 135)
 
 Mono: successfully reloaded assembly
-- Completed reload, in  0.810 seconds
+- Completed reload, in  0.974 seconds
 Platform modules already initialized, skipping
 Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
-Refreshing native plugins compatible for Editor in 0.66 ms, found 2 plugins.
+Refreshing native plugins compatible for Editor in 0.65 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 2683 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 143.7 MB.
-System memory in use after: 143.5 MB.
+System memory in use before: 155.2 MB.
+System memory in use after: 155.1 MB.
 
-Unloading 31 unused Assets to reduce memory usage. Loaded Objects now: 3366.
-Total: 2.983200 ms (FindLiveObjects: 0.343700 ms CreateObjectMapping: 0.193500 ms MarkObjects: 2.082400 ms  DeleteObjects: 0.362500 ms)
+Unloading 31 unused Assets to reduce memory usage. Loaded Objects now: 3440.
+Total: 3.084800 ms (FindLiveObjects: 0.351200 ms CreateObjectMapping: 0.190100 ms MarkObjects: 2.174000 ms  DeleteObjects: 0.368700 ms)
 
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
-Registered in 0.009106 seconds.
+Registered in 0.007329 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.72 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+GrassBendRenderer is missing RendererFeatures
+This could be due to missing scripts or compile error.
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object,UnityEngine.Object)
+UnityEngine.Debug:LogError (object,UnityEngine.Object)
+UnityEngine.Rendering.Universal.ScriptableRendererData:ValidateRendererFeatures () (at Library/PackageCache/com.unity.render-pipelines.universal@10.2.2/Runtime/ScriptableRendererData.cs:135)
+UnityEngine.Rendering.Universal.ScriptableRendererData:OnValidate () (at Library/PackageCache/com.unity.render-pipelines.universal@10.2.2/Runtime/ScriptableRendererData.cs:59)
+
+(Filename: Library/PackageCache/com.unity.render-pipelines.universal@10.2.2/Runtime/ScriptableRendererData.cs Line: 135)
+
+Mono: successfully reloaded assembly
+- Completed reload, in  1.068 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 0.87 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2683 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 155.2 MB.
+System memory in use after: 155.1 MB.
+
+Unloading 31 unused Assets to reduce memory usage. Loaded Objects now: 3442.
+Total: 4.184500 ms (FindLiveObjects: 0.637900 ms CreateObjectMapping: 0.245700 ms MarkObjects: 2.689400 ms  DeleteObjects: 0.610200 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.007912 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.71 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+GrassBendRenderer is missing RendererFeatures
+This could be due to missing scripts or compile error.
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object,UnityEngine.Object)
+UnityEngine.Debug:LogError (object,UnityEngine.Object)
+UnityEngine.Rendering.Universal.ScriptableRendererData:ValidateRendererFeatures () (at Library/PackageCache/com.unity.render-pipelines.universal@10.2.2/Runtime/ScriptableRendererData.cs:135)
+UnityEngine.Rendering.Universal.ScriptableRendererData:OnValidate () (at Library/PackageCache/com.unity.render-pipelines.universal@10.2.2/Runtime/ScriptableRendererData.cs:59)
+
+(Filename: Library/PackageCache/com.unity.render-pipelines.universal@10.2.2/Runtime/ScriptableRendererData.cs Line: 135)
+
+Mono: successfully reloaded assembly
+- Completed reload, in  1.085 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 0.70 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2683 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 155.2 MB.
+System memory in use after: 155.1 MB.
+
+Unloading 31 unused Assets to reduce memory usage. Loaded Objects now: 3444.
+Total: 3.618500 ms (FindLiveObjects: 0.563000 ms CreateObjectMapping: 0.312600 ms MarkObjects: 2.342600 ms  DeleteObjects: 0.399200 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.007571 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 1.26 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+GrassBendRenderer is missing RendererFeatures
+This could be due to missing scripts or compile error.
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object,UnityEngine.Object)
+UnityEngine.Debug:LogError (object,UnityEngine.Object)
+UnityEngine.Rendering.Universal.ScriptableRendererData:ValidateRendererFeatures () (at Library/PackageCache/com.unity.render-pipelines.universal@10.2.2/Runtime/ScriptableRendererData.cs:135)
+UnityEngine.Rendering.Universal.ScriptableRendererData:OnValidate () (at Library/PackageCache/com.unity.render-pipelines.universal@10.2.2/Runtime/ScriptableRendererData.cs:59)
+
+(Filename: Library/PackageCache/com.unity.render-pipelines.universal@10.2.2/Runtime/ScriptableRendererData.cs Line: 135)
+
+Mono: successfully reloaded assembly
+- Completed reload, in  1.282 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 0.99 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2683 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 155.2 MB.
+System memory in use after: 155.1 MB.
+
+Unloading 31 unused Assets to reduce memory usage. Loaded Objects now: 3446.
+Total: 5.414700 ms (FindLiveObjects: 0.472500 ms CreateObjectMapping: 0.218200 ms MarkObjects: 3.830100 ms  DeleteObjects: 0.892000 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.006594 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.84 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+GrassBendRenderer is missing RendererFeatures
+This could be due to missing scripts or compile error.
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object,UnityEngine.Object)
+UnityEngine.Debug:LogError (object,UnityEngine.Object)
+UnityEngine.Rendering.Universal.ScriptableRendererData:ValidateRendererFeatures () (at Library/PackageCache/com.unity.render-pipelines.universal@10.2.2/Runtime/ScriptableRendererData.cs:135)
+UnityEngine.Rendering.Universal.ScriptableRendererData:OnValidate () (at Library/PackageCache/com.unity.render-pipelines.universal@10.2.2/Runtime/ScriptableRendererData.cs:59)
+
+(Filename: Library/PackageCache/com.unity.render-pipelines.universal@10.2.2/Runtime/ScriptableRendererData.cs Line: 135)
+
+Mono: successfully reloaded assembly
+- Completed reload, in  1.145 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 1.11 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2683 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 155.2 MB.
+System memory in use after: 155.1 MB.
+
+Unloading 31 unused Assets to reduce memory usage. Loaded Objects now: 3448.
+Total: 4.442500 ms (FindLiveObjects: 0.576200 ms CreateObjectMapping: 0.261900 ms MarkObjects: 2.838900 ms  DeleteObjects: 0.762400 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.006702 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.65 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+GrassBendRenderer is missing RendererFeatures
+This could be due to missing scripts or compile error.
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object,UnityEngine.Object)
+UnityEngine.Debug:LogError (object,UnityEngine.Object)
+UnityEngine.Rendering.Universal.ScriptableRendererData:ValidateRendererFeatures () (at Library/PackageCache/com.unity.render-pipelines.universal@10.2.2/Runtime/ScriptableRendererData.cs:135)
+UnityEngine.Rendering.Universal.ScriptableRendererData:OnValidate () (at Library/PackageCache/com.unity.render-pipelines.universal@10.2.2/Runtime/ScriptableRendererData.cs:59)
+
+(Filename: Library/PackageCache/com.unity.render-pipelines.universal@10.2.2/Runtime/ScriptableRendererData.cs Line: 135)
+
+Mono: successfully reloaded assembly
+- Completed reload, in  0.836 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 0.71 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2683 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 155.2 MB.
+System memory in use after: 155.1 MB.
+
+Unloading 31 unused Assets to reduce memory usage. Loaded Objects now: 3450.
+Total: 3.438500 ms (FindLiveObjects: 0.381800 ms CreateObjectMapping: 0.231100 ms MarkObjects: 2.360400 ms  DeleteObjects: 0.464100 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.007953 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.99 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+GrassBendRenderer is missing RendererFeatures
+This could be due to missing scripts or compile error.
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object,UnityEngine.Object)
+UnityEngine.Debug:LogError (object,UnityEngine.Object)
+UnityEngine.Rendering.Universal.ScriptableRendererData:ValidateRendererFeatures () (at Library/PackageCache/com.unity.render-pipelines.universal@10.2.2/Runtime/ScriptableRendererData.cs:135)
+UnityEngine.Rendering.Universal.ScriptableRendererData:OnValidate () (at Library/PackageCache/com.unity.render-pipelines.universal@10.2.2/Runtime/ScriptableRendererData.cs:59)
+
+(Filename: Library/PackageCache/com.unity.render-pipelines.universal@10.2.2/Runtime/ScriptableRendererData.cs Line: 135)
+
+Mono: successfully reloaded assembly
+- Completed reload, in  1.081 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 1.19 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2683 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 155.2 MB.
+System memory in use after: 155.1 MB.
+
+Unloading 31 unused Assets to reduce memory usage. Loaded Objects now: 3452.
+Total: 5.144400 ms (FindLiveObjects: 0.609700 ms CreateObjectMapping: 0.913300 ms MarkObjects: 3.149700 ms  DeleteObjects: 0.469600 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.006779 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.66 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+GrassBendRenderer is missing RendererFeatures
+This could be due to missing scripts or compile error.
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object,UnityEngine.Object)
+UnityEngine.Debug:LogError (object,UnityEngine.Object)
+UnityEngine.Rendering.Universal.ScriptableRendererData:ValidateRendererFeatures () (at Library/PackageCache/com.unity.render-pipelines.universal@10.2.2/Runtime/ScriptableRendererData.cs:135)
+UnityEngine.Rendering.Universal.ScriptableRendererData:OnValidate () (at Library/PackageCache/com.unity.render-pipelines.universal@10.2.2/Runtime/ScriptableRendererData.cs:59)
+
+(Filename: Library/PackageCache/com.unity.render-pipelines.universal@10.2.2/Runtime/ScriptableRendererData.cs Line: 135)
+
+Mono: successfully reloaded assembly
+- Completed reload, in  0.820 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 0.78 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2683 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 155.2 MB.
+System memory in use after: 155.1 MB.
+
+Unloading 31 unused Assets to reduce memory usage. Loaded Objects now: 3454.
+Total: 3.166900 ms (FindLiveObjects: 0.433300 ms CreateObjectMapping: 0.213800 ms MarkObjects: 2.094300 ms  DeleteObjects: 0.424300 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.008072 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
 Refreshing native plugins compatible for Editor in 1.14 ms, found 2 plugins.
@@ -285,22 +1035,450 @@ UnityEngine.Rendering.Universal.ScriptableRendererData:OnValidate () (at Library
 (Filename: Library/PackageCache/com.unity.render-pipelines.universal@10.2.2/Runtime/ScriptableRendererData.cs Line: 135)
 
 Mono: successfully reloaded assembly
-- Completed reload, in  1.129 seconds
+- Completed reload, in  1.065 seconds
 Platform modules already initialized, skipping
 Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
-Refreshing native plugins compatible for Editor in 1.07 ms, found 2 plugins.
+Refreshing native plugins compatible for Editor in 0.89 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 2683 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 143.7 MB.
-System memory in use after: 143.6 MB.
+System memory in use before: 155.2 MB.
+System memory in use after: 155.1 MB.
 
-Unloading 31 unused Assets to reduce memory usage. Loaded Objects now: 3368.
-Total: 9.118200 ms (FindLiveObjects: 0.980800 ms CreateObjectMapping: 0.294400 ms MarkObjects: 7.258300 ms  DeleteObjects: 0.582200 ms)
+Unloading 31 unused Assets to reduce memory usage. Loaded Objects now: 3456.
+Total: 5.889200 ms (FindLiveObjects: 0.991600 ms CreateObjectMapping: 0.640400 ms MarkObjects: 3.634800 ms  DeleteObjects: 0.620700 ms)
 
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
-Registered in 0.006501 seconds.
+Registered in 0.006962 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.65 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+GrassBendRenderer is missing RendererFeatures
+This could be due to missing scripts or compile error.
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object,UnityEngine.Object)
+UnityEngine.Debug:LogError (object,UnityEngine.Object)
+UnityEngine.Rendering.Universal.ScriptableRendererData:ValidateRendererFeatures () (at Library/PackageCache/com.unity.render-pipelines.universal@10.2.2/Runtime/ScriptableRendererData.cs:135)
+UnityEngine.Rendering.Universal.ScriptableRendererData:OnValidate () (at Library/PackageCache/com.unity.render-pipelines.universal@10.2.2/Runtime/ScriptableRendererData.cs:59)
+
+(Filename: Library/PackageCache/com.unity.render-pipelines.universal@10.2.2/Runtime/ScriptableRendererData.cs Line: 135)
+
+Mono: successfully reloaded assembly
+- Completed reload, in  0.816 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 0.68 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2683 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 155.2 MB.
+System memory in use after: 155.1 MB.
+
+Unloading 31 unused Assets to reduce memory usage. Loaded Objects now: 3458.
+Total: 3.169100 ms (FindLiveObjects: 0.352100 ms CreateObjectMapping: 0.179400 ms MarkObjects: 2.205100 ms  DeleteObjects: 0.431400 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.007159 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.74 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+GrassBendRenderer is missing RendererFeatures
+This could be due to missing scripts or compile error.
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object,UnityEngine.Object)
+UnityEngine.Debug:LogError (object,UnityEngine.Object)
+UnityEngine.Rendering.Universal.ScriptableRendererData:ValidateRendererFeatures () (at Library/PackageCache/com.unity.render-pipelines.universal@10.2.2/Runtime/ScriptableRendererData.cs:135)
+UnityEngine.Rendering.Universal.ScriptableRendererData:OnValidate () (at Library/PackageCache/com.unity.render-pipelines.universal@10.2.2/Runtime/ScriptableRendererData.cs:59)
+
+(Filename: Library/PackageCache/com.unity.render-pipelines.universal@10.2.2/Runtime/ScriptableRendererData.cs Line: 135)
+
+Mono: successfully reloaded assembly
+- Completed reload, in  1.119 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 0.64 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2683 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 155.2 MB.
+System memory in use after: 155.1 MB.
+
+Unloading 31 unused Assets to reduce memory usage. Loaded Objects now: 3460.
+Total: 3.797000 ms (FindLiveObjects: 0.530900 ms CreateObjectMapping: 0.352000 ms MarkObjects: 2.464600 ms  DeleteObjects: 0.447700 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.007659 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.99 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+GrassBendRenderer is missing RendererFeatures
+This could be due to missing scripts or compile error.
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object,UnityEngine.Object)
+UnityEngine.Debug:LogError (object,UnityEngine.Object)
+UnityEngine.Rendering.Universal.ScriptableRendererData:ValidateRendererFeatures () (at Library/PackageCache/com.unity.render-pipelines.universal@10.2.2/Runtime/ScriptableRendererData.cs:135)
+UnityEngine.Rendering.Universal.ScriptableRendererData:OnValidate () (at Library/PackageCache/com.unity.render-pipelines.universal@10.2.2/Runtime/ScriptableRendererData.cs:59)
+
+(Filename: Library/PackageCache/com.unity.render-pipelines.universal@10.2.2/Runtime/ScriptableRendererData.cs Line: 135)
+
+Mono: successfully reloaded assembly
+- Completed reload, in  1.192 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 0.72 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2683 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 155.2 MB.
+System memory in use after: 155.1 MB.
+
+Unloading 31 unused Assets to reduce memory usage. Loaded Objects now: 3462.
+Total: 4.573900 ms (FindLiveObjects: 0.820200 ms CreateObjectMapping: 0.433400 ms MarkObjects: 2.850100 ms  DeleteObjects: 0.468300 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.008695 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.65 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+GrassBendRenderer is missing RendererFeatures
+This could be due to missing scripts or compile error.
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object,UnityEngine.Object)
+UnityEngine.Debug:LogError (object,UnityEngine.Object)
+UnityEngine.Rendering.Universal.ScriptableRendererData:ValidateRendererFeatures () (at Library/PackageCache/com.unity.render-pipelines.universal@10.2.2/Runtime/ScriptableRendererData.cs:135)
+UnityEngine.Rendering.Universal.ScriptableRendererData:OnValidate () (at Library/PackageCache/com.unity.render-pipelines.universal@10.2.2/Runtime/ScriptableRendererData.cs:59)
+
+(Filename: Library/PackageCache/com.unity.render-pipelines.universal@10.2.2/Runtime/ScriptableRendererData.cs Line: 135)
+
+Mono: successfully reloaded assembly
+- Completed reload, in  0.853 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 0.68 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2683 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 155.2 MB.
+System memory in use after: 155.1 MB.
+
+Unloading 31 unused Assets to reduce memory usage. Loaded Objects now: 3464.
+Total: 3.230100 ms (FindLiveObjects: 0.370800 ms CreateObjectMapping: 0.205300 ms MarkObjects: 2.267500 ms  DeleteObjects: 0.385500 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.006786 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.67 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+GrassBendRenderer is missing RendererFeatures
+This could be due to missing scripts or compile error.
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object,UnityEngine.Object)
+UnityEngine.Debug:LogError (object,UnityEngine.Object)
+UnityEngine.Rendering.Universal.ScriptableRendererData:ValidateRendererFeatures () (at Library/PackageCache/com.unity.render-pipelines.universal@10.2.2/Runtime/ScriptableRendererData.cs:135)
+UnityEngine.Rendering.Universal.ScriptableRendererData:OnValidate () (at Library/PackageCache/com.unity.render-pipelines.universal@10.2.2/Runtime/ScriptableRendererData.cs:59)
+
+(Filename: Library/PackageCache/com.unity.render-pipelines.universal@10.2.2/Runtime/ScriptableRendererData.cs Line: 135)
+
+Mono: successfully reloaded assembly
+- Completed reload, in  0.839 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 0.68 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2683 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 155.3 MB.
+System memory in use after: 155.1 MB.
+
+Unloading 31 unused Assets to reduce memory usage. Loaded Objects now: 3466.
+Total: 3.226700 ms (FindLiveObjects: 0.382700 ms CreateObjectMapping: 0.234900 ms MarkObjects: 2.196200 ms  DeleteObjects: 0.411600 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.007905 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.71 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+GrassBendRenderer is missing RendererFeatures
+This could be due to missing scripts or compile error.
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object,UnityEngine.Object)
+UnityEngine.Debug:LogError (object,UnityEngine.Object)
+UnityEngine.Rendering.Universal.ScriptableRendererData:ValidateRendererFeatures () (at Library/PackageCache/com.unity.render-pipelines.universal@10.2.2/Runtime/ScriptableRendererData.cs:135)
+UnityEngine.Rendering.Universal.ScriptableRendererData:OnValidate () (at Library/PackageCache/com.unity.render-pipelines.universal@10.2.2/Runtime/ScriptableRendererData.cs:59)
+
+(Filename: Library/PackageCache/com.unity.render-pipelines.universal@10.2.2/Runtime/ScriptableRendererData.cs Line: 135)
+
+Mono: successfully reloaded assembly
+- Completed reload, in  1.041 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 0.82 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2683 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 155.3 MB.
+System memory in use after: 155.2 MB.
+
+Unloading 31 unused Assets to reduce memory usage. Loaded Objects now: 3468.
+Total: 3.085800 ms (FindLiveObjects: 0.378000 ms CreateObjectMapping: 0.153300 ms MarkObjects: 2.144700 ms  DeleteObjects: 0.409000 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.006773 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.72 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+GrassBendRenderer is missing RendererFeatures
+This could be due to missing scripts or compile error.
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object,UnityEngine.Object)
+UnityEngine.Debug:LogError (object,UnityEngine.Object)
+UnityEngine.Rendering.Universal.ScriptableRendererData:ValidateRendererFeatures () (at Library/PackageCache/com.unity.render-pipelines.universal@10.2.2/Runtime/ScriptableRendererData.cs:135)
+UnityEngine.Rendering.Universal.ScriptableRendererData:OnValidate () (at Library/PackageCache/com.unity.render-pipelines.universal@10.2.2/Runtime/ScriptableRendererData.cs:59)
+
+(Filename: Library/PackageCache/com.unity.render-pipelines.universal@10.2.2/Runtime/ScriptableRendererData.cs Line: 135)
+
+Mono: successfully reloaded assembly
+- Completed reload, in  0.817 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 0.68 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2683 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 155.3 MB.
+System memory in use after: 155.2 MB.
+
+Unloading 31 unused Assets to reduce memory usage. Loaded Objects now: 3470.
+Total: 3.669400 ms (FindLiveObjects: 0.596600 ms CreateObjectMapping: 0.286600 ms MarkObjects: 2.336700 ms  DeleteObjects: 0.447500 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.006837 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 1.07 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+GrassBendRenderer is missing RendererFeatures
+This could be due to missing scripts or compile error.
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object,UnityEngine.Object)
+UnityEngine.Debug:LogError (object,UnityEngine.Object)
+UnityEngine.Rendering.Universal.ScriptableRendererData:ValidateRendererFeatures () (at Library/PackageCache/com.unity.render-pipelines.universal@10.2.2/Runtime/ScriptableRendererData.cs:135)
+UnityEngine.Rendering.Universal.ScriptableRendererData:OnValidate () (at Library/PackageCache/com.unity.render-pipelines.universal@10.2.2/Runtime/ScriptableRendererData.cs:59)
+
+(Filename: Library/PackageCache/com.unity.render-pipelines.universal@10.2.2/Runtime/ScriptableRendererData.cs Line: 135)
+
+Mono: successfully reloaded assembly
+- Completed reload, in  1.048 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 1.24 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2683 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 155.3 MB.
+System memory in use after: 155.2 MB.
+
+Unloading 31 unused Assets to reduce memory usage. Loaded Objects now: 3472.
+Total: 5.093700 ms (FindLiveObjects: 0.540900 ms CreateObjectMapping: 0.253600 ms MarkObjects: 3.703900 ms  DeleteObjects: 0.592500 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.006867 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.70 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+GrassBendRenderer is missing RendererFeatures
+This could be due to missing scripts or compile error.
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object,UnityEngine.Object)
+UnityEngine.Debug:LogError (object,UnityEngine.Object)
+UnityEngine.Rendering.Universal.ScriptableRendererData:ValidateRendererFeatures () (at Library/PackageCache/com.unity.render-pipelines.universal@10.2.2/Runtime/ScriptableRendererData.cs:135)
+UnityEngine.Rendering.Universal.ScriptableRendererData:OnValidate () (at Library/PackageCache/com.unity.render-pipelines.universal@10.2.2/Runtime/ScriptableRendererData.cs:59)
+
+(Filename: Library/PackageCache/com.unity.render-pipelines.universal@10.2.2/Runtime/ScriptableRendererData.cs Line: 135)
+
+Mono: successfully reloaded assembly
+- Completed reload, in  0.827 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 0.66 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2683 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 155.3 MB.
+System memory in use after: 155.2 MB.
+
+Unloading 31 unused Assets to reduce memory usage. Loaded Objects now: 3474.
+Total: 2.942100 ms (FindLiveObjects: 0.317300 ms CreateObjectMapping: 0.097100 ms MarkObjects: 2.125500 ms  DeleteObjects: 0.400900 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.007419 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.88 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+GrassBendRenderer is missing RendererFeatures
+This could be due to missing scripts or compile error.
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object,UnityEngine.Object)
+UnityEngine.Debug:LogError (object,UnityEngine.Object)
+UnityEngine.Rendering.Universal.ScriptableRendererData:ValidateRendererFeatures () (at Library/PackageCache/com.unity.render-pipelines.universal@10.2.2/Runtime/ScriptableRendererData.cs:135)
+UnityEngine.Rendering.Universal.ScriptableRendererData:OnValidate () (at Library/PackageCache/com.unity.render-pipelines.universal@10.2.2/Runtime/ScriptableRendererData.cs:59)
+
+(Filename: Library/PackageCache/com.unity.render-pipelines.universal@10.2.2/Runtime/ScriptableRendererData.cs Line: 135)
+
+Mono: successfully reloaded assembly
+- Completed reload, in  1.048 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 1.20 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2683 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 155.3 MB.
+System memory in use after: 155.2 MB.
+
+Unloading 31 unused Assets to reduce memory usage. Loaded Objects now: 3476.
+Total: 4.394600 ms (FindLiveObjects: 0.589300 ms CreateObjectMapping: 0.243200 ms MarkObjects: 3.142600 ms  DeleteObjects: 0.417200 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 3258.296806 seconds.
+  path: Assets/Scenes/AdventureZone.unity
+  artifactKey: Guid(b62ced9727b3ab148a194fa194dcb833) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/AdventureZone.unity using Guid(b62ced9727b3ab148a194fa194dcb833) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ba0d2cf0b8c7bc820455852f9181f36d') in 0.014187 seconds
+  Import took 0.019390 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.008189 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.77 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+GrassBendRenderer is missing RendererFeatures
+This could be due to missing scripts or compile error.
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object,UnityEngine.Object)
+UnityEngine.Debug:LogError (object,UnityEngine.Object)
+UnityEngine.Rendering.Universal.ScriptableRendererData:ValidateRendererFeatures () (at Library/PackageCache/com.unity.render-pipelines.universal@10.2.2/Runtime/ScriptableRendererData.cs:135)
+UnityEngine.Rendering.Universal.ScriptableRendererData:OnValidate () (at Library/PackageCache/com.unity.render-pipelines.universal@10.2.2/Runtime/ScriptableRendererData.cs:59)
+
+(Filename: Library/PackageCache/com.unity.render-pipelines.universal@10.2.2/Runtime/ScriptableRendererData.cs Line: 135)
+
+Mono: successfully reloaded assembly
+- Completed reload, in  1.062 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 0.93 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2683 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 155.3 MB.
+System memory in use after: 155.2 MB.
+
+Unloading 31 unused Assets to reduce memory usage. Loaded Objects now: 3478.
+Total: 5.660500 ms (FindLiveObjects: 0.506500 ms CreateObjectMapping: 0.687600 ms MarkObjects: 3.933600 ms  DeleteObjects: 0.531500 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.008745 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.75 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+GrassBendRenderer is missing RendererFeatures
+This could be due to missing scripts or compile error.
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object,UnityEngine.Object)
+UnityEngine.Debug:LogError (object,UnityEngine.Object)
+UnityEngine.Rendering.Universal.ScriptableRendererData:ValidateRendererFeatures () (at Library/PackageCache/com.unity.render-pipelines.universal@10.2.2/Runtime/ScriptableRendererData.cs:135)
+UnityEngine.Rendering.Universal.ScriptableRendererData:OnValidate () (at Library/PackageCache/com.unity.render-pipelines.universal@10.2.2/Runtime/ScriptableRendererData.cs:59)
+
+(Filename: Library/PackageCache/com.unity.render-pipelines.universal@10.2.2/Runtime/ScriptableRendererData.cs Line: 135)
+
+Mono: successfully reloaded assembly
+- Completed reload, in  1.290 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 1.63 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2683 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 155.3 MB.
+System memory in use after: 155.2 MB.
+
+Unloading 31 unused Assets to reduce memory usage. Loaded Objects now: 3480.
+Total: 4.824900 ms (FindLiveObjects: 0.436500 ms CreateObjectMapping: 0.170000 ms MarkObjects: 3.765000 ms  DeleteObjects: 0.451500 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.006627 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
 Refreshing native plugins compatible for Editor in 0.66 ms, found 2 plugins.
@@ -320,22 +1498,442 @@ UnityEngine.Rendering.Universal.ScriptableRendererData:OnValidate () (at Library
 (Filename: Library/PackageCache/com.unity.render-pipelines.universal@10.2.2/Runtime/ScriptableRendererData.cs Line: 135)
 
 Mono: successfully reloaded assembly
-- Completed reload, in  0.833 seconds
+- Completed reload, in  0.823 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 0.68 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2683 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 155.3 MB.
+System memory in use after: 155.2 MB.
+
+Unloading 31 unused Assets to reduce memory usage. Loaded Objects now: 3482.
+Total: 3.013100 ms (FindLiveObjects: 0.373900 ms CreateObjectMapping: 0.200200 ms MarkObjects: 2.032400 ms  DeleteObjects: 0.405500 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.007804 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.98 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+GrassBendRenderer is missing RendererFeatures
+This could be due to missing scripts or compile error.
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object,UnityEngine.Object)
+UnityEngine.Debug:LogError (object,UnityEngine.Object)
+UnityEngine.Rendering.Universal.ScriptableRendererData:ValidateRendererFeatures () (at Library/PackageCache/com.unity.render-pipelines.universal@10.2.2/Runtime/ScriptableRendererData.cs:135)
+UnityEngine.Rendering.Universal.ScriptableRendererData:OnValidate () (at Library/PackageCache/com.unity.render-pipelines.universal@10.2.2/Runtime/ScriptableRendererData.cs:59)
+
+(Filename: Library/PackageCache/com.unity.render-pipelines.universal@10.2.2/Runtime/ScriptableRendererData.cs Line: 135)
+
+Mono: successfully reloaded assembly
+- Completed reload, in  1.046 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 1.42 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2683 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 155.3 MB.
+System memory in use after: 155.2 MB.
+
+Unloading 31 unused Assets to reduce memory usage. Loaded Objects now: 3484.
+Total: 6.069000 ms (FindLiveObjects: 0.968400 ms CreateObjectMapping: 0.391700 ms MarkObjects: 4.154300 ms  DeleteObjects: 0.553200 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.006623 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.72 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+GrassBendRenderer is missing RendererFeatures
+This could be due to missing scripts or compile error.
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object,UnityEngine.Object)
+UnityEngine.Debug:LogError (object,UnityEngine.Object)
+UnityEngine.Rendering.Universal.ScriptableRendererData:ValidateRendererFeatures () (at Library/PackageCache/com.unity.render-pipelines.universal@10.2.2/Runtime/ScriptableRendererData.cs:135)
+UnityEngine.Rendering.Universal.ScriptableRendererData:OnValidate () (at Library/PackageCache/com.unity.render-pipelines.universal@10.2.2/Runtime/ScriptableRendererData.cs:59)
+
+(Filename: Library/PackageCache/com.unity.render-pipelines.universal@10.2.2/Runtime/ScriptableRendererData.cs Line: 135)
+
+Mono: successfully reloaded assembly
+- Completed reload, in  0.851 seconds
 Platform modules already initialized, skipping
 Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
 Refreshing native plugins compatible for Editor in 0.65 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 2683 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 143.7 MB.
-System memory in use after: 143.6 MB.
+System memory in use before: 155.3 MB.
+System memory in use after: 155.2 MB.
 
-Unloading 31 unused Assets to reduce memory usage. Loaded Objects now: 3370.
-Total: 2.883100 ms (FindLiveObjects: 0.379000 ms CreateObjectMapping: 0.197200 ms MarkObjects: 1.936800 ms  DeleteObjects: 0.368900 ms)
+Unloading 31 unused Assets to reduce memory usage. Loaded Objects now: 3486.
+Total: 2.961300 ms (FindLiveObjects: 0.394300 ms CreateObjectMapping: 0.211600 ms MarkObjects: 1.942900 ms  DeleteObjects: 0.411500 ms)
 
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
-Registered in 0.006541 seconds.
+Registered in 0.007018 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 1.08 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+GrassBendRenderer is missing RendererFeatures
+This could be due to missing scripts or compile error.
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object,UnityEngine.Object)
+UnityEngine.Debug:LogError (object,UnityEngine.Object)
+UnityEngine.Rendering.Universal.ScriptableRendererData:ValidateRendererFeatures () (at Library/PackageCache/com.unity.render-pipelines.universal@10.2.2/Runtime/ScriptableRendererData.cs:135)
+UnityEngine.Rendering.Universal.ScriptableRendererData:OnValidate () (at Library/PackageCache/com.unity.render-pipelines.universal@10.2.2/Runtime/ScriptableRendererData.cs:59)
+
+(Filename: Library/PackageCache/com.unity.render-pipelines.universal@10.2.2/Runtime/ScriptableRendererData.cs Line: 135)
+
+Mono: successfully reloaded assembly
+- Completed reload, in  1.059 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 1.45 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2683 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 155.3 MB.
+System memory in use after: 155.2 MB.
+
+Unloading 31 unused Assets to reduce memory usage. Loaded Objects now: 3488.
+Total: 4.472300 ms (FindLiveObjects: 0.504500 ms CreateObjectMapping: 0.176700 ms MarkObjects: 3.342100 ms  DeleteObjects: 0.447400 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.006777 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.65 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+GrassBendRenderer is missing RendererFeatures
+This could be due to missing scripts or compile error.
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object,UnityEngine.Object)
+UnityEngine.Debug:LogError (object,UnityEngine.Object)
+UnityEngine.Rendering.Universal.ScriptableRendererData:ValidateRendererFeatures () (at Library/PackageCache/com.unity.render-pipelines.universal@10.2.2/Runtime/ScriptableRendererData.cs:135)
+UnityEngine.Rendering.Universal.ScriptableRendererData:OnValidate () (at Library/PackageCache/com.unity.render-pipelines.universal@10.2.2/Runtime/ScriptableRendererData.cs:59)
+
+(Filename: Library/PackageCache/com.unity.render-pipelines.universal@10.2.2/Runtime/ScriptableRendererData.cs Line: 135)
+
+Mono: successfully reloaded assembly
+- Completed reload, in  0.811 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 0.69 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2683 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 155.4 MB.
+System memory in use after: 155.2 MB.
+
+Unloading 31 unused Assets to reduce memory usage. Loaded Objects now: 3490.
+Total: 3.519500 ms (FindLiveObjects: 0.370300 ms CreateObjectMapping: 0.206500 ms MarkObjects: 2.532100 ms  DeleteObjects: 0.409100 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.008072 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 1.18 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+GrassBendRenderer is missing RendererFeatures
+This could be due to missing scripts or compile error.
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object,UnityEngine.Object)
+UnityEngine.Debug:LogError (object,UnityEngine.Object)
+UnityEngine.Rendering.Universal.ScriptableRendererData:ValidateRendererFeatures () (at Library/PackageCache/com.unity.render-pipelines.universal@10.2.2/Runtime/ScriptableRendererData.cs:135)
+UnityEngine.Rendering.Universal.ScriptableRendererData:OnValidate () (at Library/PackageCache/com.unity.render-pipelines.universal@10.2.2/Runtime/ScriptableRendererData.cs:59)
+
+(Filename: Library/PackageCache/com.unity.render-pipelines.universal@10.2.2/Runtime/ScriptableRendererData.cs Line: 135)
+
+Mono: successfully reloaded assembly
+- Completed reload, in  1.043 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 0.85 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2683 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 155.4 MB.
+System memory in use after: 155.2 MB.
+
+Unloading 31 unused Assets to reduce memory usage. Loaded Objects now: 3492.
+Total: 4.925700 ms (FindLiveObjects: 0.713700 ms CreateObjectMapping: 0.242300 ms MarkObjects: 3.216100 ms  DeleteObjects: 0.751400 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.006528 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.65 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+GrassBendRenderer is missing RendererFeatures
+This could be due to missing scripts or compile error.
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object,UnityEngine.Object)
+UnityEngine.Debug:LogError (object,UnityEngine.Object)
+UnityEngine.Rendering.Universal.ScriptableRendererData:ValidateRendererFeatures () (at Library/PackageCache/com.unity.render-pipelines.universal@10.2.2/Runtime/ScriptableRendererData.cs:135)
+UnityEngine.Rendering.Universal.ScriptableRendererData:OnValidate () (at Library/PackageCache/com.unity.render-pipelines.universal@10.2.2/Runtime/ScriptableRendererData.cs:59)
+
+(Filename: Library/PackageCache/com.unity.render-pipelines.universal@10.2.2/Runtime/ScriptableRendererData.cs Line: 135)
+
+Mono: successfully reloaded assembly
+- Completed reload, in  0.831 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 0.69 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2683 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 155.4 MB.
+System memory in use after: 155.2 MB.
+
+Unloading 31 unused Assets to reduce memory usage. Loaded Objects now: 3494.
+Total: 3.766800 ms (FindLiveObjects: 0.431600 ms CreateObjectMapping: 0.312500 ms MarkObjects: 2.621000 ms  DeleteObjects: 0.400100 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.007503 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.90 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+GrassBendRenderer is missing RendererFeatures
+This could be due to missing scripts or compile error.
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object,UnityEngine.Object)
+UnityEngine.Debug:LogError (object,UnityEngine.Object)
+UnityEngine.Rendering.Universal.ScriptableRendererData:ValidateRendererFeatures () (at Library/PackageCache/com.unity.render-pipelines.universal@10.2.2/Runtime/ScriptableRendererData.cs:135)
+UnityEngine.Rendering.Universal.ScriptableRendererData:OnValidate () (at Library/PackageCache/com.unity.render-pipelines.universal@10.2.2/Runtime/ScriptableRendererData.cs:59)
+
+(Filename: Library/PackageCache/com.unity.render-pipelines.universal@10.2.2/Runtime/ScriptableRendererData.cs Line: 135)
+
+Mono: successfully reloaded assembly
+- Completed reload, in  1.046 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 1.19 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2683 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 155.4 MB.
+System memory in use after: 155.3 MB.
+
+Unloading 31 unused Assets to reduce memory usage. Loaded Objects now: 3496.
+Total: 5.733800 ms (FindLiveObjects: 0.603900 ms CreateObjectMapping: 0.291700 ms MarkObjects: 4.060600 ms  DeleteObjects: 0.775800 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.006954 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.68 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+GrassBendRenderer is missing RendererFeatures
+This could be due to missing scripts or compile error.
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object,UnityEngine.Object)
+UnityEngine.Debug:LogError (object,UnityEngine.Object)
+UnityEngine.Rendering.Universal.ScriptableRendererData:ValidateRendererFeatures () (at Library/PackageCache/com.unity.render-pipelines.universal@10.2.2/Runtime/ScriptableRendererData.cs:135)
+UnityEngine.Rendering.Universal.ScriptableRendererData:OnValidate () (at Library/PackageCache/com.unity.render-pipelines.universal@10.2.2/Runtime/ScriptableRendererData.cs:59)
+
+(Filename: Library/PackageCache/com.unity.render-pipelines.universal@10.2.2/Runtime/ScriptableRendererData.cs Line: 135)
+
+Mono: successfully reloaded assembly
+- Completed reload, in  0.829 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 0.71 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2683 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 155.4 MB.
+System memory in use after: 155.3 MB.
+
+Unloading 31 unused Assets to reduce memory usage. Loaded Objects now: 3498.
+Total: 3.061900 ms (FindLiveObjects: 0.398800 ms CreateObjectMapping: 0.237400 ms MarkObjects: 2.035200 ms  DeleteObjects: 0.389200 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.007873 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.90 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+GrassBendRenderer is missing RendererFeatures
+This could be due to missing scripts or compile error.
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object,UnityEngine.Object)
+UnityEngine.Debug:LogError (object,UnityEngine.Object)
+UnityEngine.Rendering.Universal.ScriptableRendererData:ValidateRendererFeatures () (at Library/PackageCache/com.unity.render-pipelines.universal@10.2.2/Runtime/ScriptableRendererData.cs:135)
+UnityEngine.Rendering.Universal.ScriptableRendererData:OnValidate () (at Library/PackageCache/com.unity.render-pipelines.universal@10.2.2/Runtime/ScriptableRendererData.cs:59)
+
+(Filename: Library/PackageCache/com.unity.render-pipelines.universal@10.2.2/Runtime/ScriptableRendererData.cs Line: 135)
+
+Mono: successfully reloaded assembly
+- Completed reload, in  1.033 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 0.81 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2683 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 155.4 MB.
+System memory in use after: 155.3 MB.
+
+Unloading 31 unused Assets to reduce memory usage. Loaded Objects now: 3500.
+Total: 5.587100 ms (FindLiveObjects: 0.944700 ms CreateObjectMapping: 0.370700 ms MarkObjects: 3.766500 ms  DeleteObjects: 0.501500 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.006733 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.66 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+GrassBendRenderer is missing RendererFeatures
+This could be due to missing scripts or compile error.
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object,UnityEngine.Object)
+UnityEngine.Debug:LogError (object,UnityEngine.Object)
+UnityEngine.Rendering.Universal.ScriptableRendererData:ValidateRendererFeatures () (at Library/PackageCache/com.unity.render-pipelines.universal@10.2.2/Runtime/ScriptableRendererData.cs:135)
+UnityEngine.Rendering.Universal.ScriptableRendererData:OnValidate () (at Library/PackageCache/com.unity.render-pipelines.universal@10.2.2/Runtime/ScriptableRendererData.cs:59)
+
+(Filename: Library/PackageCache/com.unity.render-pipelines.universal@10.2.2/Runtime/ScriptableRendererData.cs Line: 135)
+
+Mono: successfully reloaded assembly
+- Completed reload, in  0.820 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 0.68 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2683 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 155.4 MB.
+System memory in use after: 155.3 MB.
+
+Unloading 31 unused Assets to reduce memory usage. Loaded Objects now: 3502.
+Total: 3.171100 ms (FindLiveObjects: 0.371900 ms CreateObjectMapping: 0.241400 ms MarkObjects: 2.160700 ms  DeleteObjects: 0.396000 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.010615 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.83 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+GrassBendRenderer is missing RendererFeatures
+This could be due to missing scripts or compile error.
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object,UnityEngine.Object)
+UnityEngine.Debug:LogError (object,UnityEngine.Object)
+UnityEngine.Rendering.Universal.ScriptableRendererData:ValidateRendererFeatures () (at Library/PackageCache/com.unity.render-pipelines.universal@10.2.2/Runtime/ScriptableRendererData.cs:135)
+UnityEngine.Rendering.Universal.ScriptableRendererData:OnValidate () (at Library/PackageCache/com.unity.render-pipelines.universal@10.2.2/Runtime/ScriptableRendererData.cs:59)
+
+(Filename: Library/PackageCache/com.unity.render-pipelines.universal@10.2.2/Runtime/ScriptableRendererData.cs Line: 135)
+
+Mono: successfully reloaded assembly
+- Completed reload, in  1.057 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 1.24 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2683 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 155.4 MB.
+System memory in use after: 155.3 MB.
+
+Unloading 31 unused Assets to reduce memory usage. Loaded Objects now: 3504.
+Total: 4.964600 ms (FindLiveObjects: 0.480900 ms CreateObjectMapping: 0.180100 ms MarkObjects: 3.764400 ms  DeleteObjects: 0.537500 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.007011 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.73 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+GrassBendRenderer is missing RendererFeatures
+This could be due to missing scripts or compile error.
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object,UnityEngine.Object)
+UnityEngine.Debug:LogError (object,UnityEngine.Object)
+UnityEngine.Rendering.Universal.ScriptableRendererData:ValidateRendererFeatures () (at Library/PackageCache/com.unity.render-pipelines.universal@10.2.2/Runtime/ScriptableRendererData.cs:135)
+UnityEngine.Rendering.Universal.ScriptableRendererData:OnValidate () (at Library/PackageCache/com.unity.render-pipelines.universal@10.2.2/Runtime/ScriptableRendererData.cs:59)
+
+(Filename: Library/PackageCache/com.unity.render-pipelines.universal@10.2.2/Runtime/ScriptableRendererData.cs Line: 135)
+
+Mono: successfully reloaded assembly
+- Completed reload, in  0.837 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 0.70 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2683 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 155.4 MB.
+System memory in use after: 155.3 MB.
+
+Unloading 31 unused Assets to reduce memory usage. Loaded Objects now: 3506.
+Total: 3.183100 ms (FindLiveObjects: 0.408300 ms CreateObjectMapping: 0.223900 ms MarkObjects: 2.129600 ms  DeleteObjects: 0.420100 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.009868 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
 Refreshing native plugins compatible for Editor in 0.79 ms, found 2 plugins.
@@ -358,22 +1956,22 @@ Mono: successfully reloaded assembly
 - Completed reload, in  1.127 seconds
 Platform modules already initialized, skipping
 Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
-Refreshing native plugins compatible for Editor in 1.00 ms, found 2 plugins.
+Refreshing native plugins compatible for Editor in 1.09 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 2683 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 143.7 MB.
-System memory in use after: 143.6 MB.
+System memory in use before: 155.4 MB.
+System memory in use after: 155.3 MB.
 
-Unloading 31 unused Assets to reduce memory usage. Loaded Objects now: 3372.
-Total: 5.410100 ms (FindLiveObjects: 1.119000 ms CreateObjectMapping: 0.507600 ms MarkObjects: 3.249800 ms  DeleteObjects: 0.531800 ms)
+Unloading 31 unused Assets to reduce memory usage. Loaded Objects now: 3508.
+Total: 4.777600 ms (FindLiveObjects: 0.499700 ms CreateObjectMapping: 0.225300 ms MarkObjects: 3.512200 ms  DeleteObjects: 0.538900 ms)
 
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
-Registered in 0.006243 seconds.
+Registered in 0.006571 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.66 ms, found 2 plugins.
+Refreshing native plugins compatible for Editor in 0.72 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Invoked RoslynAnalysisRunner static constructor.
 RoslynAnalysisRunner will not be running.
@@ -390,96 +1988,26 @@ UnityEngine.Rendering.Universal.ScriptableRendererData:OnValidate () (at Library
 (Filename: Library/PackageCache/com.unity.render-pipelines.universal@10.2.2/Runtime/ScriptableRendererData.cs Line: 135)
 
 Mono: successfully reloaded assembly
-- Completed reload, in  0.827 seconds
+- Completed reload, in  0.820 seconds
 Platform modules already initialized, skipping
 Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
 Refreshing native plugins compatible for Editor in 0.69 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 2683 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 143.7 MB.
-System memory in use after: 143.6 MB.
+System memory in use before: 155.4 MB.
+System memory in use after: 155.3 MB.
 
-Unloading 31 unused Assets to reduce memory usage. Loaded Objects now: 3374.
-Total: 3.136400 ms (FindLiveObjects: 0.352000 ms CreateObjectMapping: 0.189800 ms MarkObjects: 2.108200 ms  DeleteObjects: 0.484900 ms)
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.007775 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.76 ms, found 2 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Invoked RoslynAnalysisRunner static constructor.
-RoslynAnalysisRunner will not be running.
-RoslynAnalysisRunner has terminated.
-GrassBendRenderer is missing RendererFeatures
-This could be due to missing scripts or compile error.
-UnityEngine.StackTraceUtility:ExtractStackTrace ()
-UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
-UnityEngine.Logger:Log (UnityEngine.LogType,object,UnityEngine.Object)
-UnityEngine.Debug:LogError (object,UnityEngine.Object)
-UnityEngine.Rendering.Universal.ScriptableRendererData:ValidateRendererFeatures () (at Library/PackageCache/com.unity.render-pipelines.universal@10.2.2/Runtime/ScriptableRendererData.cs:135)
-UnityEngine.Rendering.Universal.ScriptableRendererData:OnValidate () (at Library/PackageCache/com.unity.render-pipelines.universal@10.2.2/Runtime/ScriptableRendererData.cs:59)
-
-(Filename: Library/PackageCache/com.unity.render-pipelines.universal@10.2.2/Runtime/ScriptableRendererData.cs Line: 135)
-
-Mono: successfully reloaded assembly
-- Completed reload, in  1.212 seconds
-Platform modules already initialized, skipping
-Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
-Refreshing native plugins compatible for Editor in 0.71 ms, found 2 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 2683 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 143.7 MB.
-System memory in use after: 143.6 MB.
-
-Unloading 31 unused Assets to reduce memory usage. Loaded Objects now: 3376.
-Total: 3.377000 ms (FindLiveObjects: 0.369800 ms CreateObjectMapping: 0.157100 ms MarkObjects: 2.443000 ms  DeleteObjects: 0.406000 ms)
+Unloading 31 unused Assets to reduce memory usage. Loaded Objects now: 3510.
+Total: 3.046700 ms (FindLiveObjects: 0.388400 ms CreateObjectMapping: 0.208600 ms MarkObjects: 2.022000 ms  DeleteObjects: 0.426200 ms)
 
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
-Registered in 0.006400 seconds.
+Registered in 0.006836 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.68 ms, found 2 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Invoked RoslynAnalysisRunner static constructor.
-RoslynAnalysisRunner will not be running.
-RoslynAnalysisRunner has terminated.
-GrassBendRenderer is missing RendererFeatures
-This could be due to missing scripts or compile error.
-UnityEngine.StackTraceUtility:ExtractStackTrace ()
-UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
-UnityEngine.Logger:Log (UnityEngine.LogType,object,UnityEngine.Object)
-UnityEngine.Debug:LogError (object,UnityEngine.Object)
-UnityEngine.Rendering.Universal.ScriptableRendererData:ValidateRendererFeatures () (at Library/PackageCache/com.unity.render-pipelines.universal@10.2.2/Runtime/ScriptableRendererData.cs:135)
-UnityEngine.Rendering.Universal.ScriptableRendererData:OnValidate () (at Library/PackageCache/com.unity.render-pipelines.universal@10.2.2/Runtime/ScriptableRendererData.cs:59)
-
-(Filename: Library/PackageCache/com.unity.render-pipelines.universal@10.2.2/Runtime/ScriptableRendererData.cs Line: 135)
-
-Mono: successfully reloaded assembly
-- Completed reload, in  0.802 seconds
-Platform modules already initialized, skipping
-Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
 Refreshing native plugins compatible for Editor in 0.72 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 2683 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 143.7 MB.
-System memory in use after: 143.6 MB.
-
-Unloading 31 unused Assets to reduce memory usage. Loaded Objects now: 3378.
-Total: 2.983000 ms (FindLiveObjects: 0.385400 ms CreateObjectMapping: 0.223800 ms MarkObjects: 1.985800 ms  DeleteObjects: 0.386900 ms)
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.006861 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.92 ms, found 2 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
 Invoked RoslynAnalysisRunner static constructor.
 RoslynAnalysisRunner will not be running.
 RoslynAnalysisRunner has terminated.
@@ -495,232 +2023,22 @@ UnityEngine.Rendering.Universal.ScriptableRendererData:OnValidate () (at Library
 (Filename: Library/PackageCache/com.unity.render-pipelines.universal@10.2.2/Runtime/ScriptableRendererData.cs Line: 135)
 
 Mono: successfully reloaded assembly
-- Completed reload, in  1.102 seconds
+- Completed reload, in  1.033 seconds
 Platform modules already initialized, skipping
 Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
-Refreshing native plugins compatible for Editor in 1.31 ms, found 2 plugins.
+Refreshing native plugins compatible for Editor in 1.14 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 2683 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 143.7 MB.
-System memory in use after: 143.6 MB.
+System memory in use before: 155.4 MB.
+System memory in use after: 155.3 MB.
 
-Unloading 31 unused Assets to reduce memory usage. Loaded Objects now: 3380.
-Total: 4.332400 ms (FindLiveObjects: 0.469900 ms CreateObjectMapping: 0.176500 ms MarkObjects: 3.150700 ms  DeleteObjects: 0.532000 ms)
+Unloading 31 unused Assets to reduce memory usage. Loaded Objects now: 3512.
+Total: 5.013700 ms (FindLiveObjects: 0.530600 ms CreateObjectMapping: 0.275000 ms MarkObjects: 3.459600 ms  DeleteObjects: 0.745600 ms)
 
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
-Registered in 0.006594 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.81 ms, found 2 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Invoked RoslynAnalysisRunner static constructor.
-RoslynAnalysisRunner will not be running.
-RoslynAnalysisRunner has terminated.
-GrassBendRenderer is missing RendererFeatures
-This could be due to missing scripts or compile error.
-UnityEngine.StackTraceUtility:ExtractStackTrace ()
-UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
-UnityEngine.Logger:Log (UnityEngine.LogType,object,UnityEngine.Object)
-UnityEngine.Debug:LogError (object,UnityEngine.Object)
-UnityEngine.Rendering.Universal.ScriptableRendererData:ValidateRendererFeatures () (at Library/PackageCache/com.unity.render-pipelines.universal@10.2.2/Runtime/ScriptableRendererData.cs:135)
-UnityEngine.Rendering.Universal.ScriptableRendererData:OnValidate () (at Library/PackageCache/com.unity.render-pipelines.universal@10.2.2/Runtime/ScriptableRendererData.cs:59)
-
-(Filename: Library/PackageCache/com.unity.render-pipelines.universal@10.2.2/Runtime/ScriptableRendererData.cs Line: 135)
-
-Mono: successfully reloaded assembly
-- Completed reload, in  0.909 seconds
-Platform modules already initialized, skipping
-Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
-Refreshing native plugins compatible for Editor in 0.67 ms, found 2 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 2683 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 143.7 MB.
-System memory in use after: 143.6 MB.
-
-Unloading 31 unused Assets to reduce memory usage. Loaded Objects now: 3382.
-Total: 3.003600 ms (FindLiveObjects: 0.329600 ms CreateObjectMapping: 0.136900 ms MarkObjects: 2.160800 ms  DeleteObjects: 0.375400 ms)
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.006798 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.94 ms, found 2 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Invoked RoslynAnalysisRunner static constructor.
-RoslynAnalysisRunner will not be running.
-RoslynAnalysisRunner has terminated.
-GrassBendRenderer is missing RendererFeatures
-This could be due to missing scripts or compile error.
-UnityEngine.StackTraceUtility:ExtractStackTrace ()
-UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
-UnityEngine.Logger:Log (UnityEngine.LogType,object,UnityEngine.Object)
-UnityEngine.Debug:LogError (object,UnityEngine.Object)
-UnityEngine.Rendering.Universal.ScriptableRendererData:ValidateRendererFeatures () (at Library/PackageCache/com.unity.render-pipelines.universal@10.2.2/Runtime/ScriptableRendererData.cs:135)
-UnityEngine.Rendering.Universal.ScriptableRendererData:OnValidate () (at Library/PackageCache/com.unity.render-pipelines.universal@10.2.2/Runtime/ScriptableRendererData.cs:59)
-
-(Filename: Library/PackageCache/com.unity.render-pipelines.universal@10.2.2/Runtime/ScriptableRendererData.cs Line: 135)
-
-Mono: successfully reloaded assembly
-- Completed reload, in  1.220 seconds
-Platform modules already initialized, skipping
-Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
-Refreshing native plugins compatible for Editor in 1.00 ms, found 2 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 2683 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 143.7 MB.
-System memory in use after: 143.6 MB.
-
-Unloading 31 unused Assets to reduce memory usage. Loaded Objects now: 3384.
-Total: 5.561500 ms (FindLiveObjects: 0.825000 ms CreateObjectMapping: 0.355900 ms MarkObjects: 3.664000 ms  DeleteObjects: 0.713600 ms)
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.007986 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.66 ms, found 2 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Invoked RoslynAnalysisRunner static constructor.
-RoslynAnalysisRunner will not be running.
-RoslynAnalysisRunner has terminated.
-GrassBendRenderer is missing RendererFeatures
-This could be due to missing scripts or compile error.
-UnityEngine.StackTraceUtility:ExtractStackTrace ()
-UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
-UnityEngine.Logger:Log (UnityEngine.LogType,object,UnityEngine.Object)
-UnityEngine.Debug:LogError (object,UnityEngine.Object)
-UnityEngine.Rendering.Universal.ScriptableRendererData:ValidateRendererFeatures () (at Library/PackageCache/com.unity.render-pipelines.universal@10.2.2/Runtime/ScriptableRendererData.cs:135)
-UnityEngine.Rendering.Universal.ScriptableRendererData:OnValidate () (at Library/PackageCache/com.unity.render-pipelines.universal@10.2.2/Runtime/ScriptableRendererData.cs:59)
-
-(Filename: Library/PackageCache/com.unity.render-pipelines.universal@10.2.2/Runtime/ScriptableRendererData.cs Line: 135)
-
-Mono: successfully reloaded assembly
-- Completed reload, in  0.810 seconds
-Platform modules already initialized, skipping
-Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
-Refreshing native plugins compatible for Editor in 0.68 ms, found 2 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 2683 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 143.8 MB.
-System memory in use after: 143.6 MB.
-
-Unloading 31 unused Assets to reduce memory usage. Loaded Objects now: 3386.
-Total: 3.066800 ms (FindLiveObjects: 0.357400 ms CreateObjectMapping: 0.233800 ms MarkObjects: 2.086300 ms  DeleteObjects: 0.388100 ms)
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.008386 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.96 ms, found 2 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Invoked RoslynAnalysisRunner static constructor.
-RoslynAnalysisRunner will not be running.
-RoslynAnalysisRunner has terminated.
-GrassBendRenderer is missing RendererFeatures
-This could be due to missing scripts or compile error.
-UnityEngine.StackTraceUtility:ExtractStackTrace ()
-UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
-UnityEngine.Logger:Log (UnityEngine.LogType,object,UnityEngine.Object)
-UnityEngine.Debug:LogError (object,UnityEngine.Object)
-UnityEngine.Rendering.Universal.ScriptableRendererData:ValidateRendererFeatures () (at Library/PackageCache/com.unity.render-pipelines.universal@10.2.2/Runtime/ScriptableRendererData.cs:135)
-UnityEngine.Rendering.Universal.ScriptableRendererData:OnValidate () (at Library/PackageCache/com.unity.render-pipelines.universal@10.2.2/Runtime/ScriptableRendererData.cs:59)
-
-(Filename: Library/PackageCache/com.unity.render-pipelines.universal@10.2.2/Runtime/ScriptableRendererData.cs Line: 135)
-
-Mono: successfully reloaded assembly
-- Completed reload, in  1.104 seconds
-Platform modules already initialized, skipping
-Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
-Refreshing native plugins compatible for Editor in 1.65 ms, found 2 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 2683 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 143.8 MB.
-System memory in use after: 143.6 MB.
-
-Unloading 31 unused Assets to reduce memory usage. Loaded Objects now: 3388.
-Total: 4.641500 ms (FindLiveObjects: 0.570800 ms CreateObjectMapping: 0.218100 ms MarkObjects: 3.251600 ms  DeleteObjects: 0.599100 ms)
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.006590 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.67 ms, found 2 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Invoked RoslynAnalysisRunner static constructor.
-RoslynAnalysisRunner will not be running.
-RoslynAnalysisRunner has terminated.
-GrassBendRenderer is missing RendererFeatures
-This could be due to missing scripts or compile error.
-UnityEngine.StackTraceUtility:ExtractStackTrace ()
-UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
-UnityEngine.Logger:Log (UnityEngine.LogType,object,UnityEngine.Object)
-UnityEngine.Debug:LogError (object,UnityEngine.Object)
-UnityEngine.Rendering.Universal.ScriptableRendererData:ValidateRendererFeatures () (at Library/PackageCache/com.unity.render-pipelines.universal@10.2.2/Runtime/ScriptableRendererData.cs:135)
-UnityEngine.Rendering.Universal.ScriptableRendererData:OnValidate () (at Library/PackageCache/com.unity.render-pipelines.universal@10.2.2/Runtime/ScriptableRendererData.cs:59)
-
-(Filename: Library/PackageCache/com.unity.render-pipelines.universal@10.2.2/Runtime/ScriptableRendererData.cs Line: 135)
-
-Mono: successfully reloaded assembly
-- Completed reload, in  0.818 seconds
-Platform modules already initialized, skipping
-Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
-Refreshing native plugins compatible for Editor in 0.73 ms, found 2 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 2683 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 143.8 MB.
-System memory in use after: 143.7 MB.
-
-Unloading 31 unused Assets to reduce memory usage. Loaded Objects now: 3390.
-Total: 3.230300 ms (FindLiveObjects: 0.353500 ms CreateObjectMapping: 0.244400 ms MarkObjects: 2.157900 ms  DeleteObjects: 0.473300 ms)
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.006674 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 1.09 ms, found 2 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Invoked RoslynAnalysisRunner static constructor.
-RoslynAnalysisRunner will not be running.
-RoslynAnalysisRunner has terminated.
-GrassBendRenderer is missing RendererFeatures
-This could be due to missing scripts or compile error.
-UnityEngine.StackTraceUtility:ExtractStackTrace ()
-UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
-UnityEngine.Logger:Log (UnityEngine.LogType,object,UnityEngine.Object)
-UnityEngine.Debug:LogError (object,UnityEngine.Object)
-UnityEngine.Rendering.Universal.ScriptableRendererData:ValidateRendererFeatures () (at Library/PackageCache/com.unity.render-pipelines.universal@10.2.2/Runtime/ScriptableRendererData.cs:135)
-UnityEngine.Rendering.Universal.ScriptableRendererData:OnValidate () (at Library/PackageCache/com.unity.render-pipelines.universal@10.2.2/Runtime/ScriptableRendererData.cs:59)
-
-(Filename: Library/PackageCache/com.unity.render-pipelines.universal@10.2.2/Runtime/ScriptableRendererData.cs Line: 135)
-
-Mono: successfully reloaded assembly
-- Completed reload, in  1.102 seconds
-Platform modules already initialized, skipping
-Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
-Refreshing native plugins compatible for Editor in 1.19 ms, found 2 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 2683 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 143.8 MB.
-System memory in use after: 143.7 MB.
-
-Unloading 31 unused Assets to reduce memory usage. Loaded Objects now: 3392.
-Total: 4.509900 ms (FindLiveObjects: 0.661600 ms CreateObjectMapping: 0.372500 ms MarkObjects: 2.997700 ms  DeleteObjects: 0.476500 ms)
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.006364 seconds.
+Registered in 0.006747 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
 Refreshing native plugins compatible for Editor in 0.65 ms, found 2 plugins.
@@ -740,25 +2058,25 @@ UnityEngine.Rendering.Universal.ScriptableRendererData:OnValidate () (at Library
 (Filename: Library/PackageCache/com.unity.render-pipelines.universal@10.2.2/Runtime/ScriptableRendererData.cs Line: 135)
 
 Mono: successfully reloaded assembly
-- Completed reload, in  0.791 seconds
+- Completed reload, in  0.815 seconds
 Platform modules already initialized, skipping
 Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
-Refreshing native plugins compatible for Editor in 0.74 ms, found 2 plugins.
+Refreshing native plugins compatible for Editor in 0.70 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 2683 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 143.8 MB.
-System memory in use after: 143.7 MB.
+System memory in use before: 155.4 MB.
+System memory in use after: 155.3 MB.
 
-Unloading 31 unused Assets to reduce memory usage. Loaded Objects now: 3394.
-Total: 3.509800 ms (FindLiveObjects: 0.540300 ms CreateObjectMapping: 0.306000 ms MarkObjects: 2.283500 ms  DeleteObjects: 0.378600 ms)
+Unloading 31 unused Assets to reduce memory usage. Loaded Objects now: 3514.
+Total: 3.395000 ms (FindLiveObjects: 0.483900 ms CreateObjectMapping: 0.220300 ms MarkObjects: 2.293100 ms  DeleteObjects: 0.396500 ms)
 
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
-Registered in 0.007928 seconds.
+Registered in 0.008332 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.95 ms, found 2 plugins.
+Refreshing native plugins compatible for Editor in 0.75 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Invoked RoslynAnalysisRunner static constructor.
 RoslynAnalysisRunner will not be running.
@@ -775,16 +2093,191 @@ UnityEngine.Rendering.Universal.ScriptableRendererData:OnValidate () (at Library
 (Filename: Library/PackageCache/com.unity.render-pipelines.universal@10.2.2/Runtime/ScriptableRendererData.cs Line: 135)
 
 Mono: successfully reloaded assembly
-- Completed reload, in  1.118 seconds
+- Completed reload, in  1.137 seconds
 Platform modules already initialized, skipping
 Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
-Refreshing native plugins compatible for Editor in 1.19 ms, found 2 plugins.
+Refreshing native plugins compatible for Editor in 1.54 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 2683 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 143.7 MB.
-System memory in use after: 143.6 MB.
+System memory in use before: 155.4 MB.
+System memory in use after: 155.3 MB.
 
-Unloading 31 unused Assets to reduce memory usage. Loaded Objects now: 3396.
-Total: 5.229700 ms (FindLiveObjects: 0.655500 ms CreateObjectMapping: 0.311500 ms MarkObjects: 3.676800 ms  DeleteObjects: 0.583600 ms)
+Unloading 31 unused Assets to reduce memory usage. Loaded Objects now: 3516.
+Total: 4.980300 ms (FindLiveObjects: 0.740000 ms CreateObjectMapping: 0.330900 ms MarkObjects: 3.389700 ms  DeleteObjects: 0.518100 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.006607 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.70 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+GrassBendRenderer is missing RendererFeatures
+This could be due to missing scripts or compile error.
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object,UnityEngine.Object)
+UnityEngine.Debug:LogError (object,UnityEngine.Object)
+UnityEngine.Rendering.Universal.ScriptableRendererData:ValidateRendererFeatures () (at Library/PackageCache/com.unity.render-pipelines.universal@10.2.2/Runtime/ScriptableRendererData.cs:135)
+UnityEngine.Rendering.Universal.ScriptableRendererData:OnValidate () (at Library/PackageCache/com.unity.render-pipelines.universal@10.2.2/Runtime/ScriptableRendererData.cs:59)
+
+(Filename: Library/PackageCache/com.unity.render-pipelines.universal@10.2.2/Runtime/ScriptableRendererData.cs Line: 135)
+
+Mono: successfully reloaded assembly
+- Completed reload, in  0.854 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 0.68 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2683 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 155.5 MB.
+System memory in use after: 155.3 MB.
+
+Unloading 31 unused Assets to reduce memory usage. Loaded Objects now: 3518.
+Total: 2.883900 ms (FindLiveObjects: 0.373900 ms CreateObjectMapping: 0.172800 ms MarkObjects: 1.937600 ms  DeleteObjects: 0.398500 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.008240 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 1.20 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+GrassBendRenderer is missing RendererFeatures
+This could be due to missing scripts or compile error.
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object,UnityEngine.Object)
+UnityEngine.Debug:LogError (object,UnityEngine.Object)
+UnityEngine.Rendering.Universal.ScriptableRendererData:ValidateRendererFeatures () (at Library/PackageCache/com.unity.render-pipelines.universal@10.2.2/Runtime/ScriptableRendererData.cs:135)
+UnityEngine.Rendering.Universal.ScriptableRendererData:OnValidate () (at Library/PackageCache/com.unity.render-pipelines.universal@10.2.2/Runtime/ScriptableRendererData.cs:59)
+
+(Filename: Library/PackageCache/com.unity.render-pipelines.universal@10.2.2/Runtime/ScriptableRendererData.cs Line: 135)
+
+Mono: successfully reloaded assembly
+- Completed reload, in  1.070 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 0.98 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2683 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 155.5 MB.
+System memory in use after: 155.3 MB.
+
+Unloading 31 unused Assets to reduce memory usage. Loaded Objects now: 3520.
+Total: 5.603700 ms (FindLiveObjects: 1.068500 ms CreateObjectMapping: 0.449700 ms MarkObjects: 3.485000 ms  DeleteObjects: 0.597800 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.006637 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 1.01 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+GrassBendRenderer is missing RendererFeatures
+This could be due to missing scripts or compile error.
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object,UnityEngine.Object)
+UnityEngine.Debug:LogError (object,UnityEngine.Object)
+UnityEngine.Rendering.Universal.ScriptableRendererData:ValidateRendererFeatures () (at Library/PackageCache/com.unity.render-pipelines.universal@10.2.2/Runtime/ScriptableRendererData.cs:135)
+UnityEngine.Rendering.Universal.ScriptableRendererData:OnValidate () (at Library/PackageCache/com.unity.render-pipelines.universal@10.2.2/Runtime/ScriptableRendererData.cs:59)
+
+(Filename: Library/PackageCache/com.unity.render-pipelines.universal@10.2.2/Runtime/ScriptableRendererData.cs Line: 135)
+
+Mono: successfully reloaded assembly
+- Completed reload, in  1.179 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 1.01 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2683 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 155.4 MB.
+System memory in use after: 155.3 MB.
+
+Unloading 31 unused Assets to reduce memory usage. Loaded Objects now: 3522.
+Total: 5.337800 ms (FindLiveObjects: 0.875900 ms CreateObjectMapping: 0.406600 ms MarkObjects: 3.503200 ms  DeleteObjects: 0.549300 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.007583 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.65 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+GrassBendRenderer is missing RendererFeatures
+This could be due to missing scripts or compile error.
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object,UnityEngine.Object)
+UnityEngine.Debug:LogError (object,UnityEngine.Object)
+UnityEngine.Rendering.Universal.ScriptableRendererData:ValidateRendererFeatures () (at Library/PackageCache/com.unity.render-pipelines.universal@10.2.2/Runtime/ScriptableRendererData.cs:135)
+UnityEngine.Rendering.Universal.ScriptableRendererData:OnValidate () (at Library/PackageCache/com.unity.render-pipelines.universal@10.2.2/Runtime/ScriptableRendererData.cs:59)
+
+(Filename: Library/PackageCache/com.unity.render-pipelines.universal@10.2.2/Runtime/ScriptableRendererData.cs Line: 135)
+
+Mono: successfully reloaded assembly
+- Completed reload, in  0.808 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 0.75 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2683 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 155.5 MB.
+System memory in use after: 155.3 MB.
+
+Unloading 31 unused Assets to reduce memory usage. Loaded Objects now: 3524.
+Total: 4.247100 ms (FindLiveObjects: 0.473600 ms CreateObjectMapping: 0.440600 ms MarkObjects: 2.884400 ms  DeleteObjects: 0.447100 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.008386 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.72 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+GrassBendRenderer is missing RendererFeatures
+This could be due to missing scripts or compile error.
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object,UnityEngine.Object)
+UnityEngine.Debug:LogError (object,UnityEngine.Object)
+UnityEngine.Rendering.Universal.ScriptableRendererData:ValidateRendererFeatures () (at Library/PackageCache/com.unity.render-pipelines.universal@10.2.2/Runtime/ScriptableRendererData.cs:135)
+UnityEngine.Rendering.Universal.ScriptableRendererData:OnValidate () (at Library/PackageCache/com.unity.render-pipelines.universal@10.2.2/Runtime/ScriptableRendererData.cs:59)
+
+(Filename: Library/PackageCache/com.unity.render-pipelines.universal@10.2.2/Runtime/ScriptableRendererData.cs Line: 135)
+
+Mono: successfully reloaded assembly
+- Completed reload, in  1.108 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 1.11 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2683 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 155.5 MB.
+System memory in use after: 155.3 MB.
+
+Unloading 31 unused Assets to reduce memory usage. Loaded Objects now: 3526.
+Total: 4.996400 ms (FindLiveObjects: 0.505500 ms CreateObjectMapping: 0.242500 ms MarkObjects: 3.581100 ms  DeleteObjects: 0.665500 ms)
 
 AssetImportWorkerClient::OnTransportError - code=2 error=End of file

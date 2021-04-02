@@ -11,6 +11,7 @@ public class Combat : MonoBehaviour
 {
 
 	private PhotonView PV;
+	public Camera cam;
 	public GameObject attackPrefab;
 	public GameObject meleeSlash;
 	public GameObject meleeStab;
@@ -29,6 +30,7 @@ public class Combat : MonoBehaviour
 	{
 		PV = GetComponent<PhotonView>();
         CurrentPlayer = PhotonNetwork.LocalPlayer.TagObject as GameObject;
+		cam = Camera.main;
 	}
 
 	void Update()
@@ -86,7 +88,6 @@ public class Combat : MonoBehaviour
 		attackPrefab.GetComponent<bulletScript>().type = weap.GetComponent<WeaponStats>().item_type;
 		if(rand <= critChance){
 			critMultiplier = 2;
-			Debug.Log("Here comes the CRIT: " + attackPrefab.GetComponent<bulletScript>().dmg);
 		}
 		else
 			critMultiplier = 1;
@@ -99,15 +100,17 @@ public class Combat : MonoBehaviour
 		// set final damage for attack
 		attackPrefab.GetComponent<bulletScript>().dmg = weap.GetComponent<WeaponStats>().attack * critMultiplier;
 		// Instatiate attack
-    	GameObject attackHitbox = Instantiate(attackPrefab, shootPoint.transform.position, Quaternion.identity);
+    	GameObject attackHitbox = Instantiate(attackPrefab, shootPoint.transform.position, cam.transform.rotation);
 
         // [OLD] -- >attackHitbox.GetComponent<Rigidbody>().velocity = CurrentPlayer.transform.GetChild(1).GetComponent<Rigidbody>().velocity;
 
 		if(weap.GetComponent<WeaponStats>().item_type == 2 || weap.GetComponent<WeaponStats>().item_type == 7){
-			Camera ray_camera = GetComponent<PlayerMovementController>().ray_camera;
-			Vector3 position = new Vector3(Input.mousePosition.x, Input.mousePosition.y, 100);
-         	position = ray_camera.ScreenToWorldPoint(position);
-         	attackHitbox.transform.LookAt(position); 
+			RaycastHit hit;
+			Ray pointing = cam.ScreenPointToRay(Input.mousePosition);
+			if(Physics.Raycast(cam.transform.position, cam.transform.forward, out hit)){
+				//GameObject attackHitbox = Instantiate(attackPrefab, shootPoint.transform.position, faceTo);
+				attackHitbox.GetComponent<bulletScript>().aim = hit.point;
+			}
 		}
 		else
         	attackHitbox.transform.parent = CurrentPlayer.transform;
