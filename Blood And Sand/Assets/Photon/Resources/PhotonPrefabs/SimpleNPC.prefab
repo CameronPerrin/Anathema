@@ -407,6 +407,7 @@ MonoBehaviour:
   followPlayer: 0
   stopMove: 0
   isRangedNPC: 0
+  isBossNPC: 0
   hitP: 0
   moveSpeed: 3
   _destination: {fileID: 0}
@@ -424,10 +425,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHp: 100
   health: 100
+  defense: 0
+  magicDefense: 0
+  dotTimer: 0.5
+  dropChance: 0.2
+  corruptionDropChance: 0.5
   worldHealthBar: {fileID: 3598050600415476175}
+  redWorldHealthBackdrop: {fileID: 0}
   wHp: {fileID: 3598050601308906715}
+  bloodVFX: {fileID: 0}
+  lootDrop: {fileID: 0}
+  corruptionDrop: {fileID: 0}
   FloatingTextPrefab: {fileID: 0}
-  damage: 0
+  dmgTemp: 0
+  dmg: 0
 --- !u!136 &3598050601325449650
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -497,6 +508,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   timeBetweenAttacks: 0
+  damage: 20
   attackPrefab: {fileID: 0}
   shootPoint: {fileID: 0}
   attackRange: 0

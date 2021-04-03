@@ -14,12 +14,12 @@ public class WeaponSpawn : MonoBehaviour
 	//this would be something we set manually absed on how the weapon looks
 	void giveStats(GameObject SpawnedWeapon){
 		//set stats
-		SpawnedWeapon.GetComponent<WeaponStats>().attack = Mathf.Floor(Random.Range(0f, 100f));
-		SpawnedWeapon.GetComponent<WeaponStats>().attack_speed = Random.Range(0f, 1f);
-		SpawnedWeapon.GetComponent<WeaponStats>().crit_chance = Random.Range(0f, 1f);
-		SpawnedWeapon.GetComponent<WeaponStats>().range = Random.Range(0f, 0.01f);
+		//SpawnedWeapon.GetComponent<WeaponStats>().attack = Mathf.Floor(Random.Range(0f, 100f));
+		//SpawnedWeapon.GetComponent<WeaponStats>().attack_speed = Random.Range(0f, 1f);
+		//SpawnedWeapon.GetComponent<WeaponStats>().crit_chance = Random.Range(0f, 1f);
+		//SpawnedWeapon.GetComponent<WeaponStats>().range = Random.Range(0f, 0.01f);
 		//set item type (all melee for now)
-		SpawnedWeapon.GetComponent<WeaponStats>().item_type = 1;
+		//SpawnedWeapon.GetComponent<WeaponStats>().item_type = 1;
 		//math out value
 		SpawnedWeapon.GetComponent<WeaponStats>().item_value = Random.Range(50, 1000);;
 	}

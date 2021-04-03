@@ -8,6 +8,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 using Photon;
 using Photon.Pun;
 using Photon.Realtime;
@@ -136,7 +137,13 @@ public class mindlessFollow : MonoBehaviour
             if(PhotonNetwork.IsMasterClient)
             {
                 // Call the function that makes the navAgent go after the player.
-                SetDestination();
+                try{
+                    SetDestination();
+                }
+                catch(Exception e){ // Destroy object if error
+                    Debug.Log("NPC CAN'T FIND TERRAIN... SELF-DESTRUCTING!");
+                    Destroy(this.gameObject);
+                }
             }
         }        
     }

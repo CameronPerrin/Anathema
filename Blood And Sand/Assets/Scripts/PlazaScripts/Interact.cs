@@ -9,6 +9,7 @@ public class Interact : MonoBehaviour
     public GameObject spawnLocation;
     public GameObject networkUI;
     public Camera playerCam;
+    public GameObject presetLoot;
 
     //for case 4
     private GameObject playerBoi;
@@ -77,8 +78,20 @@ public class Interact : MonoBehaviour
                 Destroy(gameObject);
 
                 break;
+            case 6: //Corrupted Essence
+                //pauseMenu.GetComponent<InventoryController>().MainHandWeapon = presetLoot;
+                //pauseMenu.GetComponent<InventoryController>().Save();
+                player.transform.Find("playerModelUnity/body").gameObject.GetComponent<Renderer>().material.color = Color.red;
+                player.GetComponent<Health>().maxHp *= 2;
+                player.GetComponent<Health>().health = player.GetComponent<Health>().maxHp;
+                player.GetComponent<Health>().physicalDefense += 10;
+                player.GetComponent<Health>().magicDefense += 10;
+                player.GetComponent<PlayerMovementController>().moveSpeed *= 2;
+                Destroy(this.presetLoot);
+                transform.gameObject.SetActive(false);
+                break;
             default: //default
-                Debug.Log("Default interact msg");
+                Debug.Log("Default interact message.");
                 break;
         }
     }

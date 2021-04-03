@@ -30,6 +30,7 @@ public class WeaponStats : MonoBehaviour
 	//5. Armor
 	//6. Melee Stab
 	//7. Magic Strong
+	public bool isCorruptedEssence = false;
 
     void updateValue(){
     	//call this to change the value of the item based on the stats

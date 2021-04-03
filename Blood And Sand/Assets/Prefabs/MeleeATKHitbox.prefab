@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 6146532593588722168}
   m_Layer: 2
   m_Name: MeleeATKHitbox
-  m_TagString: Untagged
+  m_TagString: Bullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -108,3 +108,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 361ea570e55619c4380656de73877a7b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  damage: 0
+  type: 0

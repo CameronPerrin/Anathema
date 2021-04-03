@@ -451,15 +451,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHp: 1000
-  health: 100
+  health: 1000
   defense: 7
   magicDefense: 7
   dotTimer: 0.5
+  dropChance: 1
+  corruptionDropChance: 0
   worldHealthBar: {fileID: 4889193104877619254}
   redWorldHealthBackdrop: {fileID: 6351306223837131392}
   wHp: {fileID: 406349800763738314}
   bloodVFX: {fileID: 6062716170508370198, guid: a2d0a4f4e6e568842bf9abb6edb2864d,
     type: 3}
+  lootDrop: {fileID: 0}
+  corruptionDrop: {fileID: 0}
   FloatingTextPrefab: {fileID: 7957747401790915659, guid: 7b2549c15f36d544490e6208a44c1357,
     type: 3}
   dmgTemp: 0

@@ -17,6 +17,8 @@ TagManager:
   - Hotbar_Slot
   - InventoryPanel
   - EquipmentPanel
+  - loot
+  - Corrupted_Player
   layers:
   - Default
   - TransparentFX

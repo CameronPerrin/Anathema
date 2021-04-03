@@ -5,12 +5,16 @@ using UnityEngine;
 
 public class CurrencyCounter : MonoBehaviour
 {
-    public int Money;
+    public int Money = 0;
     public TMP_Text MoneyText;
     private void Awake()
     {
-        Money = 1000;
+        MoneyText.text = "Essence: " + Money.ToString();
+    }
 
+    public void addMoney(int addedMoney)
+    {
+        Money += addedMoney;
         MoneyText.text = "Essence: " + Money.ToString();
     }
 

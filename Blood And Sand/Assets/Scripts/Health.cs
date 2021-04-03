@@ -19,6 +19,8 @@ public class Health : MonoBehaviourPunCallbacks, IPunObservable
     public float hpRegenSpeed = 1f;
     public float physicalDefense = 0;
     public float magicDefense = 0;
+    public float dotTimer = 0.5f;
+    public bool isCorrupted = false;
     public Image overlayHealthBar; 		// HP images for screenspace overlay
     public Image redScreenHealthBackdrop;
     public Image worldHealthBar;		// HP images for worldspace overlay
@@ -32,6 +34,7 @@ public class Health : MonoBehaviourPunCallbacks, IPunObservable
 
     public GameObject FloatingTextPrefab;
     public float dmgTake; // Placeholder damage for when we add in weapons
+    public float dmgTemp;
 
 
     void Awake()
@@ -77,7 +80,7 @@ public class Health : MonoBehaviourPunCallbacks, IPunObservable
         
     }
 
-    public void TakeDamage(float dmage, int type)
+    public void TakeDamage(float dmage, int type, bool dot)
     {
         
         if(type == 1){ // physical defense
@@ -86,8 +89,27 @@ public class Health : MonoBehaviourPunCallbacks, IPunObservable
         else if(type == 2){ // magic defense
             dmgTake = dmage - magicDefense;
         }
+        if(dot){
+            dmgTemp = dmage;
+            dmgTake = (dmage - physicalDefense) / 4;
+            InvokeRepeating ("PhysicalDOTDmg", 0f, dotTimer);
+        }
         if(PV.IsMine){
             PV.RPC("Damage", RpcTarget.All);
+        }
+    }
+
+    public void PhysicalDOTDmg()
+    {
+        if(dmgTemp > 0){
+            //Debug.Log("Bleeding for " + dmg + " damage!");
+            if(PV.IsMine){
+                PV.RPC("Damage", RpcTarget.All, dmgTake);
+            }
+            dmgTemp -= dmgTake;
+        }
+        else{
+            this.CancelInvoke("PhysicalDOTDmg");
         }
     }
 

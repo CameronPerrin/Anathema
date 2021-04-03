@@ -317,10 +317,16 @@ MonoBehaviour:
   defense: 5
   magicDefense: 0
   dotTimer: 0.5
+  dropChance: 0.3
+  corruptionDropChance: 0.1
   worldHealthBar: {fileID: 1808448123854856402}
   redWorldHealthBackdrop: {fileID: 2730551330637470475}
   wHp: {fileID: 6873238743294205998}
   bloodVFX: {fileID: 6062716170508370198, guid: a2d0a4f4e6e568842bf9abb6edb2864d,
+    type: 3}
+  lootDrop: {fileID: 1716759865404533113, guid: 65a3562a866e4644baaa6804f11e47b4,
+    type: 3}
+  corruptionDrop: {fileID: 1377388708257028, guid: d6e42ab84e5704a4494922404bb47ef9,
     type: 3}
   FloatingTextPrefab: {fileID: 7957747401790915659, guid: 7b2549c15f36d544490e6208a44c1357,
     type: 3}
@@ -336,7 +342,7 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 0.5
+  m_Radius: 0.75
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
@@ -418,7 +424,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1106343127992153525
 Transform:
   m_ObjectHideFlags: 0
@@ -443,7 +449,7 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_Enabled: 1
-  m_Radius: 0.5
+  m_Radius: 0.75
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
@@ -461,7 +467,7 @@ GameObject:
   - component: {fileID: 354563450424310363}
   m_Layer: 0
   m_Name: Eyes
-  m_TagString: Untagged
+  m_TagString: EnemyHitbox
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -538,7 +544,7 @@ BoxCollider:
   m_GameObject: {fileID: 5392966904297208097}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}

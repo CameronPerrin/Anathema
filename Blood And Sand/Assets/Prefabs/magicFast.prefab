@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 3571667358613150323}
   - component: {fileID: 5175721089748540410}
   - component: {fileID: -3955745040816293651}
-  m_Layer: 10
+  m_Layer: 2
   m_Name: magicFast
   m_TagString: Bullet
   m_Icon: {fileID: 0}
@@ -111,15 +111,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CurrentPlayer: {fileID: 0}
-  dmg: 32
+  dmg: 16
   type: 2
-  DOT: 1
+  DOT: 0
   rb: {fileID: 0}
   slashMeleeAttack: 0
   stabMeleeAttack: 0
   fastMagicAttack: 1
   strongMagicAttack: 0
   projectileSpeed: 30
+  aim: {x: 0, y: 0, z: 0}
 --- !u!65 &5175721089748540410
 BoxCollider:
   m_ObjectHideFlags: 0

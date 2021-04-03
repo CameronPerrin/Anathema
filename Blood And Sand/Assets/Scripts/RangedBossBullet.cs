@@ -22,18 +22,18 @@ public class RangedBossBullet : MonoBehaviour
 
     private void OnTriggerEnter(Collider collision)
     {
-        if (collision.gameObject.tag == "Player")
+        if (collision.gameObject.tag == "Player"|| collision.gameObject.tag == "Corrupted_Player")
         {
             Health hp = collision.gameObject.GetComponent<Health>();
             if (hp)
             {
-                hp.TakeDamage(damage, type);
+                hp.TakeDamage(damage, type, false);
             }
+            
         }
-        if (collision.gameObject.tag == "Untagged")
-        {
+        else if(collision.gameObject.tag == "Bullet");
+        else
             Destroy(this.gameObject);
-        }
         //Destroy(this.gameObject);
     }
 }
