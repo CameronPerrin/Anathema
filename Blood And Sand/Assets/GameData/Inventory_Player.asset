@@ -16,5 +16,5 @@ MonoBehaviour:
   onInventoryItemsUpdated: {fileID: 11400000, guid: 7c1205c6eadeba94b9643bc4607637c1,
     type: 2}
   testItemSlot:
-    item: {fileID: 11400000, guid: 5a60dc886c3d5254fa8898af08f2a3bc, type: 2}
+    item: {fileID: 11400000, guid: c14f148391150424a9c26aaaec209482, type: 2}
     quantity: 1

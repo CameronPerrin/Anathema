@@ -62,6 +62,7 @@
     <Compile Include="Assets\IL3DN\Scripts\IL3DN_PlayRandomSound.cs" />
     <Compile Include="Assets\Scripts\Item System\Item Data\ItemSlot.cs" />
     <Compile Include="Assets\Scripts\NPC\bossCloneMechanics.cs" />
+    <Compile Include="Assets\Scripts\Item System\CurrencyCounter.cs" />
     <Compile Include="Assets\Scripts\PlazaScripts\Interact.cs" />
     <Compile Include="Assets\Stylized Grass Shader\_Demo\DemoAssets\Scripts\MoveInCircle.cs" />
     <Compile Include="Assets\Photon\PhotonChat\Demos\Common\TextButtonTransition.cs" />
@@ -185,7 +186,9 @@
     <Compile Include="Assets\Scripts\particleDestroy.cs" />
     <Compile Include="Assets\Scripts\Item System\Inventory.cs" />
     <Compile Include="Assets\nTools\PrefabPainter\Scripts\PrefabPainterSceneSettings.cs" />
-    <Compile Include="Assets\Scripts\Item System\CurrencyCounter.cs" />
+    <Compile Include="Assets\ParticleRing.cs" />
+    <Compile Include="Assets\BossAOEAttack.cs" />
+    <Compile Include="Assets\AOEBossBullet.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets\nTools\PrefabPainter\Shaders\GUITextureClipLevels.shader" />
