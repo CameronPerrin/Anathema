@@ -7,7 +7,7 @@ using Photon.Realtime;
 using Photon;
 using UnityEngine.SceneManagement;
 
-public class Combat : MonoBehaviour
+public class Combat : MonoBehaviourPun
 {
 
 	private PhotonView PV;
@@ -16,7 +16,7 @@ public class Combat : MonoBehaviour
     public GameObject CurrentPlayer;
 	public float attackSpeed = 0;
 	public float attackTimer = 0;
-	GameObject weap;
+	public GameObject weap;
 	public bool isPaused;
     
 	void Start()
@@ -36,6 +36,7 @@ public class Combat : MonoBehaviour
     				
 					try{
 						weap = this.gameObject.transform.GetChild(1).gameObject.transform.GetChild(0).gameObject.transform.GetChild(0).gameObject;
+						Debug.Log(weap.name);
 						Attack();
 					}
 					catch (Exception e){
@@ -50,12 +51,6 @@ public class Combat : MonoBehaviour
 	}
 
     public void Attack()
-    {
-    	PV.RPC("RpcShoot", RpcTarget.All);
-    }
-
-    [PunRPC]
-    void RpcShoot()
     {
 		float critChance = weap.GetComponent<WeaponStats>().crit_chance;
 		float bleedChance = weap.GetComponent<WeaponStats>().bleed_chance;
