@@ -47,16 +47,11 @@ public class npcHealth : MonoBehaviourPunCallbacks
     {
         if(type == 1 || type == 6){          // Physical damage
             dmg = dmage - defense;
-            if(PV.IsMine){
-                PV.RPC("Damage", RpcTarget.All, dmg);    
-            }
-            
+            PV.RPC("Damage", RpcTarget.All, dmg);    
         }
         else if(type == 2 || type == 7){     // Magic damage
             dmg = dmage - magicDefense;
-            if(PV.IsMine){
-                PV.RPC("Damage", RpcTarget.All, dmg);    
-            }
+            PV.RPC("Damage", RpcTarget.All, dmg);    
         }
         if(dot){
             dmgTemp = dmage;
@@ -69,9 +64,7 @@ public class npcHealth : MonoBehaviourPunCallbacks
     {
         if(dmgTemp > 0){
             //Debug.Log("Bleeding for " + dmg + " damage!");
-            if(PV.IsMine){
-                PV.RPC("Damage", RpcTarget.All, dmg);
-            }
+            PV.RPC("Damage", RpcTarget.All, dmg);
             dmgTemp -= dmg;
         }
         else{

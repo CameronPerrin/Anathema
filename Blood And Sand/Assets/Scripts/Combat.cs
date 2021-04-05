@@ -59,12 +59,6 @@ public class Combat : MonoBehaviour
 
     public void Attack()
     {
-    	PV.RPC("RpcShoot", RpcTarget.All);
-    }
-
-    [PunRPC]
-    void RpcShoot()
-    {
 		// Decide what type of weapon attack it is
 		if(weap.GetComponent<WeaponStats>().item_type == 1)
 			attackPrefab = meleeSlash;

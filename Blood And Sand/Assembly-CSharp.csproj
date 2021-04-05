@@ -113,6 +113,7 @@
      <Compile Include="Assets\Photon\PhotonChat\Demos\DemoChat\ChannelSelector.cs" />
      <Compile Include="Assets\Scripts\NPC\stopMove.cs" />
      <Compile Include="Assets\Scripts\PauseMenuController.cs" />
+     <Compile Include="Assets\weaponDisplayRotate.cs" />
      <Compile Include="Assets\ErosionBrush\Scripts\Noise.cs" />
      <Compile Include="Assets\Scripts\Item System\HotbarSlot.cs" />
      <Compile Include="Assets\ChatScript.cs" />
@@ -133,6 +134,7 @@
      <Compile Include="Assets\Scripts\GameEvents\Listeners\IGameEventListener.cs" />
      <Compile Include="Assets\Scripts\Item System\Equipment\EquipmentBar.cs" />
      <Compile Include="Assets\Scripts\WeaponScripts\WeaponStats.cs" />
+     <Compile Include="Assets\Scripts\essenceScript.cs" />
      <Compile Include="Assets\Stylized Grass Shader\_Demo\DemoAssets\Scripts\FreeCamera.cs" />
      <Compile Include="Assets\Scripts\Item System\Inventory Logic\IItemContainer.cs" />
      <Compile Include="Assets\Scripts\MenuScripts\MainMenuController.cs" />
