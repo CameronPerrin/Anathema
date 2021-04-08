@@ -9,7 +9,6 @@ public abstract class InventoryItem : HotbarItem
     [SerializeField] [Min(0)] private int sellPrice = 1;
     [SerializeField] [Min(1)] private int maxStack = 1;
 
-
     public override string ColouredName
     {
         get 
@@ -17,6 +16,11 @@ public abstract class InventoryItem : HotbarItem
             string hexColor = ColorUtility.ToHtmlStringRGB(rarity.TextColour);
             return $"<color=#{hexColor}>{Name}</color>";
         }
+    }
+
+    public InventoryItem GetCopy()
+    {
+        return this;
     }
 
     public int SellPrice => sellPrice;

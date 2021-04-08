@@ -16,16 +16,24 @@ public class Interact : MonoBehaviour
     //for weapon grab case 5
     public Transform weaponShowing;
     public GameObject pauseMenu;
+    [SerializeField] ItemSaveManager itemSaveManager;
 
     //for highlighting
     private Color startcolor;
     private bool highlight;
 
 
+    // Inventory Manager
+    [SerializeField] private Inventory inventory = null;
+    public ItemSlot weaponShowingItemSlot = new ItemSlot();
+    public EquipmentItem weapon;
+
+
+
+
     void Awake(){
         startcolor = GetComponent<Renderer>().material.color;
     }
-
 
     public void interactFunction(GameObject player){
         switch (interactItem){
@@ -54,23 +62,49 @@ public class Interact : MonoBehaviour
                 //make it so you can only use this once. rn you can spam this
                 Debug.Log("Weapon Grab");
                 //pauseMenu = GameObject.FindGameObjectWithTag("PauseMenu");
-		                // //give the weapon to the player
-		                // weaponShowing.parent = playerBoi.transform.GetChild(2);
-		                // //reposition it
-		                // weaponShowing.position = playerBoi.transform.GetChild(2).position;
-		                // weaponShowing.rotation = playerBoi.transform.GetChild(2).rotation;
+                // //give the weapon to the player
+                // weaponShowing.parent = playerBoi.transform.GetChild(2);
+                // //reposition it
+                // weaponShowing.position = playerBoi.transform.GetChild(2).position;
+                // weaponShowing.rotation = playerBoi.transform.GetChild(2).rotation;
                 //only continue if you have the money for it
 
-                //remove money from account
+                /* //remove money from account
                 Debug.Log("Current Money: "+ pauseMenu.GetComponent<PauseMenuController>().Money);
                 Debug.Log("Current Cost: "+ weaponShowing.gameObject.GetComponent<WeaponStats>().item_value);
                 int tempCurrent = pauseMenu.GetComponent<PauseMenuController>().Money;
                 int tempCost = weaponShowing.gameObject.GetComponent<WeaponStats>().item_value;
                 pauseMenu.GetComponent<PauseMenuController>().Money = tempCurrent - tempCost;
-                Debug.Log("Money After Purchase: "+ pauseMenu.GetComponent<PauseMenuController>().Money);
-                //put it in the save file
-                pauseMenu.GetComponent<InventoryController>().MainHandWeapon = weaponShowing.gameObject;
-                pauseMenu.GetComponent<InventoryController>().Save();
+                Debug.Log("Money After Purchase: "+ pauseMenu.GetComponent<PauseMenuController>().Money); */
+
+                Debug.Log("Current Money: " + inventory.Money);
+                Debug.Log("Current Cost: " + weaponShowing.gameObject.GetComponent<WeaponStats>().item_value);
+                int tempCurrent = inventory.Money;
+                int tempCost = weaponShowing.gameObject.GetComponent<WeaponStats>().item_value;
+
+                if (tempCost > tempCurrent)
+                {
+                    Debug.Log("You don't have enough Essence to buy this item.");
+                    return;
+                }
+                else
+                {
+                    inventory.Money = tempCurrent - tempCost;
+                    Debug.Log("Money After Purchase: " + inventory.Money);
+                }
+
+                if (weapon = weaponShowingItemSlot.item as EquipmentItem)
+                {
+                    (weaponShowingItemSlot.item as EquipmentItem).itemData.attack = weaponShowing.gameObject.GetComponent<WeaponStats>().attack;
+                    (weaponShowingItemSlot.item as EquipmentItem).itemData.attack_speed = weaponShowing.gameObject.GetComponent<WeaponStats>().attack_speed;
+                    (weaponShowingItemSlot.item as EquipmentItem).itemData.crit_chance = weaponShowing.gameObject.GetComponent<WeaponStats>().crit_chance;
+                    (weaponShowingItemSlot.item as EquipmentItem).itemData.range = weaponShowing.gameObject.GetComponent<WeaponStats>().range;
+                    (weaponShowingItemSlot.item as EquipmentItem).itemData.item_type = weaponShowing.gameObject.GetComponent<WeaponStats>().item_type;
+                    (weaponShowingItemSlot.item as EquipmentItem).itemData.item_value = weaponShowing.gameObject.GetComponent<WeaponStats>().item_value;
+                    inventory.ItemContainer.AddItem(weaponShowingItemSlot);
+                    itemSaveManager.SaveInventory(inventory, inventory.Money);
+                }
+
 
                 //remove it from the pedestal
                 //this can be better in the future

@@ -10,16 +10,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f4e83e3705a8d5641bc643da9e8240d9, type: 3}
-  m_Name: Item_Equipments_TestWeapon
+  m_Name: Shiv
   m_EditorClassIdentifier: 
-  name: Weapon
-  description: Weapon Description
-  icon: {fileID: 21300000, guid: 2bbe4fd634538f74a943054d6aea536c, type: 3}
+  name: Shiv
+  description: Item Description
+  icon: {fileID: 21300000, guid: fd275dd43ec2da747aba3605a2d6100f, type: 3}
   isEquipment: 1
   equipmentType: 4
-  rarity: {fileID: 11400000, guid: b72a55d28f3a2a7458955a326eecf768, type: 2}
-  sellPrice: 1
+  rarity: {fileID: 11400000, guid: 33b41d029e1e8ae48beb24b9f8616728, type: 2}
+  sellPrice: 100
   maxStack: 1
+  ID: 14
   equipSlot: {fileID: 0}
-  armorModifier: 0
-  damageModifier: 0
+  weaponPrefab: {fileID: 1650594340677698, guid: 2adec69539a0b194296965556fc78941,
+    type: 3}

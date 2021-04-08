@@ -2,18 +2,18 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using System.Runtime.Serialization.Formatters.Binary;
+using System.IO;
 [Serializable]
 public class ItemContainer : IItemContainer
 {
-    private ItemSlot[] itemSlots = new ItemSlot[0];
+    public ItemSlot[] itemSlots = new ItemSlot[0];
 
     public Action OnItemsUpdated = delegate { }; // Update UI
 
     public ItemContainer(int size) => itemSlots = new ItemSlot[size];
 
     public ItemSlot GetSlotByIndex(int index) => itemSlots[index];
-
 
     public ItemSlot AddItem(ItemSlot itemSlot)
     {
@@ -49,7 +49,7 @@ public class ItemContainer : IItemContainer
         }
 
         // Deals with adding new items or empty inventory
-        for(int i = 0; i < itemSlots.Length - 4; i++)
+        for (int i = 0; i < itemSlots.Length - 4; i++)
         {
             if(itemSlots[i].item == null)
             {
@@ -74,6 +74,17 @@ public class ItemContainer : IItemContainer
 
         return itemSlot;
     }
+
+    public void AddItemAt(ItemSlot itemSlot, int slotIndex)
+    {
+        // Make sure the index slot is valid (between 0 and max item slots)
+        if (slotIndex < 0 || slotIndex > itemSlots.Length - 1) { return; }
+
+        itemSlots[slotIndex] = itemSlot;
+
+        OnItemsUpdated.Invoke();
+    }
+
 
     // Gets total amount of an item
     public int GetTotalQuantity(InventoryItem item)
@@ -248,4 +259,12 @@ public class ItemContainer : IItemContainer
         OnItemsUpdated.Invoke(); 
     }
 
+    public void ClearInventory()
+    {
+        for (int i = 0; i < itemSlots.Length; i++)
+        {
+            itemSlots[i] = new ItemSlot();
+        }
+    }
 }
+

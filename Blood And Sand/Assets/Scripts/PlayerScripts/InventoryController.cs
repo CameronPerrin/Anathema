@@ -25,7 +25,7 @@ public class InventoryController : MonoBehaviour
     // The weapon the player has.
     public GameObject MainHandWeapon;
 
-    //where it loads inventory
+    //where it loads inventorybutton
     public Transform inventoryPanel;
 
     //The current user.
@@ -146,6 +146,7 @@ public class InventoryController : MonoBehaviour
 
 	public void buttonAssignment(int num, GameObject LoadedItem){
 		Button tempButton = LoadedItem.GetComponent<Button>();
+		//tempButton.onClick.AddListener(new UnityAction(() => LoadIntoHand(num)));
 		tempButton.onClick.AddListener(new UnityAction(() => LoadIntoHand(num)));
 	}
 
@@ -185,7 +186,6 @@ public class InventoryController : MonoBehaviour
 				tempInvText = LoadedItem.GetComponentInChildren<TextMeshProUGUI>();
 				tempInvText.text = data.object_name;
 				//Debug.Log(data.object_name);
-
     		}
 
 

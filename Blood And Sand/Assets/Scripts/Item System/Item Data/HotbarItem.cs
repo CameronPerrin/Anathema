@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -8,6 +9,8 @@ using UnityEngine;
 public abstract class HotbarItem : ScriptableObject
 {
     [Header("Basic Info")]
+    [SerializeField] string id;
+    public string ID { get { return name; } }
     [SerializeField] private new string name = "New HotBar Item Name";
     [SerializeField] private new string description = "New HotBar Item Description";
     [SerializeField] private Sprite icon = null;
@@ -48,6 +51,7 @@ public abstract class HotbarItem : ScriptableObject
         else
             return 0;
     }
+
 
 }
 

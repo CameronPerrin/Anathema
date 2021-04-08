@@ -1,3 +1,4 @@
+using Photon.Pun;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -12,6 +13,8 @@ public class InventorySlot : ItemSlotUI, IDropHandler
     [SerializeField] private InventorySlotType inventorySlotType;
 
     private HotbarItem slotItem = null;
+
+
     public override HotbarItem SlotItem
     {
         get { return ItemSlot.item;}
@@ -24,6 +27,7 @@ public class InventorySlot : ItemSlotUI, IDropHandler
     {
         public HotbarItem item;
     }
+
     public override void OnDrop(PointerEventData eventData)
     {
         ItemDragHandler itemDragHandler = eventData.pointerDrag.GetComponent<ItemDragHandler>();
@@ -74,7 +78,8 @@ public class InventorySlot : ItemSlotUI, IDropHandler
             else if (inventorySlotType == InventorySlotType.Inventory)
             {
                 Debug.Log("Inventory slot: inventory");
-                inventory.ItemContainer.SwapEquip(itemDragHandler.ItemSlotUI.SlotIndex, SlotIndex); ;
+                inventory.ItemContainer.SwapEquip(itemDragHandler.ItemSlotUI.SlotIndex, SlotIndex);
+                //inventory.playerEquipment.removeDisplayedEquipment();
                 return;
             }
             else

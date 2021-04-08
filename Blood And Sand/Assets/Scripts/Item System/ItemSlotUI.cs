@@ -43,7 +43,6 @@ public abstract class ItemSlotUI : MonoBehaviour, IDropHandler
                 break;
             default: break;
         }
-        Debug.Log(SlotIndex);
         UpdateSlotUI();
     }
 

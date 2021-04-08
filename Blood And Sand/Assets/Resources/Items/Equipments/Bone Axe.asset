@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4e83e3705a8d5641bc643da9e8240d9, type: 3}
+  m_Name: Bone Axe
+  m_EditorClassIdentifier: 
+  name: Bone Axe
+  description: Item Description
+  icon: {fileID: 21300000, guid: c4d66f5001fa7a249bc4d586f109dd5d, type: 3}
+  isEquipment: 1
+  equipmentType: 4
+  rarity: {fileID: 11400000, guid: 90618505a0572c04dbe04f80a3de4880, type: 2}
+  sellPrice: 100
+  maxStack: 1
+  ID: 1
+  equipSlot: {fileID: 0}
+  weaponPrefab: {fileID: 1740520080793004, guid: d32dce34a7e1a3044bbc9dfbdcbd69ab,
+    type: 3}

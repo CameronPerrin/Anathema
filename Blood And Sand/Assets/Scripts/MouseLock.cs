@@ -15,8 +15,6 @@ public class MouseLock : MonoBehaviour
         inventoryToToggle = GameObject.FindGameObjectWithTag("InventoryPanel");
         equipmentToToggle = GameObject.FindGameObjectWithTag("EquipmentPanel");
         pauseScreen.SetActive(false);
-        inventoryToToggle.SetActive(false);
-        equipmentToToggle.SetActive(false);
     }
 
     // Update is called once per frame
@@ -44,7 +42,30 @@ public class MouseLock : MonoBehaviour
             }
         }
 
-        if(!paused && !inventoryToToggle.activeSelf && !equipmentToToggle.activeSelf)
+        if (!paused && inventoryToToggle.transform.localScale == new Vector3(0, 0, 0) && equipmentToToggle.transform.localScale == new Vector3(0, 0, 0))
+        {
+            Cursor.lockState = CursorLockMode.Locked;
+            //this.GetComponent<PlayerMovementController>().isPaused = false;
+            this.gameObject.transform.GetChild(0).gameObject.SetActive(true);
+            this.GetComponent<PlayerMovementController>().isPaused = false;
+            this.GetComponent<Combat>().isPaused = false;
+        }
+        else if (!paused && (inventoryToToggle.transform.localScale == new Vector3(1, 1, 1) || equipmentToToggle.transform.localScale == new Vector3(1, 1, 1)))
+        {
+            Cursor.visible = true;
+            Cursor.lockState = CursorLockMode.None;
+            this.GetComponent<PlayerMovementController>().isPaused = true;
+            this.GetComponent<Combat>().isPaused = true;
+        }
+        else if (paused)
+        {
+            Cursor.lockState = CursorLockMode.None;
+            this.GetComponent<PlayerMovementController>().isPaused = true;
+            this.gameObject.transform.GetChild(0).gameObject.SetActive(false);
+        }
+
+
+        /*if(!paused && !inventoryToToggle.activeSelf && !equipmentToToggle.activeSelf)
         {
             Cursor.lockState = CursorLockMode.Locked;
             //this.GetComponent<PlayerMovementController>().isPaused = false;
@@ -64,6 +85,6 @@ public class MouseLock : MonoBehaviour
             Cursor.lockState = CursorLockMode.None;
             this.GetComponent<PlayerMovementController>().isPaused = true;
             this.gameObject.transform.GetChild(0).gameObject.SetActive(false);
-        }
+        } */
     }
 }
