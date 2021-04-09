@@ -21,7 +21,8 @@ public class ToggleActiveWithKeyPress : MonoBehaviour
         hotbarSlots = GameObject.FindGameObjectsWithTag("Hotbar_Slot");
         playerMouseLock = GameObject.Find("PhotonPlayer(Clone)");
 
-
+        inventoryToToggle.transform.localScale = new Vector3(0, 0, 0);
+        equipmentToToggle.transform.localScale = new Vector3(0, 0, 0);
     }
 
     private void Update()
@@ -29,11 +30,30 @@ public class ToggleActiveWithKeyPress : MonoBehaviour
 
         if (Input.GetKeyDown(inventoryKeyCode))
         {
-            inventoryToToggle.SetActive(!inventoryToToggle.activeSelf);
+            //inventoryToToggle.SetActive(!inventoryToToggle.activeSelf);
+
+            if (inventoryToToggle.transform.localScale == new Vector3(0, 0, 0))
+            {
+                inventoryToToggle.transform.localScale = new Vector3(1, 1, 1);
+            }
+            else
+            {
+                inventoryToToggle.transform.localScale = new Vector3(0, 0, 0);
+            }
+
+
         }
         if (Input.GetKeyDown(equipmentKeyCode))
         {
-            equipmentToToggle.SetActive(!equipmentToToggle.activeSelf);
+            //equipmentToToggle.SetActive(!equipmentToToggle.activeSelf);
+            if (equipmentToToggle.transform.localScale == new Vector3(0, 0, 0))
+            {
+                equipmentToToggle.transform.localScale = new Vector3(1, 1, 1);
+            }
+            else
+            {
+                equipmentToToggle.transform.localScale = new Vector3(0, 0, 0);
+            }
         }
         if (Input.GetKeyDown(firstHotBarSlotKeyCode))
         {

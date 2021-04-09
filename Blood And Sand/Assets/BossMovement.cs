@@ -41,8 +41,18 @@ public class BossMovement : MonoBehaviour
     {
         if (hasTakenDamage || cloneDamageTaken)
         {
-            WaitUntilTeleport();
+            Invoke(nameof(WaitUntilTeleport), 0.1f);
+            //WaitUntilTeleport();
         }
+
+        if (mainBoss.GetComponent<npcHealth>().health <= 0)
+        {
+            for (int i = 0; i < bosses.Length; i++)
+            {
+                Destroy(bosses[i]);
+            }
+        }
+
     }
 
     private void OnTriggerEnter(Collider collision)
@@ -107,12 +117,14 @@ public class BossMovement : MonoBehaviour
                         Debug.Log("Teleporting to portal...: " + portalIndexes[j]);
                         portalController.GetComponent<BossTeleportationController>().portals[portalIndexes[j]].GetComponent<BossPortal>().isVacant = false;
 
+                // Will sometimes crash when clone dies during teleportation.
                 for (int i = 0; i < bosses.Length; i++)
                 {
                     bosses[i].transform.localScale = new Vector3(1, 1, 1);
                 }
                         portalController.GetComponent<BossTeleportationController>().boss[j].GetComponent<UnityEngine.AI.NavMeshAgent>().Warp(portalController.GetComponent<BossTeleportationController>().portals[portalIndexes[j]].transform.position);
-                  }
+
+            }
             }
         //portalIndexes.Clear();
         hasTakenDamage = false;

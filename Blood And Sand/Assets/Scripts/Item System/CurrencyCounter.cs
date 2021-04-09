@@ -5,13 +5,17 @@ using UnityEngine;
 
 public class CurrencyCounter : MonoBehaviour
 {
-    public int Money;
-    public TMP_Text MoneyText;
-    private void Awake()
-    {
-        Money = 1000;
+    [SerializeField] private Inventory playerInventory;
 
-        MoneyText.text = "Essence: " + Money.ToString();
+    public TMP_Text MoneyText;
+
+
+    private void LateUpdate()
+    {
+            MoneyText.text = "Essence: " + playerInventory.Money;
     }
 
+
 }
+
+

@@ -310,7 +310,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &8816314360748903030
 Transform:
   m_ObjectHideFlags: 0
@@ -318,7 +318,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1859679386586658590}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 10.25, y: -4.65, z: 5.43}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -393,6 +393,7 @@ MonoBehaviour:
   rayOrigin: {fileID: 1859679386586658590}
   timeBetweenNormalAttacks: 1
   timeBetweenSpiralAttacks: 0.1
+  timeBetweenAOEAttacks: 1
   attackPrefab: {fileID: 8710979580092825000, guid: 0cf14e5f446db6f499198d3c5fa1c812,
     type: 3}
   shootPoint: {fileID: 662500397802172024}
@@ -402,6 +403,10 @@ MonoBehaviour:
   enemyBoss: {fileID: 1859679386586658590}
   clone: {fileID: 8841508036710474816, guid: 745240d43d990c44d8f3b9f83f91a3d4, type: 3}
   bosses: {fileID: 1859679386586658590}
+  AOEAttackPrefab: {fileID: 338827971270170317, guid: 06a1de7504e9884499bb92671558aa10,
+    type: 3}
+  size: {x: 50, y: 0.1, z: 40}
+  position: {x: 0, y: -1, z: 40}
 --- !u!114 &2165917880333194059
 MonoBehaviour:
   m_ObjectHideFlags: 0

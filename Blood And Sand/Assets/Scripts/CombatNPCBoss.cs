@@ -22,7 +22,9 @@ public class CombatNPCBoss: MonoBehaviour
     //Attacking
     public float timeBetweenNormalAttacks;
     public float timeBetweenSpiralAttacks;
+    public float timeBetweenAOEAttacks;
     bool alreadyAttacked = false;
+    bool alreadyAttackedMines = false;
     public GameObject attackPrefab;
     public GameObject shootPoint;
     public float damage = 10;
@@ -30,6 +32,7 @@ public class CombatNPCBoss: MonoBehaviour
     public int numShots; 
     public int spreadAngle;
     private float atkTimer;
+
     private int chosenAtk;
 
     [SerializeField] public GameObject enemyBoss;
@@ -45,6 +48,17 @@ public class CombatNPCBoss: MonoBehaviour
     npcHealth bossHealth;
 
     private float searchCountdown = 1f;
+
+
+
+    // Mines Attack Data
+    private float aoeAtkTimer = 1.75f;
+    [SerializeField] private GameObject AOEAttackPrefab;
+    private bool minesCanAtk = false;
+    //Variables to draw Gizmo Cube (Spawn Box)
+    private Vector3 center;
+    public Vector3 size;
+    public Vector3 position;
 
     private void Awake()
     {
@@ -71,11 +85,9 @@ public class CombatNPCBoss: MonoBehaviour
             case Phase.Phase_2:
                 randomAttack();
                 break;
-        }
-
-        if(enemyBoss.GetComponent<npcHealth>().health <= 0)
-        {
-            Destroy(bosses);
+            case Phase.Phase_3:
+                randomAttack();
+                break;
         }
     }
     void FixedUpdate()
@@ -90,6 +102,7 @@ public class CombatNPCBoss: MonoBehaviour
                     {
                         case Phase.Phase_1:
                             AttackPlayer();
+                            //minesAttackSequence();
                             break;
                         case Phase.Phase_2:
                             if(chosenAtk == 1)
@@ -102,7 +115,17 @@ public class CombatNPCBoss: MonoBehaviour
                         }
                             break;
                         case Phase.Phase_3:
-                            //AttackPlayer();
+                        minesAttackSequence();
+                        if (chosenAtk == 1)
+                        {
+                            AttackPlayer();
+
+                        }
+                        else
+                        {
+                            AttackPlayerSpiral();
+                        }
+
                             break;
                     }
                     gameObject.GetComponent<mindlessFollow>().hitP = true;
@@ -258,6 +281,49 @@ public class CombatNPCBoss: MonoBehaviour
     {
         //Debug.Log("ResetAttack invoked");
         alreadyAttacked = false;
+    }
+
+    private void ResetAttackMines()
+    {
+        alreadyAttackedMines = false;
+    }
+
+
+    private void minesAttackSequence()
+    {
+        if (alreadyAttackedMines == false)
+        {
+            // Spawn Mines
+            Vector3 pos = position + center + new Vector3(Random.Range(-size.x / 2, size.x / 2), Random.Range(-size.y / 2, size.y / 2), Random.Range(-size.z / 2, size.z / 2));
+            PhotonNetwork.InstantiateSceneObject(Path.Combine("PhotonPrefabs", "AOE_Attack_Boss_Particle"), pos, AOEAttackPrefab.transform.rotation);
+
+
+
+            alreadyAttackedMines = true;
+            Invoke(nameof(ResetAttackMines), timeBetweenAOEAttacks);
+        }
+    }
+
+    private void CheckForPlayers()
+    {
+        Collider[] colliders = Physics.OverlapSphere(this.transform.position, 4f);
+        foreach(Collider c in colliders)
+        {
+            if(c.GetComponent<PlayerMovementController>())
+            {
+                // Deal damage
+                Debug.Log("AOE Attack Dealt Damage to Player");
+                GameObject attackHitbox = Instantiate(attackPrefab, shootPoint.transform.position, transform.rotation * Quaternion.Euler(-90, 0, 0));
+            }
+        }
+    }
+
+    // Gizmo used to see spawn area.
+    void OnDrawGizmosSelected()
+    {
+        //Make Spawn Cube Red
+        Gizmos.color = new Color(1, 0, 0, 0.5f);
+        Gizmos.DrawCube(position + center, size);
     }
 
 

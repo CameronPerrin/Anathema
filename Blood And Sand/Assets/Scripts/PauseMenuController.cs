@@ -26,7 +26,7 @@ public class PauseMenuController : MonoBehaviour
 	void Awake()
 	{
 		//DontDestroyOnLoad(this.gameObject);
-		Money = 1000;
+		Money = 10000;
 		resolutions = Screen.resolutions;
 
 		// Print the resolutions

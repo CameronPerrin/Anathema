@@ -55,7 +55,7 @@ public class GameFinder : MonoBehaviourPunCallbacks
 			//eventually we will use steam names for now we use player and a number
 
 		}
-		if(playerCount == 2){
+		if(playerCount == 1){
 			if(PhotonNetwork.IsMasterClient) {
 				startButton.SetActive(true);
 			}

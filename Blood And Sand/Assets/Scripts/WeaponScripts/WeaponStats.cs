@@ -40,4 +40,22 @@ public class WeaponStats : MonoBehaviour
     {
         
     }
+
+
+	public Item_Data returnItemData()
+    {
+		Item_Data data = new Item_Data();
+		data.object_name = name;
+		data.attack = attack;
+		data.item_value = item_value;
+		data.attack_speed = attack_speed;
+		data.crit_chance = crit_chance;
+		data.range = range;
+		data.item_type = item_type;
+		data.magic_defense = magic_defense;
+		data.move_speed = move_speed;
+		data.bleed_chance = bleed_chance;
+
+		return data;
+	}
 }

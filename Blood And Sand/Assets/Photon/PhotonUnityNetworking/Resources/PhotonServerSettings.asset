@@ -34,7 +34,6 @@ MonoBehaviour:
   - ClickRpc
   - Damage
   - DestroyRpc
-  - RpcShoot
   - sendChat
   - sendName
   DisableAutoOpenWizard: 1

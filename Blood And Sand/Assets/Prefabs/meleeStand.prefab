@@ -112,6 +112,7 @@ MonoBehaviour:
   attack: 0
   attack_speed: 0
   crit_chance: 0
+  bleed_chance: 0
   range: 0
   defense: 0
   magic_defense: 0
@@ -229,6 +230,7 @@ MonoBehaviour:
   attack: 0
   attack_speed: 0
   crit_chance: 0
+  bleed_chance: 0
   range: 0
   defense: 0
   magic_defense: 0
@@ -346,6 +348,7 @@ MonoBehaviour:
   attack: 0
   attack_speed: 0
   crit_chance: 0
+  bleed_chance: 0
   range: 0
   defense: 0
   magic_defense: 0
@@ -463,6 +466,7 @@ MonoBehaviour:
   attack: 0
   attack_speed: 0
   crit_chance: 0
+  bleed_chance: 0
   range: 0
   defense: 0
   magic_defense: 0
@@ -580,6 +584,7 @@ MonoBehaviour:
   attack: 0
   attack_speed: 0
   crit_chance: 0
+  bleed_chance: 0
   range: 0
   defense: 0
   magic_defense: 0
@@ -698,6 +703,7 @@ MonoBehaviour:
   attack: 0
   attack_speed: 0
   crit_chance: 0
+  bleed_chance: 0
   range: 0
   defense: 0
   magic_defense: 0
@@ -897,6 +903,7 @@ MonoBehaviour:
   attack: 0
   attack_speed: 0
   crit_chance: 0
+  bleed_chance: 0
   range: 0
   defense: 0
   magic_defense: 0
@@ -1014,6 +1021,7 @@ MonoBehaviour:
   attack: 0
   attack_speed: 0
   crit_chance: 0
+  bleed_chance: 0
   range: 0
   defense: 0
   magic_defense: 0
@@ -1131,6 +1139,7 @@ MonoBehaviour:
   attack: 0
   attack_speed: 0
   crit_chance: 0
+  bleed_chance: 0
   range: 0
   defense: 0
   magic_defense: 0
@@ -1248,6 +1257,7 @@ MonoBehaviour:
   attack: 0
   attack_speed: 0
   crit_chance: 0
+  bleed_chance: 0
   range: 0
   defense: 0
   magic_defense: 0
@@ -1365,6 +1375,7 @@ MonoBehaviour:
   attack: 0
   attack_speed: 0
   crit_chance: 0
+  bleed_chance: 0
   range: 0
   defense: 0
   magic_defense: 0
@@ -1584,6 +1595,12 @@ MonoBehaviour:
   weaponShowing: {fileID: 0}
   pauseMenu: {fileID: 6923413154032130168, guid: 14f2b77376e59a746932100ba9cf5c8f,
     type: 3}
+  itemSaveManager: {fileID: 7657915733535987239, guid: 3522e4f8ca599fd4eabd3ca8febd2083,
+    type: 3}
+  inventory: {fileID: 11400000, guid: da31aee719a5fd84fa22325266365481, type: 2}
+  weaponShowingItemSlot:
+    item: {fileID: 0}
+    quantity: 0
 --- !u!1 &4918103272510698915
 GameObject:
   m_ObjectHideFlags: 0
@@ -1696,6 +1713,7 @@ MonoBehaviour:
   attack: 0
   attack_speed: 0
   crit_chance: 0
+  bleed_chance: 0
   range: 0
   defense: 0
   magic_defense: 0
@@ -1813,6 +1831,7 @@ MonoBehaviour:
   attack: 0
   attack_speed: 0
   crit_chance: 0
+  bleed_chance: 0
   range: 0
   defense: 0
   magic_defense: 0
@@ -1930,6 +1949,7 @@ MonoBehaviour:
   attack: 0
   attack_speed: 0
   crit_chance: 0
+  bleed_chance: 0
   range: 0
   defense: 0
   magic_defense: 0
@@ -2047,6 +2067,7 @@ MonoBehaviour:
   attack: 0
   attack_speed: 0
   crit_chance: 0
+  bleed_chance: 0
   range: 0
   defense: 0
   magic_defense: 0
@@ -2164,6 +2185,7 @@ MonoBehaviour:
   attack: 0
   attack_speed: 0
   crit_chance: 0
+  bleed_chance: 0
   range: 0
   defense: 0
   magic_defense: 0
@@ -2509,6 +2531,7 @@ MonoBehaviour:
   attack: 0
   attack_speed: 0
   crit_chance: 0
+  bleed_chance: 0
   range: 0
   defense: 0
   magic_defense: 0
@@ -2627,6 +2650,7 @@ MonoBehaviour:
   attack: 0
   attack_speed: 0
   crit_chance: 0
+  bleed_chance: 0
   range: 0
   defense: 0
   magic_defense: 0
@@ -2744,6 +2768,7 @@ MonoBehaviour:
   attack: 0
   attack_speed: 0
   crit_chance: 0
+  bleed_chance: 0
   range: 0
   defense: 0
   magic_defense: 0
@@ -2861,6 +2886,7 @@ MonoBehaviour:
   attack: 0
   attack_speed: 0
   crit_chance: 0
+  bleed_chance: 0
   range: 0
   defense: 0
   magic_defense: 0

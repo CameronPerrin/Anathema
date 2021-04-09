@@ -72,7 +72,7 @@ public class CombatNPCBossClone: MonoBehaviour
         {
             atkTimer = Random.Range(0, 10);
             chosenAtk = Random.Range(1, 3);
-            Debug.Log("Chosen Attack: " + chosenAtk);
+            //Debug.Log("Chosen Attack: " + chosenAtk);
 
         }
 

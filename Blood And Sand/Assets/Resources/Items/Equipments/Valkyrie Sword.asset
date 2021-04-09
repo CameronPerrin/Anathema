@@ -10,16 +10,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f4e83e3705a8d5641bc643da9e8240d9, type: 3}
-  m_Name: Item_Equipments_TestArmor
+  m_Name: Valkyrie Sword
   m_EditorClassIdentifier: 
-  name: Test Armour
-  description: Testing  Armour
-  icon: {fileID: 21300000, guid: 9c283ae7480a56149abbf0fbe1dce057, type: 3}
+  name: Valkyrie Sword
+  description: Item Description
+  icon: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
   isEquipment: 1
-  equipmentType: 2
-  rarity: {fileID: 11400000, guid: 7d506617b03991f438316682f1448d6e, type: 2}
-  sellPrice: 1
+  equipmentType: 4
+  rarity: {fileID: 11400000, guid: b72a55d28f3a2a7458955a326eecf768, type: 2}
+  sellPrice: 100
   maxStack: 1
+  ID: 19
   equipSlot: {fileID: 0}
-  armorModifier: 0
-  damageModifier: 0
+  weaponPrefab: {fileID: 1119460283029334, guid: 5c4f473fbd625994c8e32490e421acbe,
+    type: 3}

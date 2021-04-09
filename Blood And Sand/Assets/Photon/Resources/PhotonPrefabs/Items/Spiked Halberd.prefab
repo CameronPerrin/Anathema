@@ -114,6 +114,7 @@ MonoBehaviour:
   attack: 0
   attack_speed: 0
   crit_chance: 0
+  bleed_chance: 0
   range: 0
   defense: 0
   magic_defense: 0

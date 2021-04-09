@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4e83e3705a8d5641bc643da9e8240d9, type: 3}
+  m_Name: Dark Waraxe
+  m_EditorClassIdentifier: 
+  name: Dark Waraxe
+  description: Item Description
+  icon: {fileID: 21300000, guid: ec5c023d2d100324a8d7c99747bd8c23, type: 3}
+  isEquipment: 1
+  equipmentType: 4
+  rarity: {fileID: 11400000, guid: 90618505a0572c04dbe04f80a3de4880, type: 2}
+  sellPrice: 100
+  maxStack: 1
+  ID: 7
+  equipSlot: {fileID: 0}
+  weaponPrefab: {fileID: 1054860216200086, guid: fbbaf6bd4cf85dd4eb7a8673799933ec,
+    type: 3}

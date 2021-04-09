@@ -49,8 +49,12 @@ public class WeaponSpawn : MonoBehaviour
 		//grab the canvas above the weapon to display cost and the dmg
 		showStats(weapons[itemIndex].gameObject);
 		//maybe eventually show how much money you have to spend above it too?
-		
-    }
+
+		this.GetComponent<Interact>().weaponShowingItemSlot.item = Object.Instantiate(Resources.Load<InventoryItem>("Items/Equipments/" + weapons[itemIndex].name));
+		this.GetComponent<Interact>().weaponShowingItemSlot.quantity = 1;
+
+		//weapons[itemIndex].name
+	}
 
     //eventually we will have this for all items
     //we will also make cooler items have better stats
