@@ -12,6 +12,7 @@ using System.IO;
 public class BossMovement : MonoBehaviour
 {
     private GameObject[] bosses;
+    private PhotonView PV;
     public GameObject mainBoss;
     private GameObject portalController;
     public float teleportTime;
@@ -23,6 +24,7 @@ public class BossMovement : MonoBehaviour
 
     private void Awake()
     {
+        PV = GetComponent<PhotonView>();
         portalController = GameObject.Find("BossTeleportationController");
     }
 
@@ -39,19 +41,33 @@ public class BossMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (hasTakenDamage || cloneDamageTaken)
+        if(PhotonNetwork.IsMasterClient)
         {
-            Invoke(nameof(WaitUntilTeleport), 0.1f);
-            //WaitUntilTeleport();
-        }
-
-        if (mainBoss.GetComponent<npcHealth>().health <= 0)
-        {
-            for (int i = 0; i < bosses.Length; i++)
+            if (hasTakenDamage || cloneDamageTaken)
             {
-                Destroy(bosses[i]);
+                Debug.Log("Boss took damage");
+                if (PV.IsMine)
+                {
+                    PV.RPC("WaitUntilTeleport", RpcTarget.All);
+                }
+
+                //WaitUntilTeleport();
+            }
+
+            if (mainBoss.GetComponent<npcHealth>().health <= 0)
+            {
+                for (int i = 0; i < bosses.Length; i++)
+                {
+                    Destroy(bosses[i]);
+                }
             }
         }
+        else
+        {
+            return;
+        }
+
+
 
     }
 
@@ -69,6 +85,14 @@ public class BossMovement : MonoBehaviour
         }
     }
 
+    [PunRPC]
+    private void waitTeleport(float time)
+    {
+        Invoke(nameof(WaitUntilTeleport), time);
+    }
+
+
+    [PunRPC]
     private void WaitUntilTeleport()
     {
         teleportTimer -= Time.deltaTime;
@@ -78,15 +102,25 @@ public class BossMovement : MonoBehaviour
             bosses = GameObject.FindGameObjectsWithTag("Boss");
             portalController.GetComponent<BossTeleportationController>().boss = GameObject.FindGameObjectsWithTag("Boss");
 
+            /*
             for(int i = 0; i < bosses.Length; i++)
             {
-                bosses[i].transform.localScale = new Vector3(0, 0, 0);
+                bosses[i].GetComponent<Renderer>().enabled = false;
+            } */
+             
+            if (PV.IsMine)
+            {
+                PV.RPC("StartTeleportRPC", RpcTarget.All);
             }
-            
-            StartCoroutine(Teleport());
+            //StartCoroutine(Teleport());
         }
     }
 
+    [PunRPC]
+    public void StartTeleportRPC()
+    {
+        StartCoroutine(Teleport());
+    }
     IEnumerator Teleport()
     {
         yield return new WaitForSeconds(1);
@@ -117,15 +151,18 @@ public class BossMovement : MonoBehaviour
                         Debug.Log("Teleporting to portal...: " + portalIndexes[j]);
                         portalController.GetComponent<BossTeleportationController>().portals[portalIndexes[j]].GetComponent<BossPortal>().isVacant = false;
 
-                // Will sometimes crash when clone dies during teleportation.
-                for (int i = 0; i < bosses.Length; i++)
-                {
-                    bosses[i].transform.localScale = new Vector3(1, 1, 1);
-                }
+                
+
                         portalController.GetComponent<BossTeleportationController>().boss[j].GetComponent<UnityEngine.AI.NavMeshAgent>().Warp(portalController.GetComponent<BossTeleportationController>().portals[portalIndexes[j]].transform.position);
 
             }
             }
+
+        /*
+        for (int i = 0; i < bosses.Length; i++)
+        {
+            bosses[i].GetComponent<Renderer>().enabled = true;
+        } */
         //portalIndexes.Clear();
         hasTakenDamage = false;
         collisionOccured = false;

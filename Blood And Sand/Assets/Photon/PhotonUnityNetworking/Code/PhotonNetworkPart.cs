@@ -2320,5 +2320,10 @@ namespace Photon.Pun
                 PhotonNetwork.NetworkingClient.ConnectToRegionMaster(regionHandler.BestRegion.Code);
             }
         }
+
+        public static void InstantiateRoomObject()
+        {
+            throw new NotImplementedException();
+        }
     }
 }

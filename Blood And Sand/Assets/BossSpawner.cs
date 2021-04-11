@@ -1,3 +1,4 @@
+using Photon.Pun;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -13,28 +14,38 @@ public class BossSpawner : MonoBehaviour
 {
     public GameObject boss;
     public waveSystem waveSystem;
-    private float searchCountdown = 3f;
+    private float countDown = 5f;
+    private bool bossHasSpawned = false;
 
+    void Start()
+    {
+        if (!PhotonNetwork.IsMasterClient)
+        {
+            Destroy(this);
+        }
+
+    }
     void Update()
     {
-        if(!BossIsAlive())
+        if(!bossHasSpawned)
         {
-            waveSystem.isBossDead = true;
+            SpawnBossAfterCountdown();
         }
     }
 
-    bool BossIsAlive()
+    void SpawnBossAfterCountdown()
     {
-        searchCountdown -= Time.deltaTime;
-        if (searchCountdown <= 0f)
+        countDown -= Time.deltaTime;
+        if (countDown <= 0f)
         {
-            searchCountdown = 1f;
-            if (GameObject.FindGameObjectWithTag("Boss") == null)
-            {
-                return false;
-            }
+            Debug.Log("Boss is now spawning!");
+            PhotonNetwork.Instantiate("NPCs/BossMainNPC", new Vector3(0, 0, 0), Quaternion.identity, 0);
+            bossHasSpawned = true;
         }
-        return true;
+        else
+        {
+            Debug.Log("Boss spawning in " + countDown + " seconds!");
+        }
     }
 
 

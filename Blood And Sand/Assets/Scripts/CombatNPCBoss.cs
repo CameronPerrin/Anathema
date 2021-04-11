@@ -3,8 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using Photon.Pun;
 using System.IO;
+using UnityEngine.AI;
 
-public class CombatNPCBoss: MonoBehaviour
+public class CombatNPCBoss: MonoBehaviourPun
 {
 
     public enum Phase
@@ -18,6 +19,9 @@ public class CombatNPCBoss: MonoBehaviour
     public GameObject rayOrigin;
     private GameObject player;
     private GameObject tempObj;
+    public NavMeshAgent agent;
+    private PhotonView PV;
+    public LayerMask IgnoreMe;
 
     //Attacking
     public float timeBetweenNormalAttacks;
@@ -65,66 +69,95 @@ public class CombatNPCBoss: MonoBehaviour
         phase = Phase.WaitingToStart;
         colliderTrigger = GameObject.Find("BossColliderTrigger");
         portalController = GameObject.Find("BossTeleportationController");
+        PV = GetComponent<PhotonView>();
     }
 
     private void Start()
     {
-        colliderTrigger.GetComponent<BossColliderTrigger>().OnPlayerEnterTrigger += ColliderTrigger_OnPlayerEnterTrigger;
-        bossHealth = enemyBoss.GetComponent<npcHealth>();
-        atkTimer = Random.Range(5, 10);
 
+            agent = this.GetComponent<NavMeshAgent>();
+            //colliderTrigger.GetComponent<BossColliderTrigger>().OnPlayerEnterTrigger += ColliderTrigger_OnPlayerEnterTrigger;
+            bossHealth = enemyBoss.GetComponent<npcHealth>();
+            //atkTimer = Random.Range(5, 10);
+            StartBattle();
+
+        
     }
 
 
 
     private void Update()
     {
-        BossBattle_OnDamaged();
-        switch (phase)
+        /*
+        if (PhotonNetwork.IsMasterClient)
         {
-            case Phase.Phase_2:
-                randomAttack();
-                break;
-            case Phase.Phase_3:
-                randomAttack();
-                break;
+            BossBattle_OnDamaged();
         }
+            
+            switch (phase)
+            {
+                case Phase.Phase_2:
+                if (PhotonNetwork.IsMasterClient)
+                {
+                    randomAttack();
+                    PV.RPC("SetRandomAttack", RpcTarget.All, atkTimer, chosenAtk);
+                }
+                break;
+                case Phase.Phase_3:
+                if (PhotonNetwork.IsMasterClient)
+                {
+                    randomAttack();
+                    PV.RPC("SetRandomAttack", RpcTarget.All, atkTimer, chosenAtk);
+                }
+                break;
+            } */
+
+
+        if(PhotonNetwork.IsMasterClient)
+        {
+            BossBattle_OnDamaged();
+            PV.RPC("SetBossPhase", RpcTarget.All, phase);
+            randomAttack();
+            PV.RPC("SetRandomAttack", RpcTarget.All, atkTimer, chosenAtk);
+        }
+
+
     }
     void FixedUpdate()
     {
-            Vector3 forward = transform.TransformDirection(Vector3.forward) * 30;
+            Vector3 forward = transform.TransformDirection(Vector3.forward) * 600;
             RaycastHit hit;
-            if (Physics.Raycast(rayOrigin.transform.position, forward, out hit, 30))
+            if (Physics.Raycast(rayOrigin.transform.position, forward, out hit, 600, ~IgnoreMe))
             {
                 if (hit.collider.tag == "Player")
                 { // player is detected, time to start doing stuff! (like damage)
-                switch (phase)
+                    switch (phase)
                     {
                         case Phase.Phase_1:
                             AttackPlayer();
                             //minesAttackSequence();
                             break;
                         case Phase.Phase_2:
-                            if(chosenAtk == 1)
-                        {
-                            AttackPlayer();
-                        }
-                        else
-                        {
-                            AttackPlayerSpiral();
-                        }
+                            if (chosenAtk == 1)
+                            {
+                                AttackPlayer();
+                            }
+                            else
+                            {
+                                AttackPlayerSpiral();
+                            }
                             break;
                         case Phase.Phase_3:
-                        minesAttackSequence();
-                        if (chosenAtk == 1)
-                        {
-                            AttackPlayer();
+                            minesAttackSequence();
+                            if (chosenAtk == 1)
+                            {
+                                AttackPlayer();
 
-                        }
-                        else
-                        {
-                            AttackPlayerSpiral();
-                        }
+                            }
+                            else
+                            {
+                                AttackPlayerSpiral();
+                            }
 
                             break;
                     }
@@ -140,7 +173,9 @@ public class CombatNPCBoss: MonoBehaviour
             else
             {
                 gameObject.GetComponent<mindlessFollow>().hitP = false;
-            } 
+            }
+        
+
     }
 
     private void ColliderTrigger_OnPlayerEnterTrigger(object sender, System.EventArgs e)
@@ -170,6 +205,20 @@ public class CombatNPCBoss: MonoBehaviour
         }
 
     }
+
+    [PunRPC]
+    public void SetRandomAttack(float attackTime, int chosenAttack)
+    {
+        atkTimer = attackTime;
+        chosenAtk = chosenAttack;
+    }
+
+    [PunRPC]
+    public void SetBossPhase(Phase Phase)
+    {
+        phase = Phase;
+    }
+
     private void BossBattle_OnDamaged()
     {
 
@@ -217,21 +266,25 @@ public class CombatNPCBoss: MonoBehaviour
             case Phase.Phase_1:
                 phase = Phase.Phase_2;
                 Debug.Log("SPAWNING CLONES!!!!!!!!!!!!!!!");
-                cloneLocation = portalController.GetComponent<BossTeleportationController>().findVacantPortal();
-                PhotonNetwork.InstantiateSceneObject(Path.Combine("PhotonPrefabs", clone.name), portalController.GetComponent<BossTeleportationController>().portals[cloneLocation].transform.position, Quaternion.identity);
-                clone.GetComponent<UnityEngine.AI.NavMeshAgent>().Warp(portalController.GetComponent<BossTeleportationController>().portals[cloneLocation].transform.position);
-                portalController.GetComponent<BossTeleportationController>().portals[cloneLocation].GetComponent<BossPortal>().isVacant = false;
+                if(PhotonNetwork.IsMasterClient)
+                {
+                    cloneLocation = portalController.GetComponent<BossTeleportationController>().findVacantPortal();
+                    PhotonNetwork.Instantiate("NPCs/BossCloneNPC", portalController.GetComponent<BossTeleportationController>().portals[cloneLocation].transform.position, Quaternion.identity, 0);
+                    //PhotonNetwork.InstantiateSceneObject(Path.Combine("PhotonPrefabs", clone.name), portalController.GetComponent<BossTeleportationController>().portals[cloneLocation].transform.position, Quaternion.identity);
+                    clone.GetComponent<UnityEngine.AI.NavMeshAgent>().Warp(portalController.GetComponent<BossTeleportationController>().portals[cloneLocation].transform.position);
+                    portalController.GetComponent<BossTeleportationController>().portals[cloneLocation].GetComponent<BossPortal>().isVacant = false;
+                }
+
                 break;
             case Phase.Phase_2:
                 phase = Phase.Phase_3;
-                cloneLocation = portalController.GetComponent<BossTeleportationController>().findVacantPortal();
-                PhotonNetwork.InstantiateSceneObject(Path.Combine("PhotonPrefabs", clone.name), portalController.GetComponent<BossTeleportationController>().portals[cloneLocation].transform.position, Quaternion.identity);
-                clone.GetComponent<UnityEngine.AI.NavMeshAgent>().Warp(portalController.GetComponent<BossTeleportationController>().portals[cloneLocation].transform.position);
-                portalController.GetComponent<BossTeleportationController>().portals[cloneLocation].GetComponent<BossPortal>().isVacant = false;
-                //////////     Enable mines here
-
-
-                //////////
+                if(PhotonNetwork.IsMasterClient)
+                {
+                    cloneLocation = portalController.GetComponent<BossTeleportationController>().findVacantPortal();
+                    PhotonNetwork.Instantiate("NPCs/BossCloneNPC", portalController.GetComponent<BossTeleportationController>().portals[cloneLocation].transform.position, Quaternion.identity, 0);
+                    clone.GetComponent<UnityEngine.AI.NavMeshAgent>().Warp(portalController.GetComponent<BossTeleportationController>().portals[cloneLocation].transform.position);
+                    portalController.GetComponent<BossTeleportationController>().portals[cloneLocation].GetComponent<BossPortal>().isVacant = false;
+                }
                 break;
         }
         Debug.Log("Starting next phase: " + phase);

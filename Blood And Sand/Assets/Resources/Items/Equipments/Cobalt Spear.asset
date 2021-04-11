@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4e83e3705a8d5641bc643da9e8240d9, type: 3}
   m_Name: Cobalt Spear
   m_EditorClassIdentifier: 
+  id: 
   name: Cobalt Spear
   description: Item Description
   icon: {fileID: 21300000, guid: 18b6e259b09d1f447a58ce6598f75305, type: 3}
@@ -20,7 +21,18 @@ MonoBehaviour:
   rarity: {fileID: 11400000, guid: 7d506617b03991f438316682f1448d6e, type: 2}
   sellPrice: 100
   maxStack: 1
-  ID: 3
   equipSlot: {fileID: 0}
   weaponPrefab: {fileID: 1034379743010502, guid: 4e161596dd8013b4d88da7539861a395,
     type: 3}
+  itemData:
+    object_name: 
+    item_value: 0
+    attack: 50
+    attack_speed: 0.1
+    crit_chance: 0
+    range: 0
+    defense: 0
+    magic_defense: 0
+    move_speed: 0
+    item_type: 6
+    bleed_chance: 0

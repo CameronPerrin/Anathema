@@ -18,11 +18,13 @@ public class Combat : MonoBehaviour
 	public GameObject magicFast;
 	public GameObject magicStrong;
 	public GameObject shootPoint;
-    public GameObject CurrentPlayer;
+	public GameObject stabPoint;
+	public GameObject CurrentPlayer;
 	public float attackSpeed = 0;
 	public float attackTimer = 0;
 	GameObject weap;
 	public bool isPaused;
+	GameObject attackHitbox;
 
 	[HideInInspector] public int critMultiplier = 1;
     
@@ -47,7 +49,7 @@ public class Combat : MonoBehaviour
 						Attack();
 					}
 					catch (Exception e){
-						Debug.Log("Can't find item, are you sure player has it equipped?");
+						//Debug.Log("Can't find item, are you sure player has it equipped?");
 					}
 				}
     		}
@@ -100,7 +102,21 @@ public class Combat : MonoBehaviour
 		// set final damage for attack
 		attackPrefab.GetComponent<bulletScript>().dmg = weap.GetComponent<WeaponStats>().attack * critMultiplier;
 		// Instatiate attack
-    	GameObject attackHitbox = Instantiate(attackPrefab, shootPoint.transform.position, cam.transform.rotation);
+
+
+		if(weap.GetComponent<WeaponStats>().item_type == 6)
+		{
+			attackHitbox = Instantiate(attackPrefab, stabPoint.transform.position, stabPoint.transform.rotation);
+		}
+		else if (weap.GetComponent<WeaponStats>().item_type == 1)
+        {
+			attackHitbox = Instantiate(attackPrefab, shootPoint.transform.position, shootPoint.transform.rotation);
+		}
+		else
+        {
+			attackHitbox = Instantiate(attackPrefab, shootPoint.transform.position, cam.transform.rotation);
+		}
+		//shootPoint.transform.position = tempShootPoint;
 
         // [OLD] -- >attackHitbox.GetComponent<Rigidbody>().velocity = CurrentPlayer.transform.GetChild(1).GetComponent<Rigidbody>().velocity;
 

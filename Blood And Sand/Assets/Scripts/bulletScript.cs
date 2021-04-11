@@ -30,7 +30,6 @@ public class bulletScript : MonoBehaviour
     {
         if(!fastMagicAttack && !strongMagicAttack)
             Destroy(this.gameObject, 0.2f);
-
         else{
             transform.LookAt(aim);
             rb.velocity = transform.forward * projectileSpeed;

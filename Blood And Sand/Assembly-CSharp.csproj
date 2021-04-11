@@ -155,6 +155,7 @@
     <Compile Include="Assets\Scripts\MenuScripts\MainMenuController.cs" />
     <Compile Include="Assets\Photon\PhotonChat\Demos\DemoChat\FriendItem.cs" />
     <Compile Include="Assets\Scripts\NetworkController.cs" />
+    <Compile Include="Assets\Scripts\Item System\Button_Close.cs" />
     <Compile Include="Assets\Scripts\PlayerScripts\PlayerLoadoutController.cs" />
     <Compile Include="Assets\Scripts\CombatNPCMelee.cs" />
     <Compile Include="Assets\Scripts\Item System\ItemSlotUI.cs" />
@@ -196,7 +197,7 @@
     <Compile Include="Assets\Scripts\particleDestroy.cs" />
     <Compile Include="Assets\Scripts\Item System\Inventory.cs" />
     <Compile Include="Assets\nTools\PrefabPainter\Scripts\PrefabPainterSceneSettings.cs" />
-    <Compile Include="Assets\Scripts\Item System\Button_Close.cs" />
+    <Compile Include="Assets\NetworkBoss.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets\nTools\PrefabPainter\Shaders\GUITextureClipLevels.shader" />

@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 367b372f26c220c458d480f2dfdd15f5, type: 3}
   m_Name: Inventory_Player
   m_EditorClassIdentifier: 
-  Money: 1000
+  Money: 452
   onInventoryItemsUpdated: {fileID: 11400000, guid: 7c1205c6eadeba94b9643bc4607637c1,
     type: 2}
   testItemSlot:
-    item: {fileID: 11400000, guid: eeee90944f53e954895c31f0e74b2e2f, type: 2}
+    item: {fileID: 11400000, guid: 1a0efbe084f63c142aa367b09ae0b452, type: 2}
     quantity: 1

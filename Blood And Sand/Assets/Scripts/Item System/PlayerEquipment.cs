@@ -26,6 +26,12 @@ public class PlayerEquipment : MonoBehaviour
     [SerializeField] private Inventory playerInventory;
     [SerializeField] ItemSaveManager itemSaveManager;
 
+    PhotonView PV;
+
+    private void Start()
+    {
+        PV = GetComponent<PhotonView>();
+    }
 
     private void Update()
     {
@@ -94,7 +100,10 @@ public class PlayerEquipment : MonoBehaviour
                 LoadedWeapon = PhotonNetwork.Instantiate((Path.Combine("PhotonPrefabs/Items", savedSlots.SavedSlots[17].ItemID)), Vector3.up, Quaternion.identity) as GameObject;
                 LoadedWeapon.transform.position = CurrentPlayer.transform.GetChild(1).GetChild(0).position;
                 LoadedWeapon.transform.rotation = CurrentPlayer.transform.GetChild(1).GetChild(0).rotation;
-                LoadedWeapon.transform.parent = CurrentPlayer.transform.GetChild(1).GetChild(0);
+
+                PV.RPC("TransformLoadedWeapon", RpcTarget.All);
+                //LoadedWeapon.transform.SetParent(CurrentPlayer.transform.GetChild(1).GetChild(0));
+                //LoadedWeapon.transform.parent = CurrentPlayer.transform.GetChild(1).GetChild(0);
 
                 LoadedWeapon.GetComponent<WeaponStats>().item_value = savedSlots.SavedSlots[17].itemData.item_value;
                 LoadedWeapon.GetComponent<WeaponStats>().attack = savedSlots.SavedSlots[17].itemData.attack;
@@ -113,7 +122,10 @@ public class PlayerEquipment : MonoBehaviour
             LoadedWeapon = PhotonNetwork.Instantiate((Path.Combine("PhotonPrefabs/Items", weaponItem.Name)), Vector3.up, Quaternion.identity) as GameObject;
             LoadedWeapon.transform.position = CurrentPlayer.transform.GetChild(1).GetChild(0).position;
             LoadedWeapon.transform.rotation = CurrentPlayer.transform.GetChild(1).GetChild(0).rotation;
-            LoadedWeapon.transform.parent = CurrentPlayer.transform.GetChild(1).GetChild(0);
+
+            PV.RPC("TransformLoadedWeapon", RpcTarget.All);
+            //LoadedWeapon.transform.SetParent(CurrentPlayer.transform.GetChild(1).GetChild(0));
+            //LoadedWeapon.transform.parent = CurrentPlayer.transform.GetChild(1).GetChild(0);
 
             equipmentItem = playerInventory.ItemContainer.itemSlots[17].item as EquipmentItem;
 
@@ -207,4 +219,11 @@ public class PlayerEquipment : MonoBehaviour
      
     } */
 
+
+    [PunRPC] void TransformLoadedWeapon()
+    {
+        Debug.Log("RPC Calling tranform");
+        CurrentPlayer = PhotonNetwork.LocalPlayer.TagObject as GameObject;
+        LoadedWeapon.transform.SetParent(CurrentPlayer.transform.GetChild(1).GetChild(0));
+    }
 }

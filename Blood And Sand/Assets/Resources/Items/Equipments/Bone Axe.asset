@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4e83e3705a8d5641bc643da9e8240d9, type: 3}
   m_Name: Bone Axe
   m_EditorClassIdentifier: 
+  id: 
   name: Bone Axe
   description: Item Description
   icon: {fileID: 21300000, guid: c4d66f5001fa7a249bc4d586f109dd5d, type: 3}
@@ -20,7 +21,18 @@ MonoBehaviour:
   rarity: {fileID: 11400000, guid: 90618505a0572c04dbe04f80a3de4880, type: 2}
   sellPrice: 100
   maxStack: 1
-  ID: 1
   equipSlot: {fileID: 0}
   weaponPrefab: {fileID: 1740520080793004, guid: d32dce34a7e1a3044bbc9dfbdcbd69ab,
     type: 3}
+  itemData:
+    object_name: Bone Axe
+    item_value: 0
+    attack: 50
+    attack_speed: 0.1
+    crit_chance: 0
+    range: 10
+    defense: 0
+    magic_defense: 0
+    move_speed: 0
+    item_type: 1
+    bleed_chance: 0

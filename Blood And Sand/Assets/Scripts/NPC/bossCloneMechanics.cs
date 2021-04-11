@@ -22,8 +22,8 @@ public class bossCloneMechanics : MonoBehaviour
     private void Start()
     {
         // Change to BossMainNPC(Clone) later
-        //mainBoss = GameObject.Find("BossMainNPC(Clone)");
-        mainBoss = GameObject.Find("BossMainNPC");
+        mainBoss = GameObject.Find("BossMainNPC(Clone)");
+        //mainBoss = GameObject.Find("BossMainNPC");
     }
 
     private void Update()

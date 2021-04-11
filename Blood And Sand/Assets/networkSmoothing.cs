@@ -9,8 +9,10 @@ public class networkSmoothing : MonoBehaviourPunCallbacks, IPunObservable
     private PhotonView PV;
     private Vector3 realPos = Vector3.zero;
     private Quaternion realRot = Quaternion.identity;
+    private Vector3 realScale = Vector3.zero;
 
     private Vector3 lastPos;
+    private Vector3 lastScale;
     private Vector3 velocity;
 
     [Range(0.0f, 1.0f)]
@@ -23,7 +25,8 @@ public class networkSmoothing : MonoBehaviourPunCallbacks, IPunObservable
         PV = GetComponent<PhotonView>();
 	    realPos = this.transform.position;
 	    realRot = this.transform.rotation;
-	    predictionCoeff = Mathf.Clamp(predictionCoeff, 0.0f, 1.0f);  //Uncomment this to ensure the prediction is clamped
+        realScale = this.transform.localScale;
+        predictionCoeff = Mathf.Clamp(predictionCoeff, 0.0f, 1.0f);  //Uncomment this to ensure the prediction is clamped
 	}
 	
 	public void Reset()
@@ -37,12 +40,17 @@ public class networkSmoothing : MonoBehaviourPunCallbacks, IPunObservable
 	void FixedUpdate () 
     {
         lastPos = realPos;
+        lastScale = realScale;
+
 	    if (!PV.IsMine)
 	    {
             //Set the position & rotation based on the data that was received
-	        transform.position = Vector3.Lerp(transform.position, realPos + (predictionCoeff*velocity*Time.deltaTime), Time.deltaTime);
-            transform.rotation = Quaternion.Lerp(transform.rotation, realRot, Time.deltaTime);
-	    }
+            //transform.position = realPos;
+            //transform.position = Vector3.Lerp(transform.position, realPos + (predictionCoeff*velocity*Time.deltaTime),  7.0f * Time.deltaTime);
+            transform.position = Vector3.Lerp(transform.position, realPos + (predictionCoeff * velocity * Time.deltaTime), 7.0f * Time.deltaTime);
+            transform.rotation = Quaternion.Lerp(transform.rotation, realRot, 7.0f * Time.deltaTime);
+            //transform.localScale = Vector3.Lerp(transform.localScale, realScale + (predictionCoeff * velocity * Time.deltaTime), 1);;
+        }
 	}
 	
     public void OnPhotonSerializeView(PhotonStream stream, PhotonMessageInfo info)
@@ -54,6 +62,7 @@ public class networkSmoothing : MonoBehaviourPunCallbacks, IPunObservable
             stream.SendNext(transform.rotation);
             //Send velocity over network
             stream.SendNext((realPos - lastPos) / Time.deltaTime);
+            //stream.SendNext((realScale - lastScale) / Time.deltaTime);
         }
         else if(stream.IsReading)
         {

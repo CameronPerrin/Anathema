@@ -1,3 +1,4 @@
+using Photon.Pun;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -14,6 +15,8 @@ public class CombatNPCBossClone: MonoBehaviour
     bool alreadyAttacked = false;
     public GameObject attackPrefab;
     public GameObject shootPoint;
+    private PhotonView PV;
+    public LayerMask IgnoreMe;
 
 
     public int numShots; 
@@ -27,22 +30,28 @@ public class CombatNPCBossClone: MonoBehaviour
 
     private void Start()
     {
+        PV = GetComponent<PhotonView>();
         atkTimer = Random.Range(5, 10);
     }
 
     private void Update()
     {
-        randomAttack();
+        if(PhotonNetwork.IsMasterClient)
+        {
+            randomAttack();
+            PV.RPC("SetRandomAttack", RpcTarget.All, atkTimer, chosenAtk);
+        }
+        //randomAttack();
     }
     void FixedUpdate()
     {
-            Vector3 forward = transform.TransformDirection(Vector3.forward) * 30;
+            Vector3 forward = transform.TransformDirection(Vector3.forward) * 600;
             RaycastHit hit;
-            if (Physics.Raycast(rayOrigin.transform.position, forward, out hit, 30))
+            if (Physics.Raycast(rayOrigin.transform.position, forward, out hit, 600, ~IgnoreMe))
             {
                 if (hit.collider.tag == "Player")
                 { // player is detected, time to start doing stuff! (like damage)
-                            if(chosenAtk == 1)
+                        if(chosenAtk == 1)
                         {
                             AttackPlayer();
                         }
@@ -65,6 +74,7 @@ public class CombatNPCBossClone: MonoBehaviour
             } 
     }
 
+    //[PunRPC]
     private void randomAttack()
     {
         atkTimer -= Time.deltaTime;
@@ -72,12 +82,17 @@ public class CombatNPCBossClone: MonoBehaviour
         {
             atkTimer = Random.Range(0, 10);
             chosenAtk = Random.Range(1, 3);
-            //Debug.Log("Chosen Attack: " + chosenAtk);
-
         }
 
     }
-   
+
+    [PunRPC]
+    public void SetRandomAttack(float attackTime, int chosenAttack)
+    {
+        atkTimer = attackTime;
+        chosenAtk = chosenAttack;
+    }
+
     private void AttackPlayer()
     {
         if(alreadyAttacked == false)
