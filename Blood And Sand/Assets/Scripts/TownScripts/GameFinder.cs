@@ -113,7 +113,7 @@ public class GameFinder : MonoBehaviourPunCallbacks
 		if(PhotonNetwork.IsMasterClient)
 		{
 			PhotonNetwork.CurrentRoom.IsOpen = false;
-			PhotonNetwork.LoadLevel(4);
+			PhotonNetwork.LoadLevel(5);
 		}
 	}
 

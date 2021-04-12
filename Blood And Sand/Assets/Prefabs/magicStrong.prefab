@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 3571667358613150323}
   - component: {fileID: 5175721089748540410}
   - component: {fileID: 7847037077974018561}
-  m_Layer: 10
+  m_Layer: 2
   m_Name: magicStrong
   m_TagString: Bullet
   m_Icon: {fileID: 0}
@@ -120,6 +120,7 @@ MonoBehaviour:
   fastMagicAttack: 0
   strongMagicAttack: 1
   projectileSpeed: 10
+  aim: {x: 0, y: 0, z: 0}
 --- !u!65 &5175721089748540410
 BoxCollider:
   m_ObjectHideFlags: 0

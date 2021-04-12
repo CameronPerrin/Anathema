@@ -17,10 +17,14 @@ public class npcHealth : MonoBehaviourPunCallbacks
     public int defense = 0;
     public int magicDefense = 0;
     public float dotTimer = 0.5f;
+    public float dropChance = 0.2f;
+    public float corruptionDropChance = 0.5f;
     public Image worldHealthBar;		// HP images for worldspace overlay
     public Image redWorldHealthBackdrop;
     public GameObject wHp; 				// canvas world
     public GameObject bloodVFX;
+    public GameObject lootDrop;
+    public GameObject corruptionDrop;
     //public GameObject bloodSpotInstLocation;
 
 
@@ -43,16 +47,11 @@ public class npcHealth : MonoBehaviourPunCallbacks
     {
         if(type == 1 || type == 6){          // Physical damage
             dmg = dmage - defense;
-            if(PV.IsMine){
-                PV.RPC("Damage", RpcTarget.All, dmg);    
-            }
-            
+            PV.RPC("Damage", RpcTarget.All, dmg);    
         }
         else if(type == 2 || type == 7){     // Magic damage
             dmg = dmage - magicDefense;
-            if(PV.IsMine){
-                PV.RPC("Damage", RpcTarget.All, dmg);    
-            }
+            PV.RPC("Damage", RpcTarget.All, dmg);    
         }
         if(dot){
             dmgTemp = dmage;
@@ -65,9 +64,7 @@ public class npcHealth : MonoBehaviourPunCallbacks
     {
         if(dmgTemp > 0){
             //Debug.Log("Bleeding for " + dmg + " damage!");
-            if(PV.IsMine){
-                PV.RPC("Damage", RpcTarget.All, dmg);
-            }
+            PV.RPC("Damage", RpcTarget.All, dmg);
             dmgTemp -= dmg;
         }
         else{
@@ -87,18 +84,24 @@ public class npcHealth : MonoBehaviourPunCallbacks
     public void Damage(float dmage)
     {
         health -= dmage;
+        ShowFloatingText();
         Instantiate(bloodVFX, this.transform.position, Quaternion.identity); // spawn blood vfx
         //Instantiate(bloodVFX, bloodSpotInstLocation.transform.position, Quaternion.identity); // spawn blood vfx
             if(health <= 0){
+                float rand = UnityEngine.Random.Range(0.01f, 1.0f);
+                if(rand <= corruptionDropChance)
+                    Instantiate(corruptionDrop, new Vector3 (transform.position.x, 6, transform.position.z), Quaternion.identity);
+                if(rand <= dropChance)
+                    Instantiate(lootDrop, new Vector3 (transform.position.x, 6, transform.position.z), Quaternion.identity);
                 Destroy(this.gameObject);
             }  
         worldHealthBar.fillAmount = health/maxHp;
         
         // Check if floating text exists and if health is over 0 so that damage text does not spawn at hp 0
-            if(FloatingTextPrefab)
-            {
-                ShowFloatingText();
-            }
+            //if(FloatingTextPrefab)
+            //{
+                
+            //}
     }
 
 

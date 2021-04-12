@@ -31,7 +31,7 @@ Transform:
   m_GameObject: {fileID: 1668341018723190}
   m_LocalRotation: {x: 0.000000081460335, y: 0, z: -0, w: 1}
   m_LocalPosition: {x: -0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.1, y: 0.1, z: 0.1}
   m_Children:
   - {fileID: 90763316645221467}
   m_Father: {fileID: 0}
@@ -121,6 +121,7 @@ MonoBehaviour:
   magic_defense: 0
   move_speed: 0
   item_type: 0
+  isCorruptedEssence: 0
 --- !u!114 &9223099182084958913
 MonoBehaviour:
   m_ObjectHideFlags: 0

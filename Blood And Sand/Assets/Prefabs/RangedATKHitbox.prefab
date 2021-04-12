@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 8573643656485139041}
   m_Layer: 2
   m_Name: RangedATKHitbox
-  m_TagString: EditorOnly
+  m_TagString: Bullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -111,6 +111,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rb: {fileID: 0}
   projectileSpeed: 30
+  damage: 0
+  type: 0
 --- !u!54 &8573643656485139041
 Rigidbody:
   m_ObjectHideFlags: 0

@@ -37,7 +37,7 @@ public class Combat : MonoBehaviour
 
 	void Update()
 	{
-		if(Input.GetMouseButtonDown(0) && SceneManager.GetActiveScene().buildIndex != 1 && attackTimer <= 0)
+		if(Input.GetMouseButton(0) && SceneManager.GetActiveScene().buildIndex != 1 && attackTimer <= 0)
     	{
     		if(PV.IsMine)
     		{
@@ -61,12 +61,6 @@ public class Combat : MonoBehaviour
 
     public void Attack()
     {
-    	PV.RPC("RpcShoot", RpcTarget.All);
-    }
-
-    [PunRPC]
-    void RpcShoot()
-    {
 		// Decide what type of weapon attack it is
 		if(weap.GetComponent<WeaponStats>().item_type == 1)
 			attackPrefab = meleeSlash;
@@ -83,8 +77,6 @@ public class Combat : MonoBehaviour
 		attackSpeed = weap.GetComponent<WeaponStats>().attack_speed;
 		attackTimer = attackSpeed;
 		float rand = UnityEngine.Random.Range(0.01f, 1.0f);
-
-		
 
 		// Tell the damage prefab what type of specials it has, and calculate the chances of secondary active stats activating
 		attackPrefab.GetComponent<bulletScript>().type = weap.GetComponent<WeaponStats>().item_type;

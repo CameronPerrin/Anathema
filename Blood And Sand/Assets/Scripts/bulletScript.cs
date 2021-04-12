@@ -39,6 +39,7 @@ public class bulletScript : MonoBehaviour
 
     private void OnTriggerEnter(Collider collision)
     {
+        //Debug.Log("Hit: " + collision.name); --> use this to check to see what the bullet is actually hitting
         if((collision.gameObject.tag == "EnemyHitbox") && (collision.gameObject != CurrentPlayer)){
             npcHealth hp = collision.gameObject.GetComponent<npcHealth>();
             //Debug.Log(hp);
@@ -49,7 +50,7 @@ public class bulletScript : MonoBehaviour
             Destroy(this.gameObject);
         }
 
-        if ((collision.gameObject.tag == "Boss") && (collision.gameObject != CurrentPlayer))
+        else if ((collision.gameObject.tag == "Boss") && (collision.gameObject != CurrentPlayer))
         {
             npcHealth hp = collision.gameObject.GetComponent<npcHealth>();
             //Debug.Log(hp);
@@ -62,18 +63,19 @@ public class bulletScript : MonoBehaviour
         }
 
         //probably find a wayto do this without assigning a variable each time this spawns if we need to optimize the script in the future
-        if ((collision.gameObject.tag == "Player") && (collision.gameObject != CurrentPlayer))
+        else if ((collision.gameObject.tag == "Corrupted_Player") && (collision.gameObject != CurrentPlayer))
         {
         	Health hp = collision.gameObject.GetComponent<Health>();
             if(hp){
-               //hp.TakeDamage(dmg); 
+               hp.TakeDamage(dmg, type, DOT); 
             }
-        	
-            
-            Destroy(this.gameObject);
-          
+            Destroy(this.gameObject);  
         }
 
+        else if (collision.gameObject.tag == "Bullet");
+        // destroy if it collides with anything else
+        else
+            Destroy(this.gameObject);
         
     }
 }
