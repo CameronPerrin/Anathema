@@ -14,6 +14,7 @@ public class waveSystem : MonoBehaviour
     [System.Serializable]
     public class Wave
     {
+        public bool isBossWave = false;
         public string name;
         public Spawn[] enemies;
         public int maxSpawnCount;
@@ -25,9 +26,17 @@ public class waveSystem : MonoBehaviour
         public float spawnMultiplier = 1;
     }
 
+    [System.Serializable]
+    public class SpawnBox
+    {
+        public Vector3 Position;
+        public Vector3 Size;
+    }
+
     public Wave[] waves;
+    [SerializeField] private SpawnBox[] spawnLocations;
     public GameObject boss;
-    private int nextWave = 0;
+    private int nextWave = -1;
     public bool hasBossWave;
     public BossTeleportationController portal;
     [HideInInspector] public bool isBossDead;
@@ -40,12 +49,10 @@ public class waveSystem : MonoBehaviour
     public float waveCountdown;
     private float searchCountdown = 1f;
     public SpawnState state = SpawnState.COUNTING;
+    private bool allWavesComplete = false;
+    [SerializeField] private int townWaitTimer;
 
-    //Variables to draw Gizmo Cube (Spawn Box)
-    private Vector3 center;
-    public Vector3 size;
-
-
+    [SerializeField] private GameObject bossSpawner;
 
 
     void Start()
@@ -58,38 +65,40 @@ public class waveSystem : MonoBehaviour
         {
             Destroy(this);
         }
-
     }
+
 
     void Update()
     {
-        if (state == SpawnState.WAITING)
+        if(!allWavesComplete)
         {
-            //Check if enemies are still alive
-            if(!EnemyIsAlive())
+            if (state == SpawnState.WAITING)
             {
+                //Check if enemies are still alive
+                if (!EnemyIsAlive())
+                {
 
-                //Begin a new round
-                beginNewRound();
+                    //Begin a new round
+                    beginNewRound();
+                }
+                else
+                {
+                    return;
+                }
+            }
+            if (waveCountdown <= 0)
+            {
+                if (state != SpawnState.SPAWNING)
+                {
+                    //Start spawning wave
+                    StartCoroutine(EnemyDrop(waves[nextWave]));
+                }
             }
             else
             {
-                return;
+                waveCountdown -= Time.deltaTime;
             }
         }
-        if(waveCountdown <= 0)
-        {
-            if (state != SpawnState.SPAWNING)
-            {
-                //Start spawning wave
-                StartCoroutine(EnemyDrop(waves[nextWave]));
-            }
-        }
-        else
-        {
-            waveCountdown -= Time.deltaTime;
-        }
-
     }
 
     void beginNewRound()
@@ -101,25 +110,17 @@ public class waveSystem : MonoBehaviour
         if (nextWave + 1 > waves.Length - 1)
         {
             nextWave = 0;
+            // Loop or Send all players to next scene
+            Debug.Log("ALL WAVES COMPLETE!");
+            allWavesComplete = true;
 
-            //state = SpawnState.WAITING;
-            /// Hold until boss wave completed
-            if (hasBossWave)
-            {
-                PhotonNetwork.InstantiateSceneObject(Path.Combine("PhotonPrefabs", boss.name), portal.portals[0].transform.position, Quaternion.identity);
-                hasBossWave = false;
-            }
-            ///
-            Debug.Log("ALL WAVES COMPLETE! Looping...");
-            for(int i = 0; i < waves.Length; i++)
+            /*
+            Debug.Log("Looping Waves");
+            for (int i = 0; i < waves.Length; i++)
             {
                 waves[i].enemyCount = 0;
-            }
-
-
-
-            // Multipliers goes here
-
+            } */
+            StartCoroutine(loadBackToTown());
         }
         else
         {
@@ -129,6 +130,16 @@ public class waveSystem : MonoBehaviour
 
     }
 
+    IEnumerator loadBackToTown()
+    {
+        Debug.Log("Loading back to town");
+        while (true)
+        { // This creates a never-ending loop
+            yield return new WaitForSeconds(townWaitTimer);
+            PhotonNetwork.LoadLevel(1);
+            break;
+        }
+    }
     bool EnemyIsAlive()
     {
         //searchCountdown is used so the function doesn't check every frame.
@@ -136,14 +147,7 @@ public class waveSystem : MonoBehaviour
         if(searchCountdown <= 0f)
         {
             searchCountdown = 1f;
-
-            if (GameObject.FindGameObjectWithTag("Boss") != null)
-            {
-                return true;
-            }
-
-
-            if (GameObject.FindGameObjectWithTag("EnemyHitbox") == null)
+            if (GameObject.FindGameObjectWithTag("EnemyHitbox") == null && GameObject.FindGameObjectWithTag("Boss_Spawner") == null)
             {
                 return false;
             }
@@ -156,34 +160,44 @@ public class waveSystem : MonoBehaviour
         Debug.Log("Spawning Wave: " + _wave.name);
         state = SpawnState.SPAWNING;
 
-        while (_wave.enemyCount <= _wave.maxSpawnCount)
+        if(_wave.isBossWave)
         {
-            float randomEnemyRange = Random.Range(Mathf.Round(_wave.startingSpawnMin), Mathf.Round(_wave.startingSpawnMax + 1));
-            for (int k = 0; k < randomEnemyRange; k++)
+            bossSpawner.SetActive(true);
+        }
+        else
+        {
+            while (_wave.enemyCount <= _wave.maxSpawnCount)
             {
-                // Grab random X,Y,Z position within Gizmo Cube to spawn enemy
-                Vector3 pos = transform.localPosition + center + new Vector3(Random.Range(-size.x / 2, size.x / 2), Random.Range(-size.y / 2, size.y / 2), Random.Range(-size.z / 2, size.z / 2));
-                int i = Random.Range(0, 100);
-                // Iterate through enemies array
-                for (int j = 0; j < _wave.enemies.Length; j++)
+                float randomEnemyRange = Random.Range(Mathf.Round(_wave.startingSpawnMin), Mathf.Round(_wave.startingSpawnMax));
+                for (int k = 0; k < (int)randomEnemyRange; k++)
                 {
-                    // Checks if i falls between min and max probability range of enemy[j]
-                    if (i >= _wave.enemies[j].minProbabilityRange && i <= _wave.enemies[j].maxProbabilityRange)
+                    // Grab random X,Y,Z position within Gizmo Cube to spawn enemy
+                    int randomSpawnLocation = Random.Range(0, spawnLocations.Length);
+                    Vector3 pos = spawnLocations[randomSpawnLocation].Position + new Vector3(Random.Range(-spawnLocations[randomSpawnLocation].Size.x / 2, spawnLocations[randomSpawnLocation].Size.x / 2), Random.Range(-spawnLocations[randomSpawnLocation].Size.y / 2, spawnLocations[randomSpawnLocation].Size.y / 2), Random.Range(-spawnLocations[randomSpawnLocation].Size.z / 2, spawnLocations[randomSpawnLocation].Size.z / 2));
+                    //Vector3 pos = transform.localPosition + center + new Vector3(Random.Range(-size.x / 2, size.x / 2), Random.Range(-size.y / 2, size.y / 2), Random.Range(-size.z / 2, size.z / 2));
+                    int i = Random.Range(0, 100);
+                    // Iterate through enemies array
+                    for (int j = 0; j < _wave.enemies.Length; j++)
                     {
-                        // Spawn enemy
-                        PhotonNetwork.InstantiateSceneObject(Path.Combine("PhotonPrefabs", _wave.enemies[j].spawnObject.name), pos, Quaternion.identity);
-                        break;
+                        // Checks if i falls between min and max probability range of enemy[j]
+                        if (i >= _wave.enemies[j].minProbabilityRange && i <= _wave.enemies[j].maxProbabilityRange)
+                        {
+                            // Spawn enemy
+                            PhotonNetwork.InstantiateSceneObject(Path.Combine("PhotonPrefabs", _wave.enemies[j].spawnObject.name), pos, Quaternion.identity);
+                            break;
+                        }
                     }
                 }
+                _wave.enemyCount += (int)randomEnemyRange;
+
+                // Multiply min and max spawn rage by multiplier.
+                _wave.startingSpawnMin *= _wave.spawnMultiplier;
+                _wave.startingSpawnMax *= _wave.spawnMultiplier;
+
+                yield return new WaitForSeconds(_wave.timeBetweenSpawns);
             }
-            _wave.enemyCount += (int)randomEnemyRange;
-
-            // Multiply min and max spawn rage by multiplier.
-            _wave.startingSpawnMin *= _wave.spawnMultiplier;
-            _wave.startingSpawnMax *= _wave.spawnMultiplier;
-
-            yield return new WaitForSeconds(_wave.timeBetweenSpawns);
         }
+
         // All enemies are spawned for the wave and waits until all enemies are killed.
         state = SpawnState.WAITING;
         yield break;
@@ -195,8 +209,13 @@ public class waveSystem : MonoBehaviour
     {
         //Make Spawn Cube Red
         Gizmos.color = new Color(1, 0, 0, 0.5f);
-        Gizmos.DrawCube(transform.localPosition + center, size);
-    }
+
+        for(int i = 0; i < spawnLocations.Length; i++)
+        {
+            Gizmos.DrawCube(spawnLocations[i].Position, spawnLocations[i].Size);
+        }
+
+    }  
 }
 
 

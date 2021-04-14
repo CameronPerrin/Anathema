@@ -19,6 +19,7 @@ TagManager:
   - EquipmentPanel
   - Boss_Attack
   - Boss_Clone
+  - Boss_Spawner
   layers:
   - Default
   - TransparentFX

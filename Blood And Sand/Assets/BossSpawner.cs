@@ -10,12 +10,14 @@ using UnityEngine;
 // Set bosses active
 
 
+
 public class BossSpawner : MonoBehaviour
 {
     public GameObject boss;
     public waveSystem waveSystem;
     private float countDown = 5f;
     private bool bossHasSpawned = false;
+    private float searchCountdown = 1f;
 
     void Start()
     {
@@ -31,6 +33,26 @@ public class BossSpawner : MonoBehaviour
         {
             SpawnBossAfterCountdown();
         }
+
+        if(!BossIsAlive())
+        {
+            Destroy(this.gameObject);
+        }
+    }
+
+    bool BossIsAlive()
+    {
+        //searchCountdown is used so the function doesn't check every frame.
+        searchCountdown -= Time.deltaTime;
+        if (searchCountdown <= 0f && bossHasSpawned)
+        {
+            searchCountdown = 1f;
+            if (GameObject.FindGameObjectWithTag("Boss") == null)
+            {
+                return false;
+            }
+        }
+        return true;
     }
 
     void SpawnBossAfterCountdown()

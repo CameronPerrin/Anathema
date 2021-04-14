@@ -44,7 +44,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   waves:
-  - name: First Wave
+  - isBossWave: 0
+    name: First Wave
     enemies:
     - spawnObject: {fileID: 4832338527365570554, guid: 57af95181810f5e42816887b93800996,
         type: 3}
@@ -60,7 +61,8 @@ MonoBehaviour:
     startingSpawnMin: 1
     startingSpawnMax: 3
     spawnMultiplier: 1.1
-  - name: Second Wave
+  - isBossWave: 0
+    name: Second Wave
     enemies:
     - spawnObject: {fileID: 5401975044253669403, guid: 765f7e76edda7614292d7137bd056992,
         type: 3}
@@ -76,7 +78,8 @@ MonoBehaviour:
     startingSpawnMin: 2
     startingSpawnMax: 4
     spawnMultiplier: 1.2
-  - name: Third Wave (Boss Wave)
+  - isBossWave: 0
+    name: Third Wave (Boss Wave)
     enemies: []
     maxSpawnCount: 1
     enemyCount: 1
@@ -84,6 +87,14 @@ MonoBehaviour:
     startingSpawnMin: 0
     startingSpawnMax: 0
     spawnMultiplier: 1
+  spawnLocations: []
+  boss: {fileID: 0}
+  hasBossWave: 0
+  portal: {fileID: 0}
+  isBossDead: 0
   timeBetweenWaves: 4
   waveCountdown: 0
-  size: {x: 40, y: 1, z: 20}
+  state: 2
+  townWaitTimer: 5
+  bossSpawner: {fileID: 5299245797551961595, guid: d7e0af39c704c7942a4beb3428feaa18,
+    type: 3}

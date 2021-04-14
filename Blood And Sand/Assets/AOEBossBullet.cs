@@ -39,7 +39,7 @@ public class AOEBossBullet : MonoBehaviour
             Health hp = collision.gameObject.GetComponent<Health>();
             if (hp)
             {
-                hp.TakeDamage(damage, type);
+                hp.TakeDamage(damage, type, false);
             }
         }
         //Destroy(this.gameObject);

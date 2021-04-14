@@ -31,9 +31,14 @@ public class RangedBossBullet : MonoBehaviour
             }
             
         }
-        else if(collision.gameObject.tag == "Bullet");
-        else
+        if (collision.gameObject.tag == "Untagged")
+        {
             Destroy(this.gameObject);
+        }
+
+        /*else if(collision.gameObject.tag == "Bullet");
+        else 
+            Destroy(this.gameObject); */
         //Destroy(this.gameObject);
     }
 }

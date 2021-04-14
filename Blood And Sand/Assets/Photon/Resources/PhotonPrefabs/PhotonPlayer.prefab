@@ -978,6 +978,8 @@ MonoBehaviour:
   hpRegenSpeed: 3
   physicalDefense: 6
   magicDefense: 0
+  dotTimer: 0.5
+  isCorrupted: 0
   overlayHealthBar: {fileID: 7738224452872692261}
   redScreenHealthBackdrop: {fileID: 3447164253107990170}
   worldHealthBar: {fileID: 709491987561619163}
@@ -991,6 +993,7 @@ MonoBehaviour:
   FloatingTextPrefab: {fileID: 7957747401790915659, guid: e4c38fc68cee0d34ea6cd0bafcad4ae0,
     type: 3}
   dmgTake: 0
+  dmgTemp: 0
 --- !u!114 &956957041702412034
 MonoBehaviour:
   m_ObjectHideFlags: 0

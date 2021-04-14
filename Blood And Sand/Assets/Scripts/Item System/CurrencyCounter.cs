@@ -15,6 +15,11 @@ public class CurrencyCounter : MonoBehaviour
             MoneyText.text = "Essence: " + playerInventory.Money;
     }
 
+    public void addMoney(int amount)
+    {
+        playerInventory.Money += amount;
+    }
+
 
 }
 
