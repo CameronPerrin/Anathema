@@ -382,8 +382,8 @@ MonoBehaviour:
   defense: 0
   magicDefense: 5
   dotTimer: 0.5
-  dropChance: 0.3
-  corruptionDropChance: 0.1
+  dropChance: 1
+  corruptionDropChance: 1
   worldHealthBar: {fileID: 1216152337699825459}
   redWorldHealthBackdrop: {fileID: 800827637245468037}
   wHp: {fileID: 6240555181705799631}

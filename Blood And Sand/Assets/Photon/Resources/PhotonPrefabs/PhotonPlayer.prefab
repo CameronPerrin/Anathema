@@ -230,7 +230,7 @@ CapsuleCollider:
   m_GameObject: {fileID: 1404866618595192266}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   m_Radius: 0.5
   m_Height: 2
   m_Direction: 1
@@ -834,6 +834,7 @@ GameObject:
   - component: {fileID: 7991041869338575788}
   - component: {fileID: 2939558711176660642}
   - component: {fileID: -2388538057121418057}
+  - component: {fileID: 8088340091125721381}
   m_Layer: 9
   m_Name: PhotonPlayer
   m_TagString: Player
@@ -1076,6 +1077,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 37e8c72af06dfa34facc1147c10cb609, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!136 &8088340091125721381
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3536456245099357511}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.5
+  m_Height: 2
+  m_Direction: 1
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &3680925794353910806
 GameObject:
   m_ObjectHideFlags: 0
