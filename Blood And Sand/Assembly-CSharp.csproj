@@ -93,6 +93,7 @@
      <Compile Include="Assets\Scripts\RangedBullet.cs" />
      <Compile Include="Assets\Scripts\Item System\InventorySlot.cs" />
      <Compile Include="Assets\Scripts\QuickStartRoomController.cs" />
+     <Compile Include="Assets\VFX\Projectile\Scripts\PlayAnimationOnKeyPre.cs" />
      <Compile Include="Assets\TutorialInfo\Scripts\Readme.cs" />
      <Compile Include="Assets\Scripts\Item System\InventoryItemDragHandler.cs" />
      <Compile Include="Assets\Scripts\Item System\Equipment\EquipmentSlot.cs" />

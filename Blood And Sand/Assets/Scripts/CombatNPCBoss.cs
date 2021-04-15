@@ -23,6 +23,9 @@ public class CombatNPCBoss: MonoBehaviourPun
     private PhotonView PV;
     public LayerMask IgnoreMe;
 
+    // VFX
+    public GameObject projVFX;
+
     //Attacking
     public float timeBetweenNormalAttacks;
     public float timeBetweenSpiralAttacks;
@@ -301,11 +304,15 @@ public class CombatNPCBoss: MonoBehaviourPun
 
             for (int i = 0; i < numShots; i++)
             {
+                // Vfx
+                if(i == 1)
+                    Instantiate(projVFX, shootPoint.transform.position, qAngle);
                 GameObject attackHitbox = Instantiate(attackPrefab, shootPoint.transform.position, qAngle);
                 attackHitbox.GetComponent<RangedBossBullet>().damage = damage;
                 attackHitbox.GetComponent<RangedBossBullet>().type = 1;
-                qAngle = qDelta * qAngle;
+                qAngle = qDelta * qAngle;                
             }
+            
 
             alreadyAttacked = true;
             Invoke(nameof(ResetAttack), timeBetweenNormalAttacks);
@@ -321,11 +328,13 @@ public class CombatNPCBoss: MonoBehaviourPun
             attackHitbox.GetComponent<RangedBossBullet>().type = 2;
             shootPoint.transform.Rotate(new Vector3(0, 1000f * Time.deltaTime , 0f));
 
+            // Vfx
+            Instantiate(projVFX, shootPoint.transform.position, shootPoint.transform.rotation);
 
             alreadyAttacked = true;
             Invoke(nameof(ResetAttack), timeBetweenSpiralAttacks);
         }
-
+        
         //GameObject attackHitbox = Instantiate(attackPrefab, shootPoint.transform.position, bulDir);
 
     }

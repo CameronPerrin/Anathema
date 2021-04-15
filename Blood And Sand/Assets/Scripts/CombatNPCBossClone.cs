@@ -18,6 +18,8 @@ public class CombatNPCBossClone: MonoBehaviour
     private PhotonView PV;
     public LayerMask IgnoreMe;
 
+    // VFX
+    public GameObject projVFX;
 
     public int numShots; 
     public int spreadAngle;
@@ -103,9 +105,14 @@ public class CombatNPCBossClone: MonoBehaviour
 
             for (int i = 0; i < numShots; i++)
             {
+                // Vfx
+                if(i == 1)
+                    Instantiate(projVFX, shootPoint.transform.position, qAngle);
                 GameObject attackHitbox = Instantiate(attackPrefab, shootPoint.transform.position, qAngle);
                 qAngle = qDelta * qAngle;
             }
+            // Vfx
+            Instantiate(projVFX, shootPoint.transform.position, shootPoint.transform.rotation);
 
             alreadyAttacked = true;
             Invoke(nameof(ResetAttack), timeBetweenNormalAttacks);
@@ -119,6 +126,8 @@ public class CombatNPCBossClone: MonoBehaviour
             GameObject attackHitbox = Instantiate(attackPrefab, shootPoint.transform.position, shootPoint.transform.rotation);
             shootPoint.transform.Rotate(new Vector3(0, 1000f * Time.deltaTime , 0f));
 
+            // Vfx
+            Instantiate(projVFX, shootPoint.transform.position, shootPoint.transform.rotation);
 
             alreadyAttacked = true;
             Invoke(nameof(ResetAttack), timeBetweenSpiralAttacks);

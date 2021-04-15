@@ -629,6 +629,7 @@ MonoBehaviour:
   IgnoreMe:
     serializedVersion: 2
     m_Bits: 4
+  projVFX: {fileID: 8989157459608790110, guid: 699132034dc68104986b21e100fbefd3, type: 3}
   numShots: 3
   spreadAngle: 15
 --- !u!114 &-6316698471492455406

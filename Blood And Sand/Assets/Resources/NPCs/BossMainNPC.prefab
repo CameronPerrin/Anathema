@@ -395,6 +395,7 @@ MonoBehaviour:
   IgnoreMe:
     serializedVersion: 2
     m_Bits: 4
+  projVFX: {fileID: 8989157459608790110, guid: 699132034dc68104986b21e100fbefd3, type: 3}
   timeBetweenNormalAttacks: 1
   timeBetweenSpiralAttacks: 0.1
   timeBetweenAOEAttacks: 1

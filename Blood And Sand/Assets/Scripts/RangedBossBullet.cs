@@ -8,9 +8,12 @@ public class RangedBossBullet : MonoBehaviour
     public int projectileSpeed = 10;
     public float damage = 0;
     public int type = 0;
+    public GameObject impactVFX;
+    //public GameObject projVFX;
     // Start is called before the first frame update
     void Start()
     {
+        
         rb = GetComponent<Rigidbody>();
     }
 
@@ -24,6 +27,7 @@ public class RangedBossBullet : MonoBehaviour
     {
         if (collision.gameObject.tag == "Player"|| collision.gameObject.tag == "Corrupted_Player")
         {
+            Instantiate(impactVFX, transform.position, Quaternion.identity);
             Health hp = collision.gameObject.GetComponent<Health>();
             if (hp)
             {
