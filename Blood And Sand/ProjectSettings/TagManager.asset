@@ -20,6 +20,8 @@ TagManager:
   - Boss_Attack
   - Boss_Clone
   - Boss_Spawner
+  - loot
+  - Corrupted_Player
   layers:
   - Default
   - TransparentFX

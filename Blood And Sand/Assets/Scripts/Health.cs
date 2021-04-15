@@ -36,6 +36,8 @@ public class Health : MonoBehaviourPunCallbacks, IPunObservable
     public float dmgTake; // Placeholder damage for when we add in weapons
     public float dmgTemp;
 
+    public Inventory inventory;
+
 
     void Awake()
     {
@@ -65,7 +67,7 @@ public class Health : MonoBehaviourPunCallbacks, IPunObservable
             health += hpRegen;
             if(health > maxHp)
                 health = maxHp;
-            overlayHealthBar.fillAmount = health/maxHp;
+            //overlayHealthBar.fillAmount = health/maxHp;
         }
     }
 
@@ -77,35 +79,43 @@ public class Health : MonoBehaviourPunCallbacks, IPunObservable
             redWorldHealthBackdrop.fillAmount = Mathf.Lerp(redWorldHealthBackdrop.fillAmount, health/maxHp, Time.deltaTime * 4);
             redScreenHealthBackdrop.fillAmount = Mathf.Lerp(redScreenHealthBackdrop.fillAmount, health/maxHp, Time.deltaTime * 4);
         }
-        
+        overlayHealthBar.fillAmount = health/maxHp;
+        turnCorrupted(isCorrupted);
     }
 
     public void TakeDamage(float dmage, int type, bool dot)
     {
         
-        if(type == 1){ // physical defense
+        if(type == 1 || type == 6){ // physical defense
+            //Debug.Log("PHYS DAMAGE");
             dmgTake = dmage - physicalDefense;
+            if(dmgTake <= 0)
+                dmgTake = 0;
+            PV.RPC("Damage", RpcTarget.All, dmgTake);
         }
-        else if(type == 2){ // magic defense
+        else if(type == 2 || type == 7){ // magic defense
             dmgTake = dmage - magicDefense;
+            if(dmgTake <= 0)
+                dmgTake = 0;
+            PV.RPC("Damage", RpcTarget.All, dmgTake);
         }
         if(dot){
+            Debug.Log("DOT DAMAGE!");
             dmgTemp = dmage;
             dmgTake = (dmage - physicalDefense) / 4;
+            if(dmgTake <= 0)
+                dmgTake = 0;
             InvokeRepeating ("PhysicalDOTDmg", 0f, dotTimer);
         }
-        if(PV.IsMine){
-            PV.RPC("Damage", RpcTarget.All);
-        }
+        
     }
 
     public void PhysicalDOTDmg()
     {
         if(dmgTemp > 0){
             //Debug.Log("Bleeding for " + dmg + " damage!");
-            if(PV.IsMine){
-                PV.RPC("Damage", RpcTarget.All, dmgTake);
-            }
+            
+            PV.RPC("Damage", RpcTarget.All, dmgTake);
             dmgTemp -= dmgTake;
         }
         else{
@@ -114,9 +124,10 @@ public class Health : MonoBehaviourPunCallbacks, IPunObservable
     }
 
     [PunRPC]
-    public void Damage()
+    public void Damage(float dmage)
     {
-        health -= dmgTake;
+        //Debug.Log("Taking " + dmage + " damage.");
+        health -= dmage;
         Instantiate(bloodVFX, bloodSpotInstLocation.transform.position, Quaternion.identity); // spawn blood vfx
         if(health <= 0){
             GameObject.Find("TheReaper").GetComponent<deathScript>().killPlayer(this.gameObject);
@@ -126,12 +137,10 @@ public class Health : MonoBehaviourPunCallbacks, IPunObservable
                 GameObject.Find("TheReaper").GetComponent<deathScript>().onDeath(); // Find obj, find script, call function     
             }  
         }
-        overlayHealthBar.fillAmount = health/maxHp;
         worldHealthBar.fillAmount = health/maxHp;
-
         if(FloatingTextPrefab)
         {
-            ShowFloatingText();
+            ShowFloatingText(dmage);
         }
     }
 
@@ -140,24 +149,63 @@ public class Health : MonoBehaviourPunCallbacks, IPunObservable
         {
             //this is my player!
             stream.SendNext(health);
+            stream.SendNext(isCorrupted);
         }
 
         else if(stream.IsReading)
         {
             //everyone else
             health = (float)stream.ReceiveNext();
+            isCorrupted = (bool)stream.ReceiveNext();
         }
     }
 
     // Spawn in damage text and makes sure that the text rotation is facing the camera
     // ** This might be changed later because text does not show sometimes in multiplayer session. **
-    void ShowFloatingText()
+    void ShowFloatingText(float dmage)
     {
         var go = Instantiate(FloatingTextPrefab, transform.position, Quaternion.identity, transform);
         go.transform.rotation = Quaternion.LookRotation(transform.position - Camera.main.transform.position);
         //go.transform.LookAt(Camera.main.transform);
-        go.GetComponent<TextMesh>().text = dmgTake.ToString();
+        go.GetComponent<TextMesh>().text = dmage.ToString();
     }
 
+    private void OnTriggerEnter(Collider collision)
+    {
+        
+        if(collision.gameObject.tag == "loot"){
+            GameObject esse = collision.gameObject;
+            //Debug.Log(pl.name);
+            //moneyStorage = pl.transform.Find("InventoryManager/InventoryUI/InventoryCanvas/InventoryPanel/CurrencyCounter").gameObject;
+            //Debug.Log(pl.name+" "+moneyStorage.name);
+            //Debug.Log(moneyStorage.name);
+            //Debug.Log(PV.IsMine);
+            if(esse.GetComponent<essenceScript>().isCorruptedEssence){
+                if(PV.IsMine){
+                    //Debug.Log(PV.IsMine);
+                    inventory.Money += esse.GetComponent<essenceScript>().essenceAmount;
+                }   
+                if(isCorrupted == false && tag != "Corrupted_Player"){
+                    tag = "Corrupted_Player";
+                    isCorrupted = true;
+                    //turnCorrupted(isCorrupted);
+                    
+                    //moveSpeed *= 2;   
+                    } 
+                }
+            Destroy(esse.gameObject);
+        }  
+    }
 
+    public void turnCorrupted(bool corr)
+    {
+        if(corr){
+            transform.Find("playerModelUnity/body").gameObject.GetComponent<Renderer>().material.color = Color.red;
+            //maxHp *= 2;
+            health = maxHp;
+            physicalDefense += 10;
+            magicDefense += 10;
+            isCorrupted = false;
+        }
+    }
 }

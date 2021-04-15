@@ -109,6 +109,7 @@ public class PlayerEquipment : MonoBehaviour
                 LoadedWeapon.GetComponent<WeaponStats>().attack = savedSlots.SavedSlots[17].itemData.attack;
                 LoadedWeapon.GetComponent<WeaponStats>().attack_speed = savedSlots.SavedSlots[17].itemData.attack_speed;
                 LoadedWeapon.GetComponent<WeaponStats>().crit_chance = savedSlots.SavedSlots[17].itemData.crit_chance;
+                LoadedWeapon.GetComponent<WeaponStats>().bleed_chance = savedSlots.SavedSlots[17].itemData.bleed_chance;
                 LoadedWeapon.GetComponent<WeaponStats>().range = savedSlots.SavedSlots[17].itemData.range;
                 LoadedWeapon.GetComponent<WeaponStats>().defense = savedSlots.SavedSlots[17].itemData.defense;
                 LoadedWeapon.GetComponent<WeaponStats>().magic_defense = savedSlots.SavedSlots[17].itemData.magic_defense;
@@ -133,6 +134,7 @@ public class PlayerEquipment : MonoBehaviour
             LoadedWeapon.GetComponent<WeaponStats>().attack = (playerInventory.ItemContainer.itemSlots[17].item as EquipmentItem).itemData.attack;
             LoadedWeapon.GetComponent<WeaponStats>().attack_speed = (playerInventory.ItemContainer.itemSlots[17].item as EquipmentItem).itemData.attack_speed;
             LoadedWeapon.GetComponent<WeaponStats>().crit_chance = (playerInventory.ItemContainer.itemSlots[17].item as EquipmentItem).itemData.crit_chance;
+            LoadedWeapon.GetComponent<WeaponStats>().bleed_chance = (playerInventory.ItemContainer.itemSlots[17].item as EquipmentItem).itemData.bleed_chance;
             LoadedWeapon.GetComponent<WeaponStats>().range = (playerInventory.ItemContainer.itemSlots[17].item as EquipmentItem).itemData.range;
             LoadedWeapon.GetComponent<WeaponStats>().defense = (playerInventory.ItemContainer.itemSlots[17].item as EquipmentItem).itemData.defense;
             LoadedWeapon.GetComponent<WeaponStats>().magic_defense = (playerInventory.ItemContainer.itemSlots[17].item as EquipmentItem).itemData.magic_defense;

@@ -20,7 +20,7 @@ GameObject:
   - component: {fileID: 633753529765077891}
   m_Layer: 0
   m_Name: Corrupted Essence
-  m_TagString: Inventory_Item
+  m_TagString: loot
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -174,9 +174,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 0}
-  amount: 100
+  essenceAmount: 10
   pMenu: {fileID: 0}
   isCorruptedEssence: 1
+  inventory: {fileID: 11400000, guid: da31aee719a5fd84fa22325266365481, type: 2}
 --- !u!54 &1903674094368710399
 Rigidbody:
   m_ObjectHideFlags: 0

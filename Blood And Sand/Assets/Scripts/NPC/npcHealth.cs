@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.IO;
 using UnityEngine;
 using UnityEngine.UI;
 using Photon.Pun;
@@ -54,6 +55,7 @@ public class npcHealth : MonoBehaviourPunCallbacks
             PV.RPC("Damage", RpcTarget.All, dmg);    
         }
         if(dot){
+            Debug.Log("DOT DAMAGE!");
             dmgTemp = dmage;
             dmg = (dmage - defense) / 4;
             InvokeRepeating ("PhysicalDOTDmg", 0f, dotTimer);
@@ -90,7 +92,9 @@ public class npcHealth : MonoBehaviourPunCallbacks
             if(health <= 0){
                 float rand = UnityEngine.Random.Range(0.01f, 1.0f);
                 if(rand <= corruptionDropChance)
-                    Instantiate(corruptionDrop, new Vector3 (transform.position.x, 6, transform.position.z), Quaternion.identity);
+                    PhotonNetwork.Instantiate(Path.Combine("PhotonPrefabs", "Corrupted Essence"), new Vector3 (transform.position.x, 6, transform.position.z), Quaternion.identity, 0);
+                    //Instantiate(corruptionDrop, new Vector3 (transform.position.x, 6, transform.position.z), Quaternion.identity);
+                    
                 if(rand <= dropChance)
                     Instantiate(lootDrop, new Vector3 (transform.position.x, 6, transform.position.z), Quaternion.identity);
                 Destroy(this.gameObject);

@@ -78,8 +78,8 @@ public class Interact : MonoBehaviour
                 pauseMenu.GetComponent<PauseMenuController>().Money = tempCurrent - tempCost;
                 Debug.Log("Money After Purchase: "+ pauseMenu.GetComponent<PauseMenuController>().Money); */
 
-                Debug.Log("Current Money: " + inventory.Money);
-                Debug.Log("Current Cost: " + weaponShowing.gameObject.GetComponent<WeaponStats>().item_value);
+                //Debug.Log("Current Money: " + inventory.Money);
+                //Debug.Log("Current Cost: " + weaponShowing.gameObject.GetComponent<WeaponStats>().item_value);
                 int tempCurrent = inventory.Money;
                 int tempCost = weaponShowing.gameObject.GetComponent<WeaponStats>().item_value;
 
@@ -99,6 +99,7 @@ public class Interact : MonoBehaviour
                     (weaponShowingItemSlot.item as EquipmentItem).itemData.attack = weaponShowing.gameObject.GetComponent<WeaponStats>().attack;
                     (weaponShowingItemSlot.item as EquipmentItem).itemData.attack_speed = weaponShowing.gameObject.GetComponent<WeaponStats>().attack_speed;
                     (weaponShowingItemSlot.item as EquipmentItem).itemData.crit_chance = weaponShowing.gameObject.GetComponent<WeaponStats>().crit_chance;
+                    (weaponShowingItemSlot.item as EquipmentItem).itemData.bleed_chance = weaponShowing.gameObject.GetComponent<WeaponStats>().bleed_chance;
                     (weaponShowingItemSlot.item as EquipmentItem).itemData.range = weaponShowing.gameObject.GetComponent<WeaponStats>().range;
                     (weaponShowingItemSlot.item as EquipmentItem).itemData.item_type = weaponShowing.gameObject.GetComponent<WeaponStats>().item_type;
                     (weaponShowingItemSlot.item as EquipmentItem).itemData.item_value = weaponShowing.gameObject.GetComponent<WeaponStats>().item_value;

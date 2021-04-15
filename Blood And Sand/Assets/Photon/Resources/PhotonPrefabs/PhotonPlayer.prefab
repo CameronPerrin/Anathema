@@ -972,11 +972,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9bb9d182e1b803e43bb1c8bbccd7a8e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHp: 1000
+  maxHp: 500
   health: 0
-  hpRegen: 20
+  hpRegen: 1
   hpRegenSpeed: 3
-  physicalDefense: 6
+  physicalDefense: 0
   magicDefense: 0
   dotTimer: 0.5
   isCorrupted: 0
@@ -994,6 +994,7 @@ MonoBehaviour:
     type: 3}
   dmgTake: 0
   dmgTemp: 0
+  inventory: {fileID: 11400000, guid: da31aee719a5fd84fa22325266365481, type: 2}
 --- !u!114 &956957041702412034
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1015,7 +1016,8 @@ MonoBehaviour:
     type: 3}
   magicFast: {fileID: 6404847672541117547, guid: 6131eb11a67d7fe448491ae4d9ce7093,
     type: 3}
-  magicStrong: {fileID: 0}
+  magicStrong: {fileID: 6404847672541117547, guid: 7aaa0e9916d6e7c488ef168721f53193,
+    type: 3}
   shootPoint: {fileID: 3680925794353910806}
   stabPoint: {fileID: 6057987515808200031}
   CurrentPlayer: {fileID: 0}

@@ -34,5 +34,5 @@ MonoBehaviour:
     defense: 0
     magic_defense: 0
     move_speed: 0
-    item_type: 1
+    item_type: 6
     bleed_chance: 0

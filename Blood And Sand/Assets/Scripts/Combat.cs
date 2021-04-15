@@ -45,7 +45,8 @@ public class Combat : MonoBehaviour
 				{
     				
 					try{
-						weap = this.gameObject.transform.GetChild(1).gameObject.transform.GetChild(0).gameObject.transform.GetChild(0).gameObject;
+						weap = this.gameObject.transform.Find("Capsule/weaponHolder").gameObject.transform.GetChild(0).gameObject;
+						//weap = this.gameObject.transform.GetChild(1).gameObject.transform.GetChild(0).gameObject.transform.GetChild(0).gameObject;
 						Attack();
 					}
 					catch (Exception e){
@@ -85,8 +86,11 @@ public class Combat : MonoBehaviour
 		}
 		else
 			critMultiplier = 1;
+		
+		Debug.Log(bleedChance);
 		if(rand <= bleedChance){
 			attackPrefab.GetComponent<bulletScript>().DOT = true;
+			Debug.Log("Should bleed...");
 		}
 		else
 			attackPrefab.GetComponent<bulletScript>().DOT = false;
