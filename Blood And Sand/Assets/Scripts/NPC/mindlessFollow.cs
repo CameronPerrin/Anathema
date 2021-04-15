@@ -86,7 +86,7 @@ public class mindlessFollow : MonoBehaviour
         *****************************************************************************************************************
         */
         if(!isTargetPlayer && PhotonNetwork.IsMasterClient){
-            Debug.Log("[1] - Begin player finding...");
+            //Debug.Log("[1] - Begin player finding...");
             // cIndex is in charge of finding the index position of the player on the player list that has the shortest distance.
             int cIndex = 0;
             int playersFound = 0;
@@ -102,14 +102,14 @@ public class mindlessFollow : MonoBehaviour
                     distList.Add((npos - ppos).magnitude);
                     Debug.Log("[2] - " + gamers.transform.Find("Canvas_WS_Overlay/name").gameObject.GetComponent<TMP_Text>().text + " is found...");
             }
-            Debug.Log("[3] - Total of: " + playersFound + " players found...");
+            //Debug.Log("[3] - Total of: " + playersFound + " players found...");
             /*
             * Cycle through the entire list using a simple find "minimum" algorithm. Afterwards,
             * every time the new "minimum" is set, set the "cIndex" to the current index in the loop.
             * This makes it so that everytime a new minimum is found we are updating the position to 
             * the latest position found.
             */
-            Debug.Log("[4] - Distances on distance list: " + distList.Count + "...");
+            //Debug.Log("[4] - Distances on distance list: " + distList.Count + "...");
             for(int i = 0; i < distList.Count; i++){
                 if(i == 0){
                     min = distList[0];
@@ -121,12 +121,12 @@ public class mindlessFollow : MonoBehaviour
                     min = temp;
                 }
             }
-            Debug.Log("[5] - Distance is calculated!");
+            //Debug.Log("[5] - Distance is calculated!");
 
             // Finally we set the player object equal the the player found at "cIndex", and reset everything back to 0.
-            Debug.Log("[6] - current index is: " + cIndex);
+            //Debug.Log("[6] - current index is: " + cIndex);
             player = pObjects[cIndex];
-            Debug.Log("[7] - " + player.transform.Find("Canvas_WS_Overlay/name").gameObject.GetComponent<TMP_Text>().text + " is the target.");
+            //Debug.Log("[7] - " + player.transform.Find("Canvas_WS_Overlay/name").gameObject.GetComponent<TMP_Text>().text + " is the target.");
             min = 0;
             cIndex = 0;
             // This enables isTargetPlayer to true so that this doesn't needlessly loop.
@@ -142,7 +142,7 @@ public class mindlessFollow : MonoBehaviour
                 transform.LookAt(player.transform);
             }
             catch (Exception e){
-                Debug.Log("Is target player: " + isTargetPlayer);
+                //Debug.Log("Is target player: " + isTargetPlayer);
 				Debug.Log("NPCs trying to LOOK AT players, but cannot find any.");
 			}
         }
