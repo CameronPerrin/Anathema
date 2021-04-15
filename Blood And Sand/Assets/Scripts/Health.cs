@@ -41,10 +41,10 @@ public class Health : MonoBehaviourPunCallbacks, IPunObservable
 
     void Awake()
     {
-        if(SceneManager.GetActiveScene().buildIndex == 1){
-            Destroy(wHp);
-            Destroy(oHp);
-        }
+        // if(SceneManager.GetActiveScene().buildIndex == 1){
+        //     Destroy(wHp);
+        //     Destroy(oHp);
+        // }
     }
 
     void Start()

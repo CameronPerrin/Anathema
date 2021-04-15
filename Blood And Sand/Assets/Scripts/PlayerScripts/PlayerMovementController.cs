@@ -42,6 +42,7 @@ public class PlayerMovementController : MonoBehaviour
     private GameObject netController;
 
     // For highliting
+    public GameObject eToInteract;
     private GameObject temp;
     // Start is called before the first frame update
 
@@ -73,15 +74,29 @@ public class PlayerMovementController : MonoBehaviour
             // RAYTRACING for Player to interact with things (items, etc).
             RaycastHit hit;
             Ray pointing = ray_camera.ScreenPointToRay(Input.mousePosition);
-
+            GameObject obj = null;
             if(Physics.Raycast(pointing, out hit, 20)){
-                    Debug.DrawRay(pointing.origin, pointing.direction * 20);
+                    //Debug.DrawRay(pointing.origin, pointing.direction * 20);
                     if(hit.collider.tag == "Interact"){
-                        hit.collider.gameObject.GetComponent<Interact>().isHighlightOn(true);
+                        //hit.collider.gameObject.GetComponent<Interact>().isHighlightOn(true);
+                        // Have 'e' button pop up to display controls
+                        obj = hit.collider.gameObject; 
+                        eToInteract.SetActive(true);
+                        //gameObject.transform.Find("Canvas_SS_Overlay/'E' to interact").gameObject.SetActive(true);
                         if(Input.GetKeyDown("e")){ 
                             hit.collider.gameObject.GetComponent<Interact>().interactFunction(this.gameObject);
                         }
                     }
+                    else if(hit.collider.tag != "Interact"){
+                        eToInteract.SetActive(false);
+                    }
+                    if (obj == null){
+                        eToInteract.SetActive(false);
+                        //gameObject.transform.Find("Canvas_SS_Overlay/'E' to interact").gameObject.SetActive(false);
+                    }
+            }
+            else{
+                eToInteract.SetActive(false);
             }
             // Movement input
             if(!isPaused){
