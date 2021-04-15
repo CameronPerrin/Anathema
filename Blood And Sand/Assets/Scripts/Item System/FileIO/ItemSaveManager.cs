@@ -33,7 +33,7 @@ public class ItemSaveManager : MonoBehaviour
 
     public void LoadInventory(Inventory inventory)
     {
-        Debug.Log("Loading Inventory...");
+        //Debug.Log("Loading Inventory...");
         ItemContainerSaveData savedSlots = ItemSaveIO.LoadItems(InventoryFileName);
         inventory.Money = savedSlots.Money;
         if (savedSlots == null) return;
@@ -67,14 +67,14 @@ public class ItemSaveManager : MonoBehaviour
 
         if (savedSlots.SavedSlots[17] != null)
         {
-            Debug.Log("Loading Equipped Weapon from Save File...");
+            //Debug.Log("Loading Equipped Weapon from Save File...");
             uiCharacterEquipment.loadEquippedItems();
         }
     }
 
     public void SaveInventory(Inventory inventory, int currencyAmount)
     {
-        Debug.Log("Saving Inventory...");
+        //Debug.Log("Saving Inventory...");
         SaveItems(inventory.ItemContainer.itemSlots, InventoryFileName, currencyAmount);
     }
 
@@ -93,12 +93,12 @@ public class ItemSaveManager : MonoBehaviour
             }
             else
             {
-                Debug.Log("Saving " + itemSlot.item.ID + " to slot " + i);
+                //Debug.Log("Saving " + itemSlot.item.ID + " to slot " + i);
                 saveData.SavedSlots[i] = new ItemSlotSaveData(itemSlot.item.ID, itemSlot.quantity);
 
                 if(itemSlot.item as EquipmentItem)
                 {
-                    Debug.Log("Saving Equipment Item...");
+                    //Debug.Log("Saving Equipment Item...");
                     saveData.SavedSlots[i].itemData = (itemSlot.item as EquipmentItem).itemData;
                 }
 

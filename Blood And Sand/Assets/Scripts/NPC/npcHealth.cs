@@ -92,11 +92,11 @@ public class npcHealth : MonoBehaviourPunCallbacks
             if(health <= 0){
                 float rand = UnityEngine.Random.Range(0.01f, 1.0f);
                 if(rand <= corruptionDropChance)
-                    PhotonNetwork.Instantiate(Path.Combine("PhotonPrefabs", "Corrupted Essence"), new Vector3 (transform.position.x, 6, transform.position.z), Quaternion.identity, 0);
+                    PhotonNetwork.Instantiate(Path.Combine("PhotonPrefabs", "Corrupted Essence"), new Vector3 (transform.position.x, 10, transform.position.z), Quaternion.identity, 0);
                     //Instantiate(corruptionDrop, new Vector3 (transform.position.x, 6, transform.position.z), Quaternion.identity);
                     
                 if(rand <= dropChance)
-                    Instantiate(lootDrop, new Vector3 (transform.position.x, 6, transform.position.z), Quaternion.identity);
+                    Instantiate(lootDrop, new Vector3 (transform.position.x, 10, transform.position.z), Quaternion.identity);
                 Destroy(this.gameObject);
             }  
         worldHealthBar.fillAmount = health/maxHp;

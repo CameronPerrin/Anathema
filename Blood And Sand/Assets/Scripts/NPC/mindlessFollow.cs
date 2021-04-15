@@ -12,6 +12,7 @@ using System;
 using Photon;
 using Photon.Pun;
 using Photon.Realtime;
+using TMPro;
 
 public class mindlessFollow : MonoBehaviour
 {
@@ -32,7 +33,7 @@ public class mindlessFollow : MonoBehaviour
     // Components used to find the shortest distance to a player
     private GameObject netController;
     private List<GameObject> pObjects;
-    private List<float> distList = new List<float>();
+    private List<float> distList;
     float temp, min;
    
     //Vector3 direction;
@@ -67,6 +68,7 @@ public class mindlessFollow : MonoBehaviour
     // FixedUpdate() instead of Update() because of NPC HPbar orientation issues.
     void FixedUpdate()
     {
+        List<float> distList = new List<float>();
         // [CONTINUED] Navmesh components, resetting and re-enabling if the ownership (Master or Client) gets transfered over after player death
         if(!PhotonNetwork.IsMasterClient){
             _navMeshAgent.enabled = false;
@@ -84,26 +86,31 @@ public class mindlessFollow : MonoBehaviour
         *****************************************************************************************************************
         */
         if(!isTargetPlayer && PhotonNetwork.IsMasterClient){
+            Debug.Log("[1] - Begin player finding...");
             // cIndex is in charge of finding the index position of the player on the player list that has the shortest distance.
             int cIndex = 0;
+            int playersFound = 0;
             // Making sure the list isn't empty.
             if(pObjects !=null){
-            foreach (GameObject gamers in pObjects){
-                // NPC position
-                Vector3 npos = new Vector3 (transform.position.x, 0, transform.position.z);
-                // Current player from player list position
-                Vector3 ppos = new Vector3 (gamers.transform.position.x, 0, gamers.transform.position.z);
-                // Add the magnitude of the difference of the two distances to a new list.
-                distList.Add((npos - ppos).magnitude);
+                foreach (GameObject gamers in pObjects){
+                    playersFound++;
+                    // NPC position
+                    Vector3 npos = new Vector3 (transform.position.x, 0, transform.position.z);
+                    // Current player from player list position
+                    Vector3 ppos = new Vector3 (gamers.transform.position.x, 0, gamers.transform.position.z);
+                    // Add the magnitude of the difference of the two distances to a new list.
+                    distList.Add((npos - ppos).magnitude);
+                    Debug.Log("[2] - " + gamers.transform.Find("Canvas_WS_Overlay/name").gameObject.GetComponent<TMP_Text>().text + " is found...");
             }
-
+            Debug.Log("[3] - Total of: " + playersFound + " players found...");
             /*
             * Cycle through the entire list using a simple find "minimum" algorithm. Afterwards,
             * every time the new "minimum" is set, set the "cIndex" to the current index in the loop.
             * This makes it so that everytime a new minimum is found we are updating the position to 
             * the latest position found.
             */
-            for(int i = 0; i < distList.Count; ++i){
+            Debug.Log("[4] - Distances on distance list: " + distList.Count + "...");
+            for(int i = 0; i < distList.Count; i++){
                 if(i == 0){
                     min = distList[0];
                     cIndex = i;
@@ -114,20 +121,31 @@ public class mindlessFollow : MonoBehaviour
                     min = temp;
                 }
             }
+            Debug.Log("[5] - Distance is calculated!");
 
             // Finally we set the player object equal the the player found at "cIndex", and reset everything back to 0.
+            Debug.Log("[6] - current index is: " + cIndex);
             player = pObjects[cIndex];
+            Debug.Log("[7] - " + player.transform.Find("Canvas_WS_Overlay/name").gameObject.GetComponent<TMP_Text>().text + " is the target.");
             min = 0;
             cIndex = 0;
             // This enables isTargetPlayer to true so that this doesn't needlessly loop.
             isTargetPlayer = true;
             }
+            
         }
         // [OLD] --> player = GameObject.FindGameObjectWithTag("Player");
 
         // Only look at player if Master client, this part of what fixes rotation issues in multiplayer.
-        if(PhotonNetwork.IsMasterClient)
-            transform.LookAt(player.transform);
+        if(PhotonNetwork.IsMasterClient){
+            try{
+                transform.LookAt(player.transform);
+            }
+            catch (Exception e){
+                Debug.Log("Is target player: " + isTargetPlayer);
+				Debug.Log("NPCs trying to LOOK AT players, but cannot find any.");
+			}
+        }
 
         // Error if navAgent isnt found.
         if(_navMeshAgent == null && !isTargetPlayer){
@@ -185,7 +203,7 @@ public class mindlessFollow : MonoBehaviour
             }
         }
         else{
-            Debug.Log("Player not found to for SetDestination()");
+            Debug.Log("Player not found for SetDestination()");
             isTargetPlayer = false;
         }
     }

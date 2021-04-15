@@ -115,8 +115,16 @@ public class PlayerMovementController : MonoBehaviour
                 isFalling = false;
             } 
 
-
-
+            
+            if (Input.GetMouseButton(0)) {
+                    float targetAngle = Mathf.Atan2(direction.x, direction.z) * Mathf.Rad2Deg + p_camera.transform.eulerAngles.y;
+                    float targetAngle1 = p_camera.transform.eulerAngles.y;
+                    transform.rotation = Quaternion.Euler(0f, targetAngle1, 0f);
+                } 
+                // else {
+                //     float targetAngle = Mathf.Atan2(direction.x, direction.z) * Mathf.Rad2Deg + p_camera.transform.eulerAngles.y;
+                //     transform.rotation = Quaternion.Euler(0f, targetAngle, 0f);
+                // }
             /********************************************************************************************
             *      - [PLAYER MOVEMENT] -                                                                *
             * Making sure player is currently moving. If direction.magnitude == 0, then no movement.    *

@@ -19,6 +19,7 @@ public class Combat : MonoBehaviour
 	public GameObject magicStrong;
 	public GameObject shootPoint;
 	public GameObject stabPoint;
+	public GameObject magicPoint;
 	public GameObject CurrentPlayer;
 	public float attackSpeed = 0;
 	public float attackTimer = 0;
@@ -100,17 +101,17 @@ public class Combat : MonoBehaviour
 		// Instatiate attack
 
 
-		if(weap.GetComponent<WeaponStats>().item_type == 6)
+		if(weap.GetComponent<WeaponStats>().item_type == 6) // Stab
 		{
 			attackHitbox = Instantiate(attackPrefab, stabPoint.transform.position, stabPoint.transform.rotation);
 		}
-		else if (weap.GetComponent<WeaponStats>().item_type == 1)
+		else if (weap.GetComponent<WeaponStats>().item_type == 1) // Slash
         {
 			attackHitbox = Instantiate(attackPrefab, shootPoint.transform.position, shootPoint.transform.rotation);
 		}
-		else
+		else // Magic attacks
         {
-			attackHitbox = Instantiate(attackPrefab, shootPoint.transform.position, cam.transform.rotation);
+			attackHitbox = Instantiate(attackPrefab, magicPoint.transform.position, cam.transform.rotation);
 		}
 		//shootPoint.transform.position = tempShootPoint;
 

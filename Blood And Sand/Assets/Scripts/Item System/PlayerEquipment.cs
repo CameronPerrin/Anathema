@@ -84,7 +84,7 @@ public class PlayerEquipment : MonoBehaviour
     private void SetWeaponItem(HotbarItem weaponItem, bool isLoadingfromSave)
     {
         this.weaponItem = weaponItem;
-        Debug.Log("Weapon Slot: Currently Equiped " + weaponItem.name);
+        //Debug.Log("Weapon Slot: Currently Equiped " + weaponItem.name);
 
         if (LoadedWeapon)
         {
@@ -224,7 +224,7 @@ public class PlayerEquipment : MonoBehaviour
 
     [PunRPC] void TransformLoadedWeapon()
     {
-        Debug.Log("RPC Calling tranform");
+        //Debug.Log("RPC Calling tranform");
         CurrentPlayer = PhotonNetwork.LocalPlayer.TagObject as GameObject;
         LoadedWeapon.transform.SetParent(CurrentPlayer.transform.GetChild(1).GetChild(0));
     }

@@ -42,7 +42,6 @@ MonoBehaviour:
   - TransformLoadedWeapon
   - waitTeleport
   - WaitUntilTeleport
-  - RpcShoot
   DisableAutoOpenWizard: 1
   ShowSettings: 0
-  DevRegionSetOnce: 1
+  DevRegionSetOnce: 0
