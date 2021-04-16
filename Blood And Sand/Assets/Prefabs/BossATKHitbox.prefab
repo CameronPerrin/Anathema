@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 5128328130012717219}
   - component: {fileID: 8573643656485139041}
   - component: {fileID: -4851804009851950171}
+  - component: {fileID: 6170185646740637210}
   m_Layer: 2
   m_Name: BossATKHitbox
   m_TagString: Finish
@@ -130,3 +131,16 @@ MonoBehaviour:
   damage: 10
   type: 0
   VFXhit: {fileID: 1897349014599146, guid: 63302e558aa73ad469090bedc33fd633, type: 3}
+--- !u!114 &6170185646740637210
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8710979580092825000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1d57c947575961540bbab1a86bcdb6db, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  duration: 5

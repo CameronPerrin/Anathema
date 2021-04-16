@@ -1,5 +1,35 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &2055924169840173185
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8289405141515397963}
+  m_Layer: 0
+  m_Name: SpawnImpactVFX
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8289405141515397963
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2055924169840173185}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0.818}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1811686237856307496}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2640154558071995969
 GameObject:
   m_ObjectHideFlags: 0
@@ -185,7 +215,7 @@ RectTransform:
   m_Children:
   - {fileID: 5385925930757692460}
   m_Father: {fileID: 1811686237856307496}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -426,12 +456,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8841508036710474816}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 363.42, y: 6.71, z: 464.85}
+  m_LocalPosition: {x: 407.68, y: 8.16, z: 424.35}
   m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children:
   - {fileID: 3955910655751884303}
   - {fileID: 3018790251739115531}
   - {fileID: 6151244587850188989}
+  - {fileID: 8289405141515397963}
   - {fileID: 5390222288677869818}
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -550,8 +581,10 @@ MonoBehaviour:
   wHp: {fileID: 7412384878247566228}
   bloodVFX: {fileID: 6062716170508370198, guid: a2d0a4f4e6e568842bf9abb6edb2864d,
     type: 3}
-  lootDrop: {fileID: 0}
-  corruptionDrop: {fileID: 0}
+  lootDrop: {fileID: 1716759865404533113, guid: 65a3562a866e4644baaa6804f11e47b4,
+    type: 3}
+  corruptionDrop: {fileID: 1377388708257028, guid: d6e42ab84e5704a4494922404bb47ef9,
+    type: 3}
   FloatingTextPrefab: {fileID: 7957747401790915659, guid: 7b2549c15f36d544490e6208a44c1357,
     type: 3}
   dmgTemp: 0
@@ -676,7 +709,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &3955910655751884303
 Transform:
   m_ObjectHideFlags: 0

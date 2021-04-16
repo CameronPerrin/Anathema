@@ -97,10 +97,10 @@ public class Combat : MonoBehaviour
 		else
 			critMultiplier = 1;
 		
-		Debug.Log(bleedChance);
+		//Debug.Log(bleedChance);
 		if(rand <= bleedChance){
 			attackPrefab.GetComponent<bulletScript>().DOT = true;
-			Debug.Log("Should bleed...");
+			//Debug.Log("Should bleed...");
 		}
 		else
 			attackPrefab.GetComponent<bulletScript>().DOT = false;

@@ -104,10 +104,12 @@ public class bulletScript : MonoBehaviour
             Destroy(this.gameObject);
         }
 
-        else if (collision.gameObject.tag == "Bullet" || collision.gameObject.tag == "EditorOnly");
-        // destroy if it collides with anything else
-        else
-            Destroy(this.gameObject);
+        else if (collision.gameObject.tag == "Bullet" || collision.gameObject.tag == "EditorOnly" || collision.gameObject.tag == "Untagged"){
+            Debug.Log("Colliding with other bullets!");
+        }
+        // // destroy if it collides with anything else
+        // else
+        //     Destroy(this.gameObject);
 
         
         
