@@ -4,6 +4,10 @@ using UnityEngine;
 
 public class WeaponStats : MonoBehaviour
 {
+	// VFX
+	public GameObject attack_vfx;
+	public GameObject impact_vfx;
+
 	//for all items
 	public int item_value;
 

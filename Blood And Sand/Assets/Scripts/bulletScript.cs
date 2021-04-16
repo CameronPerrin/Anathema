@@ -17,6 +17,10 @@ public class bulletScript : MonoBehaviour
     public bool strongMagicAttack = false;
     public int projectileSpeed = 10;
     public Vector3 aim;
+
+    // VFX
+    public GameObject impactVFX;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -44,6 +48,7 @@ public class bulletScript : MonoBehaviour
         //probably find a wayto do this without assigning a variable each time this spawns if we need to optimize the script in the future
         if ((collision.gameObject.tag == "Corrupted_Player") && (collision.gameObject != CurrentPlayer))
         {
+            Instantiate(impactVFX, collision.transform.position, transform.rotation);
         	//Health hp = collision.gameObject.GetComponent<Health>();
             if(collision.gameObject.GetComponent<Health>()){
                 Debug.Log("Bullet doing damage");
@@ -55,6 +60,7 @@ public class bulletScript : MonoBehaviour
         {
         	//Health hp = collision.gameObject.GetComponent<Health>();
             if(CurrentPlayer.tag == "Corrupted_Player"){
+                Instantiate(impactVFX, collision.transform.position, transform.rotation);
                 if(collision.gameObject.GetComponent<Health>()){
                     Debug.Log("Bullet doing damage");
                     collision.gameObject.GetComponent<Health>().TakeDamage(dmg, type, DOT); 
@@ -63,6 +69,7 @@ public class bulletScript : MonoBehaviour
             Destroy(this.gameObject);  
         }
         if((collision.gameObject.tag == "EnemyHitbox") && (collision.gameObject != CurrentPlayer)){
+            Instantiate(impactVFX, collision.transform.position, transform.rotation);
             npcHealth hp = collision.gameObject.GetComponent<npcHealth>();
             //Debug.Log(hp);
             if(hp){
@@ -74,6 +81,7 @@ public class bulletScript : MonoBehaviour
 
         else if ((collision.gameObject.tag == "Boss") && (collision.gameObject != CurrentPlayer))
         {
+            Instantiate(impactVFX, collision.transform.position, transform.rotation);
             npcHealth hp = collision.gameObject.GetComponent<npcHealth>();
             //Debug.Log(hp);
             if (hp)

@@ -1024,6 +1024,8 @@ MonoBehaviour:
   stabPoint: {fileID: 6057987515808200031}
   magicPoint: {fileID: 6956219985668802377}
   CurrentPlayer: {fileID: 0}
+  attackVFX: {fileID: 0}
+  impactVFX: {fileID: 0}
   attackSpeed: 0
   attackTimer: 0
   isPaused: 0

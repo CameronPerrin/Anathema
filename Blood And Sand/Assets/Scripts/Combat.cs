@@ -21,6 +21,11 @@ public class Combat : MonoBehaviour
 	public GameObject stabPoint;
 	public GameObject magicPoint;
 	public GameObject CurrentPlayer;
+
+	// VFX
+	public GameObject attackVFX;
+	public GameObject impactVFX;
+
 	public float attackSpeed = 0;
 	public float attackTimer = 0;
 	GameObject weap;
@@ -80,6 +85,10 @@ public class Combat : MonoBehaviour
 		attackTimer = attackSpeed;
 		float rand = UnityEngine.Random.Range(0.01f, 1.0f);
 
+		// Assign VFX
+		attackVFX = weap.GetComponent<WeaponStats>().attack_vfx;
+		impactVFX = weap.GetComponent<WeaponStats>().impact_vfx;
+
 		// Tell the damage prefab what type of specials it has, and calculate the chances of secondary active stats activating
 		attackPrefab.GetComponent<bulletScript>().type = weap.GetComponent<WeaponStats>().item_type;
 		if(rand <= critChance){
@@ -104,15 +113,22 @@ public class Combat : MonoBehaviour
 		if(weap.GetComponent<WeaponStats>().item_type == 6) // Stab
 		{
 			attackHitbox = Instantiate(attackPrefab, stabPoint.transform.position, stabPoint.transform.rotation);
+			Instantiate(attackVFX, stabPoint.transform.position, stabPoint.transform.rotation);
 		}
 		else if (weap.GetComponent<WeaponStats>().item_type == 1) // Slash
         {
 			attackHitbox = Instantiate(attackPrefab, shootPoint.transform.position, shootPoint.transform.rotation);
+			Instantiate(attackVFX, shootPoint.transform.position, shootPoint.transform.rotation);
 		}
 		else // Magic attacks
         {
 			attackHitbox = Instantiate(attackPrefab, magicPoint.transform.position, cam.transform.rotation);
+			Instantiate(attackVFX, magicPoint.transform.position, cam.transform.rotation);
 		}
+
+		// impact VFX
+		attackHitbox.GetComponent<bulletScript>().impactVFX = impactVFX;
+
 		//shootPoint.transform.position = tempShootPoint;
 
         // [OLD] -- >attackHitbox.GetComponent<Rigidbody>().velocity = CurrentPlayer.transform.GetChild(1).GetComponent<Rigidbody>().velocity;

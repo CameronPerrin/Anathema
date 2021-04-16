@@ -48,11 +48,11 @@ public class npcHealth : MonoBehaviourPunCallbacks
     {
         if(type == 1 || type == 6){          // Physical damage
             dmg = dmage - defense;
-            PV.RPC("Damage", RpcTarget.All, dmg);    
+            PV.RPC("Damage", RpcTarget.All, dmg, false);    
         }
         else if(type == 2 || type == 7){     // Magic damage
             dmg = dmage - magicDefense;
-            PV.RPC("Damage", RpcTarget.All, dmg);    
+            PV.RPC("Damage", RpcTarget.All, dmg, false);    
         }
         if(dot){
             Debug.Log("DOT DAMAGE!");
@@ -66,7 +66,7 @@ public class npcHealth : MonoBehaviourPunCallbacks
     {
         if(dmgTemp > 0){
             //Debug.Log("Bleeding for " + dmg + " damage!");
-            PV.RPC("Damage", RpcTarget.All, dmg);
+            PV.RPC("Damage", RpcTarget.All, dmg, true);
             dmgTemp -= dmg;
         }
         else{
@@ -83,11 +83,12 @@ public class npcHealth : MonoBehaviourPunCallbacks
 
     // this stuff sends info to all network
     [PunRPC]
-    public void Damage(float dmage)
+    public void Damage(float dmage, bool dotOn)
     {
         health -= dmage;
         ShowFloatingText();
-        Instantiate(bloodVFX, this.transform.position, Quaternion.identity); // spawn blood vfx
+        if(dotOn)
+            Instantiate(bloodVFX, this.transform.position, Quaternion.identity); // spawn blood vfx
         //Instantiate(bloodVFX, bloodSpotInstLocation.transform.position, Quaternion.identity); // spawn blood vfx
             if(health <= 0){
                 float rand = UnityEngine.Random.Range(0.01f, 1.0f);

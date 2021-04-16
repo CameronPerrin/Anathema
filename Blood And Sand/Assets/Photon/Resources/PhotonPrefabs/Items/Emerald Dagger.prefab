@@ -110,6 +110,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d29422f0a565e84998fb66991875afe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  attack_vfx: {fileID: 9215816606621201317, guid: 6dc058b25e61c444f851a38ccd34f92e,
+    type: 3}
+  impact_vfx: {fileID: 5463789531843479128, guid: 01c0c15aad2ad8749945fe9321ad8216,
+    type: 3}
   item_value: 0
   attack: 0
   attack_speed: 0
