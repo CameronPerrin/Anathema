@@ -64,10 +64,6 @@ public class BossSpawner : MonoBehaviour
             PhotonNetwork.Instantiate("NPCs/BossMainNPC", new Vector3(0, 0, 0), Quaternion.identity, 0);
             bossHasSpawned = true;
         }
-        else
-        {
-            Debug.Log("Boss spawning in " + countDown + " seconds!");
-        }
     }
 
 

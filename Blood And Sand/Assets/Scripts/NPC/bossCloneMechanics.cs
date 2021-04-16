@@ -41,7 +41,6 @@ public class bossCloneMechanics : MonoBehaviour
         {
             StartCoroutine(onDamaged());
         }
-
     }
 
     IEnumerator onDamaged()
@@ -53,7 +52,7 @@ public class bossCloneMechanics : MonoBehaviour
 
         yield return new WaitForSeconds(.5f);
 
-        bossClone.GetComponent<Renderer>().material.SetColor("_BaseColor", Color.cyan);
+        bossClone.GetComponent<Renderer>().material.SetColor("_BaseColor", Color.green);
 
         //Notify Main Boss that damage is taken on clone.
         mainBoss.GetComponent<BossMovement>().cloneDamageTaken = true;

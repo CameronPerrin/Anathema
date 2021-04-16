@@ -127,6 +127,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rb: {fileID: 0}
   projectileSpeed: 100
-  damage: 0
-  type: 0
+  damage: 50
+  type: 1
   timeBeforeDestroy: 1

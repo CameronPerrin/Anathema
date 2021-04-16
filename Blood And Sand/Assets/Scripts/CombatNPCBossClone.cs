@@ -28,6 +28,8 @@ public class CombatNPCBossClone: MonoBehaviour
 
     private float searchCountdown = 1f;
 
+    public float damage = 10;
+
     private void Start()
     {
         PV = GetComponent<PhotonView>();
@@ -47,10 +49,10 @@ public class CombatNPCBossClone: MonoBehaviour
     {
             Vector3 forward = transform.TransformDirection(Vector3.forward) * 600;
             RaycastHit hit;
-            if (Physics.Raycast(rayOrigin.transform.position, forward, out hit, 600, ~IgnoreMe))
+            if (Physics.Raycast(rayOrigin.transform.position, forward, out hit, 600))
             {
-                if (hit.collider.tag == "Player")
-                { // player is detected, time to start doing stuff! (like damage)
+                //if (hit.collider.tag == "Player")
+                //{ // player is detected, time to start doing stuff! (like damage)
                         if(chosenAtk == 1)
                         {
                             AttackPlayer();
@@ -62,11 +64,11 @@ public class CombatNPCBossClone: MonoBehaviour
                     gameObject.GetComponent<mindlessFollow>().hitP = true;
                     Debug.DrawRay(rayOrigin.transform.position, forward, Color.yellow);
                     tempObj = hit.collider.gameObject;
-                }
-                else
-                {
+                //}
+                //else
+                //{
                     gameObject.GetComponent<mindlessFollow>().hitP = false;
-                }
+                ///}
             }
             else
             {
@@ -104,6 +106,8 @@ public class CombatNPCBossClone: MonoBehaviour
             for (int i = 0; i < numShots; i++)
             {
                 GameObject attackHitbox = Instantiate(attackPrefab, shootPoint.transform.position, qAngle);
+                attackHitbox.GetComponent<RangedBossBullet>().damage = damage;
+                attackHitbox.GetComponent<RangedBossBullet>().type = 1;
                 qAngle = qDelta * qAngle;
             }
 
@@ -117,6 +121,8 @@ public class CombatNPCBossClone: MonoBehaviour
         {
 
             GameObject attackHitbox = Instantiate(attackPrefab, shootPoint.transform.position, shootPoint.transform.rotation);
+            attackHitbox.GetComponent<RangedBossBullet>().damage = damage;
+            attackHitbox.GetComponent<RangedBossBullet>().type = 1;
             shootPoint.transform.Rotate(new Vector3(0, 1000f * Time.deltaTime , 0f));
 
 

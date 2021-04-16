@@ -127,10 +127,11 @@ public class CombatNPCBoss: MonoBehaviourPun
     {
             Vector3 forward = transform.TransformDirection(Vector3.forward) * 600;
             RaycastHit hit;
-            if (Physics.Raycast(rayOrigin.transform.position, forward, out hit, 600, ~IgnoreMe))
+        //Physics.Raycast(rayOrigin.transform.position, forward, out hit, 600, ~IgnoreMe)
+        if (Physics.Raycast(transform.position, forward, out hit, 600))
             {
-                if (hit.collider.tag == "Player")
-                { // player is detected, time to start doing stuff! (like damage)
+                //if (hit.collider.tag == "Player")
+                //{ // player is detected, time to start doing stuff! (like damage)
                     switch (phase)
                     {
                         case Phase.Phase_1:
@@ -164,11 +165,11 @@ public class CombatNPCBoss: MonoBehaviourPun
                     gameObject.GetComponent<mindlessFollow>().hitP = true;
                     Debug.DrawRay(rayOrigin.transform.position, forward, Color.yellow);
                     tempObj = hit.collider.gameObject;
-                }
-                else
-                {
-                    gameObject.GetComponent<mindlessFollow>().hitP = false;
-                }
+                //}
+                //else
+                //{
+                    //gameObject.GetComponent<mindlessFollow>().hitP = false;
+                //}
             }
             else
             {

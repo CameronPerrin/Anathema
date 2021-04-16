@@ -5,13 +5,16 @@ using UnityEngine;
 public class RangedBossBullet : MonoBehaviour
 {
     public Rigidbody rb;
+    private Collider collider;
     public int projectileSpeed = 10;
     public float damage = 0;
     public int type = 0;
+    private Vector3 des;
     // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody>();
+        collider = GetComponent<SphereCollider>();
     }
 
     // Update is called once per frame
@@ -33,6 +36,12 @@ public class RangedBossBullet : MonoBehaviour
         }
         if (collision.gameObject.tag == "Untagged")
         {
+
+            des = new Vector3(transform.position.x + 1, transform.position.y + 1, transform.position.z + 1);
+            gameObject.transform.position = Vector3.Lerp(gameObject.transform.position, des, .1f);
+        }
+        if (collision.gameObject.tag == "Invisible_Wall")
+        {
             Destroy(this.gameObject);
         }
 
@@ -41,4 +50,5 @@ public class RangedBossBullet : MonoBehaviour
             Destroy(this.gameObject); */
         //Destroy(this.gameObject);
     }
+
 }

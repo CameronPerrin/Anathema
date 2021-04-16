@@ -22,6 +22,7 @@ TagManager:
   - Boss_Spawner
   - loot
   - Corrupted_Player
+  - Invisible_Wall
   layers:
   - Default
   - TransparentFX

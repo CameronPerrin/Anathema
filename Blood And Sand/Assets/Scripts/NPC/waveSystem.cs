@@ -33,6 +33,7 @@ public class waveSystem : MonoBehaviour
         public Vector3 Size;
     }
 
+    private PhotonView PV;
     public Wave[] waves;
     [SerializeField] private SpawnBox[] spawnLocations;
     public GameObject boss;
@@ -40,6 +41,7 @@ public class waveSystem : MonoBehaviour
     public bool hasBossWave;
     public BossTeleportationController portal;
     [HideInInspector] public bool isBossDead;
+
 
     // Used to show state of wave system
     public enum SpawnState { SPAWNING, WAITING, COUNTING };
@@ -53,11 +55,15 @@ public class waveSystem : MonoBehaviour
     [SerializeField] private int townWaitTimer;
 
     [SerializeField] private GameObject bossSpawner;
+    [SerializeField] private GameObject invisibleWall;
+    [SerializeField] private GameObject teleportPosition;
 
-
+    private GameObject netController;
+    private List<GameObject> pObjects;
     void Start()
     {
-        if(PhotonNetwork.IsMasterClient)
+        PV = GetComponent<PhotonView>();
+        if (PhotonNetwork.IsMasterClient)
         {
             waveCountdown = timeBetweenWaves;
         }
@@ -65,12 +71,15 @@ public class waveSystem : MonoBehaviour
         {
             Destroy(this);
         }
+
+
     }
 
 
     void Update()
     {
-        if(!allWavesComplete)
+
+        if (!allWavesComplete)
         {
             if (state == SpawnState.WAITING)
             {
@@ -163,6 +172,9 @@ public class waveSystem : MonoBehaviour
         if(_wave.isBossWave)
         {
             bossSpawner.SetActive(true);
+            invisibleWall.SetActive(true);
+            //TeleportPlayer();
+            PV.RPC("TeleportPlayer", RpcTarget.All);
         }
         else
         {
@@ -215,8 +227,21 @@ public class waveSystem : MonoBehaviour
             Gizmos.DrawCube(spawnLocations[i].Position, spawnLocations[i].Size);
         }
 
-    }  
+    }
+
+    [PunRPC]
+    public void TeleportPlayer()
+    {
+        Debug.Log("Teleporting Player to Boss Area...");
+        GameObject CurrentPlayer;
+        CurrentPlayer = PhotonNetwork.LocalPlayer.TagObject as GameObject;
+        CurrentPlayer.GetComponent<CharacterController>().enabled = false;
+        //CurrentPlayer.GetComponent<Rigidbody>().position = new Vector3(CurrentPlayer.transform.position.x, 10, CurrentPlayer.transform.position.z);
+        CurrentPlayer.transform.position = teleportPosition.transform.position;
+        CurrentPlayer.GetComponent<CharacterController>().enabled = true;
+    }
 }
+
 
 
 // Allows developer to customize which object and probability rate to spawn
