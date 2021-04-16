@@ -129,4 +129,4 @@ MonoBehaviour:
   projectileSpeed: 20
   damage: 10
   type: 0
-  impactVFX: {fileID: 1897349014599146, guid: 507746b1e4df49a49b1b2089b1d996ad, type: 3}
+  VFXhit: {fileID: 1897349014599146, guid: 507746b1e4df49a49b1b2089b1d996ad, type: 3}
