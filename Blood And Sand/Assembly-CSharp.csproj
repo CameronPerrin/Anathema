@@ -202,6 +202,7 @@
     <Compile Include="Assets\Scripts\particleDestroy.cs" />
     <Compile Include="Assets\Scripts\Item System\Inventory.cs" />
     <Compile Include="Assets\nTools\PrefabPainter\Scripts\PrefabPainterSceneSettings.cs" />
+    <Compile Include="Assets\Scripts\MainMenu.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets\nTools\PrefabPainter\Shaders\GUITextureClipLevels.shader" />
