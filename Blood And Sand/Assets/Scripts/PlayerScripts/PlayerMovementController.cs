@@ -32,6 +32,7 @@ public class PlayerMovementController : MonoBehaviour
     private bool setFallingStats = false;
     private Vector3 fallDir;
     private bool ifSprint = false;
+    public float sprintStaminaUsage = 0.1f;
     
     float horizontal; 
     float vertical;
@@ -174,7 +175,14 @@ public class PlayerMovementController : MonoBehaviour
                 moveDir = Quaternion.Euler(0f, targetAngle, 0f) * Vector3.forward;
                 // Sprinting
                 if(Input.GetKey(KeyCode.LeftShift) && IsGrounded() && (!isPaused)) { 
-                    controller.Move(moveDir.normalized * moveSpeed * 2f * Time.deltaTime);
+                    if(StaminaBar.instance.UseStamina(sprintStaminaUsage))
+                    {
+                        controller.Move(moveDir.normalized * moveSpeed * 2f * Time.deltaTime);
+                    }
+                    else
+                    {
+                        controller.Move(moveDir.normalized * moveSpeed * Time.deltaTime);
+                    }
                 }
                 // If not sprinting, then move normally.
                 else { 
