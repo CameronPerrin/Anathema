@@ -11,7 +11,7 @@ public class PlayerDash : MonoBehaviour
     public float dashSpeed;
     public float dashTime;
     public bool isPaused = false;
-
+    [SerializeField] private int staminaUsage = 20;
 
 
     void Start()
@@ -24,8 +24,12 @@ public class PlayerDash : MonoBehaviour
 
         if(Input.GetKeyDown(KeyCode.F) && !isPaused)
         {
-            //Couroutine is used to model behavior over several frames
-            StartCoroutine(Dash());
+            if(StaminaBar.instance.UseStamina((float)staminaUsage))
+            {
+                //Couroutine is used to model behavior over several frames
+                StartCoroutine(Dash());
+            }
+
         }
     }
 

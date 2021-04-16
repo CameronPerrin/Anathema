@@ -111,6 +111,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attack_vfx: {fileID: 0}
+  impact_vfx: {fileID: 0}
   item_value: 0
   attack: 0
   attack_speed: 0
