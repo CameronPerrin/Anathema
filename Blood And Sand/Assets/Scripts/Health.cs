@@ -39,6 +39,11 @@ public class Health : MonoBehaviourPunCallbacks, IPunObservable
     public Inventory inventory;
 
 
+    private void OnDisable()
+    {
+        GameObject.Find("TheReaper").GetComponent<deathScript>().killPlayer(this.gameObject);
+    }
+
     void Awake()
     {
         // if(SceneManager.GetActiveScene().buildIndex == 1){

@@ -426,7 +426,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8841508036710474816}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 363.42, y: 6.71, z: 464.85}
+  m_LocalPosition: {x: 450.69, y: 9.342, z: 464.85}
   m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children:
   - {fileID: 3955910655751884303}
@@ -629,6 +629,7 @@ MonoBehaviour:
   IgnoreMe:
     serializedVersion: 2
     m_Bits: 4
+  projVFX: {fileID: 8989157459608790110, guid: 699132034dc68104986b21e100fbefd3, type: 3}
   numShots: 3
   spreadAngle: 15
   damage: 10

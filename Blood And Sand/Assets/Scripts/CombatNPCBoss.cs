@@ -252,6 +252,7 @@ public class CombatNPCBoss: MonoBehaviourPun
                 case Phase.Phase_3:
                     if (enemyBoss.GetComponent<npcHealth>().health <= 0)
                     {
+                        Debug.Log("Inside if loop");
                         Destroy(bosses);
                     }
                     break;
@@ -307,7 +308,9 @@ public class CombatNPCBoss: MonoBehaviourPun
             {
                 // Vfx
                 if(i == 1)
+                {
                     Instantiate(projVFX, shootPoint.transform.position, qAngle);
+                }
                 GameObject attackHitbox = Instantiate(attackPrefab, shootPoint.transform.position, qAngle);
                 attackHitbox.GetComponent<RangedBossBullet>().damage = damage;
                 attackHitbox.GetComponent<RangedBossBullet>().type = 1;

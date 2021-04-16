@@ -8,6 +8,14 @@ public class deathScript : MonoBehaviourPunCallbacks
 {
     public List<GameObject> playerObjects;
 
+    /*
+    private void OnDisable()
+    {
+        GameObject CurrentPlayer;
+        CurrentPlayer = PhotonNetwork.LocalPlayer.TagObject as GameObject;
+        killPlayer(CurrentPlayer);
+    } */
+
     public void killPlayer(GameObject dedp)
     {
         for (int i = 0; i < playerObjects.Count; i++)
