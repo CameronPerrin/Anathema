@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 367b372f26c220c458d480f2dfdd15f5, type: 3}
   m_Name: Inventory_Player
   m_EditorClassIdentifier: 
-  Money: 69315
+  Money: 65915
   onInventoryItemsUpdated: {fileID: 11400000, guid: 7c1205c6eadeba94b9643bc4607637c1,
     type: 2}
   testItemSlot:
