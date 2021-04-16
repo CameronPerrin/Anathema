@@ -48,7 +48,10 @@ public class bulletScript : MonoBehaviour
         //probably find a wayto do this without assigning a variable each time this spawns if we need to optimize the script in the future
         if ((collision.gameObject.tag == "Corrupted_Player") && (collision.gameObject != CurrentPlayer))
         {
-            Instantiate(impactVFX, collision.transform.position, transform.rotation);
+            // VFX
+            GameObject impactPoint = collision.gameObject.transform.Find("SpawnImpactVFX").gameObject;
+            Instantiate(impactVFX, impactPoint.transform.position, impactPoint.transform.rotation);
+
         	//Health hp = collision.gameObject.GetComponent<Health>();
             if(collision.gameObject.GetComponent<Health>()){
                 Debug.Log("Bullet doing damage");
@@ -60,7 +63,10 @@ public class bulletScript : MonoBehaviour
         {
         	//Health hp = collision.gameObject.GetComponent<Health>();
             if(CurrentPlayer.tag == "Corrupted_Player"){
-                Instantiate(impactVFX, collision.transform.position, transform.rotation);
+                // VFX
+                GameObject impactPoint = collision.gameObject.transform.Find("SpawnImpactVFX").gameObject;
+                Instantiate(impactVFX, impactPoint.transform.position, impactPoint.transform.rotation);
+
                 if(collision.gameObject.GetComponent<Health>()){
                     Debug.Log("Bullet doing damage");
                     collision.gameObject.GetComponent<Health>().TakeDamage(dmg, type, DOT); 
@@ -69,7 +75,10 @@ public class bulletScript : MonoBehaviour
             Destroy(this.gameObject);  
         }
         if((collision.gameObject.tag == "EnemyHitbox") && (collision.gameObject != CurrentPlayer)){
-            Instantiate(impactVFX, collision.transform.position, transform.rotation);
+            // VFX
+            GameObject impactPoint = collision.gameObject.transform.Find("SpawnImpactVFX").gameObject;
+            Instantiate(impactVFX, impactPoint.transform.position, impactPoint.transform.rotation);
+
             npcHealth hp = collision.gameObject.GetComponent<npcHealth>();
             //Debug.Log(hp);
             if(hp){
@@ -81,7 +90,10 @@ public class bulletScript : MonoBehaviour
 
         else if ((collision.gameObject.tag == "Boss") && (collision.gameObject != CurrentPlayer))
         {
-            Instantiate(impactVFX, collision.transform.position, transform.rotation);
+            // VFX
+            GameObject impactPoint = collision.gameObject.transform.Find("SpawnImpactVFX").gameObject;
+            Instantiate(impactVFX, impactPoint.transform.position, impactPoint.transform.rotation);
+
             npcHealth hp = collision.gameObject.GetComponent<npcHealth>();
             //Debug.Log(hp);
             if (hp)

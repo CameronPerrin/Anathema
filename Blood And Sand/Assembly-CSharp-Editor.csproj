@@ -55,6 +55,7 @@
      <Compile Include="Assets\IL3DN\Scripts\Editor\IL3DN_Wind_Editor.cs" />
      <Compile Include="Assets\TutorialInfo\Scripts\Editor\ReadmeEditor.cs" />
      <Compile Include="Assets\IL3DN\Scripts\Editor\IL3DN_ColorManagerTextures_Editor.cs" />
+     <Compile Include="Assets\Hovl Studio\Render Pipelines support\Editor\ShaderChanger.cs" />
      <Compile Include="Assets\IL3DN\Scripts\Editor\IL3DN_Snow_Editor.cs" />
      <Compile Include="Assets\IL3DN\Scripts\Editor\IL3DN_ColorController_Editor.cs" />
      <Compile Include="Assets\ErosionBrush\Scripts\Editor\ErosionBrushEditor.cs" />

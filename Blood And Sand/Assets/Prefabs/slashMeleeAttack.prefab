@@ -51,7 +51,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6513307914839274789}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -111,8 +111,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CurrentPlayer: {fileID: 0}
-  dmg: 0
-  type: 0
+  dmg: 21
+  type: 1
   DOT: 0
   rb: {fileID: 0}
   slashMeleeAttack: 1
@@ -121,6 +121,7 @@ MonoBehaviour:
   strongMagicAttack: 0
   projectileSpeed: 0
   aim: {x: 0, y: 0, z: 0}
+  impactVFX: {fileID: 0}
 --- !u!114 &3021028076868895697
 MonoBehaviour:
   m_ObjectHideFlags: 0

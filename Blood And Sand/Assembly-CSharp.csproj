@@ -201,18 +201,26 @@
      <None Include="Assets\IL3DN\Shaders\IL3DN_Fog_PP.shader" />
      <None Include="Assets\Photon\PhotonUnityNetworking\changelog.txt" />
      <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_Bitmap.shader" />
+     <None Include="Assets\Hovl Studio\Render Pipelines support\Shaders\LWRP_LightGlow.shader" />
      <None Include="Assets\NatureStarterKit2\Standard Assets\Effects\Projectors\Guidelines.txt" />
      <None Include="Assets\Stylized Grass Shader\Shaders\Libraries\Bending.hlsl" />
      <None Include="Assets\Stylized Grass Shader\Shaders\Resources\GrassBendMesh.shader" />
      <None Include="Assets\IL3DN\Shaders\IL3DN_CardSimple.shader" />
+     <None Include="Assets\VFX\Spinning Stab\Shaders\DissolveNoise.shader" />
      <None Include="Assets\NatureStarterKit2\info.txt" />
      <None Include="Assets\IL3DN\Shaders\IL3DN_Pine.shader" />
      <None Include="Assets\NatureStarterKit2\Standard Assets\Effects\ToonShading\Shaders\ToonLitOutline.shader" />
      <None Include="Assets\Stylized Grass Shader\Shaders\Libraries\Color.hlsl" />
+     <None Include="Assets\VFX\Spinning Stab\Shaders\Add_Fresnel.shader" />
      <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Surface-Mobile.shader" />
+     <None Include="Assets\VFX\Spinning Stab\Shaders\Ice.shader" />
+     <None Include="Assets\VFX\Spinning Stab\Shaders\Distortion.shader" />
+     <None Include="Assets\VFX\Spinning Stab\Shaders\Blend_TwoSides.shader" />
      <None Include="Assets\NatureStarterKit2\Standard Assets\Effects\GlassRefraction\Shaders\GlassStainedBumpDistort.shader" />
      <None Include="Assets\IL3DN\Shaders\IL3DN_Terrain.shader" />
+     <None Include="Assets\VFX\Spinning Stab\Shaders\Blend_CenterGlow.shader" />
      <None Include="Assets\Stylized Grass Shader\Shaders\ShadowPass.hlsl" />
+     <None Include="Assets\Hovl Studio\Render Pipelines support\Documentation.txt" />
      <None Include="Assets\Stylized Grass Shader\Shaders\StylizedGrassShader.shader" />
      <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Surface.shader" />
      <None Include="Assets\TextMesh Pro\Sprites\EmojiOne Attribution.txt" />
@@ -239,9 +247,11 @@
      <None Include="Assets\Stylized Grass Shader\Shaders\Libraries\Input.hlsl" />
      <None Include="Assets\IL3DN\Shaders\IL3DN_Cloud.shader" />
      <None Include="Assets\Stylized Grass Shader\Shaders\Libraries\StylizedGrassCommon.hlsl" />
+     <None Include="Assets\VFX\Spinning Stab\Shaders\BlendDistort.shader" />
      <None Include="Assets\Stylized Grass Shader\Shaders\LightingPass.hlsl" />
      <None Include="Assets\IL3DN\Shaders\IL3DN_CardComplex.shader" />
      <None Include="Assets\TextMesh Pro\Resources\LineBreaking Following Characters.txt" />
+     <None Include="Assets\VFX\Spinning Stab\Shaders\Scroll.shader" />
      <None Include="Assets\Stylized Grass Shader\Shaders\DepthPass.hlsl" />
      <None Include="Assets\nTools\PrefabPainter\Docs\changelog.txt" />
      <None Include="Assets\IL3DN\Shaders\IL3DN_Grass.shader" />
@@ -251,6 +261,7 @@
      <None Include="Assets\Stylized Grass Shader\Shaders\Libraries\StylizedGrassInput.hlsl" />
      <None Include="Assets\IL3DN\Shaders\IL3DN_SoftParticle.shader" />
      <None Include="Assets\Photon\PhotonLibs\Photon3Unity3D.xml" />
+     <None Include="Assets\VFX\Spinning Stab\Shaders\Add_CenterGlow.shader" />
      <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF Overlay.shader" />
      <None Include="Assets\Stylized Grass Shader\Changelog.txt" />
      <None Include="Assets\IL3DN\Shaders\IL3DN_Fog.shader" />
@@ -260,7 +271,9 @@
      <None Include="Assets\Photon\PhotonUnityNetworking\link.xml" />
      <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Mobile.shader" />
      <None Include="Assets\Stylized Grass Shader\Shaders\Libraries\Lighting.hlsl" />
+     <None Include="Assets\VFX\Spinning Stab\Shaders\Explosion.shader" />
      <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_Sprite.shader" />
+     <None Include="Assets\VFX\Spinning Stab\Shaders\SwordSlash.shader" />
  <Reference Include="UnityEngine">
  <HintPath>C:/Program Files/Unity/Hub/Editor/2020.2.3f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
  </Reference>

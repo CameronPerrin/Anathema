@@ -88,7 +88,7 @@ public class npcHealth : MonoBehaviourPunCallbacks
         health -= dmage;
         ShowFloatingText();
         if(dotOn)
-            Instantiate(bloodVFX, this.transform.position, Quaternion.identity); // spawn blood vfx
+            Instantiate(bloodVFX, transform.position, Quaternion.identity); // spawn blood vfx
         //Instantiate(bloodVFX, bloodSpotInstLocation.transform.position, Quaternion.identity); // spawn blood vfx
             if(health <= 0){
                 float rand = UnityEngine.Random.Range(0.01f, 1.0f);
