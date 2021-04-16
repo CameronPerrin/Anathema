@@ -24,7 +24,7 @@ public class BossAOEAttack : MonoBehaviour
             GameObject attackHitbox = Instantiate(attackPrefab, circleParticleObject.transform.position, transform.rotation * Quaternion.Euler(0, 0, -90));
             //attackHitbox.transform.localScale = new Vector3(2, 2, 2);
             minesCanAtk = false;
-            Destroy(this.gameObject);
+            Destroy(this.gameObject, 4.5f);
         }
     }
 

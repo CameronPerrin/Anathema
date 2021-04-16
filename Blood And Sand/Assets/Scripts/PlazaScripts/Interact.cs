@@ -132,20 +132,28 @@ public class Interact : MonoBehaviour
     }
 
 
-
-    /// HIGHLIGHTING FUNCTIONS HERE
-    public void isHighlightOn(bool check){
-        if(check){
-            StartCoroutine(highlightTimer());
-            check = false;
-        }
+    void OnMouseOver()
+    {
+        GetComponent<Renderer>().material.color = Color.yellow; 
     }
 
-    public IEnumerator highlightTimer(){
-        //Debug.Log("Changing color to yellow!");
-        GetComponent<Renderer>().material.color = Color.yellow;     //change the color to yellow
-        yield return new WaitForSeconds(1);                         //wait for 3 seconds
-        //Debug.Log("BACK TO GRAY");
-        GetComponent<Renderer>().material.color = startcolor;       // change color back to original
+    void OnMouseExit()
+    {
+        GetComponent<Renderer>().material.color = startcolor;
     }
+    // /// HIGHLIGHTING FUNCTIONS HERE
+    // public void isHighlightOn(bool check){
+    //     if(check){
+    //         StartCoroutine(highlightTimer());
+    //         check = false;
+    //     }
+    // }
+
+    // public IEnumerator highlightTimer(){
+    //     //Debug.Log("Changing color to yellow!");
+    //     GetComponent<Renderer>().material.color = Color.yellow;     //change the color to yellow
+    //     yield return new WaitForSeconds(1);                         //wait for 3 seconds
+    //     //Debug.Log("BACK TO GRAY");
+    //     GetComponent<Renderer>().material.color = startcolor;       // change color back to original
+    // }
 }

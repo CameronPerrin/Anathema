@@ -41,10 +41,10 @@ public class Health : MonoBehaviourPunCallbacks, IPunObservable
 
     void Awake()
     {
-        if(SceneManager.GetActiveScene().buildIndex == 1){
-            Destroy(wHp);
-            Destroy(oHp);
-        }
+        // if(SceneManager.GetActiveScene().buildIndex == 1){
+        //     Destroy(wHp);
+        //     Destroy(oHp);
+        // }
     }
 
     void Start()
@@ -128,7 +128,7 @@ public class Health : MonoBehaviourPunCallbacks, IPunObservable
     {
         //Debug.Log("Taking " + dmage + " damage.");
         health -= dmage;
-        Instantiate(bloodVFX, bloodSpotInstLocation.transform.position, Quaternion.identity); // spawn blood vfx
+        //Instantiate(bloodVFX, bloodSpotInstLocation.transform.position, Quaternion.identity); // spawn blood vfx
         if(health <= 0){
             GameObject.Find("TheReaper").GetComponent<deathScript>().killPlayer(this.gameObject);
         }

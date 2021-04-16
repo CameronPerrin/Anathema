@@ -100,7 +100,7 @@ public class mindlessFollow : MonoBehaviour
                     Vector3 ppos = new Vector3 (gamers.transform.position.x, 0, gamers.transform.position.z);
                     // Add the magnitude of the difference of the two distances to a new list.
                     distList.Add((npos - ppos).magnitude);
-                    Debug.Log("[2] - " + gamers.transform.Find("Canvas_WS_Overlay/name").gameObject.GetComponent<TMP_Text>().text + " is found...");
+                    //Debug.Log("[2] - " + gamers.transform.Find("Canvas_WS_Overlay/name").gameObject.GetComponent<TMP_Text>().text + " is found...");
             }
             //Debug.Log("[3] - Total of: " + playersFound + " players found...");
             /*
