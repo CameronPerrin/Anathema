@@ -26,6 +26,11 @@ public class playerNameDisplayer : MonoBehaviourPun
             PV.RPC("sendName", RpcTarget.All, PhotonNetwork.NickName);
     }
 
+    void Update()
+    {
+        if(PV.IsMine)
+            PV.RPC("sendName", RpcTarget.All, PhotonNetwork.NickName);
+    }
 
     // NOTE: If we want to display player names AFTER they enter a scene, we need to
     // use OnPhotonSerializeView component for networking. But since players are joining

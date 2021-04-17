@@ -37,15 +37,21 @@ public class Health : MonoBehaviourPunCallbacks, IPunObservable
     public float dmgTemp;
 
     public Inventory inventory;
+    GameObject removePlayer;
 
 
     private void OnDisable()
     {
-        GameObject.Find("TheReaper").GetComponent<deathScript>().killPlayer(this.gameObject);
+        if(removePlayer != null){
+            removePlayer.GetComponent<deathScript>().killPlayer(this.gameObject);
+        }
+        if(PV.IsMine)
+            GetComponent<ChatScript>().PV.RPC("sendChat", RpcTarget.All,"", $"<color=yellow>{PhotonNetwork.LocalPlayer.NickName} has left the room.</color>", true);
     }
 
     void Awake()
     {
+        removePlayer = GameObject.Find("TheReaper");
         // if(SceneManager.GetActiveScene().buildIndex == 1){
         //     Destroy(wHp);
         //     Destroy(oHp);
@@ -136,6 +142,8 @@ public class Health : MonoBehaviourPunCallbacks, IPunObservable
         //Instantiate(bloodVFX, bloodSpotInstLocation.transform.position, Quaternion.identity); // spawn blood vfx
         if(health <= 0){
             GameObject.Find("TheReaper").GetComponent<deathScript>().killPlayer(this.gameObject);
+            if(PV.IsMine)
+                GetComponent<ChatScript>().PV.RPC("sendChat", RpcTarget.All,"", $"<color=#ff0a0a>{PhotonNetwork.LocalPlayer.NickName} has died.</color>", true);
         }
         if(PV.IsMine) {
             if(health <= 0){

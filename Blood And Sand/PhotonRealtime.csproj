@@ -48,19 +48,19 @@
   </PropertyGroup>
   <ItemGroup>
      <Compile Include="Assets\Photon\PhotonRealtime\Code\RegionHandler.cs" />
-     <Compile Include="Assets\Photon\PhotonRealtime\Code\LoadBalancingClient.cs" />
      <Compile Include="Assets\Photon\PhotonRealtime\Code\Extensions.cs" />
      <Compile Include="Assets\Photon\PhotonRealtime\Code\WebRpc.cs" />
      <Compile Include="Assets\Photon\PhotonRealtime\Code\LoadbalancingPeer.cs" />
+     <Compile Include="Assets\Photon\PhotonRealtime\Code\PhotonPingClasses.cs" />
+     <Compile Include="Assets\Photon\PhotonRealtime\Code\Room.cs" />
+     <Compile Include="Assets\Photon\PhotonRealtime\Code\RoomInfo.cs" />
+     <Compile Include="Assets\Photon\PhotonRealtime\Code\Player.cs" />
+     <Compile Include="Assets\Photon\PhotonRealtime\Code\LoadBalancingClient.cs" />
      <Compile Include="Assets\Photon\PhotonRealtime\Code\Region.cs" />
      <Compile Include="Assets\Photon\PhotonRealtime\Code\SupportLogger.cs" />
      <Compile Include="Assets\Photon\PhotonRealtime\Code\AppSettings.cs" />
      <Compile Include="Assets\Photon\PhotonRealtime\Code\FriendInfo.cs" />
-     <Compile Include="Assets\Photon\PhotonRealtime\Code\PhotonPingClasses.cs" />
-     <Compile Include="Assets\Photon\PhotonRealtime\Code\Room.cs" />
      <Compile Include="Assets\Photon\PhotonRealtime\Code\PhotonPing.cs" />
-     <Compile Include="Assets\Photon\PhotonRealtime\Code\RoomInfo.cs" />
-     <Compile Include="Assets\Photon\PhotonRealtime\Code\Player.cs" />
      <Compile Include="Assets\Photon\PhotonRealtime\Code\ConnectionHandler.cs" />
      <None Include="Assets\Photon\PhotonRealtime\Code\changes-realtime.txt" />
      <None Include="Assets\Photon\PhotonRealtime\Code\PhotonRealtime.asmdef" />

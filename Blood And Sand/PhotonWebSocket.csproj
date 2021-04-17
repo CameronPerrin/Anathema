@@ -47,8 +47,8 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
-     <Compile Include="Assets\Photon\PhotonLibs\WebSocket\WebSocket.cs" />
      <Compile Include="Assets\Photon\PhotonLibs\WebSocket\SocketWebTcp.cs" />
+     <Compile Include="Assets\Photon\PhotonLibs\WebSocket\WebSocket.cs" />
      <None Include="Assets\Photon\PhotonLibs\WebSocket\PhotonWebSocket.asmdef" />
  <Reference Include="UnityEngine">
  <HintPath>C:/Program Files/Unity/Hub/Editor/2020.2.3f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>

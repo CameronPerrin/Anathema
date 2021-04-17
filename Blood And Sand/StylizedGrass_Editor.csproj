@@ -48,13 +48,13 @@
   </PropertyGroup>
   <ItemGroup>
      <Compile Include="Assets\Stylized Grass Shader\Scripts\Editor\GrassBenderInspector.cs" />
-     <Compile Include="Assets\Stylized Grass Shader\Scripts\Editor\ColorMapInspector.cs" />
      <Compile Include="Assets\Stylized Grass Shader\Scripts\Editor\ColorMapEditor.cs" />
-     <Compile Include="Assets\Stylized Grass Shader\Scripts\Editor\StylizedGrassGUI.cs" />
      <Compile Include="Assets\Stylized Grass Shader\Scripts\Editor\StylizedGrassRendererInspector.cs" />
      <Compile Include="Assets\Stylized Grass Shader\Scripts\Editor\StylizedGrassEditor.cs" />
      <Compile Include="Assets\Stylized Grass Shader\Scripts\Editor\StylizedGrassShaderGUI.cs" />
      <Compile Include="Assets\Stylized Grass Shader\Scripts\Editor\GrassColorMapRendererInspector.cs" />
+     <Compile Include="Assets\Stylized Grass Shader\Scripts\Editor\ColorMapInspector.cs" />
+     <Compile Include="Assets\Stylized Grass Shader\Scripts\Editor\StylizedGrassGUI.cs" />
      <Compile Include="Assets\Stylized Grass Shader\Scripts\Editor\ShaderConfigurator.cs" />
      <Compile Include="Assets\Stylized Grass Shader\Scripts\Editor\AssetInfo.cs" />
      <None Include="Assets\Stylized Grass Shader\Scripts\Editor\StylizedGrass_Editor.asmdef" />

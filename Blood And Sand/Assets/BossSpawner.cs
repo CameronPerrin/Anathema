@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.IO;
 using UnityEngine;
+using TMPro;
 
 
 // Store bosses in array
@@ -12,7 +13,7 @@ using UnityEngine;
 
 
 
-public class BossSpawner : MonoBehaviour
+public class BossSpawner : MonoBehaviourPun
 {
     public GameObject boss;
     public waveSystem waveSystem;
@@ -20,16 +21,24 @@ public class BossSpawner : MonoBehaviour
     private bool bossHasSpawned = false;
     private float searchCountdown = 1f;
 
+    // Chat event system
+    private GameObject chat;
+    PhotonView PV;
+
     void Start()
     { 
         if (!PhotonNetwork.IsMasterClient)
         {
             Destroy(this);
         }
+        PV = GetComponent<PhotonView>();
 
     }
     void Update()
     {
+        if(chat == null)
+            chat = GameObject.Find("ChatSTUFF/chatPanel/chatbox").gameObject;
+
             if (!bossHasSpawned)
             {
                 SpawnBossAfterCountdown();
@@ -62,6 +71,8 @@ public class BossSpawner : MonoBehaviour
         if (countDown <= 0f)
         {
             Debug.Log("Boss is now spawning!");
+            //if(PV.IsMine)
+            chat.GetComponent<TMP_Text>().text += $"<color=#ffc800><I>The Dark Lord has been summoned!</I></color> \n";
             //PhotonNetwork.Instantiate("NPCs/BossMainNPC", new Vector3(0, 0, 0), Quaternion.identity, 0);
             PhotonNetwork.InstantiateSceneObject("NPCs/BossMainNPC", new Vector3(0, 0, 0), Quaternion.identity);
             bossHasSpawned = true;

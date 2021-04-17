@@ -42,10 +42,10 @@ public class PauseMenuController : MonoBehaviour
 		QualityLevels = QualitySettings.names;
 
 		// Print the resolutions
-		foreach (var name in QualityLevels)
-		{
-			Debug.Log(name);
-		}
+		// foreach (var name in QualityLevels)
+		// {
+		// 	Debug.Log(name);
+		// }
 		PopulateQualityDropdown(QualityDropdown, QualityLevels);
 		QualityDropdown.onValueChanged.AddListener(delegate {
 			QualityDropdownValueChanged(QualityDropdown);

@@ -47,13 +47,13 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
+     <Compile Include="Assets\Stylized Grass Shader\Scripts\GrassColorMap.cs" />
+     <Compile Include="Assets\Stylized Grass Shader\Scripts\GrassBenderBase.cs" />
+     <Compile Include="Assets\Stylized Grass Shader\Scripts\GrassColorMapRenderer.cs" />
      <Compile Include="Assets\Stylized Grass Shader\Scripts\PipelineUtilities.cs" />
      <Compile Include="Assets\Stylized Grass Shader\Scripts\StylizedGrassRenderer.cs" />
      <Compile Include="Assets\Stylized Grass Shader\Scripts\GrassBender.cs" />
-     <Compile Include="Assets\Stylized Grass Shader\Scripts\GrassColorMap.cs" />
-     <Compile Include="Assets\Stylized Grass Shader\Scripts\GrassBenderBase.cs" />
      <Compile Include="Assets\Stylized Grass Shader\Scripts\DrawGrassBenders.cs" />
-     <Compile Include="Assets\Stylized Grass Shader\Scripts\GrassColorMapRenderer.cs" />
      <Compile Include="Assets\Stylized Grass Shader\Scripts\StylizedGrassShaderController.cs" />
      <None Include="Assets\Stylized Grass Shader\Scripts\StylizedGrass_Runtime.asmdef" />
  <Reference Include="UnityEngine">

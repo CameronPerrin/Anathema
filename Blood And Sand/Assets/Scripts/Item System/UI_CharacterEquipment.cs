@@ -70,7 +70,8 @@ public class UI_CharacterEquipment : MonoBehaviour
     IEnumerator waitForSlotLoad(InventorySlot inventorySlot)
     {
         yield return new WaitForSeconds(0.1f);
-        playerEquipment.TryEquipItem(PlayerEquipment.EquipSlot.Weapon, inventorySlot.SlotItem, false);
+        if(PlayerEquipment.EquipSlot.Weapon != null)
+            playerEquipment.TryEquipItem(PlayerEquipment.EquipSlot.Weapon, inventorySlot.SlotItem, false);
     }
 
     public void SetCharacterEquipment(PlayerEquipment playerEquipment)

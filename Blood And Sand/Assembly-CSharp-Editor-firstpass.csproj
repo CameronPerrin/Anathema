@@ -47,8 +47,8 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
-     <Compile Include="Assets\Plugins\GitHub\Editor\UnityAPIWrapper.cs" />
      <Compile Include="Assets\Plugins\GitHub\Editor\ExtensionLoader.cs" />
+     <Compile Include="Assets\Plugins\GitHub\Editor\UnityAPIWrapper.cs" />
      <None Include="Assets\Plugins\GitHub\Editor\credits.txt" />
      <None Include="Assets\Plugins\GitHub\Editor\eula.txt" />
  <Reference Include="UnityEngine">
@@ -657,6 +657,9 @@
  <Reference Include="UnityEditor.TestRunner">
  <HintPath>G:/Program Files (x86)/Anathema/Blood And Sand/Library/ScriptAssemblies/UnityEditor.TestRunner.dll</HintPath>
  </Reference>
+ <Reference Include="Unity.VisualEffectGraph.Editor">
+ <HintPath>G:/Program Files (x86)/Anathema/Blood And Sand/Library/ScriptAssemblies/Unity.VisualEffectGraph.Editor.dll</HintPath>
+ </Reference>
  <Reference Include="Unity.VSCode.Editor">
  <HintPath>G:/Program Files (x86)/Anathema/Blood And Sand/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
  </Reference>
@@ -671,6 +674,9 @@
  </Reference>
  <Reference Include="Unity.VisualStudio.Editor">
  <HintPath>G:/Program Files (x86)/Anathema/Blood And Sand/Library/ScriptAssemblies/Unity.VisualStudio.Editor.dll</HintPath>
+ </Reference>
+ <Reference Include="Unity.VisualEffectGraph.Runtime">
+ <HintPath>G:/Program Files (x86)/Anathema/Blood And Sand/Library/ScriptAssemblies/Unity.VisualEffectGraph.Runtime.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Timeline">
  <HintPath>G:/Program Files (x86)/Anathema/Blood And Sand/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>

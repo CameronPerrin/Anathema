@@ -10,6 +10,7 @@ public class StaminaBar : MonoBehaviour
     private float maxStamina = 100;
     private float currentStamina;
     public int waitTillRegen = 1;
+    public int regenRate = 1;
     private WaitForSeconds regenTick = new WaitForSeconds(0.1f);
     private Coroutine regen;
 
@@ -52,10 +53,12 @@ public class StaminaBar : MonoBehaviour
 
         while(currentStamina < maxStamina)
         {
-            currentStamina += maxStamina / 100;
+            currentStamina += regenRate;
             staminaBar.value = currentStamina;
             yield return regenTick;
         }
+        if (currentStamina > maxStamina)
+            currentStamina = maxStamina;
         regen = null;
     }
 

@@ -20,7 +20,8 @@ public class ChatScript : MonoBehaviourPun
     //private bool isHidden = false;
     private string text;
     private string nameColor;
-    private PhotonView PV;
+    [HideInInspector]public PhotonView PV;
+    [HideInInspector]public bool hasJoinedMsg;
     // Start is called before the first frame update
     void Start()
     {
@@ -52,6 +53,8 @@ public class ChatScript : MonoBehaviourPun
             else if(cNumb == 3){
                 nameColor = "001524";
             }
+        // if(PV.IsMine)
+        //     PV.RPC("sendChat", RpcTarget.All, "", $"<color=yellow>{PhotonNetwork.NickName} has joined the room.</color>", true);
     }
 
     // Update is called once per frame
@@ -61,10 +64,12 @@ public class ChatScript : MonoBehaviourPun
             Debug.Log("CANT FIND PANEL");
         }
         chatPanel.SetActive(true);
+
         // opens input for chatting
         if(Input.GetKeyUp(KeyCode.Return) && !isActive){
             this.GetComponent<PlayerDash>().isPaused = true;
             this.GetComponent<PlayerMovementController>().isPaused = true;
+            this.GetComponent<Combat>().isPaused = false;
             //chatCanvas.SetActive(true);
             inputBox.SetActive(true);
             inputBox.GetComponent<TMP_InputField>().ActivateInputField(); 
@@ -79,22 +84,43 @@ public class ChatScript : MonoBehaviourPun
             //chatCanvas.SetActive(true);
             text = textFilter(text);
             if(PV.IsMine && text!="")
-                PV.RPC("sendChat", RpcTarget.All, PhotonNetwork.NickName, text);
+                PV.RPC("sendChat", RpcTarget.All, PhotonNetwork.NickName, text, false);
             inputBox.GetComponent<TMP_InputField>().text = null;
             this.GetComponent<PlayerDash>().isPaused = false;
             this.GetComponent<PlayerMovementController>().isPaused = false;
+            this.GetComponent<Combat>().isPaused = false;
             inputBox.SetActive(false);
             isActive = false;
         }   
+
+        if(isActive){
+            this.GetComponent<PlayerMovementController>().isPaused = true;
+            this.GetComponent<PlayerDash>().isPaused = true;
+        }
     }
 
-    [PunRPC]
-    void sendChat(string name, string text)
+    void LateUpdate()
     {
-
-        // NEEDS TO USE RICH TEXT TO BE ABLE TO CHANGE COLOR
-        chatBox.GetComponent<TMP_Text>().text += $"[<color=#{nameColor}><b>{name}</b></color>]: "+ text + "\n";
+        if(hasJoinedMsg){
+                hasJoinedMsg = false;
+                Debug.Log("Found panel, sending message... ");
+                if(PV.IsMine){
+                    PV.RPC("sendChat", RpcTarget.All, "", $"<color=yellow>{PhotonNetwork.NickName} has joined the room.</color>", true); 
+                }
+            }
     }
+    [PunRPC]
+    public void sendChat(string name, string text, bool isEvent)
+    {
+        // NEEDS TO USE RICH TEXT TO BE ABLE TO CHANGE COLOR
+        if(!isEvent) // if not an system event
+            chatBox.GetComponent<TMP_Text>().text += $"[<color=white><b>{name}</b></color>]: "+ text + "\n";
+            //chatBox.GetComponent<TMP_Text>().text += $"[<color=#{nameColor}><b>{name}</b></color>]: "+ text + "\n";
+        else{
+            chatBox.GetComponent<TMP_Text>().text += text + "\n";
+        }
+    }
+
 
     string textFilter(string textf)
     {
@@ -124,5 +150,4 @@ public class ChatScript : MonoBehaviourPun
         }
         return retText;
     }
-
 }

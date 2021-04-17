@@ -4,6 +4,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 using Photon.Pun;
 using System.IO;
 
@@ -60,6 +61,9 @@ public class waveSystem : MonoBehaviour
 
     private GameObject netController;
     private List<GameObject> pObjects;
+
+    // Chat event system
+    private GameObject chat;
     void Start()
     {
         PV = GetComponent<PhotonView>();
@@ -78,7 +82,9 @@ public class waveSystem : MonoBehaviour
 
     void Update()
     {
-
+        if(chat == null)
+            chat = GameObject.Find("ChatSTUFF/chatPanel/chatbox").gameObject;
+        
         if (!allWavesComplete)
         {
             if (state == SpawnState.WAITING)
@@ -89,6 +95,7 @@ public class waveSystem : MonoBehaviour
 
                     //Begin a new round
                     beginNewRound();
+                    
                 }
                 else
                 {
@@ -113,14 +120,21 @@ public class waveSystem : MonoBehaviour
     void beginNewRound()
     {
         Debug.Log("Wave Completed!");
+            //GetComponent<ChatScript>().PV.RPC("sendChat", RpcTarget.All,"", , true);
         state = SpawnState.COUNTING;
         waveCountdown = timeBetweenWaves;
-
+        if(nextWave != -1){
+            if(PV.IsMine)
+                    chat.GetComponent<TMP_Text>().text += $"<color=#ffc800><I>Wave completed!</I></color> \n";
+        }
         if (nextWave + 1 > waves.Length - 1)
         {
             nextWave = 0;
             // Loop or Send all players to next scene
             Debug.Log("ALL WAVES COMPLETE!");
+            if(PV.IsMine)
+                chat.GetComponent<TMP_Text>().text += $"<color=#ffc800><I>You feel dark magic in the air...</I></color>\n";
+                //GetComponent<ChatScript>().PV.RPC("sendChat", RpcTarget.All,"", $"<color=#ffc800><I>You feel dark magic in the air...</I></color>", true);
             allWavesComplete = true;
 
             /*
@@ -136,6 +150,7 @@ public class waveSystem : MonoBehaviour
             Debug.Log("nextWave incremented");
             nextWave++;
         }
+        
 
     }
 
@@ -167,6 +182,9 @@ public class waveSystem : MonoBehaviour
     IEnumerator EnemyDrop(Wave _wave)
     {
         Debug.Log("Spawning Wave: " + _wave.name);
+        if(PV.IsMine)
+            chat.GetComponent<TMP_Text>().text += $"<color=#ffc800><I>{_wave.name} is starting...</I></color>\n";
+            //GetComponent<ChatScript>().PV.RPC("sendChat", RpcTarget.All,"", $"<color=#ffc800><I>Wave {_wave.name} is starting...</I></color>", true);
         state = SpawnState.SPAWNING;
 
         if(_wave.isBossWave)

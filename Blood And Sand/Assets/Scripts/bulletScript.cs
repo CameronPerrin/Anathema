@@ -77,8 +77,10 @@ public class bulletScript : MonoBehaviour
         }
         if((collision.gameObject.tag == "EnemyHitbox") && (collision.gameObject != CurrentPlayer)){
             // VFX
-            GameObject impactPoint = collision.gameObject.transform.Find("SpawnImpactVFX").gameObject;
-            Instantiate(impactVFX, impactPoint.transform.position, impactPoint.transform.rotation);
+            if(collision.gameObject.transform.Find("SpawnImpactVFX").gameObject != null){
+                GameObject impactPoint = collision.gameObject.transform.Find("SpawnImpactVFX").gameObject;
+                Instantiate(impactVFX, impactPoint.transform.position, impactPoint.transform.rotation);
+            }
 
             npcHealth hp = collision.gameObject.GetComponent<npcHealth>();
             //Debug.Log(hp);

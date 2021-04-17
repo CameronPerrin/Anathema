@@ -49,15 +49,15 @@
   <ItemGroup>
      <Compile Include="Assets\nTools\PrefabPainter\Scripts\Editor\PrefabPainter.cs" />
      <Compile Include="Assets\IL3DN\Scripts\Editor\IL3DN_ColorManagerEffects_Editor.cs" />
+     <Compile Include="Assets\IL3DN\Scripts\Editor\IL3DN_Wind_Editor.cs" />
+     <Compile Include="Assets\TutorialInfo\Scripts\Editor\ReadmeEditor.cs" />
+     <Compile Include="Assets\IL3DN\Scripts\Editor\IL3DN_ColorController_Editor.cs" />
      <Compile Include="Assets\nTools\PrefabPainter\Scripts\Editor\PrafabPainterGUI.cs" />
      <Compile Include="Assets\ErosionBrush\Scripts\Editor\Layout.cs" />
      <Compile Include="Assets\Editor\SaveOnPlay.cs" />
-     <Compile Include="Assets\IL3DN\Scripts\Editor\IL3DN_Wind_Editor.cs" />
-     <Compile Include="Assets\TutorialInfo\Scripts\Editor\ReadmeEditor.cs" />
      <Compile Include="Assets\IL3DN\Scripts\Editor\IL3DN_ColorManagerTextures_Editor.cs" />
      <Compile Include="Assets\Hovl Studio\Render Pipelines support\Editor\ShaderChanger.cs" />
      <Compile Include="Assets\IL3DN\Scripts\Editor\IL3DN_Snow_Editor.cs" />
-     <Compile Include="Assets\IL3DN\Scripts\Editor\IL3DN_ColorController_Editor.cs" />
      <Compile Include="Assets\ErosionBrush\Scripts\Editor\ErosionBrushEditor.cs" />
  <Reference Include="UnityEngine">
  <HintPath>C:/Program Files/Unity/Hub/Editor/2020.2.3f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
@@ -665,6 +665,9 @@
  <Reference Include="UnityEditor.TestRunner">
  <HintPath>G:/Program Files (x86)/Anathema/Blood And Sand/Library/ScriptAssemblies/UnityEditor.TestRunner.dll</HintPath>
  </Reference>
+ <Reference Include="Unity.VisualEffectGraph.Editor">
+ <HintPath>G:/Program Files (x86)/Anathema/Blood And Sand/Library/ScriptAssemblies/Unity.VisualEffectGraph.Editor.dll</HintPath>
+ </Reference>
  <Reference Include="Unity.VSCode.Editor">
  <HintPath>G:/Program Files (x86)/Anathema/Blood And Sand/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
  </Reference>
@@ -679,6 +682,9 @@
  </Reference>
  <Reference Include="Unity.VisualStudio.Editor">
  <HintPath>G:/Program Files (x86)/Anathema/Blood And Sand/Library/ScriptAssemblies/Unity.VisualStudio.Editor.dll</HintPath>
+ </Reference>
+ <Reference Include="Unity.VisualEffectGraph.Runtime">
+ <HintPath>G:/Program Files (x86)/Anathema/Blood And Sand/Library/ScriptAssemblies/Unity.VisualEffectGraph.Runtime.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Timeline">
  <HintPath>G:/Program Files (x86)/Anathema/Blood And Sand/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
