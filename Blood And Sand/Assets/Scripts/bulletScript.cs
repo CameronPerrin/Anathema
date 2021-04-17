@@ -20,6 +20,7 @@ public class bulletScript : MonoBehaviour
 
     // VFX
     public GameObject impactVFX;
+    public float destroyTimer = 0;
 
     // Start is called before the first frame update
     void Start()
@@ -57,7 +58,7 @@ public class bulletScript : MonoBehaviour
                 Debug.Log("Bullet doing damage");
                 collision.gameObject.GetComponent<Health>().TakeDamage(dmg, type, DOT); 
             }
-            Destroy(this.gameObject);  
+            Destroy(this.gameObject, destroyTimer);  
         }
         if ((collision.gameObject.tag == "Player") && (collision.gameObject != CurrentPlayer))
         {
@@ -72,7 +73,7 @@ public class bulletScript : MonoBehaviour
                     collision.gameObject.GetComponent<Health>().TakeDamage(dmg, type, DOT); 
                 }
             }
-            Destroy(this.gameObject);  
+            Destroy(this.gameObject, destroyTimer);  
         }
         if((collision.gameObject.tag == "EnemyHitbox") && (collision.gameObject != CurrentPlayer)){
             // VFX
@@ -85,7 +86,7 @@ public class bulletScript : MonoBehaviour
                hp.TakeDamage(dmg, type, DOT); 
             }
 
-            Destroy(this.gameObject);
+            Destroy(this.gameObject,destroyTimer);
         }
 
         else if ((collision.gameObject.tag == "Boss") && (collision.gameObject != CurrentPlayer))
@@ -101,15 +102,16 @@ public class bulletScript : MonoBehaviour
                 hp.TakeDamage(dmg, type, DOT);
             }
 
-            Destroy(this.gameObject);
+            Destroy(this.gameObject,destroyTimer);
         }
 
-        else if (collision.gameObject.tag == "Bullet" || collision.gameObject.tag == "EditorOnly" || collision.gameObject.tag == "Untagged"){
-            Debug.Log("Colliding with other bullets!");
+        else if (collision.gameObject.tag == "Bullet" || collision.gameObject.tag == "EditorOnly");
+        // destroy if it collides with anything else
+        else if(collision.gameObject.tag == "Untagged"){
+            Debug.Log("Tag: " + collision.gameObject.tag);
+            Debug.Log("Name: " + collision.gameObject.name);
+            Destroy(this.gameObject);
         }
-        // // destroy if it collides with anything else
-        // else
-        //     Destroy(this.gameObject);
 
         
         

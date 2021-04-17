@@ -110,8 +110,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d29422f0a565e84998fb66991875afe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attack_vfx: {fileID: 0}
-  impact_vfx: {fileID: 0}
+  attack_vfx: {fileID: 8468883596701821890, guid: e9c47073e61725d48939e31b787e3328,
+    type: 3}
+  impact_vfx: {fileID: 2035876634574076466, guid: 960e70d857fa3914d91dd4beaf3c8c00,
+    type: 3}
   item_value: 0
   attack: 0
   attack_speed: 0
@@ -121,7 +123,7 @@ MonoBehaviour:
   defense: 0
   magic_defense: 0
   move_speed: 0
-  item_type: 0
+  item_type: 7
   isCorruptedEssence: 0
 --- !u!114 &5386495745624397977
 MonoBehaviour:
