@@ -991,6 +991,7 @@ MonoBehaviour:
   redWorldHealthBackdrop: {fileID: 4113379089755202690}
   oHp: {fileID: 6691666988021276544}
   wHp: {fileID: 8586873480530414400}
+  sprintBar: {fileID: 7525606340605623437}
   deathObj: {fileID: 0}
   bloodVFX: {fileID: 6062716170508370198, guid: a2d0a4f4e6e568842bf9abb6edb2864d,
     type: 3}
@@ -4373,6 +4374,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e899ae2f13f481247b8f4299ed4dc03a, type: 3}
+--- !u!1 &7525606340605623437 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5433681813329925781, guid: e899ae2f13f481247b8f4299ed4dc03a,
+    type: 3}
+  m_PrefabInstance: {fileID: 2528775357578766872}
+  m_PrefabAsset: {fileID: 0}
 --- !u!224 &2054559697448144997 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 4583328388961630845, guid: e899ae2f13f481247b8f4299ed4dc03a,

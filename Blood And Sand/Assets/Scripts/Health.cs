@@ -27,6 +27,7 @@ public class Health : MonoBehaviourPunCallbacks, IPunObservable
     public Image redWorldHealthBackdrop;
     public GameObject oHp; 				// canvas overlay
     public GameObject wHp; 				// canvas world
+    public GameObject sprintBar;
 
     public GameObject deathObj;
     public GameObject bloodVFX;
@@ -65,9 +66,11 @@ public class Health : MonoBehaviourPunCallbacks, IPunObservable
         if(PV.IsMine)
     	{
     		wHp.SetActive(false);
+            sprintBar.SetActive(true);
     	}
     	else{
     		oHp.SetActive(false);
+            sprintBar.SetActive(false);
     	}
         InvokeRepeating ("RegenHealth", 0f, hpRegenSpeed);
     }
