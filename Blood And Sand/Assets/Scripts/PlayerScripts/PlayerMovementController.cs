@@ -42,6 +42,9 @@ public class PlayerMovementController : MonoBehaviour
     
     private GameObject netController;
 
+    // Stamina bar
+    public GameObject StaminaBar;
+
     // For highliting
     public GameObject eToInteract;
     private GameObject temp;
@@ -62,6 +65,7 @@ public class PlayerMovementController : MonoBehaviour
         if(netController){
             netController.GetComponent<deathScript>().playerObjects.Add(gameObject);
         }
+        //StaminaBar = GetComponent<StaminaBar>();
         float horizontal = Input.GetAxisRaw("Horizontal"); 
         float vertical = Input.GetAxisRaw("Vertical");
     }
@@ -175,7 +179,7 @@ public class PlayerMovementController : MonoBehaviour
                 moveDir = Quaternion.Euler(0f, targetAngle, 0f) * Vector3.forward;
                 // Sprinting
                 if(Input.GetKey(KeyCode.LeftShift) && IsGrounded() && (!isPaused)) { 
-                    if(StaminaBar.instance.UseStamina(sprintStaminaUsage))
+                    if(StaminaBar.GetComponent<StaminaBar>().UseStamina(sprintStaminaUsage))
                     {
                         controller.Move(moveDir.normalized * moveSpeed * 2f * Time.deltaTime);
                     }

@@ -22,7 +22,7 @@ public class RangedBullet : MonoBehaviour
 
     private void OnTriggerEnter(Collider collision)
     {
-        Debug.Log(collision.name);
+        //Debug.Log(collision.name);
         if (collision.gameObject.tag == "Player" || collision.gameObject.tag == "Corrupted_Player")
         {
             Health hp = collision.gameObject.GetComponent<Health>();
@@ -32,7 +32,7 @@ public class RangedBullet : MonoBehaviour
             }
             Destroy(this.gameObject);
         }
-        else if(collision.gameObject.tag == "Bullet");
+        else if(collision.gameObject.tag == "Bullet" || collision.gameObject.tag == "BossColliderTrigger");
         else
             Destroy(this.gameObject);
     }

@@ -14,12 +14,12 @@ public class StaminaBar : MonoBehaviour
     private WaitForSeconds regenTick = new WaitForSeconds(0.1f);
     private Coroutine regen;
 
-    public static StaminaBar instance;
+    // public static StaminaBar instance;
 
-    private void Awake()
-    {
-        instance = this;
-    }
+    // private void Awake()
+    // {
+    //     instance = this;
+    // }
     // Start is called before the first frame update
     void Start()
     {

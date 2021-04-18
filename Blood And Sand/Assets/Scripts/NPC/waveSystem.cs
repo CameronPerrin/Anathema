@@ -64,6 +64,7 @@ public class waveSystem : MonoBehaviour
 
     // Chat event system
     private GameObject chat;
+    private GameObject playerChat;
     void Start()
     {
         PV = GetComponent<PhotonView>();
@@ -75,15 +76,19 @@ public class waveSystem : MonoBehaviour
         {
             Destroy(this);
         }
-
-
     }
 
 
     void Update()
     {
-        if(chat == null)
-            chat = GameObject.Find("ChatSTUFF/chatPanel/chatbox").gameObject;
+        if(playerChat == null){
+            playerChat = GameObject.Find("PhotonPlayer(Clone)").gameObject;
+        }
+        // else{
+        //     Debug.Log("[SYSTEM]: Can't find player to send chat from.");
+        // }
+        // if(chat == null)
+        //     chat = GameObject.Find("ChatSTUFF/chatPanel/chatbox").gameObject;
         
         if (!allWavesComplete)
         {
@@ -125,7 +130,8 @@ public class waveSystem : MonoBehaviour
         waveCountdown = timeBetweenWaves;
         if(nextWave != -1){
             if(PV.IsMine)
-                    chat.GetComponent<TMP_Text>().text += $"<color=#ffc800><I>Wave completed!</I></color> \n";
+                    //chat.GetComponent<TMP_Text>().text += $"<color=#ffc800><I>Wave completed!</I></color> \n";
+                    playerChat.GetComponent<ChatScript>().PV.RPC("sendChat", RpcTarget.All,"", $"<color=#ffc800><I>Wave completed!</I></color>", true);
         }
         if (nextWave + 1 > waves.Length - 1)
         {
@@ -133,8 +139,8 @@ public class waveSystem : MonoBehaviour
             // Loop or Send all players to next scene
             Debug.Log("ALL WAVES COMPLETE!");
             if(PV.IsMine)
-                chat.GetComponent<TMP_Text>().text += $"<color=#ffc800><I>You feel dark magic in the air...</I></color>\n";
-                //GetComponent<ChatScript>().PV.RPC("sendChat", RpcTarget.All,"", $"<color=#ffc800><I>You feel dark magic in the air...</I></color>", true);
+                //chat.GetComponent<TMP_Text>().text += $"<color=#ffc800><I>You feel dark magic in the air...</I></color>\n";
+                playerChat.GetComponent<ChatScript>().PV.RPC("sendChat", RpcTarget.All,"", $"<color=#ffc800><I>You feel dark magic in the air...</I></color>", true);
             allWavesComplete = true;
 
             /*
@@ -183,8 +189,8 @@ public class waveSystem : MonoBehaviour
     {
         Debug.Log("Spawning Wave: " + _wave.name);
         if(PV.IsMine)
-            chat.GetComponent<TMP_Text>().text += $"<color=#ffc800><I>{_wave.name} is starting...</I></color>\n";
-            //GetComponent<ChatScript>().PV.RPC("sendChat", RpcTarget.All,"", $"<color=#ffc800><I>Wave {_wave.name} is starting...</I></color>", true);
+            //chat.GetComponent<TMP_Text>().text += $"<color=#ffc800><I>{_wave.name} is starting...</I></color>\n";
+            playerChat.GetComponent<ChatScript>().PV.RPC("sendChat", RpcTarget.All,"", $"<color=#ffc800><I>{_wave.name} is starting...</I></color>", true);
         state = SpawnState.SPAWNING;
 
         if(_wave.isBossWave)

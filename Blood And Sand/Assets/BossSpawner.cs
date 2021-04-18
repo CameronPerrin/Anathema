@@ -22,6 +22,7 @@ public class BossSpawner : MonoBehaviourPun
     private float searchCountdown = 1f;
 
     // Chat event system
+    private GameObject playerChat;
     private GameObject chat;
     PhotonView PV;
 
@@ -31,13 +32,20 @@ public class BossSpawner : MonoBehaviourPun
         {
             Destroy(this);
         }
-        PV = GetComponent<PhotonView>();
+        
 
     }
     void Update()
     {
-        if(chat == null)
-            chat = GameObject.Find("ChatSTUFF/chatPanel/chatbox").gameObject;
+        if(playerChat == null){
+            playerChat = GameObject.Find("PhotonPlayer(Clone)").gameObject;
+            PV = playerChat.GetComponent<PhotonView>();
+        }
+        // else{
+        //     Debug.Log("[SYSTEM]: Can't find player to send chat from.");
+        // }
+        // if(chat == null)
+        //     chat = GameObject.Find("ChatSTUFF/chatPanel/chatbox").gameObject;
 
             if (!bossHasSpawned)
             {
@@ -71,8 +79,9 @@ public class BossSpawner : MonoBehaviourPun
         if (countDown <= 0f)
         {
             Debug.Log("Boss is now spawning!");
-            //if(PV.IsMine)
-            chat.GetComponent<TMP_Text>().text += $"<color=#ffc800><I>The Dark Lord has been summoned!</I></color> \n";
+            if(PV.IsMine)
+                playerChat.GetComponent<ChatScript>().PV.RPC("sendChat", RpcTarget.All,"", $"<color=#ffc800><I>The Void Lord has been summoned!</I></color>", true);
+            //chat.GetComponent<TMP_Text>().text += $"<color=#ffc800><I>The Void Lord has been summoned!</I></color> \n";
             //PhotonNetwork.Instantiate("NPCs/BossMainNPC", new Vector3(0, 0, 0), Quaternion.identity, 0);
             PhotonNetwork.InstantiateSceneObject("NPCs/BossMainNPC", new Vector3(0, 0, 0), Quaternion.identity);
             bossHasSpawned = true;
