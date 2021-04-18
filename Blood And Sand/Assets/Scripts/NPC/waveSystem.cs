@@ -82,7 +82,11 @@ public class waveSystem : MonoBehaviour
     void Update()
     {
         if(playerChat == null){
-            playerChat = GameObject.Find("PhotonPlayer(Clone)").gameObject;
+            if(playerChat = GameObject.Find("PhotonPlayer(Clone)").gameObject);
+            else{
+                playerChat = null;
+            }
+            
         }
         // else{
         //     Debug.Log("[SYSTEM]: Can't find player to send chat from.");
