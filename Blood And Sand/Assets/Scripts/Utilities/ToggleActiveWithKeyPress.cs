@@ -1,8 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Photon;
+using Photon.Pun;
+using Photon.Realtime;
 
-public class ToggleActiveWithKeyPress : MonoBehaviour
+public class ToggleActiveWithKeyPress : MonoBehaviourPun
 {
     [SerializeField] private KeyCode inventoryKeyCode = KeyCode.None;
     [SerializeField] private KeyCode equipmentKeyCode = KeyCode.None;
@@ -16,10 +19,11 @@ public class ToggleActiveWithKeyPress : MonoBehaviour
     [HideInInspector] public bool isPaused = false;
 
     private GameObject[] hotbarSlots = null;
-
+    PhotonView PV;
 
     private void Start()
     {
+        PV = GetComponent<PhotonView>();
         hotbarSlots = GameObject.FindGameObjectsWithTag("Hotbar_Slot");
         playerMouseLock = GameObject.Find("PhotonPlayer(Clone)");
 
@@ -29,7 +33,7 @@ public class ToggleActiveWithKeyPress : MonoBehaviour
 
     private void Update()
     {
-
+        if(PV.IsMine){
         if (Input.GetKeyDown(inventoryKeyCode) && !isPaused)
         {
             //inventoryToToggle.SetActive(!inventoryToToggle.activeSelf);
@@ -81,6 +85,7 @@ public class ToggleActiveWithKeyPress : MonoBehaviour
         {
             HideMouseCursor();
         } */
+        }
     }
 
     public void ShowMouseCursor()

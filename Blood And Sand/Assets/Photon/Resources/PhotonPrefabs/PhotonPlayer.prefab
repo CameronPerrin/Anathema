@@ -965,6 +965,7 @@ MonoBehaviour:
   pauseScreen: {fileID: 0}
   inventoryToToggle: {fileID: 0}
   equipmentToToggle: {fileID: 0}
+  PV: {fileID: 0}
 --- !u!114 &4154899573533838182
 MonoBehaviour:
   m_ObjectHideFlags: 0

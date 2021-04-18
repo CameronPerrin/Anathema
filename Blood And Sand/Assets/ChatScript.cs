@@ -62,6 +62,7 @@ public class ChatScript : MonoBehaviourPun
     // Update is called once per frame
     void Update()
     {
+        if(PV.IsMine){
         if(chatPanel == null){
             Debug.Log("CANT FIND PANEL");
         }
@@ -73,6 +74,7 @@ public class ChatScript : MonoBehaviourPun
             this.GetComponent<PlayerMovementController>().isPaused = true;
             this.GetComponent<Combat>().isPaused = true;
             InventoryObj.GetComponent<ToggleActiveWithKeyPress>().isPaused = true;
+            
             //chatCanvas.SetActive(true);
             inputBox.SetActive(true);
             inputBox.GetComponent<TMP_InputField>().ActivateInputField(); 
@@ -98,8 +100,11 @@ public class ChatScript : MonoBehaviourPun
         }   
 
         if(isActive){
+            Debug.Log(InventoryObj.GetComponent<ToggleActiveWithKeyPress>().isPaused);
             this.GetComponent<PlayerMovementController>().isPaused = true;
             this.GetComponent<PlayerDash>().isPaused = true;
+            InventoryObj.GetComponent<ToggleActiveWithKeyPress>().isPaused = true;
+        }
         }
     }
 
@@ -121,7 +126,11 @@ public class ChatScript : MonoBehaviourPun
             chatBox.GetComponent<TMP_Text>().text += $"[<color=white><b>{name}</b></color>]: "+ text + "\n";
             //chatBox.GetComponent<TMP_Text>().text += $"[<color=#{nameColor}><b>{name}</b></color>]: "+ text + "\n";
         else{
-            chatBox.GetComponent<TMP_Text>().text += text + "\n";
+            if(chatBox != null)
+                chatBox.GetComponent<TMP_Text>().text += text + "\n";
+            else{
+                Debug.Log("Can't find chatbox to send inside RPC script (ChatScript.cs)");
+            }
         }
     }
 

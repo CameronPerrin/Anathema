@@ -1,28 +1,36 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Photon;
+using Photon.Pun;
+using Photon.Realtime;
 
-public class MouseLock : MonoBehaviour
+public class MouseLock : MonoBehaviourPun
 {
     public bool paused = false;
     public GameObject pauseScreen;
     [SerializeField] private GameObject inventoryToToggle = null;
     [SerializeField] private GameObject equipmentToToggle = null;
+    [HideInInspector]public PhotonView PV;
     // Start is called before the first frame update
     void Start()
     {
-        pauseScreen = GameObject.FindGameObjectWithTag("PauseMenu");
-        inventoryToToggle = GameObject.FindGameObjectWithTag("InventoryPanel");
-        equipmentToToggle = GameObject.FindGameObjectWithTag("EquipmentPanel");
-        pauseScreen.SetActive(false);
+        PV = GetComponent<PhotonView>();
+        if(PV.IsMine){
+            pauseScreen = GameObject.FindGameObjectWithTag("PauseMenu");
+            inventoryToToggle = GameObject.FindGameObjectWithTag("InventoryPanel");
+            equipmentToToggle = GameObject.FindGameObjectWithTag("EquipmentPanel");
+            pauseScreen.SetActive(false);
+        }
     }
 
     // Update is called once per frame
     void Update()
     {
+        if(PV.IsMine){
         //pauseScreen = GameObject.FindGameObjectWithTag("PauseMenu");
         //SUPER rough pause menu so I can hit buttons in the test scene
-        if (Input.GetKeyDown(KeyCode.Escape))
+        if (Input.GetKeyDown(KeyCode.Escape) && PV.IsMine)
         {
             
             paused = !paused;
@@ -86,5 +94,6 @@ public class MouseLock : MonoBehaviour
             this.GetComponent<PlayerMovementController>().isPaused = true;
             this.gameObject.transform.GetChild(0).gameObject.SetActive(false);
         } */
+        }
     }
 }
