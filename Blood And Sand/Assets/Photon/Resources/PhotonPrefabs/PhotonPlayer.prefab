@@ -1079,6 +1079,7 @@ MonoBehaviour:
   chatBox: {fileID: 0}
   chatCanvas: {fileID: 4664544431964007537}
   chatPanel: {fileID: 0}
+  InventoryObj: {fileID: 0}
   PV: {fileID: 0}
   hasJoinedMsg: 1
 --- !u!114 &-2388538057121418057
@@ -1653,6 +1654,7 @@ MonoBehaviour:
   chatBox: {fileID: 0}
   chatCanvas: {fileID: 0}
   chatPanel: {fileID: 0}
+  InventoryObj: {fileID: 0}
   PV: {fileID: 0}
   hasJoinedMsg: 1
 --- !u!1 &4816360832675179670

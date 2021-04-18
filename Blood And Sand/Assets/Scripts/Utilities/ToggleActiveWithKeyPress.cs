@@ -13,6 +13,8 @@ public class ToggleActiveWithKeyPress : MonoBehaviour
     [SerializeField] private GameObject equipmentToToggle = null;
     [SerializeField] private GameObject playerMouseLock = null;
 
+    [HideInInspector] public bool isPaused = false;
+
     private GameObject[] hotbarSlots = null;
 
 
@@ -28,7 +30,7 @@ public class ToggleActiveWithKeyPress : MonoBehaviour
     private void Update()
     {
 
-        if (Input.GetKeyDown(inventoryKeyCode))
+        if (Input.GetKeyDown(inventoryKeyCode) && !isPaused)
         {
             //inventoryToToggle.SetActive(!inventoryToToggle.activeSelf);
 
@@ -43,7 +45,7 @@ public class ToggleActiveWithKeyPress : MonoBehaviour
 
 
         }
-        if (Input.GetKeyDown(equipmentKeyCode))
+        if (Input.GetKeyDown(equipmentKeyCode) && !isPaused)
         {
             //equipmentToToggle.SetActive(!equipmentToToggle.activeSelf);
             if (equipmentToToggle.transform.localScale == new Vector3(0, 0, 0))

@@ -15,6 +15,7 @@ public class ChatScript : MonoBehaviourPun
     public GameObject chatBox;
     public GameObject chatCanvas;
     public GameObject chatPanel;
+    public GameObject InventoryObj;
 
     private bool isActive = false;
     //private bool isHidden = false;
@@ -25,6 +26,7 @@ public class ChatScript : MonoBehaviourPun
     // Start is called before the first frame update
     void Start()
     {
+        InventoryObj = GameObject.Find("InventoryManager/InventoryUI").gameObject;
         chatBox = GameObject.Find("chatbox");
         chatPanel = GameObject.Find("chatPanel");
         if(chatBox == null){
@@ -69,7 +71,8 @@ public class ChatScript : MonoBehaviourPun
         if(Input.GetKeyUp(KeyCode.Return) && !isActive){
             this.GetComponent<PlayerDash>().isPaused = true;
             this.GetComponent<PlayerMovementController>().isPaused = true;
-            this.GetComponent<Combat>().isPaused = false;
+            this.GetComponent<Combat>().isPaused = true;
+            InventoryObj.GetComponent<ToggleActiveWithKeyPress>().isPaused = true;
             //chatCanvas.SetActive(true);
             inputBox.SetActive(true);
             inputBox.GetComponent<TMP_InputField>().ActivateInputField(); 
@@ -89,6 +92,7 @@ public class ChatScript : MonoBehaviourPun
             this.GetComponent<PlayerDash>().isPaused = false;
             this.GetComponent<PlayerMovementController>().isPaused = false;
             this.GetComponent<Combat>().isPaused = false;
+            InventoryObj.GetComponent<ToggleActiveWithKeyPress>().isPaused = false;
             inputBox.SetActive(false);
             isActive = false;
         }   
