@@ -77,6 +77,7 @@
      <Compile Include="Assets\Scripts\Item System\InventorySlot.cs" />
      <Compile Include="Assets\VFX\Projectile\Scripts\PlayAnimationOnKeyPre.cs" />
      <Compile Include="Assets\Scripts\QuickStartRoomController.cs" />
+     <Compile Include="Assets\versionScript.cs" />
      <Compile Include="Assets\Scripts\CombatNPCBossClone.cs" />
      <Compile Include="Assets\Scripts\Combat.cs" />
      <Compile Include="Assets\Scripts\Item System\FileIO\ItemSaveIO.cs" />

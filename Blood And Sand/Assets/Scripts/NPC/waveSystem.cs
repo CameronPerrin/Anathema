@@ -65,22 +65,31 @@ public class waveSystem : MonoBehaviour
     // Chat event system
     private GameObject chat;
     private GameObject playerChat;
+
+    bool setTimeBetweenWaves = false;
     void Start()
     {
         PV = GetComponent<PhotonView>();
-        if (PhotonNetwork.IsMasterClient)
+        if (PV.IsMine)
         {
             waveCountdown = timeBetweenWaves;
+            setTimeBetweenWaves = true;
         }
         else
         {
-            Destroy(this);
+            //Destroy(this);
         }
     }
 
 
     void Update()
     {
+        if(PV.IsMine){
+            if(!setTimeBetweenWaves){
+                waveCountdown = timeBetweenWaves;
+                setTimeBetweenWaves = true;
+            }
+            
         if(playerChat == null){
             if(playerChat = GameObject.Find("PhotonPlayer(Clone)").gameObject);
             else{
@@ -116,6 +125,7 @@ public class waveSystem : MonoBehaviour
                 if (state != SpawnState.SPAWNING)
                 {
                     //Start spawning wave
+                    PV.RPC("sendWaveData", RpcTarget.All, nextWave);
                     StartCoroutine(EnemyDrop(waves[nextWave]));
                 }
             }
@@ -123,6 +133,7 @@ public class waveSystem : MonoBehaviour
             {
                 waveCountdown -= Time.deltaTime;
             }
+        }
         }
     }
 
@@ -255,6 +266,11 @@ public class waveSystem : MonoBehaviour
             Gizmos.DrawCube(spawnLocations[i].Position, spawnLocations[i].Size);
         }
 
+    }
+    [PunRPC]
+    public void sendWaveData(int nWave)
+    {
+        nextWave = nWave;
     }
 
     [PunRPC]

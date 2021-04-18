@@ -38,7 +38,8 @@ public class BossSpawner : MonoBehaviourPun
     void Update()
     {
         if(playerChat == null){
-            playerChat = GameObject.Find("PhotonPlayer(Clone)").gameObject;
+            if(GameObject.Find("PhotonPlayer(Clone)").gameObject != null)
+                playerChat = GameObject.Find("PhotonPlayer(Clone)").gameObject;
             PV = playerChat.GetComponent<PhotonView>();
         }
         // else{
