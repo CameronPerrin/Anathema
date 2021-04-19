@@ -90,12 +90,20 @@ public class waveSystem : MonoBehaviour
                 setTimeBetweenWaves = true;
             }
             
-        if(playerChat == null){
-            if(playerChat = GameObject.Find("PhotonPlayer(Clone)").gameObject);
-            else{
-                playerChat = null;
-            }
+        // if(playerChat == null){
+        //     if(playerChat = GameObject.Find("PhotonPlayer(Clone)").gameObject);
+        //     else{
+        //         playerChat = null;
+        //     }
             
+        // }
+        if(playerChat==null)
+        {
+            var temp = GameObject.Find("PhotonPlayer(Clone)");
+            if (temp != null){
+                playerChat = temp.gameObject;
+                //PV = playerChat.GetComponent<PhotonView>();
+            }
         }
         // else{
         //     Debug.Log("[SYSTEM]: Can't find player to send chat from.");
