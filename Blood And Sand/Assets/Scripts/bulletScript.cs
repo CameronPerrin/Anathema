@@ -44,7 +44,7 @@ public class bulletScript : MonoBehaviour
 
     private void OnTriggerEnter(Collider collision)
     {
-        //Debug.Log(collision.name);
+        Debug.Log(collision.name);
         //Debug.Log("Hit: " + collision.name); --> use this to check to see what the bullet is actually hitting
         //probably find a wayto do this without assigning a variable each time this spawns if we need to optimize the script in the future
         if ((collision.gameObject.tag == "Corrupted_Player") && (collision.gameObject != CurrentPlayer))
@@ -104,16 +104,16 @@ public class bulletScript : MonoBehaviour
                 hp.TakeDamage(dmg, type, DOT);
             }
 
-            Destroy(this.gameObject,destroyTimer);
+            Destroy(this.gameObject,0);
         }
 
-        else if (collision.gameObject.tag == "Bullet" || collision.gameObject.tag == "EditorOnly");
+        else if (collision.gameObject.tag == "Bullet" || collision.gameObject.tag == "EditorOnly" || collision.gameObject.tag == "Untagged");
         // destroy if it collides with anything else
-        else if(collision.gameObject.tag == "Untagged"){
-            Debug.Log("Tag: " + collision.gameObject.tag);
-            Debug.Log("Name: " + collision.gameObject.name);
-            Destroy(this.gameObject);
-        }
+        // else if(collision.gameObject.tag == "Untagged"){
+        //     Debug.Log("Tag: " + collision.gameObject.tag);
+        //     Debug.Log("Name: " + collision.gameObject.name);
+        //     Destroy(this.gameObject);
+        // }
 
         
         

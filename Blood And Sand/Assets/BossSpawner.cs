@@ -37,10 +37,19 @@ public class BossSpawner : MonoBehaviourPun
     }
     void Update()
     {
-        if(playerChat == null){
-            if(GameObject.Find("PhotonPlayer(Clone)").gameObject != null)
-                playerChat = GameObject.Find("PhotonPlayer(Clone)").gameObject;
-            PV = playerChat.GetComponent<PhotonView>();
+        // if(playerChat == null){
+        //     if(GameObject.Find("PhotonPlayer(Clone)") != null){
+        //         playerChat = GameObject.Find("PhotonPlayer(Clone)").gameObject;
+        //         PV = playerChat.GetComponent<PhotonView>();
+        //     }
+        // }
+        if(playerChat==null)
+        {
+            var temp = GameObject.Find("PhotonPlayer(Clone)");
+            if (temp != null){
+                playerChat = temp.gameObject;
+                PV = playerChat.GetComponent<PhotonView>();
+            }
         }
         // else{
         //     Debug.Log("[SYSTEM]: Can't find player to send chat from.");
@@ -68,6 +77,8 @@ public class BossSpawner : MonoBehaviourPun
             searchCountdown = 1f;
             if (GameObject.FindGameObjectWithTag("Boss") == null)
             {
+                if(PV.IsMine)
+                    playerChat.GetComponent<ChatScript>().PV.RPC("sendChat", RpcTarget.All,"", $"<color=#ffc800><I>The Void Lord has been defeated!</I></color>", true);
                 return false;
             }
         }

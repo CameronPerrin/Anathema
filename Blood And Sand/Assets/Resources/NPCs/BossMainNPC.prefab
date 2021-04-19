@@ -235,7 +235,7 @@ BoxCollider:
   m_GameObject: {fileID: 1159298769615884741}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
@@ -459,8 +459,10 @@ MonoBehaviour:
   wHp: {fileID: 406349800763738314}
   bloodVFX: {fileID: 6062716170508370198, guid: a2d0a4f4e6e568842bf9abb6edb2864d,
     type: 3}
-  lootDrop: {fileID: 0}
-  corruptionDrop: {fileID: 0}
+  lootDrop: {fileID: 1716759865404533113, guid: 65a3562a866e4644baaa6804f11e47b4,
+    type: 3}
+  corruptionDrop: {fileID: 1377388708257028, guid: d6e42ab84e5704a4494922404bb47ef9,
+    type: 3}
   FloatingTextPrefab: {fileID: 7957747401790915659, guid: 7b2549c15f36d544490e6208a44c1357,
     type: 3}
   dmgTemp: 0
@@ -637,7 +639,7 @@ MonoBehaviour:
   m_FillMethod: 0
   m_FillAmount: 1
   m_FillClockwise: 1
-  m_FillOrigin: 0
+  m_FillOrigin: 1
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
 --- !u!1 &4584829021903663906
@@ -712,7 +714,7 @@ MonoBehaviour:
   m_FillMethod: 0
   m_FillAmount: 1
   m_FillClockwise: 1
-  m_FillOrigin: 0
+  m_FillOrigin: 1
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
 --- !u!1 &5178583968156282143

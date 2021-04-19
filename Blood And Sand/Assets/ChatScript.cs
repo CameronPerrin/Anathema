@@ -17,7 +17,7 @@ public class ChatScript : MonoBehaviourPun
     public GameObject chatPanel;
     public GameObject InventoryObj;
 
-    private bool isActive = false;
+    public bool isActive = false;
     //private bool isHidden = false;
     private string text;
     private string nameColor;
@@ -80,7 +80,6 @@ public class ChatScript : MonoBehaviourPun
             inputBox.GetComponent<TMP_InputField>().ActivateInputField(); 
             isActive = true;
             //isHidden = false;
-
         }
 
         // closes input for chatting and sends msg
@@ -101,9 +100,11 @@ public class ChatScript : MonoBehaviourPun
 
         if(isActive){
             Debug.Log(InventoryObj.GetComponent<ToggleActiveWithKeyPress>().isPaused);
+            //Debug.Log(InventoryObj.GetComponent<ToggleActiveWithKeyPress>().isPaused);
             this.GetComponent<PlayerMovementController>().isPaused = true;
             this.GetComponent<PlayerDash>().isPaused = true;
             InventoryObj.GetComponent<ToggleActiveWithKeyPress>().isPaused = true;
+            this.GetComponent<Combat>().isPaused = true;
         }
         }
     }

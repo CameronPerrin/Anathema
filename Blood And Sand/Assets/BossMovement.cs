@@ -145,10 +145,10 @@ public class BossMovement : MonoBehaviour
         Debug.Log("Boss Length: " + portalController.GetComponent<BossTeleportationController>().boss.Length);
         for (int j = 0; j < portalController.GetComponent<BossTeleportationController>().boss.Length; j++)
             {
-              Debug.Log("Iterating through boss length.");
+              //Debug.Log("Iterating through boss length.");
               if (portalController.GetComponent<BossTeleportationController>().portals[portalIndexes[j]].GetComponent<BossPortal>().isVacant == true)
                   {
-                        Debug.Log("Teleporting to portal...: " + portalIndexes[j]);
+                        //Debug.Log("Teleporting to portal...: " + portalIndexes[j]);
                         portalController.GetComponent<BossTeleportationController>().portals[portalIndexes[j]].GetComponent<BossPortal>().isVacant = false;
 
                 

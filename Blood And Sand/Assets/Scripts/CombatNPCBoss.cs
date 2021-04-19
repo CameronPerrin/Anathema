@@ -116,6 +116,8 @@ public class CombatNPCBoss: MonoBehaviourPun
             } */
 
 
+        //if(PhotonNetwork.IsMasterClient)
+        //if(PV.IsMine)
         if(PhotonNetwork.IsMasterClient)
         {
             BossBattle_OnDamaged();

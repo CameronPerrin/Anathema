@@ -40,6 +40,7 @@ public class Health : MonoBehaviourPunCallbacks, IPunObservable
     public Inventory inventory;
     GameObject removePlayer;
 
+    bool isAlreadyDead = false;
 
     private void OnDisable()
     {
@@ -140,24 +141,30 @@ public class Health : MonoBehaviourPunCallbacks, IPunObservable
     [PunRPC]
     public void Damage(float dmage)
     {
-        //Debug.Log("Taking " + dmage + " damage.");
-        health -= dmage;
-        //Instantiate(bloodVFX, bloodSpotInstLocation.transform.position, Quaternion.identity); // spawn blood vfx
-        if(health <= 0){
-            GameObject.Find("TheReaper").GetComponent<deathScript>().killPlayer(this.gameObject);
-            if(PV.IsMine)
-                GetComponent<ChatScript>().PV.RPC("sendChat", RpcTarget.All,"", $"<color=#ff0a0a>{PhotonNetwork.LocalPlayer.NickName} has died.</color>", true);
-        }
-        if(PV.IsMine) {
-            if(health <= 0){
-                GameObject.Find("TheReaper").GetComponent<deathScript>().onDeath(); // Find obj, find script, call function     
-            }  
-        }
-        worldHealthBar.fillAmount = health/maxHp;
+        
+        // Always show damage dealt first!
         if(FloatingTextPrefab)
         {
             ShowFloatingText(dmage);
         }
+        // temp script container so as to not call get component more than ncessary
+        var tempReapScript = removePlayer.GetComponent<deathScript>();
+        //Debug.Log("Taking " + dmage + " damage.");
+        health -= dmage;
+        //Instantiate(bloodVFX, bloodSpotInstLocation.transform.position, Quaternion.identity); // spawn blood vfx
+        if(health <= 0 && !isAlreadyDead){
+            tempReapScript.killPlayer(this.gameObject);
+            if(PV.IsMine)
+                GetComponent<ChatScript>().PV.RPC("sendChat", RpcTarget.All,"", $"<color=#ff0a0a>{PhotonNetwork.LocalPlayer.NickName} has died.</color>", true);
+        }
+        if(PV.IsMine) {
+            if(health <= 0 && !isAlreadyDead){
+                tempReapScript.onDeath(); // Find obj, find script, call function
+                isAlreadyDead = true;     
+            }  
+        }
+        // update hpbar fill amount
+        worldHealthBar.fillAmount = health/maxHp;
     }
 
     public virtual void OnPhotonSerializeView(PhotonStream stream, PhotonMessageInfo info){

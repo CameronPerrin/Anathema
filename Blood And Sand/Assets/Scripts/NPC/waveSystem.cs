@@ -155,7 +155,7 @@ public class waveSystem : MonoBehaviour
             Debug.Log("ALL WAVES COMPLETE!");
             if(PV.IsMine)
                 //chat.GetComponent<TMP_Text>().text += $"<color=#ffc800><I>You feel dark magic in the air...</I></color>\n";
-                playerChat.GetComponent<ChatScript>().PV.RPC("sendChat", RpcTarget.All,"", $"<color=#ffc800><I>You feel dark magic in the air...</I></color>", true);
+                playerChat.GetComponent<ChatScript>().PV.RPC("sendChat", RpcTarget.All,"", $"<color=#42f5e0><I>Soulgard is calling you back home... You are being teleported.</I></color>", true);
             allWavesComplete = true;
 
             /*

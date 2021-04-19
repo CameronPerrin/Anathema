@@ -40,7 +40,8 @@ public class CombatNPCBossClone: MonoBehaviour
 
     private void Update()
     {
-        if(PhotonNetwork.IsMasterClient)
+        //if(PhotonNetwork.IsMasterClient)
+        if(PV.IsMine)
         {
             randomAttack();
             PV.RPC("SetRandomAttack", RpcTarget.All, atkTimer, chosenAtk);
