@@ -1072,7 +1072,7 @@ MonoBehaviour:
       - gameObject: {fileID: 0}
       - gameObject: {fileID: 0}
       selectedSlot: 0
-      selected: 1
+      selected: 0
       colorTag: 0
     - name: IL3DN_Dead_Leaf_02
       settings:
@@ -2025,8 +2025,8 @@ MonoBehaviour:
         randomizeOrientationZ: 100
         scaleTransformMode: 0
         scaleMode: 0
-        scaleUniformMin: 7
-        scaleUniformMax: 8
+        scaleUniformMin: 0.5
+        scaleUniformMax: 0.6
         scalePerAxisMin: {x: 1, y: 1, z: 1}
         scalePerAxisMax: {x: 1, y: 1, z: 1}
         pinFixedRotation: 0
@@ -2136,7 +2136,7 @@ MonoBehaviour:
       - gameObject: {fileID: 0}
       - gameObject: {fileID: 0}
       selectedSlot: 0
-      selected: 0
+      selected: 1
       colorTag: 0
     - name: IL3DN_Rock_Boulder_02
       settings:
@@ -4558,7 +4558,7 @@ MonoBehaviour:
   pinSnapScale: 0
   placeAngleStep: 15
   placeScaleStep: 0.1
-  eraseBrushRadius: 12.11
+  eraseBrushRadius: 0.25
   eraseByLayer: 0
   eraseLayers:
     serializedVersion: 2

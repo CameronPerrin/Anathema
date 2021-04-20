@@ -15,7 +15,7 @@ MonoBehaviour:
   id: 
   name: Dark Broadsword
   description: Item Description
-  icon: {fileID: 21300000, guid: 3e83863df81b1a74f9b1e1e6e3af9f6a, type: 3}
+  icon: {fileID: 21300000, guid: 365f76fba4b615846907efdaccefc0f3, type: 3}
   isEquipment: 1
   equipmentType: 4
   rarity: {fileID: 11400000, guid: 90618505a0572c04dbe04f80a3de4880, type: 2}

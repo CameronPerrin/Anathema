@@ -15,7 +15,7 @@ MonoBehaviour:
   id: 
   name: Metal Scythe
   description: Item Description
-  icon: {fileID: 21300000, guid: 7377013011b4c3348809ff574abe799e, type: 3}
+  icon: {fileID: 21300000, guid: dbbebfbac771e3f488e1284386493125, type: 3}
   isEquipment: 1
   equipmentType: 4
   rarity: {fileID: 11400000, guid: 278b092531ce42f4ab2b86331b5bbd84, type: 2}

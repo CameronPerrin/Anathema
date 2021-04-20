@@ -18,7 +18,7 @@ public class GameSetupController : MonoBehaviour
     {
     	Debug.Log("Creating Player");
     	
-        PhotonNetwork.LocalPlayer.TagObject = PhotonNetwork.Instantiate(Path.Combine("PhotonPrefabs", "PhotonPlayer"), SpawnPoint.position, Quaternion.identity);
+        PhotonNetwork.LocalPlayer.TagObject = PhotonNetwork.Instantiate(Path.Combine("PhotonPrefabs", "PhotonPlayer"), SpawnPoint.position, SpawnPoint.rotation);
         PhotonNetwork.NickName = pNameObj.GetComponent<playerName>().pName;
     }
 
