@@ -12,11 +12,13 @@ public class MouseLock : MonoBehaviourPun
     [SerializeField] private GameObject inventoryToToggle = null;
     [SerializeField] private GameObject equipmentToToggle = null;
     [HideInInspector]public PhotonView PV;
+    [HideInInspector]public GameObject pauseScript;
     // Start is called before the first frame update
     void Start()
     {
         PV = GetComponent<PhotonView>();
         if(PV.IsMine){
+            pauseScript = GetComponent<pauseHierarchyScript>().gameObject;
             pauseScreen = GameObject.FindGameObjectWithTag("PauseMenu");
             inventoryToToggle = GameObject.FindGameObjectWithTag("InventoryPanel");
             equipmentToToggle = GameObject.FindGameObjectWithTag("EquipmentPanel");
@@ -32,44 +34,59 @@ public class MouseLock : MonoBehaviourPun
         //SUPER rough pause menu so I can hit buttons in the test scene
         if (Input.GetKeyDown(KeyCode.Escape) && PV.IsMine)
         {
+            var tempScript = pauseScript.GetComponent<pauseHierarchyScript>();
             
-            paused = !paused;
-            if(paused)
-            {
-                pauseScreen.SetActive(true);
-                this.GetComponent<PlayerMovementController>().isPaused = true;
-                this.gameObject.transform.GetChild(0).gameObject.SetActive(false);
-                this.GetComponent<Combat>().isPaused = true;
+            if(!tempScript.menuPause){
+                if(tempScript.inventoryPause || tempScript.charPanelPause || tempScript.chatPause){
+                    tempScript.closeAllPanelsButMenu = true;
+                    tempScript.pauseThings(false);
+                }
+                else{
+                    pauseScreen.SetActive(true);
+                    tempScript.setPauseActive(1);
+                }
             }
-            else if(!paused)
-            {
+            else{
                 pauseScreen.SetActive(false);
-                this.GetComponent<PlayerMovementController>().isPaused = false;
-                this.gameObject.transform.GetChild(0).gameObject.SetActive(true);
-                this.GetComponent<Combat>().isPaused = false;
-            }
+                tempScript.setPauseActive(1);
+            }   
+            // paused = !paused;
+            // if(paused)
+            // {
+            //     pauseScreen.SetActive(true);
+            //     this.GetComponent<PlayerMovementController>().isPaused = true;
+            //     this.gameObject.transform.GetChild(0).gameObject.SetActive(false);
+            //     this.GetComponent<Combat>().isPaused = true;
+            // }
+            // else if(!paused)
+            // {
+            //     pauseScreen.SetActive(false);
+            //     this.GetComponent<PlayerMovementController>().isPaused = false;
+            //     this.gameObject.transform.GetChild(0).gameObject.SetActive(true);
+            //     this.GetComponent<Combat>().isPaused = false;
+            // }
         }
 
         if (!paused && inventoryToToggle.transform.localScale == new Vector3(0, 0, 0) && equipmentToToggle.transform.localScale == new Vector3(0, 0, 0))
         {
-            Cursor.lockState = CursorLockMode.Locked;
-            //this.GetComponent<PlayerMovementController>().isPaused = false;
-            this.gameObject.transform.GetChild(0).gameObject.SetActive(true);
-            this.GetComponent<PlayerMovementController>().isPaused = false;
-            this.GetComponent<Combat>().isPaused = false;
+            // Cursor.lockState = CursorLockMode.Locked;
+            // //this.GetComponent<PlayerMovementController>().isPaused = false;
+            // this.gameObject.transform.GetChild(0).gameObject.SetActive(true);
+            // this.GetComponent<PlayerMovementController>().isPaused = false;
+            // this.GetComponent<Combat>().isPaused = false;
         }
         else if (!paused && (inventoryToToggle.transform.localScale == new Vector3(1, 1, 1) || equipmentToToggle.transform.localScale == new Vector3(1, 1, 1)))
         {
-            Cursor.visible = true;
-            Cursor.lockState = CursorLockMode.None;
-            this.GetComponent<PlayerMovementController>().isPaused = true;
-            this.GetComponent<Combat>().isPaused = true;
+            // Cursor.visible = true;
+            // Cursor.lockState = CursorLockMode.None;
+            // this.GetComponent<PlayerMovementController>().isPaused = true;
+            // this.GetComponent<Combat>().isPaused = true;
         }
         else if (paused)
         {
-            Cursor.lockState = CursorLockMode.None;
-            this.GetComponent<PlayerMovementController>().isPaused = true;
-            this.gameObject.transform.GetChild(0).gameObject.SetActive(false);
+            // Cursor.lockState = CursorLockMode.None;
+            // this.GetComponent<PlayerMovementController>().isPaused = true;
+            // this.gameObject.transform.GetChild(0).gameObject.SetActive(false);
         }
 
 

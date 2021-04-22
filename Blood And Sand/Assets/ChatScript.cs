@@ -67,45 +67,66 @@ public class ChatScript : MonoBehaviourPun
             Debug.Log("CANT FIND PANEL");
         }
         chatPanel.SetActive(true);
-
+        var tempScript = this.GetComponent<pauseHierarchyScript>();
+        if(tempScript.closeAllPanelsButMenu){
+                inputBox.SetActive(false);
+                tempScript.chatPause = false;
+            }
         // opens input for chatting
-        if(Input.GetKeyUp(KeyCode.Return) && !isActive){
-            this.GetComponent<PlayerDash>().isPaused = true;
-            this.GetComponent<PlayerMovementController>().isPaused = true;
-            this.GetComponent<Combat>().isPaused = true;
-            InventoryObj.GetComponent<ToggleActiveWithKeyPress>().isPaused = true;
+        if(Input.GetKeyUp(KeyCode.Return) && !tempScript.chatPause){
+            // this.GetComponent<PlayerDash>().isPaused = true;
+            // this.GetComponent<PlayerMovementController>().isPaused = true;
+            // this.GetComponent<Combat>().isPaused = true;
+            // InventoryObj.GetComponent<ToggleActiveWithKeyPress>().isPaused = true;
             
             //chatCanvas.SetActive(true);
-            inputBox.SetActive(true);
-            inputBox.GetComponent<TMP_InputField>().ActivateInputField(); 
-            isActive = true;
+            if(tempScript.menuPause);
+            else{
+                inputBox.SetActive(true);
+                inputBox.GetComponent<TMP_InputField>().ActivateInputField(); 
+                tempScript.setPauseActive(4);
+            }
+            // inputBox.SetActive(true);
+            // inputBox.GetComponent<TMP_InputField>().ActivateInputField(); 
+            // isActive = true;
             //isHidden = false;
         }
 
         // closes input for chatting and sends msg
-        else if(Input.GetKeyUp(KeyCode.Return) && isActive){
-            text = inputBox.GetComponent<TMP_InputField>().text;
+        else if(Input.GetKeyUp(KeyCode.Return) && tempScript.chatPause){
+            if(tempScript.menuPause);
+            else{
+                text = inputBox.GetComponent<TMP_InputField>().text;
+                text = textFilter(text);
+                if(PV.IsMine && text!="")
+                    PV.RPC("sendChat", RpcTarget.All, PhotonNetwork.NickName, text, false);
+                inputBox.GetComponent<TMP_InputField>().text = null;
+                inputBox.SetActive(false);
+                tempScript.setPauseActive(4);
+            }
+            // text = inputBox.GetComponent<TMP_InputField>().text;
+            // text = textFilter(text);
+            // if(PV.IsMine && text!="")
+            //     PV.RPC("sendChat", RpcTarget.All, PhotonNetwork.NickName, text, false);
+            // inputBox.GetComponent<TMP_InputField>().text = null;
+            // inputBox.SetActive(false);
             //chatCanvas.SetActive(true);
-            text = textFilter(text);
-            if(PV.IsMine && text!="")
-                PV.RPC("sendChat", RpcTarget.All, PhotonNetwork.NickName, text, false);
-            inputBox.GetComponent<TMP_InputField>().text = null;
-            this.GetComponent<PlayerDash>().isPaused = false;
-            this.GetComponent<PlayerMovementController>().isPaused = false;
-            this.GetComponent<Combat>().isPaused = false;
-            InventoryObj.GetComponent<ToggleActiveWithKeyPress>().isPaused = false;
-            inputBox.SetActive(false);
-            isActive = false;
+            // this.GetComponent<PlayerDash>().isPaused = false;
+            // this.GetComponent<PlayerMovementController>().isPaused = false;
+            // this.GetComponent<Combat>().isPaused = false;
+            // InventoryObj.GetComponent<ToggleActiveWithKeyPress>().isPaused = false;
+            
+            //isActive = false;
         }   
 
-        if(isActive){
-            Debug.Log(InventoryObj.GetComponent<ToggleActiveWithKeyPress>().isPaused);
-            //Debug.Log(InventoryObj.GetComponent<ToggleActiveWithKeyPress>().isPaused);
-            this.GetComponent<PlayerMovementController>().isPaused = true;
-            this.GetComponent<PlayerDash>().isPaused = true;
-            InventoryObj.GetComponent<ToggleActiveWithKeyPress>().isPaused = true;
-            this.GetComponent<Combat>().isPaused = true;
-        }
+        // if(isActive){
+        //     Debug.Log(InventoryObj.GetComponent<ToggleActiveWithKeyPress>().isPaused);
+        //     //Debug.Log(InventoryObj.GetComponent<ToggleActiveWithKeyPress>().isPaused);
+        //     this.GetComponent<PlayerMovementController>().isPaused = true;
+        //     this.GetComponent<PlayerDash>().isPaused = true;
+        //     InventoryObj.GetComponent<ToggleActiveWithKeyPress>().isPaused = true;
+        //     this.GetComponent<Combat>().isPaused = true;
+        // }
         }
     }
 

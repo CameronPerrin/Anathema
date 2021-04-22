@@ -52,6 +52,8 @@ public class PlayerMovementController : MonoBehaviour
 
     void Start()
     {
+        // Lock the cursor from the start of game
+        Cursor.lockState = CursorLockMode.Locked;
         PV = GetComponent<PhotonView>();
         if (PV.IsMine)
         {
@@ -103,14 +105,7 @@ public class PlayerMovementController : MonoBehaviour
             else{
                 eToInteract.SetActive(false);
             }
-            // Movement input
-            if(!isPaused){
-                horizontal = Input.GetAxisRaw("Horizontal");
-                PlayerAnimator.SetFloat("moving sideways", horizontal);
-                vertical = Input.GetAxisRaw("Vertical");
-                PlayerAnimator.SetFloat("moving forward", vertical);
-
-            }
+            
 
             Vector3 direction = new Vector3(horizontal, 0f, vertical).normalized;
 
@@ -135,12 +130,20 @@ public class PlayerMovementController : MonoBehaviour
                 isFalling = false;
             } 
 
-            
-            if (Input.GetMouseButton(0)) {
+            // Movement input
+            if(!isPaused){
+                horizontal = Input.GetAxisRaw("Horizontal");
+                PlayerAnimator.SetFloat("moving sideways", horizontal);
+                vertical = Input.GetAxisRaw("Vertical");
+                PlayerAnimator.SetFloat("moving forward", vertical);
+                if (Input.GetMouseButton(0)) {
                     float targetAngle = Mathf.Atan2(direction.x, direction.z) * Mathf.Rad2Deg + p_camera.transform.eulerAngles.y;
                     float targetAngle1 = p_camera.transform.eulerAngles.y;
                     transform.rotation = Quaternion.Euler(0f, targetAngle1, 0f);
-                } 
+                }
+            }
+
+             
                 // else {
                 //     float targetAngle = Mathf.Atan2(direction.x, direction.z) * Mathf.Rad2Deg + p_camera.transform.eulerAngles.y;
                 //     transform.rotation = Quaternion.Euler(0f, targetAngle, 0f);

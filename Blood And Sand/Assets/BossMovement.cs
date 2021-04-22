@@ -48,7 +48,7 @@ public class BossMovement : MonoBehaviour
                 //Debug.Log("Boss took damage");
                 if (PV.IsMine)
                 {
-                    PV.RPC("waitTeleport", RpcTarget.All);
+                    PV.RPC("WaitUntilTeleport", RpcTarget.All);
                 }
 
                 //WaitUntilTeleport();

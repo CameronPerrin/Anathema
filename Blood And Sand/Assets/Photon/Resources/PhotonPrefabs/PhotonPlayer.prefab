@@ -836,6 +836,7 @@ GameObject:
   - component: {fileID: 7991041869338575788}
   - component: {fileID: 2939558711176660642}
   - component: {fileID: -2388538057121418057}
+  - component: {fileID: 7004643874483889062}
   m_Layer: 9
   m_Name: PhotonPlayer
   m_TagString: Player
@@ -966,6 +967,7 @@ MonoBehaviour:
   inventoryToToggle: {fileID: 0}
   equipmentToToggle: {fileID: 0}
   PV: {fileID: 0}
+  pauseScript: {fileID: 0}
 --- !u!114 &4154899573533838182
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1101,6 +1103,23 @@ MonoBehaviour:
   playerInventory: {fileID: 11400000, guid: da31aee719a5fd84fa22325266365481, type: 2}
   itemSaveManager: {fileID: 7657915733535987239, guid: 3522e4f8ca599fd4eabd3ca8febd2083,
     type: 3}
+--- !u!114 &7004643874483889062
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3536456245099357511}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ccdba69bebd57264c9ee7e838e292e98, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  menuPause: 0
+  inventoryPause: 0
+  charPanelPause: 0
+  chatPause: 0
+  closeAllPanelsButMenu: 0
 --- !u!1 &3680925794353910806
 GameObject:
   m_ObjectHideFlags: 0
@@ -4145,6 +4164,11 @@ PrefabInstance:
       propertyPath: chatBox
       value: 
       objectReference: {fileID: 4664544431964007537}
+    - target: {fileID: 3541870503185401385, guid: 3522e4f8ca599fd4eabd3ca8febd2083,
+        type: 3}
+      propertyPath: pauseScript
+      value: 
+      objectReference: {fileID: 3536456245099357511}
     - target: {fileID: 3541870503185401385, guid: 3522e4f8ca599fd4eabd3ca8febd2083,
         type: 3}
       propertyPath: playerMouseLock
