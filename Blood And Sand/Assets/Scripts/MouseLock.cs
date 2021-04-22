@@ -42,8 +42,11 @@ public class MouseLock : MonoBehaviourPun
                     tempScript.pauseThings(false);
                 }
                 else{
-                    pauseScreen.SetActive(true);
-                    tempScript.setPauseActive(1);
+                    if(tempScript.blockMainMenu);
+                    else{
+                        pauseScreen.SetActive(true);
+                        tempScript.setPauseActive(1);
+                    }
                 }
             }
             else{

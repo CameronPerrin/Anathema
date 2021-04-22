@@ -1120,6 +1120,7 @@ MonoBehaviour:
   charPanelPause: 0
   chatPause: 0
   closeAllPanelsButMenu: 0
+  blockMainMenu: 0
 --- !u!1 &3680925794353910806
 GameObject:
   m_ObjectHideFlags: 0

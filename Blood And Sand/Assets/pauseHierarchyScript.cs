@@ -6,22 +6,19 @@ public class pauseHierarchyScript : MonoBehaviour
 {
 
 
-    public bool menuPause, inventoryPause, charPanelPause, chatPause, closeAllPanelsButMenu;     
-    void Update()
-    {
-        // if(menuPause){
-            
-        // }
-    }
+    public bool menuPause, inventoryPause, charPanelPause, chatPause, closeAllPanelsButMenu, blockMainMenu;     
 
     public void setPauseActive(int c)
     {
         switch(c){
             case 1:
                 if(!menuPause){
+                    if(blockMainMenu);
+                    else{
                     // Activate pause menu
-                    menuPause = true;
-                    pauseThings(true);
+                        menuPause = true;
+                        pauseThings(true);
+                    }
                     // unpause everything else since menu is priority
                     
                 }

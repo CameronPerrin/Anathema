@@ -55,8 +55,9 @@ public class Interact : MonoBehaviour
                 networkUI.SetActive(true);
                 playerBoi = PhotonNetwork.LocalPlayer.TagObject as GameObject;
                 //playerBoi.transform.GetChild(0).gameObject.SetActive(false);
-                playerBoi.SetActive(false);
-                Cursor.lockState = CursorLockMode.None;
+                playerBoi.GetComponent<pauseHierarchyScript>().pauseThings(true);
+                playerBoi.GetComponent<pauseHierarchyScript>().blockMainMenu = true;
+                //Cursor.lockState = CursorLockMode.None;
                 break;
             case 5: //weapon grab
             	//Add feedback for when the item is purchased

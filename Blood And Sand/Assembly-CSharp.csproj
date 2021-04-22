@@ -194,6 +194,7 @@
      <Compile Include="Assets\Scripts\Item System\Inventory.cs" />
      <Compile Include="Assets\nTools\PrefabPainter\Scripts\PrefabPainterSceneSettings.cs" />
      <Compile Include="Assets\pauseHierarchyScript.cs" />
+     <Compile Include="Assets\backOutScript.cs" />
      <None Include="Assets\nTools\PrefabPainter\Shaders\GUITextureClipLevels.shader" />
      <None Include="Assets\TextMesh Pro\Resources\Shaders\TMPro.cginc" />
      <None Include="Assets\IL3DN\Shaders\IL3DN_Water.shader" />
