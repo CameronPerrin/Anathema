@@ -126,7 +126,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 0}
-  essenceAmount: 10
+  essenceAmount: 15
   pMenu: {fileID: 0}
   isCorruptedEssence: 0
   inventory: {fileID: 11400000, guid: da31aee719a5fd84fa22325266365481, type: 2}

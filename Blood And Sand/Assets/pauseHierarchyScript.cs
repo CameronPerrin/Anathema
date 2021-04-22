@@ -1,12 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Cinemachine;
 
 public class pauseHierarchyScript : MonoBehaviour
 {
 
 
-    public bool menuPause, inventoryPause, charPanelPause, chatPause, closeAllPanelsButMenu, blockMainMenu;     
+    public bool menuPause, inventoryPause, charPanelPause, chatPause, closeAllPanelsButMenu, blockMainMenu;
+    public CinemachineFreeLook vcam;
+    
 
     public void setPauseActive(int c)
     {
@@ -98,7 +101,10 @@ public class pauseHierarchyScript : MonoBehaviour
             this.GetComponent<PlayerMovementController>().isPaused = true;
             this.GetComponent<PlayerDash>().isPaused = true;
             this.GetComponent<Combat>().isPaused = true;
-            this.gameObject.transform.GetChild(0).gameObject.SetActive(false);
+            vcam.m_YAxis.m_MaxSpeed = 0;
+            vcam.m_XAxis.m_MaxSpeed = 0;
+            //cameraMovement.GetComponent<Cinemachine>().setActive = false;
+            //this.gameObject.transform.GetChild(0).gameObject.SetActive(false);
             closeAllPanelsButMenu = false;
         }
         // UNPAUSE ALL THINGS
@@ -107,7 +113,9 @@ public class pauseHierarchyScript : MonoBehaviour
             this.GetComponent<PlayerMovementController>().isPaused = false;
             this.GetComponent<Combat>().isPaused = false;
             this.GetComponent<PlayerDash>().isPaused = false;
-            this.gameObject.transform.GetChild(0).gameObject.SetActive(true);
+            vcam.m_YAxis.m_MaxSpeed = 2;
+            vcam.m_XAxis.m_MaxSpeed = 300;
+            //this.gameObject.transform.GetChild(0).gameObject.SetActive(true);
         }
     }
 }

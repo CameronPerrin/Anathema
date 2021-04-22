@@ -203,10 +203,10 @@ public class Health : MonoBehaviourPunCallbacks, IPunObservable
             //Debug.Log(pl.name+" "+moneyStorage.name);
             //Debug.Log(moneyStorage.name);
             //Debug.Log(PV.IsMine);
+            inventory.Money += esse.GetComponent<essenceScript>().essenceAmount;
             if(esse.GetComponent<essenceScript>().isCorruptedEssence){
                 if(PV.IsMine){
                     //Debug.Log(PV.IsMine);
-                    inventory.Money += esse.GetComponent<essenceScript>().essenceAmount;
                 }   
                 if(isCorrupted == false && tag != "Corrupted_Player"){
                     tag = "Corrupted_Player";
