@@ -15,6 +15,8 @@ GameObject:
   - component: {fileID: 3571667358613150323}
   - component: {fileID: 5175721089748540410}
   - component: {fileID: -3955745040816293651}
+  - component: {fileID: -2133205611285359059}
+  - component: {fileID: 831265247894028546}
   m_Layer: 2
   m_Name: magicFast
   m_TagString: Bullet
@@ -121,8 +123,10 @@ MonoBehaviour:
   fastMagicAttack: 1
   strongMagicAttack: 0
   projectileSpeed: 30
+  isCrit: 0
   aim: {x: 0, y: 0, z: 0}
   impactVFX: {fileID: 0}
+  destroyTimer: 0
 --- !u!65 &5175721089748540410
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -152,6 +156,43 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &-2133205611285359059
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6404847672541117547}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ObservedComponentsFoldoutOpen: 1
+  Group: 0
+  prefixField: -1
+  Synchronization: 3
+  OwnershipTransfer: 0
+  ObservedComponents:
+  - {fileID: 831265247894028546}
+  viewIdField: 0
+  InstantiationId: 0
+  isRuntimeInstantiated: 0
+--- !u!114 &831265247894028546
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6404847672541117547}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 627855c7f81362d41938ffe0b1475957, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SynchronizePosition: 1
+  m_SynchronizeRotation: 1
+  m_SynchronizeScale: 0
 --- !u!1001 &6726266328219186069
 PrefabInstance:
   m_ObjectHideFlags: 0
