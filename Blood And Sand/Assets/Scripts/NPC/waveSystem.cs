@@ -172,7 +172,9 @@ public class waveSystem : MonoBehaviour
             {
                 waves[i].enemyCount = 0;
             } */
-            StartCoroutine(loadBackToTown());
+            
+            PV.RPC("RPCloadingBackToTown", RpcTarget.All);
+            //StartCoroutine(loadBackToTown());
         }
         else
         {
@@ -197,6 +199,12 @@ public class waveSystem : MonoBehaviour
             // PhotonNetwork.LoadLevel(1);
             break;
         }
+    }
+
+    [PunRPC]
+    void RPCloadingBackToTown()
+    {
+        StartCoroutine(loadBackToTown());
     }
     bool EnemyIsAlive()
     {

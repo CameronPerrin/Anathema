@@ -101,7 +101,9 @@ public class PlayerEquipment : MonoBehaviourPun
                 LoadedWeapon.transform.position = CurrentPlayer.transform.GetChild(1).GetChild(0).position;
                 LoadedWeapon.transform.rotation = CurrentPlayer.transform.GetChild(1).GetChild(0).rotation;
 
-                PV.RPC("TransformLoadedWeapon", RpcTarget.All);
+                // if(PV.IsMine)
+                //     PV.RPC("TransformLoadedWeapon", RpcTarget.All);
+                TransformLoadedWeapon();
                 //LoadedWeapon.transform.SetParent(CurrentPlayer.transform.GetChild(1).GetChild(0));
                 //LoadedWeapon.transform.parent = CurrentPlayer.transform.GetChild(1).GetChild(0);
 
@@ -124,7 +126,9 @@ public class PlayerEquipment : MonoBehaviourPun
             LoadedWeapon.transform.position = CurrentPlayer.transform.GetChild(1).GetChild(0).position;
             LoadedWeapon.transform.rotation = CurrentPlayer.transform.GetChild(1).GetChild(0).rotation;
 
-            PV.RPC("TransformLoadedWeapon", RpcTarget.All);
+            // if(PV.IsMine)
+            //     PV.RPC("TransformLoadedWeapon", RpcTarget.All); // RpcTarget.all
+            TransformLoadedWeapon();
             //LoadedWeapon.transform.SetParent(CurrentPlayer.transform.GetChild(1).GetChild(0));
             //LoadedWeapon.transform.parent = CurrentPlayer.transform.GetChild(1).GetChild(0);
 
@@ -222,7 +226,8 @@ public class PlayerEquipment : MonoBehaviourPun
     } */
 
 
-    [PunRPC] void TransformLoadedWeapon()
+    //[PunRPC] 
+    void TransformLoadedWeapon()
     {
         //Debug.Log("RPC Calling tranform");
         CurrentPlayer = PhotonNetwork.LocalPlayer.TagObject as GameObject;
