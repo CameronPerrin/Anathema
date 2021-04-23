@@ -31,7 +31,7 @@ public class deathScript : MonoBehaviourPunCallbacks
         Debug.Log("DEATH IS CALLED");
         //playerObjects.RemoveAt(0);
         //playerObjects[0] = null;
-
+        PhotonNetwork.AutomaticallySyncScene = false;
 		PhotonNetwork.LeaveRoom();
 
 	}

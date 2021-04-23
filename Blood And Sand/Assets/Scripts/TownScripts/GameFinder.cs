@@ -34,12 +34,16 @@ public class GameFinder : MonoBehaviourPunCallbacks
 
 	//private string roomName;
 
-	void ClearPlayerListings()
+	int ClearPlayerListings()
 	{
-		for (int i = playersContainer.childCount - 1; i >= 0; i--)
-		{
+		// for (int i = playersContainer.childCount - 1; i >= 0; i--)
+		// {
+		// 	Destroy(playersContainer.GetChild(i).gameObject);
+		// }
+		for (int i = 0; i < playersContainer.childCount; i++){
 			Destroy(playersContainer.GetChild(i).gameObject);
 		}
+		return playersContainer.childCount;
 	}
 
 	void ListPlayers()
@@ -109,11 +113,17 @@ public class GameFinder : MonoBehaviourPunCallbacks
 
 	public void StartGame()
 	{
+		if(ClearPlayerListings() == 0){
 		//eventually make it so auto starts after like 10 sec
 		if(PhotonNetwork.IsMasterClient)
 		{
+			Debug.Log("Player listing: " + ClearPlayerListings());
 			PhotonNetwork.CurrentRoom.IsOpen = false;
 			PhotonNetwork.LoadLevel(5);
+		}
+		}
+		else{
+			Debug.Log("Player list not empty... Player List: " + ClearPlayerListings());
 		}
 	}
 

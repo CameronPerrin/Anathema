@@ -55,7 +55,7 @@ public class npcHealth : MonoBehaviourPunCallbacks
             PV.RPC("Damage", RpcTarget.All, dmg, false);    
         }
         if(dot){
-            Debug.Log("DOT DAMAGE!");
+            //Debug.Log("DOT DAMAGE!");
             dmgTemp = dmage;
             dmg = (dmage - defense) / 4;
             InvokeRepeating ("PhysicalDOTDmg", 0f, dotTimer);

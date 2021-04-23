@@ -183,13 +183,18 @@ public class waveSystem : MonoBehaviour
 
     }
 
+    // Send the player back to town
     IEnumerator loadBackToTown()
     {
         Debug.Log("Loading back to town");
         while (true)
         { // This creates a never-ending loop
             yield return new WaitForSeconds(townWaitTimer);
-            PhotonNetwork.LoadLevel(1);
+            PhotonNetwork.AutomaticallySyncScene = false;
+            PhotonNetwork.LeaveRoom();
+            // while(PhotonNetwork.InRoom)
+            //     yield return null;
+            // PhotonNetwork.LoadLevel(1);
             break;
         }
     }
