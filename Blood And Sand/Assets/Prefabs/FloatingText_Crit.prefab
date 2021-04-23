@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 8546739766463614799}
   - component: {fileID: 5982365035135721664}
   m_Layer: 0
-  m_Name: FloatingText
+  m_Name: FloatingText_Crit
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -30,7 +30,7 @@ Transform:
   m_GameObject: {fileID: 7957747401790915659}
   m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
   m_LocalPosition: {x: -32.582, y: 2.774, z: 30.077}
-  m_LocalScale: {x: 0.03, y: 0.03, z: 1}
+  m_LocalScale: {x: 0.06, y: 0.06, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -110,9 +110,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 17587a016336ec24fb8fd6dae745406d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DestroyTime: 0.6
+  DestroyTime: 1.3
   Offset: {x: 0, y: 3, z: 0}
-  RandomizeIntensity: {x: 1.5, y: 0, z: 0}
+  RandomizeIntensity: {x: 2, y: 0.5, z: 0}
   textAnim: {fileID: 8546739766463614799}
 --- !u!95 &8546739766463614799
 Animator:
@@ -124,7 +124,7 @@ Animator:
   m_GameObject: {fileID: 7957747401790915659}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: ed0708b8d6b567147ba0827c5d717f80, type: 2}
+  m_Controller: {fileID: 9100000, guid: 6d1e54ab1d7750b4c8602e357d6880d7, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0

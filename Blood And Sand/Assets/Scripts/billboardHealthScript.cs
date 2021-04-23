@@ -12,6 +12,6 @@ public class billboardHealthScript : MonoBehaviour
     }
     void Update()
     {
-        transform.LookAt(transform.position + myCamera.transform.rotation * Vector3.back, myCamera.transform.rotation * Vector3.up);
+        transform.LookAt(transform.position + myCamera.transform.rotation * Vector3.forward, myCamera.transform.rotation * Vector3.up);
     }
 }

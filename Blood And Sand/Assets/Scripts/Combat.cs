@@ -80,6 +80,7 @@ public class Combat : MonoBehaviour
 
 		// Secondary active stats
 		float critChance = weap.GetComponent<WeaponStats>().crit_chance;
+		bool isCrit = false;
 		float bleedChance = weap.GetComponent<WeaponStats>().bleed_chance;
 		attackSpeed = weap.GetComponent<WeaponStats>().attack_speed;
 		attackTimer = attackSpeed;
@@ -93,6 +94,7 @@ public class Combat : MonoBehaviour
 		attackPrefab.GetComponent<bulletScript>().type = weap.GetComponent<WeaponStats>().item_type;
 		if(rand <= critChance){
 			critMultiplier = 2;
+			isCrit = true;
 		}
 		else
 			critMultiplier = 1;
@@ -107,6 +109,7 @@ public class Combat : MonoBehaviour
 			
 		// set final damage for attack
 		attackPrefab.GetComponent<bulletScript>().dmg = weap.GetComponent<WeaponStats>().attack * critMultiplier;
+		attackPrefab.GetComponent<bulletScript>().isCrit = isCrit;
 		// Instatiate attack
 
 

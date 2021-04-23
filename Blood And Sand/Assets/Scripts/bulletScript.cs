@@ -16,6 +16,7 @@ public class bulletScript : MonoBehaviour
     public bool fastMagicAttack = false;
     public bool strongMagicAttack = false;
     public int projectileSpeed = 10;
+    public bool isCrit;
     public Vector3 aim;
 
     // VFX
@@ -85,7 +86,7 @@ public class bulletScript : MonoBehaviour
             npcHealth hp = collision.gameObject.GetComponent<npcHealth>();
             //Debug.Log(hp);
             if(hp){
-               hp.TakeDamage(dmg, type, DOT); 
+               hp.TakeDamage(dmg, type, DOT, isCrit); 
             }
 
             Destroy(this.gameObject,destroyTimer);
@@ -101,7 +102,7 @@ public class bulletScript : MonoBehaviour
             //Debug.Log(hp);
             if (hp)
             {
-                hp.TakeDamage(dmg, type, DOT);
+                hp.TakeDamage(dmg, type, DOT, isCrit);
             }
 
             Destroy(this.gameObject,0);

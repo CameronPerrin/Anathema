@@ -142,11 +142,11 @@ public class Health : MonoBehaviourPunCallbacks, IPunObservable
     public void Damage(float dmage)
     {
         
-        // Always show damage dealt first!
-        if(FloatingTextPrefab)
-        {
-            ShowFloatingText(dmage);
-        }
+        // Removed damage text for now...
+        // if(FloatingTextPrefab)
+        // {
+        //     ShowFloatingText(dmage);
+        // }
         // temp script container so as to not call get component more than ncessary
         var tempReapScript = removePlayer.GetComponent<deathScript>();
         //Debug.Log("Taking " + dmage + " damage.");

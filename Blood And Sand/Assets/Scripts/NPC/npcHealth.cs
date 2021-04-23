@@ -31,8 +31,11 @@ public class npcHealth : MonoBehaviourPunCallbacks
 
    // public Camera playerCamera;
     public GameObject FloatingTextPrefab;
+    public GameObject FloatingTextPrefabCrit;
     public float dmgTemp;
     public float dmg; // Placeholder damage for when we add in weapons
+
+    private bool isCrit;
 
 
     public event EventHandler OnDamaged;
@@ -44,8 +47,9 @@ public class npcHealth : MonoBehaviourPunCallbacks
     }
 
     // This function is called in another script to tell this script when to take damage.
-    public void TakeDamage(float dmage, int type, bool dot)
+    public void TakeDamage(float dmage, int type, bool dot, bool crit)
     {
+        isCrit = crit;
         if(type == 1 || type == 6){          // Physical damage
             dmg = dmage - defense;
             PV.RPC("Damage", RpcTarget.All, dmg, false);    
@@ -85,8 +89,8 @@ public class npcHealth : MonoBehaviourPunCallbacks
     [PunRPC]
     public void Damage(float dmage, bool dotOn)
     {
+        ShowFloatingText(dotOn);
         health -= dmage;
-        ShowFloatingText();
         if(dotOn)
             Instantiate(bloodVFX, transform.position, Quaternion.identity); // spawn blood vfx
         //Instantiate(bloodVFX, bloodSpotInstLocation.transform.position, Quaternion.identity); // spawn blood vfx
@@ -128,11 +132,26 @@ public class npcHealth : MonoBehaviourPunCallbacks
 
     // Spawn in damage text and makes sure that the text rotation is facing the camera
     // ** This might be changed later because text does not show sometimes in multiplayer session. **
-    void ShowFloatingText()
+    void ShowFloatingText(bool isDotOn)
     {
-        var go = Instantiate(FloatingTextPrefab, transform.position, Quaternion.identity, transform);
-        go.transform.rotation = Quaternion.LookRotation(transform.position - Camera.main.transform.position);
-        //go.transform.LookAt(Camera.main.transform);
-        go.GetComponent<TextMesh>().text = dmg.ToString();
+        if(!isCrit){
+            var go = Instantiate(FloatingTextPrefab, transform.position, Quaternion.identity);
+            go.transform.rotation = Quaternion.LookRotation(transform.position - Camera.main.transform.position);
+            //go.transform.LookAt(Camera.main.transform);
+            if(isDotOn){
+                go.GetComponent<TextMesh>().color = new Color(255,0,0);
+            }
+            go.GetComponent<TextMesh>().text = dmg.ToString();
+        }
+        else{
+            var go = Instantiate(FloatingTextPrefabCrit, transform.position, Quaternion.identity);
+            go.transform.rotation = Quaternion.LookRotation(transform.position - Camera.main.transform.position);
+            //go.transform.LookAt(Camera.main.transform);
+            if(isDotOn){
+                go.GetComponent<TextMesh>().color = new Color(255,0,0);
+            }
+            go.GetComponent<TextMesh>().text = dmg.ToString("F0");
+        }
+        
     }
 }
