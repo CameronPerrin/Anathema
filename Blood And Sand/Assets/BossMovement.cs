@@ -20,6 +20,7 @@ public class BossMovement : MonoBehaviour
     private bool hasTakenDamage;
     private bool collisionOccured;
     public bool cloneDamageTaken;
+    public bool isTeleporting = false;
     int spawnLocation;
 
     private void Awake()
@@ -41,15 +42,15 @@ public class BossMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(PhotonNetwork.IsMasterClient)
-        {
+        // if(PV.IsMine)
+        // {
             if (hasTakenDamage || cloneDamageTaken)
             {
                 //Debug.Log("Boss took damage");
-                if (PV.IsMine)
-                {
-                    PV.RPC("WaitUntilTeleport", RpcTarget.All);
-                }
+                // if (PV.IsMine)
+                // {
+                PV.RPC("WaitUntilTeleport", RpcTarget.All);
+                //}
 
                 //WaitUntilTeleport();
             }
@@ -61,11 +62,11 @@ public class BossMovement : MonoBehaviour
                     Destroy(bosses[i]);
                 }
             }
-        }
-        else
-        {
-            return;
-        }
+        // }
+        // else
+        // {
+        //     return;
+        // }
 
 
 
@@ -85,6 +86,7 @@ public class BossMovement : MonoBehaviour
         }
     }
 
+
     [PunRPC]
     private void waitTeleport(float time)
     {
@@ -95,12 +97,15 @@ public class BossMovement : MonoBehaviour
     [PunRPC]
     private void WaitUntilTeleport()
     {
-        teleportTimer -= Time.deltaTime;
-        if (teleportTimer <= 0f)
-        {
-            teleportTimer = teleportTime;
-            bosses = GameObject.FindGameObjectsWithTag("Boss");
-            portalController.GetComponent<BossTeleportationController>().boss = GameObject.FindGameObjectsWithTag("Boss");
+        if(!isTeleporting){
+            //Debug.Log("1 - Tryna TP yo.");
+            teleportTimer -= Time.deltaTime;
+            if (teleportTimer <= 0f)
+            {
+                //Debug.Log("2 - Tryna TP yo.");
+                teleportTimer = teleportTime;
+                bosses = GameObject.FindGameObjectsWithTag("Boss");
+                portalController.GetComponent<BossTeleportationController>().boss = GameObject.FindGameObjectsWithTag("Boss");
 
             /*
             for(int i = 0; i < bosses.Length; i++)
@@ -108,17 +113,20 @@ public class BossMovement : MonoBehaviour
                 bosses[i].GetComponent<Renderer>().enabled = false;
             } */
              
-            if (PV.IsMine)
-            {
-                PV.RPC("StartTeleportRPC", RpcTarget.All);
-            }
+                if (PV.IsMine)
+                {
+                    PV.RPC("StartTeleportRPC", RpcTarget.All);
+                }
             //StartCoroutine(Teleport());
+            isTeleporting = true;
+            }
         }
     }
 
     [PunRPC]
     public void StartTeleportRPC()
     {
+        //Debug.Log("3 - Tryna TP yo.");
         StartCoroutine(Teleport());
     }
     IEnumerator Teleport()
@@ -164,8 +172,10 @@ public class BossMovement : MonoBehaviour
             bosses[i].GetComponent<Renderer>().enabled = true;
         } */
         //portalIndexes.Clear();
+        isTeleporting = false;
         hasTakenDamage = false;
         collisionOccured = false;
         cloneDamageTaken = false;
+        //Debug.Log("4 - Tryna TP yo.");
     }
 }

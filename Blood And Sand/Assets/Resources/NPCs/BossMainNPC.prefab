@@ -534,6 +534,7 @@ MonoBehaviour:
   mainBoss: {fileID: 1859679386586658590}
   teleportTime: 2
   cloneDamageTaken: 0
+  isTeleporting: 0
 --- !u!114 &-1026374074130883855
 MonoBehaviour:
   m_ObjectHideFlags: 0
