@@ -25,11 +25,14 @@ public class MainMenuController : MonoBehaviourPunCallbacks
     private GameObject inputField;
 
     // input field
+    [SerializeField]
+    private GameObject helpText;
     private GameObject pName;
     private string text;
 
     void Start()
     {
+        inputField.GetComponent<TMP_InputField>().characterLimit = 12;
         pName = GameObject.Find("NameSaver");
         if(!pName){
             Debug.Log("CAN'T FIND OBJECT NameSaver");
@@ -50,6 +53,7 @@ public class MainMenuController : MonoBehaviourPunCallbacks
         text = inputField.GetComponent<TMP_InputField>().text;
         // text has to be a minimum of 3 characters to work
         if(text.Length >= 3 && text.Length <= 12){
+            helpText.GetComponent<TMP_Text>().text = $"<color=green>Username approved!</color>";
             RoomOptions roomOptions = new RoomOptions();
             roomOptions.IsVisible = false;
             startButton.SetActive(false);
@@ -58,7 +62,8 @@ public class MainMenuController : MonoBehaviourPunCallbacks
             PhotonNetwork.JoinOrCreateRoom("Anathema", roomOptions, TypedLobby.Default);
         }
         else{
-            Debug.Log("You entered: " + text + ". Invalid username!");
+            //Debug.Log("You entered: " + text + ". Invalid username!");
+            helpText.GetComponent<TMP_Text>().text = $"<color=red><I>Invalid username...</I></color>";
         }
         
     }
@@ -66,5 +71,4 @@ public class MainMenuController : MonoBehaviourPunCallbacks
     {
         PhotonNetwork.LoadLevel(sceneIndex);
     }
-
 }
