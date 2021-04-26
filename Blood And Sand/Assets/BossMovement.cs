@@ -134,7 +134,8 @@ public class BossMovement : MonoBehaviour
         yield return new WaitForSeconds(1);
 
         // Set all portals to vacant since All bosses teleports out.
-        portalController.GetComponent<BossTeleportationController>().setAllPortalsVacant();
+        //portalController.GetComponent<BossTeleportationController>().setAllPortalsVacant();
+        PV.RPC("SetPortalsVacant", RpcTarget.All);
 
         List<int> uniqueNumbers = new List<int>();
         List<int> portalIndexes = new List<int>();
@@ -163,7 +164,7 @@ public class BossMovement : MonoBehaviour
 
                         portalController.GetComponent<BossTeleportationController>().boss[j].GetComponent<UnityEngine.AI.NavMeshAgent>().Warp(portalController.GetComponent<BossTeleportationController>().portals[portalIndexes[j]].transform.position);
 
-            }
+                  }
             }
 
         /*
@@ -177,5 +178,11 @@ public class BossMovement : MonoBehaviour
         collisionOccured = false;
         cloneDamageTaken = false;
         //Debug.Log("4 - Tryna TP yo.");
+    }
+
+    [PunRPC]
+    void SetPortalsVacant()
+    {
+        portalController.GetComponent<BossTeleportationController>().setAllPortalsVacant();
     }
 }
