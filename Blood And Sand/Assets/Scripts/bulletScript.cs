@@ -66,13 +66,15 @@ public class bulletScript : MonoBehaviour
         	//Health hp = collision.gameObject.GetComponent<Health>();
             if(CurrentPlayer.tag == "Corrupted_Player"){
                 // VFX
-                GameObject impactPoint = collision.gameObject.transform.Find("SpawnImpactVFX").gameObject;
-                Instantiate(impactVFX, impactPoint.transform.position, impactPoint.transform.rotation);
+                // if(collision.gameObject.transform.Find("SpawnImpactVFX").gameObject != null){
+                //     GameObject impactPoint = collision.gameObject.transform.Find("SpawnImpactVFX").gameObject;
+                //     Instantiate(impactVFX, impactPoint.transform.position, impactPoint.transform.rotation);
+                // }
 
-                if(collision.gameObject.GetComponent<Health>()){
-                    Debug.Log("Bullet doing damage");
-                    collision.gameObject.GetComponent<Health>().TakeDamage(dmg, type, DOT); 
-                }
+                // if(collision.gameObject.GetComponent<Health>()){
+                //     Debug.Log("Bullet doing damage");
+                //     collision.gameObject.GetComponent<Health>().TakeDamage(dmg, type, DOT); 
+                // }
             }
             Destroy(this.gameObject, destroyTimer);  
         }
