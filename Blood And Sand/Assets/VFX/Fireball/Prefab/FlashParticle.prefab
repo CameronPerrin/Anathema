@@ -9777,6 +9777,7 @@ GameObject:
   - component: {fileID: 1682353059407167346}
   - component: {fileID: 3185087405554496081}
   - component: {fileID: 7706792933880090516}
+  - component: {fileID: -4009051139019671884}
   m_Layer: 0
   m_Name: FlashParticle
   m_TagString: Untagged
@@ -14586,6 +14587,19 @@ ParticleSystemRenderer:
   m_Mesh2: {fileID: 0}
   m_Mesh3: {fileID: 0}
   m_MaskInteraction: 0
+--- !u!114 &-4009051139019671884
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2852164880559801242}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1d57c947575961540bbab1a86bcdb6db, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  duration: 1
 --- !u!1 &3350908981083592842
 GameObject:
   m_ObjectHideFlags: 0

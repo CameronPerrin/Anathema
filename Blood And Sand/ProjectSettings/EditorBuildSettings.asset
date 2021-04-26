@@ -20,13 +20,13 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Town.unity
     guid: 7271f9577e8a48c418f17446d8b7f88a
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/MultiplayerScene.unity
     guid: a5a0f32bfe6a95240a565d1f0ab9e3b9
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Test Scenes/WeaponTesting.unity
     guid: 0c63917ab67cc714186a537b4f3a36ce
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Test Scenes/CombatTesting.unity
     guid: 9c631033138e52f4c891904ff99345ec
   - enabled: 1
