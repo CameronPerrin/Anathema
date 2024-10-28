@@ -1,2 +1,2 @@
 # BloodAndSand
- IceFall Studios in progress game
+ A Final Semester Game Dev Project
